@@ -1,0 +1,60 @@
+.contactPage .body {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 77px;
+  width: 1300px;
+  margin: auto;
+  padding-top: 58px;
+  padding-bottom: 80px;
+  background: url(/img/general/line-bg.png);
+  background-position: center;
+  background-size: contain;
+}
+.contactPage .contact_info .title:first-child {
+  margin-top: 0;
+}
+.contactPage .body .img {
+  width: 100%;
+}
+
+@media screen and (max-width: 1350px) {
+  .contactPage .body {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .contactPage .body {
+    grid-gap: 41px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .form .playfair {
+    font-size: 33px;
+    margin: 12px 0;
+  }
+  .form input,
+  .form textarea {
+    height: 49px;
+    margin-bottom: 14px;
+  }
+  .form textarea {
+    padding-top: 16px;
+    height: 104px;
+  }
+  .contactPage .body {
+    grid-gap: 22px;
+  }
+  .form .grid {
+    grid-gap: 11px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .contactPage .body {
+    grid-template-columns: 1fr;
+  }
+  .contactPage .body .form {
+    grid-row: 1;
+  }
+}
