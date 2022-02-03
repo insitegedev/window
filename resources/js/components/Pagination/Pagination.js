@@ -1,24 +1,27 @@
 import React from "react";
+import {Link} from "@inertiajs/inertia-react";
 
-export const Pagination = ({ length, active }) => {
+export const Pagination = ({ length, active, links }) => {
   return (
     <div className="pagination flex centered">
-      {Array.from({ length: length }).map((num, i) => {
-        return (
-          <button
-            className="num"
-            style={{
-              opacity: active === i + 1 ? "1" : "0.5",
-              color: "#334E60",
-              margin: " 0 5px",
-              fontWeight: "bold",
-              fontSize: "16px",
-            }}
-          >
-            {i + 1}
-          </button>
-        );
-      })}
+        {links.slice(1, -1).map((item)=>{
+            return(
+                <Link href={item.url}>
+                    <button
+                        className="num"
+                        style={{
+                            opacity: item.active ? "1" : "0.5",
+                            color: "#334E60",
+                            margin: " 0 5px",
+                            fontWeight: "bold",
+                            fontSize: "16px",
+                        }}
+                    >
+                        {item.label}
+                    </button>
+                </Link>
+            );
+        })}
     </div>
   );
 };

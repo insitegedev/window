@@ -3543,7 +3543,9 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
-var Gallery = function Gallery() {
+var Gallery = function Gallery(_ref) {
+  var galleries = _ref.galleries;
+  console.log(galleries);
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
     aos__WEBPACK_IMPORTED_MODULE_6___default().init({
       duration: 2000
@@ -3570,7 +3572,7 @@ var Gallery = function Gallery() {
     className: "wrapper"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "gallery_grid"
-  }, galleryImages.map(function (img, i) {
+  }, galleries.data.map(function (img, i) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
       className: "img",
       key: i,
@@ -3579,12 +3581,13 @@ var Gallery = function Gallery() {
       },
       "data-aos": "zoom-in-up"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-      src: img,
+      src: "/" + img.file.path + "/" + img.file.title,
       alt: ""
     }));
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Pagination_Pagination__WEBPACK_IMPORTED_MODULE_4__.Pagination, {
     length: 5,
-    active: 1
+    active: 1,
+    links: galleries.links
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_GalleryPopup_GalleryPopup__WEBPACK_IMPORTED_MODULE_5__.default, {
     closePopup: function closePopup() {
       return setShowPopup(false);
@@ -4444,25 +4447,28 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "Pagination": () => (/* binding */ Pagination)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
+
 
 var Pagination = function Pagination(_ref) {
   var length = _ref.length,
-      active = _ref.active;
+      active = _ref.active,
+      links = _ref.links;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "pagination flex centered"
-  }, Array.from({
-    length: length
-  }).map(function (num, i) {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+  }, links.slice(1, -1).map(function (item) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__.Link, {
+      href: item.url
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
       className: "num",
       style: {
-        opacity: active === i + 1 ? "1" : "0.5",
+        opacity: item.active ? "1" : "0.5",
         color: "#334E60",
         margin: " 0 5px",
         fontWeight: "bold",
         fontSize: "16px"
       }
-    }, i + 1);
+    }, item.label));
   }));
 };
 

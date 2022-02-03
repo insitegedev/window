@@ -10,6 +10,7 @@
 use App\Http\Controllers\Admin\Auth\LoginController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\CertificateController;
+use App\Http\Controllers\Admin\GalleryController;
 use App\Http\Controllers\Admin\LanguageController;
 use App\Http\Controllers\Admin\PageController;
 use App\Http\Controllers\Admin\ProductController;
@@ -54,6 +55,9 @@ Route::prefix('{locale?}')
                 // Product
                 Route::resource('product', ProductController::class);
                 Route::get('product/{product}/destroy', [ProductController::class, 'destroy'])->name('product.destroy');
+                // Product
+                Route::resource('gallery', GalleryController::class);
+                Route::get('gallery/{gallery}/destroy', [GalleryController::class, 'destroy'])->name('gallery.destroy');
 
                 // Project
                 Route::resource('project', ProjectController::class);
@@ -86,7 +90,7 @@ Route::prefix('{locale?}')
 
             // Home Page
             Route::get('', [HomeController::class, 'index'])->name('client.home.index');
-            Route::get('/gallery', [HomeController::class, 'gallery'])->name('client.gallery.index');
+            Route::get('/gallery', [\App\Http\Controllers\Client\GalleryController::class, 'index'])->name('client.gallery.index');
             Route::get('/doctors', [HomeController::class, 'doctors'])->name('client.doctors.index');
             Route::get('/apartment', [HomeController::class, 'apartment'])->name('client.apartment.index');
 

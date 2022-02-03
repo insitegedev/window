@@ -9,7 +9,8 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import Layout from "../../Layouts/Layout";
 
-const Gallery = () => {
+const Gallery = ({galleries}) => {
+    console.log(galleries);
   useEffect(() => {
     Aos.init({ duration: 2000 });
   }, []);
@@ -40,7 +41,7 @@ const Gallery = () => {
               <Showcase title="Gallery" />
               <div className="wrapper">
                   <div className="gallery_grid">
-                      {galleryImages.map((img, i) => {
+                      {galleries.data.map((img, i) => {
                           return (
                               <div
                                   className="img"
@@ -48,12 +49,12 @@ const Gallery = () => {
                                   onClick={() => setShowPopup(true)}
                                   data-aos="zoom-in-up"
                               >
-                                  <img src={img} alt="" />
+                                  <img src={"/"+ img.file.path + "/" + img.file.title} alt="" />
                               </div>
                           );
                       })}
                   </div>
-                  <Pagination length={5} active={1} />
+                  <Pagination length={5} active={1} links={galleries.links} />
               </div>
               <GalleryPopup
                   closePopup={() => setShowPopup(false)}

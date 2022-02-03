@@ -13,7 +13,7 @@ class HomeController extends Controller
 
 
 //        $news = News::where("status", 1)->with(['file', 'translations'])->take(6)->get();
-        $sliders = Slider::query()->with(['file', 'translations']);
+        $sliders = Slider::query()->where("status", 1)->with(['file', 'translations']);
 
         return Inertia::render('Home/Home', ["sliders" => $sliders->get()]);
 
