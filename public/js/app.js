@@ -2971,6 +2971,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var _SocialMedia_SocialMedia__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../SocialMedia/SocialMedia */ "./resources/js/Components/SocialMedia/SocialMedia.js");
 /* harmony import */ var _ContactInfo_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ContactInfo.css */ "./resources/js/Components/ContactInfo/ContactInfo.css");
+/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
+
 
 
 
@@ -2978,6 +2980,14 @@ __webpack_require__.r(__webpack_exports__);
 var ContactInfo = function ContactInfo(_ref) {
   var color = _ref.color,
       right = _ref.right;
+  var _usePage$props = (0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_3__.usePage)().props,
+      gphone = _usePage$props.gphone,
+      gemail = _usePage$props.gemail,
+      gaddress = _usePage$props.gaddress,
+      gcity = _usePage$props.gcity,
+      gcountry = _usePage$props.gcountry,
+      gfacebook = _usePage$props.gfacebook,
+      ginstagram = _usePage$props.ginstagram;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: right ? "contact_info right" : "contact_info",
     style: {
@@ -2985,10 +2995,12 @@ var ContactInfo = function ContactInfo(_ref) {
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "title"
-  }, "address"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Street Name #"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Bakuriani"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Georgia"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  }, "address"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, gaddress.value), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, gcity.value), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, gcountry.value), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "title"
-  }, "contact"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Info@Window.Ge"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "+995 032 2 22 33 11"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_SocialMedia_SocialMedia__WEBPACK_IMPORTED_MODULE_1__.SocialMedia, {
-    color: color
+  }, "contact"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, gemail.value), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, gphone.value), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_SocialMedia_SocialMedia__WEBPACK_IMPORTED_MODULE_1__.SocialMedia, {
+    color: color,
+    ginstagram: ginstagram.value,
+    gfacebook: gfacebook.value
   }));
 };
 
@@ -3140,7 +3152,7 @@ var Languages = function Languages() {
   var _usePage$props = (0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__.usePage)().props,
       locales = _usePage$props.locales,
       currentLocale = _usePage$props.currentLocale;
-  console.log(locales); // console.log("ff");
+  console.log(currentLocale); // console.log("ff");
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "languages"
@@ -3276,15 +3288,19 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var SocialMedia = function SocialMedia(_ref) {
-  var color = _ref.color;
+  var color = _ref.color,
+      gfacebook = _ref.gfacebook,
+      ginstagram = _ref.ginstagram;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "socialmedia flex"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__.Link, {
-    href: "/"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
+    target: "_blank",
+    href: gfacebook
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_img_icons_sm_smIcons__WEBPACK_IMPORTED_MODULE_2__.FB, {
     color: color
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__.Link, {
-    href: "/",
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
+    target: "_blank",
+    href: ginstagram,
     style: {
       marginLeft: "30px"
     }
@@ -4262,6 +4278,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var _SocialMedia_SocialMedia__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../SocialMedia/SocialMedia */ "./resources/js/components/SocialMedia/SocialMedia.js");
 /* harmony import */ var _ContactInfo_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ContactInfo.css */ "./resources/js/components/ContactInfo/ContactInfo.css");
+/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
+
 
 
 
@@ -4269,6 +4287,14 @@ __webpack_require__.r(__webpack_exports__);
 var ContactInfo = function ContactInfo(_ref) {
   var color = _ref.color,
       right = _ref.right;
+  var _usePage$props = (0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_3__.usePage)().props,
+      gphone = _usePage$props.gphone,
+      gemail = _usePage$props.gemail,
+      gaddress = _usePage$props.gaddress,
+      gcity = _usePage$props.gcity,
+      gcountry = _usePage$props.gcountry,
+      gfacebook = _usePage$props.gfacebook,
+      ginstagram = _usePage$props.ginstagram;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: right ? "contact_info right" : "contact_info",
     style: {
@@ -4276,10 +4302,12 @@ var ContactInfo = function ContactInfo(_ref) {
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "title"
-  }, "address"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Street Name #"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Bakuriani"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Georgia"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  }, "address"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, gaddress.value), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, gcity.value), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, gcountry.value), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "title"
-  }, "contact"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Info@Window.Ge"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "+995 032 2 22 33 11"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_SocialMedia_SocialMedia__WEBPACK_IMPORTED_MODULE_1__.SocialMedia, {
-    color: color
+  }, "contact"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, gemail.value), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, gphone.value), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_SocialMedia_SocialMedia__WEBPACK_IMPORTED_MODULE_1__.SocialMedia, {
+    color: color,
+    ginstagram: ginstagram.value,
+    gfacebook: gfacebook.value
   }));
 };
 
@@ -4489,15 +4517,19 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var SocialMedia = function SocialMedia(_ref) {
-  var color = _ref.color;
+  var color = _ref.color,
+      gfacebook = _ref.gfacebook,
+      ginstagram = _ref.ginstagram;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "socialmedia flex"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__.Link, {
-    href: "/"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
+    target: "_blank",
+    href: gfacebook
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_img_icons_sm_smIcons__WEBPACK_IMPORTED_MODULE_2__.FB, {
     color: color
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__.Link, {
-    href: "/",
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
+    target: "_blank",
+    href: ginstagram,
     style: {
       marginLeft: "30px"
     }

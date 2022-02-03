@@ -61,10 +61,10 @@ class HandleInertiaRequests extends Middleware
         $gphone = "";
         $gemail = "";
         $gaddress = "";
-        $gworkingHours = "";
+        $gcity = "";
+        $gcountry = "";
         $ginstagram = "";
         $gfacebook = "";
-        $gyoutube = "";
 
         $settings = Setting::query()->with(['translations']);
         $settings = $settings->get();
@@ -79,17 +79,17 @@ class HandleInertiaRequests extends Middleware
                 case "address":
                     $gaddress = $setting;
                     break;
-                case "working_hours":
-                    $gworkingHours = $setting;
-                    break;
                 case "instagram":
                     $ginstagram = $setting;
                     break;
                 case "facebook":
                     $gfacebook = $setting;
                     break;
-                case "youtube":
-                    $gyoutube = $setting;
+                case "city":
+                    $gcity = $setting;
+                    break;
+                case "country":
+                    $gcountry = $setting;
                     break;
             }
         }
@@ -98,9 +98,10 @@ class HandleInertiaRequests extends Middleware
             "gphone" => $gphone,
             "gemail" => $gemail,
             "gaddress" => $gaddress,
-            "gworkingHours" => $gworkingHours,
             "ginstagram" => $ginstagram,
-            "gfacebook" => $gfacebook
+            "gfacebook" => $gfacebook,
+            "gcity" => $gcity,
+            "gcountry" => $gcountry
         ]);
     }
 

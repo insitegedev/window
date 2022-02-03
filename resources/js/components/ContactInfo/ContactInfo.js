@@ -1,21 +1,25 @@
 import React from "react";
 import { SocialMedia } from "../SocialMedia/SocialMedia";
 import "./ContactInfo.css";
+import {usePage} from "@inertiajs/inertia-react";
 
 const ContactInfo = ({ color, right }) => {
-  return (
+
+    const {gphone, gemail, gaddress, gcity, gcountry, gfacebook, ginstagram} = usePage().props;
+
+    return (
     <div
       className={right ? "contact_info right" : "contact_info"}
       style={{ color: color }}
     >
       <div className="title">address</div>
-      <p>Street Name #</p>
-      <p>Bakuriani</p>
-      <p>Georgia</p>
+      <p>{gaddress.value}</p>
+      <p>{gcity.value}</p>
+      <p>{gcountry.value}</p>
       <div className="title">contact</div>
-      <p>Info@Window.Ge</p>
-      <p>+995 032 2 22 33 11</p>
-      <SocialMedia color={color} />
+      <p>{gemail.value}</p>
+      <p>{gphone.value}</p>
+      <SocialMedia color={color} ginstagram={ginstagram.value} gfacebook={gfacebook.value} />
     </div>
   );
 };
