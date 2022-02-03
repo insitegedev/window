@@ -3,9 +3,8 @@ import {Link, usePage} from "@inertiajs/inertia-react";
 import "./Languages.css";
 
 export const Languages = () => {
-    const {locales, currentLocale} = usePage().props;
-    console.log(currentLocale);
-    // console.log("ff");
+    const {locales, currentLocale, locale_urls} = usePage().props;
+
 
     return (
     <div className="languages">
@@ -13,7 +12,7 @@ export const Languages = () => {
           {Object.keys(locales).map((name, index) => {
               if (locales[name] === currentLocale) {
                   return (
-                      <a href={"/" + locales[name]} key={name + "locale"}>{name}</a>
+                      <a href={locales[name]} key={name + "locale"}>{name}</a>
                   );
               }
           })}
@@ -22,7 +21,7 @@ export const Languages = () => {
           {Object.keys(locales).map((name, index) => {
               if (locales[name] !== currentLocale) {
                   return (
-                      <a href={"/" + locales[name]} key={name + "locale"}>{name}</a>
+                      <a href={locale_urls[name]} key={name + "locale"}>{name}</a>
                   );
               }
           })}

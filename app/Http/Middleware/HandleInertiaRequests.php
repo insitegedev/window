@@ -46,14 +46,26 @@ class HandleInertiaRequests extends Middleware
         $locales = config("translatable.locales");
         $currentLocale = App::getLocale();
         $currentRoute = url()->current();
-
+        $locale_urls = $this->locale_urls();
 
         return array_merge(parent::share($request), [
             "localizations" => $trans->loadTranslations("ge", "client"),
             "locales" => $locales,
             "currentLocale" => $currentLocale,
-            "pathname" => $currentRoute
+            "pathname" => $currentRoute,
+            "locale_urls" => $locale_urls
         ]);
+    }
+
+    protected function locale_urls()
+    {
+        $locales = config("translatable.locales");
+        $routes = [];
+        foreach ($locales as $key => $val)
+        {
+         $routes[$key] = get_url($val);
+        }
+        return $routes;
     }
 
     protected function settings()

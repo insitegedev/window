@@ -3151,9 +3151,8 @@ __webpack_require__.r(__webpack_exports__);
 var Languages = function Languages() {
   var _usePage$props = (0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__.usePage)().props,
       locales = _usePage$props.locales,
-      currentLocale = _usePage$props.currentLocale;
-  console.log(currentLocale); // console.log("ff");
-
+      currentLocale = _usePage$props.currentLocale,
+      locale_urls = _usePage$props.locale_urls;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "languages"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -3161,7 +3160,7 @@ var Languages = function Languages() {
   }, Object.keys(locales).map(function (name, index) {
     if (locales[name] === currentLocale) {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
-        href: "/" + locales[name],
+        href: locales[name],
         key: name + "locale"
       }, name);
     }
@@ -3170,7 +3169,7 @@ var Languages = function Languages() {
   }, Object.keys(locales).map(function (name, index) {
     if (locales[name] !== currentLocale) {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
-        href: "/" + locales[name],
+        href: locale_urls[name],
         key: name + "locale"
       }, name);
     }
