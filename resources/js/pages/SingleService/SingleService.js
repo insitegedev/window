@@ -9,9 +9,9 @@ import DragSlide from "./DragSlide/DragSlide";
 import { NextServiceBox } from "../../components/NextServiceBox/NextServiceBox";
 import Layout from "../../Layouts/Layout";
 
-const SingleService = () => {
+const SingleService = ({service, nextService}) => {
   const sliderImages = ["/img/services/1.png", "/img/services/2.png", "/img/services/3.png", "/img/services/4.png", "/img/services/1.png", "/img/services/2.png", "/img/services/3.png", "/img/services/4.png"];
-
+console.log(nextService);
   return (
       <Layout>
           <div className="singleService servicePage">
@@ -21,74 +21,40 @@ const SingleService = () => {
               <div className="wrapper">
                   <div className="flex main one">
                       <div className="img" data-aos="fade-right">
-                          <img src="/img/services/3.png" alt="" />
+                          { service.main_file_1 &&
+                              <img src={"/" + service.main_file_1.path+ "/" + service.main_file_1.title} alt=""/>
+                          }
                       </div>
                       <div className="content">
                           <img className="icon" src="/img/icons/home/spa.svg" alt="" />
-                          <div className="playfair">Spa & Aesthetics Center</div>
+                          <div className="playfair">{service.title}</div>
                           <div className="subtitle">
-                              “Sometimes the most productive thing you can do is relax
+                              {service.subtitle_1}
                           </div>
-                          <p>
-                              Each piece in the MooM’s collections holds a unique message and
-                              style to be considered by the viewer, offering a historical
-                              reference to the diversity of art within the present time.This is
-                              truly a growing tribute to the talent and creativity we find in.
-                          </p>
-                          <p>
-                              The role that curators play, like the art they care for, is
-                              constantly evolving. As culture shifts, moving with changes in the
-                              social and political landscape or technological innovations so
-                              does the art being produced
-                          </p>
-                          <p>
-                              Each piece in the MooM’s collections holds a unique message and
-                              style to be considered by the viewer, offering a historical
-                              reference to the diversity of art within the present time.This is
-                              truly a growing tribute to the talent and creativity we find in.
-                          </p>
-                          <p>
-                              The role that curators play, like the art they care for, is
-                              constantly evolving. As culture shifts, moving with changes in the
-                              social and political landscape or technological innovations so
-                              does the art being produced
+                          <p dangerouslySetInnerHTML={{__html: service.content_1}}>
                           </p>
                       </div>
                   </div>
                   <div className="flex main two">
                       <div className="content">
                           <div className="subtitle">
-                              “Sometimes the most productive thing you can do is relax
+                              {service.subtitle_2}
                           </div>
-                          <p>
-                              Each piece in the MooM’s collections holds a unique message and
-                              style to be considered by the viewer, offering a historical
-                              reference to the diversity of art within the present time.This is
-                              truly a growing tribute to the talent and creativity we find in.
-                          </p>
-                          <p>
-                              The role that curators play, like the art they care for, is
-                              constantly evolving. As culture shifts, moving with changes in the
-                              social and political landscape or technological innovations so
-                              does the art being produced
-                          </p>
-                          <p>
-                              Each piece in the MooM’s collections holds a unique message and
-                              style to be considered by the viewer, offering a historical
-                              reference to the diversity of art within the present time.This is
-                              truly a growing tribute to the talent and creativity we find in.
+                          <p dangerouslySetInnerHTML={{__html: service.content_2}}>
                           </p>
                       </div>
                       <div className="img" data-aos="fade-left">
-                          <img src="/img/services/4.png" alt="" />
+                          {service.main_file_1 &&
+                          <img src={"/" + service.main_file_2.path + "/" + service.main_file_2.title} alt=""/>
+                          }
                       </div>
                   </div>
               </div>
-              <DragSlide sliderData={sliderImages} />
+              <DragSlide sliderData={service.files} />
               <NextServiceBox
-                  link="/"
-                  background="/img/services/2.png"
-                  title="Café / Restaurant"
+                  link={route('client.service.show', nextService.id)}
+                  background={nextService.main_file_1 ? "/"+nextService.main_file_1.path+"/"+nextService.main_file_1.title : "/img/services/2.png"}
+                  title={nextService.title}
                   icon="/img/icons/home/coffee-cup.svg"
               />
           </div>

@@ -17,9 +17,23 @@ class ServiceController extends Controller
 {
     public function index() {
         $page = Page::where('key', 'service')->firstOrFail();
-        $services = Service::where('status',true)->with(['file','translations'])->get();
+        $services = Service::where('status',true)->with(['mainFile_1','translations'])->get();
+//        dd($services);
 
-        return Inertia::render("Services/Services");
+        return Inertia::render("Services/Services", ["services"=> $services]);
+        return view('client.pages.service.index', [
+            'services' => $services,
+            'page' => $page
+        ]);
+    }
+
+    public function show(string $locale, $id) {
+        $page = Page::where('key', 'service')->firstOrFail();
+        $service = Service::where('status', 1)->where("id", $id)->with(['files','mainFile_1','mainFile_2','translations'])->firstOrFail();
+        $nextService = Service::where("status", 1)->with(['mainFile_1','translations'])->inRandomOrder()->first();
+//        dd(Service::inRandomOrder()->first());
+
+        return Inertia::render("SingleService/SingleService", ["service"=> $service, "nextService" => $nextService]);
         return view('client.pages.service.index', [
             'services' => $services,
             'page' => $page

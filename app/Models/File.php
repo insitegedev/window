@@ -31,7 +31,8 @@ class File extends Model
     use HasFactory,softDeletes;
 
     public const FILE_DEFAULT = 1;
-    public const FILE_MAIN = 2;
+    public const FILE_MAIN_1 = 2;
+    public const FILE_MAIN_2 = 3;
 
     /**
      * The table associated with the model.

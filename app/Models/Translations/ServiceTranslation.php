@@ -20,6 +20,10 @@ class ServiceTranslation extends BaseTranslationModel
      */
     protected $fillable = [
         'title',
+        "subtitle_1",
+        "subtitle_2",
+        "content_1",
+        "content_2",
         'description',
     ];
 }

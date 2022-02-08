@@ -3886,15 +3886,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var _components_Buttons_Buttons__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/Buttons/Buttons */ "./resources/js/components/Buttons/Buttons.js");
 /* harmony import */ var _components_Showcase_Showcase__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/Showcase/Showcase */ "./resources/js/components/Showcase/Showcase.js");
-/* harmony import */ var _Services_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Services.css */ "./resources/js/Pages/Services/Services.css");
-/* harmony import */ var _Layouts_Layout__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../Layouts/Layout */ "./resources/js/Layouts/Layout.js");
+/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
+/* harmony import */ var _Services_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Services.css */ "./resources/js/Pages/Services/Services.css");
+/* harmony import */ var _Layouts_Layout__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../Layouts/Layout */ "./resources/js/Layouts/Layout.js");
 
 
 
 
 
 
-var Services = function Services() {
+
+var Services = function Services(_ref) {
+  var services = _ref.services;
+  console.log(services);
+  console.log(route('client.service.show', 1));
   var serviceBoxes = [{
     icon: "/img/icons/home/bell.svg",
     title: "Recipient / Reception",
@@ -3920,7 +3925,7 @@ var Services = function Services() {
     title: "Rental And Hotel Services",
     para: "The infrastructure of the complex includes: reception / reception, spa, parking, green yard with children's playground and yard infrastructure, cafe-restaurant"
   }];
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Layouts_Layout__WEBPACK_IMPORTED_MODULE_4__.default, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Layouts_Layout__WEBPACK_IMPORTED_MODULE_5__.default, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "servicePage"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Showcase_Showcase__WEBPACK_IMPORTED_MODULE_2__.default, {
     title: "Services"
@@ -3936,7 +3941,7 @@ var Services = function Services() {
     className: "playfair"
   }, "Services You Have When Living In Window Bakuriani"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "flex first"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  }, services.length > 0 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "spabox flex centered",
     "data-aos": "fade-up"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -3947,13 +3952,36 @@ var Services = function Services() {
     className: "icon"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "playfair"
-  }, "Spa & Aesthetics Center"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "\u201CSometimes the most productive thing you can do is relax"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Buttons_Buttons__WEBPACK_IMPORTED_MODULE_1__.MainButton, {
-    link: "/single-service",
+  }, services[0].title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+    dangerouslySetInnerHTML: {
+      __html: services[0].description
+    }
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Buttons_Buttons__WEBPACK_IMPORTED_MODULE_1__.MainButton, {
+    link: route('client.service.show', services[0].id),
     dark: true,
     text: "learn more"
-  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  }))), services.length > 1 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "side_boxes"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  }, services.map(function (service) {
+    console.log(service.main_file_1);
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      className: "sidebox sb1 flex",
+      style: {
+        background: "url(".concat(service.main_file_1 ? "/" + service.main_file_1.path + "/" + service.main_file_1.title : "/img/services/2.png", ")")
+      },
+      "data-aos": "flip-right"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      className: "service_title"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+      src: "/img/icons/home/coffee-cup.svg",
+      alt: "",
+      className: "icon"
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, "Caf\xE9 / Restaurant")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Buttons_Buttons__WEBPACK_IMPORTED_MODULE_1__.MainButton, {
+      link: route('client.service.show', service.id),
+      dark: true,
+      text: "learn more"
+    }));
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "sidebox sb1 flex",
     "data-aos": "flip-right"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -3973,7 +4001,7 @@ var Services = function Services() {
     link: "/about-us",
     dark: true,
     text: "more about us"
-  })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  }))), "                  "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "other_services"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "head"
@@ -4052,11 +4080,11 @@ var DragSlide = function DragSlide(_ref) {
   };
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_slick__WEBPACK_IMPORTED_MODULE_1__.default, _extends({}, settings, {
     className: "service_slider"
-  }), sliderData.map(function (item) {
+  }), sliderData && sliderData.map(function (item) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
       className: "img"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-      src: item,
+      src: "/" + item.path + "/" + item.title,
       alt: ""
     }));
   }));
@@ -4096,8 +4124,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var SingleService = function SingleService() {
+var SingleService = function SingleService(_ref) {
+  var service = _ref.service,
+      nextService = _ref.nextService;
   var sliderImages = ["/img/services/1.png", "/img/services/2.png", "/img/services/3.png", "/img/services/4.png", "/img/services/1.png", "/img/services/2.png", "/img/services/3.png", "/img/services/4.png"];
+  console.log(nextService);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Layouts_Layout__WEBPACK_IMPORTED_MODULE_8__.default, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "singleService servicePage"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Showcase_Showcase__WEBPACK_IMPORTED_MODULE_2__.default, {
@@ -4116,8 +4147,8 @@ var SingleService = function SingleService() {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "img",
     "data-aos": "fade-right"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-    src: "/img/services/3.png",
+  }, service.main_file_1 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: "/" + service.main_file_1.path + "/" + service.main_file_1.title,
     alt: ""
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "content"
@@ -4127,26 +4158,34 @@ var SingleService = function SingleService() {
     alt: ""
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "playfair"
-  }, "Spa & Aesthetics Center"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  }, service.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "subtitle"
-  }, "\u201CSometimes the most productive thing you can do is relax"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Each piece in the MooM\u2019s collections holds a unique message and style to be considered by the viewer, offering a historical reference to the diversity of art within the present time.This is truly a growing tribute to the talent and creativity we find in."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "The role that curators play, like the art they care for, is constantly evolving. As culture shifts, moving with changes in the social and political landscape or technological innovations so does the art being produced"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Each piece in the MooM\u2019s collections holds a unique message and style to be considered by the viewer, offering a historical reference to the diversity of art within the present time.This is truly a growing tribute to the talent and creativity we find in."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "The role that curators play, like the art they care for, is constantly evolving. As culture shifts, moving with changes in the social and political landscape or technological innovations so does the art being produced"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  }, service.subtitle_1), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+    dangerouslySetInnerHTML: {
+      __html: service.content_1
+    }
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "flex main two"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "content"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "subtitle"
-  }, "\u201CSometimes the most productive thing you can do is relax"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Each piece in the MooM\u2019s collections holds a unique message and style to be considered by the viewer, offering a historical reference to the diversity of art within the present time.This is truly a growing tribute to the talent and creativity we find in."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "The role that curators play, like the art they care for, is constantly evolving. As culture shifts, moving with changes in the social and political landscape or technological innovations so does the art being produced"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Each piece in the MooM\u2019s collections holds a unique message and style to be considered by the viewer, offering a historical reference to the diversity of art within the present time.This is truly a growing tribute to the talent and creativity we find in.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  }, service.subtitle_2), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+    dangerouslySetInnerHTML: {
+      __html: service.content_2
+    }
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "img",
     "data-aos": "fade-left"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-    src: "/img/services/4.png",
+  }, service.main_file_1 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: "/" + service.main_file_2.path + "/" + service.main_file_2.title,
     alt: ""
   })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_DragSlide_DragSlide__WEBPACK_IMPORTED_MODULE_6__.default, {
-    sliderData: sliderImages
+    sliderData: service.files
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_NextServiceBox_NextServiceBox__WEBPACK_IMPORTED_MODULE_7__.NextServiceBox, {
-    link: "/",
-    background: "/img/services/2.png",
-    title: "Caf\xE9 / Restaurant",
+    link: route('client.service.show', nextService.id),
+    background: nextService.main_file_1 ? "/" + nextService.main_file_1.path + "/" + nextService.main_file_1.title : "/img/services/2.png",
+    title: nextService.title,
     icon: "/img/icons/home/coffee-cup.svg"
   })));
 };
@@ -4602,15 +4641,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var _components_Buttons_Buttons__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/Buttons/Buttons */ "./resources/js/components/Buttons/Buttons.js");
 /* harmony import */ var _components_Showcase_Showcase__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/Showcase/Showcase */ "./resources/js/components/Showcase/Showcase.js");
-/* harmony import */ var _Services_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Services.css */ "./resources/js/pages/Services/Services.css");
-/* harmony import */ var _Layouts_Layout__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../Layouts/Layout */ "./resources/js/Layouts/Layout.js");
+/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
+/* harmony import */ var _Services_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Services.css */ "./resources/js/pages/Services/Services.css");
+/* harmony import */ var _Layouts_Layout__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../Layouts/Layout */ "./resources/js/Layouts/Layout.js");
 
 
 
 
 
 
-var Services = function Services() {
+
+var Services = function Services(_ref) {
+  var services = _ref.services;
+  console.log(services);
+  console.log(route('client.service.show', 1));
   var serviceBoxes = [{
     icon: "/img/icons/home/bell.svg",
     title: "Recipient / Reception",
@@ -4636,7 +4680,7 @@ var Services = function Services() {
     title: "Rental And Hotel Services",
     para: "The infrastructure of the complex includes: reception / reception, spa, parking, green yard with children's playground and yard infrastructure, cafe-restaurant"
   }];
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Layouts_Layout__WEBPACK_IMPORTED_MODULE_4__.default, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Layouts_Layout__WEBPACK_IMPORTED_MODULE_5__.default, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "servicePage"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Showcase_Showcase__WEBPACK_IMPORTED_MODULE_2__.default, {
     title: "Services"
@@ -4652,7 +4696,7 @@ var Services = function Services() {
     className: "playfair"
   }, "Services You Have When Living In Window Bakuriani"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "flex first"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  }, services.length > 0 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "spabox flex centered",
     "data-aos": "fade-up"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -4663,13 +4707,36 @@ var Services = function Services() {
     className: "icon"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "playfair"
-  }, "Spa & Aesthetics Center"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "\u201CSometimes the most productive thing you can do is relax"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Buttons_Buttons__WEBPACK_IMPORTED_MODULE_1__.MainButton, {
-    link: "/single-service",
+  }, services[0].title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+    dangerouslySetInnerHTML: {
+      __html: services[0].description
+    }
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Buttons_Buttons__WEBPACK_IMPORTED_MODULE_1__.MainButton, {
+    link: route('client.service.show', services[0].id),
     dark: true,
     text: "learn more"
-  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  }))), services.length > 1 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "side_boxes"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  }, services.map(function (service) {
+    console.log(service.main_file_1);
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      className: "sidebox sb1 flex",
+      style: {
+        background: "url(".concat(service.main_file_1 ? "/" + service.main_file_1.path + "/" + service.main_file_1.title : "/img/services/2.png", ")")
+      },
+      "data-aos": "flip-right"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      className: "service_title"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+      src: "/img/icons/home/coffee-cup.svg",
+      alt: "",
+      className: "icon"
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, "Caf\xE9 / Restaurant")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Buttons_Buttons__WEBPACK_IMPORTED_MODULE_1__.MainButton, {
+      link: route('client.service.show', service.id),
+      dark: true,
+      text: "learn more"
+    }));
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "sidebox sb1 flex",
     "data-aos": "flip-right"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -4689,7 +4756,7 @@ var Services = function Services() {
     link: "/about-us",
     dark: true,
     text: "more about us"
-  })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  }))), "                  "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "other_services"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "head"

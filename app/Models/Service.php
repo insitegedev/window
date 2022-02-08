@@ -77,6 +77,10 @@ class Service extends Model
     /** @var array */
     public $translatedAttributes = [
         'title',
+        "subtitle_1",
+        "subtitle_2",
+        "content_1",
+        "content_2",
         'description',
     ];
 
@@ -100,19 +104,22 @@ class Service extends Model
     }
 
 
-    /**
-     * @return MorphMany
-     */
     public function files(): MorphMany
     {
-        return $this->morphMany(File::class, 'fileable');
+        return $this->morphMany(File::class, 'fileable')->where(['type' => File::FILE_DEFAULT]);
     }
 
-    /**
-     * @return MorphOne
-     */
     public function file(): MorphOne
     {
-        return $this->morphOne(File::class, 'fileable');
+        return $this->morphOne(File::class, 'fileable')->where(['type' => File::FILE_DEFAULT]);
+    }
+
+    public function mainFile_1(): MorphOne
+    {
+        return $this->morphOne(File::class, 'fileable')->where(['type' => File::FILE_MAIN_1]);
+    }
+    public function mainFile_2(): MorphOne
+    {
+        return $this->morphOne(File::class, 'fileable')->where(['type' => File::FILE_MAIN_2]);
     }
 }

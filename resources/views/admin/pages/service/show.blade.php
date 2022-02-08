@@ -83,6 +83,22 @@
                                         <td>{{$service->translate($locale)->title ?? ''}}</td>
                                     </tr>
                                     <tr>
+                                        <td>@lang('admin.subtitle_1'):</td>
+                                        <td>{{$service->translate($locale)->subtitle_1 ?? ''}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>@lang('admin.subtitle_2'):</td>
+                                        <td>{{$service->translate($locale)->subtitle_2 ?? ''}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>@lang('admin.content_1'):</td>
+                                        <td>{{$service->translate($locale)->content_1 ?? ''}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>@lang('admin.content_2'):</td>
+                                        <td>{{$service->translate($locale)->content_2 ?? ''}}</td>
+                                    </tr>
+                                    <tr>
                                         <td>@lang('admin.description'):</td>
                                         <td>{{$service->translate($locale)->description ?? ''}}</td>
                                     </tr>
@@ -101,6 +117,28 @@
                 <div class="popup-gallery">
                     <div class="gallery-sizer"></div>
                     <div class="row">
+                        @if($service->mainFile_1)
+                            <div class="col s12 m6 l4 xl2">
+                                <div>
+                                    <a href="{{asset($service->mainFile_1->path.'/'.$service->mainFile_1->title)}}" target="_blank"
+                                       title="$file->title">
+                                        <img src="{{asset($service->mainFile_1->path.'/'.$service->mainFile_1->title)}}" class="responsive-img mb-10"
+                                             alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        @endif
+                            @if($service->mainFile_2)
+                                <div class="col s12 m6 l4 xl2">
+                                    <div>
+                                        <a href="{{asset($service->mainFile_2->path.'/'.$service->mainFile_2->title)}}" target="_blank"
+                                           title="$file->title">
+                                            <img src="{{asset($service->mainFile_2->path.'/'.$service->mainFile_2->title)}}" class="responsive-img mb-10"
+                                                 alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            @endif
                         @foreach($service->files as $file)
                             <div class="col s12 m6 l4 xl2">
                                 <div>

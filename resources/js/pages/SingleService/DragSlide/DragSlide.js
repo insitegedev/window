@@ -33,10 +33,11 @@ const DragSlide = ({ sliderData }) => {
   };
   return (
     <Slider {...settings} className="service_slider">
-      {sliderData.map((item) => {
+      {sliderData &&
+          sliderData.map((item) => {
         return (
           <div className="img">
-            <img src={item} alt="" />
+            <img src={"/"+item.path+"/"+item.title} alt="" />
           </div>
         );
       })}

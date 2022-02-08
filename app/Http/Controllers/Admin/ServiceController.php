@@ -85,8 +85,8 @@ class ServiceController extends Controller
         $service = $this->serviceRepository->create($saveData);
 
         // Save Files
-        if ($request->hasFile('images')) {
-            $service = $this->serviceRepository->saveFiles($service->id, $request);
+        if ($request->hasFile('images') || $request->hasFile('main-image')) {
+            $service = $this->serviceRepository->saveFile($service->id, $request);
         }
 
         return redirect(locale_route('service.show', $service->id))->with('success', __('admin.create_successfully'));
@@ -143,9 +143,9 @@ class ServiceController extends Controller
         $this->serviceRepository->update($service->id,$saveData);
 
         // Save Files
-        if ($request->hasFile('images')) {
-            $this->serviceRepository->saveFiles($service->id, $request);
-        }
+//        if ($request->hasFile('images')) {
+            $this->serviceRepository->saveFile($service->id, $request);
+//        }
 
 
         return redirect(locale_route('service.show', $service->id))->with('success', __('admin.update_successfully'));
