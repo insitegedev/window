@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Showcase from "../../components/Showcase/Showcase";
 import Img1 from "/img/about/1.png";
 import Img2 from "/img/about/2.png";
@@ -7,8 +7,13 @@ import "./AboutUs.css";
 import { ArrowButton, MainButton } from "../../components/Buttons/Buttons";
 import Facilities from "../Home/Facilities/Facilities";
 import Layout from "../../Layouts/Layout";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const AboutUs = () => {
+    useEffect(() => {
+        Aos.init({ duration: 2000 });
+    }, []);
     return (
         <Layout>
             <div className="aboutPage">

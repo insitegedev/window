@@ -4,6 +4,7 @@ import { useState } from "react";
 import { BackButton } from "../../components/Buttons/Buttons";
 import Showcase from "../../components/Showcase/Showcase";
 import Layout from "../../Layouts/Layout";
+import Background from "/img/apartments/bg.png";
 import "./ChooseFloor.css";
 
 const ChooseFloor = () => {
@@ -77,6 +78,7 @@ const ChooseFloor = () => {
     return (
         <Layout>
             <div className="chooseFloor">
+                <img className="background" src={Background} alt="" />
                 <Showcase short />
                 <BackButton color="#1B2D39" />
                 <div className="container">

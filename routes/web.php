@@ -93,6 +93,7 @@ Route::prefix('{locale?}')
             Route::get('/gallery', [\App\Http\Controllers\Client\GalleryController::class, 'index'])->name('client.gallery.index');
             Route::get('/doctors', [HomeController::class, 'doctors'])->name('client.doctors.index');
             Route::get('/choosefloor', [HomeController::class, 'choosefloor'])->name('client.choosefloor.index');
+            Route::get('/apartment', [HomeController::class, 'apartment'])->name('client.apartment.index');
 
 
             // Contact Page

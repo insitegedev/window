@@ -9,58 +9,105 @@ import DragSlide from "./DragSlide/DragSlide";
 import { NextServiceBox } from "../../components/NextServiceBox/NextServiceBox";
 import Layout from "../../Layouts/Layout";
 
-const SingleService = ({service, nextService}) => {
-  const sliderImages = ["/img/services/1.png", "/img/services/2.png", "/img/services/3.png", "/img/services/4.png", "/img/services/1.png", "/img/services/2.png", "/img/services/3.png", "/img/services/4.png"];
-console.log(nextService);
-  return (
-      <Layout>
-          <div className="singleService servicePage">
-              <Showcase short />
-              <BackButton color="#334E60" link="/services" />
-              <PagePath loc1="home" loc2="Services" loc3="Spa & Aesthetics Center" />
-              <div className="wrapper">
-                  <div className="flex main one">
-                      <div className="img" data-aos="fade-right">
-                          { service.main_file_1 &&
-                              <img src={"/" + service.main_file_1.path+ "/" + service.main_file_1.title} alt=""/>
-                          }
-                      </div>
-                      <div className="content">
-                          <img className="icon" src="/img/icons/home/spa.svg" alt="" />
-                          <div className="playfair">{service.title}</div>
-                          <div className="subtitle">
-                              {service.subtitle_1}
-                          </div>
-                          <p dangerouslySetInnerHTML={{__html: service.content_1}}>
-                          </p>
-                      </div>
-                  </div>
-                  <div className="flex main two">
-                      <div className="content">
-                          <div className="subtitle">
-                              {service.subtitle_2}
-                          </div>
-                          <p dangerouslySetInnerHTML={{__html: service.content_2}}>
-                          </p>
-                      </div>
-                      <div className="img" data-aos="fade-left">
-                          {service.main_file_1 &&
-                          <img src={"/" + service.main_file_2.path + "/" + service.main_file_2.title} alt=""/>
-                          }
-                      </div>
-                  </div>
-              </div>
-              <DragSlide sliderData={service.files} />
-              <NextServiceBox
-                  link={route('client.service.show', nextService.id)}
-                  background={nextService.main_file_1 ? "/"+nextService.main_file_1.path+"/"+nextService.main_file_1.title : "/img/services/2.png"}
-                  title={nextService.title}
-                  icon="/img/icons/home/coffee-cup.svg"
-              />
-          </div>
+import Aos from "aos";
+import "aos/dist/aos.css";
 
-      </Layout>
-  );
+const SingleService = ({ service, nextService }) => {
+    const sliderImages = [
+        "/img/services/1.png",
+        "/img/services/2.png",
+        "/img/services/3.png",
+        "/img/services/4.png",
+        "/img/services/1.png",
+        "/img/services/2.png",
+        "/img/services/3.png",
+        "/img/services/4.png",
+    ];
+    console.log(nextService);
+    useEffect(() => {
+        Aos.init({ duration: 2000 });
+    }, []);
+    return (
+        <Layout>
+            <div className="singleService servicePage">
+                <Showcase short />
+                <BackButton color="#334E60" link="/services" />
+                <PagePath
+                    loc1="home"
+                    loc2="Services"
+                    loc3="Spa & Aesthetics Center"
+                />
+                <div className="wrapper">
+                    <div className="flex main one">
+                        <div className="img" data-aos="fade-right">
+                            {service.main_file_1 && (
+                                <img
+                                    src={
+                                        "/" +
+                                        service.main_file_1.path +
+                                        "/" +
+                                        service.main_file_1.title
+                                    }
+                                    alt=""
+                                />
+                            )}
+                        </div>
+                        <div className="content">
+                            <img
+                                className="icon"
+                                src="/img/icons/home/spa.svg"
+                                alt=""
+                            />
+                            <div className="playfair">{service.title}</div>
+                            <div className="subtitle">{service.subtitle_1}</div>
+                            <p
+                                dangerouslySetInnerHTML={{
+                                    __html: service.content_1,
+                                }}
+                            ></p>
+                        </div>
+                    </div>
+                    <div className="flex main two">
+                        <div className="content">
+                            <div className="subtitle">{service.subtitle_2}</div>
+                            <p
+                                dangerouslySetInnerHTML={{
+                                    __html: service.content_2,
+                                }}
+                            ></p>
+                        </div>
+                        <div className="img" data-aos="fade-left">
+                            {service.main_file_1 && (
+                                <img
+                                    src={
+                                        "/" +
+                                        service.main_file_2.path +
+                                        "/" +
+                                        service.main_file_2.title
+                                    }
+                                    alt=""
+                                />
+                            )}
+                        </div>
+                    </div>
+                </div>
+                <DragSlide sliderData={service.files} />
+                <NextServiceBox
+                    link={route("client.service.show", nextService.id)}
+                    background={
+                        nextService.main_file_1
+                            ? "/" +
+                              nextService.main_file_1.path +
+                              "/" +
+                              nextService.main_file_1.title
+                            : "/img/services/2.png"
+                    }
+                    title={nextService.title}
+                    icon="/img/icons/home/coffee-cup.svg"
+                />
+            </div>
+        </Layout>
+    );
 };
 
 export default SingleService;

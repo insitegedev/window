@@ -3368,6 +3368,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Buttons_Buttons__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../components/Buttons/Buttons */ "./resources/js/components/Buttons/Buttons.js");
 /* harmony import */ var _Home_Facilities_Facilities__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../Home/Facilities/Facilities */ "./resources/js/Pages/Home/Facilities/Facilities.js");
 /* harmony import */ var _Layouts_Layout__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../Layouts/Layout */ "./resources/js/Layouts/Layout.js");
+/* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! aos */ "./node_modules/aos/dist/aos.js");
+/* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(aos__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var aos_dist_aos_css__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! aos/dist/aos.css */ "./node_modules/aos/dist/aos.css");
+
+
 
 
 
@@ -3379,6 +3384,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var AboutUs = function AboutUs() {
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    aos__WEBPACK_IMPORTED_MODULE_9___default().init({
+      duration: 2000
+    });
+  }, []);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Layouts_Layout__WEBPACK_IMPORTED_MODULE_8__.default, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "aboutPage"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Buttons_Buttons__WEBPACK_IMPORTED_MODULE_6__.ArrowButton, {
@@ -3454,6 +3464,84 @@ var AboutUs = function AboutUs() {
 
 /***/ }),
 
+/***/ "./resources/js/Pages/Apartment/Apartment.js":
+/*!***************************************************!*\
+  !*** ./resources/js/Pages/Apartment/Apartment.js ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _components_Buttons_Buttons__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/Buttons/Buttons */ "./resources/js/components/Buttons/Buttons.js");
+/* harmony import */ var _Components_ContactInfo_ContactInfo__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../Components/ContactInfo/ContactInfo */ "./resources/js/Components/ContactInfo/ContactInfo.js");
+/* harmony import */ var _components_PagePath_PagePath__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/PagePath/PagePath */ "./resources/js/components/PagePath/PagePath.js");
+/* harmony import */ var _components_Showcase_Showcase__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../components/Showcase/Showcase */ "./resources/js/components/Showcase/Showcase.js");
+/* harmony import */ var _Layouts_Layout__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../Layouts/Layout */ "./resources/js/Layouts/Layout.js");
+/* harmony import */ var _img_apartments_1_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../img/apartments/1.png */ "./public/img/apartments/1.png");
+/* harmony import */ var _Apartment_css__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Apartment.css */ "./resources/js/Pages/Apartment/Apartment.css");
+/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
+/* harmony import */ var _img_icons_apartment_file_svg__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../img/icons/apartment/file.svg */ "./public/img/icons/apartment/file.svg");
+
+
+
+
+
+
+
+
+
+
+
+var Apartment = function Apartment() {
+  var specifications = ["Hall - 6.3 m", "Bathroom - 4.4 m", "living room - 12.7 m", "Master bedroom - 14.8 m", "Bedroom - 8.5 m", "Balcony - 4.5 m"];
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Layouts_Layout__WEBPACK_IMPORTED_MODULE_5__.default, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "apartmentPage"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Showcase_Showcase__WEBPACK_IMPORTED_MODULE_4__.default, {
+    "short": true
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Buttons_Buttons__WEBPACK_IMPORTED_MODULE_1__.BackButton, {
+    color: "#334E60"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_PagePath_PagePath__WEBPACK_IMPORTED_MODULE_3__.PagePath, {
+    loc1: "home",
+    loc2: "Choose apartment",
+    loc3: "apartments"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "wrapper flex"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "details"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", {
+    className: "floor"
+  }, "Floor 4"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", {
+    className: "apartment"
+  }, "apartment 53"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "specifications"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h6", null, "Specifications"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ol", null, specifications.map(function (item, i) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, i + 1, ". ", item, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("sup", null, "2"));
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h6", null, "total area"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", {
+    className: "total_area"
+  }, "58.3 M", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("sup", null, "2")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_8__.Link, {
+    href: "/",
+    className: "flex centered pdf"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    src: _img_icons_apartment_file_svg__WEBPACK_IMPORTED_MODULE_9__.default,
+    alt: ""
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Download pdf"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    className: "apartment_img",
+    src: _img_apartments_1_png__WEBPACK_IMPORTED_MODULE_6__.default,
+    alt: ""
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Components_ContactInfo_ContactInfo__WEBPACK_IMPORTED_MODULE_2__.default, {
+    color: "#334E60",
+    right: true
+  }))));
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Apartment);
+
+/***/ }),
+
 /***/ "./resources/js/Pages/ChooseFloor/ChooseFloor.js":
 /*!*******************************************************!*\
   !*** ./resources/js/Pages/ChooseFloor/ChooseFloor.js ***!
@@ -3470,7 +3558,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Buttons_Buttons__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/Buttons/Buttons */ "./resources/js/components/Buttons/Buttons.js");
 /* harmony import */ var _components_Showcase_Showcase__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/Showcase/Showcase */ "./resources/js/components/Showcase/Showcase.js");
 /* harmony import */ var _Layouts_Layout__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../Layouts/Layout */ "./resources/js/Layouts/Layout.js");
-/* harmony import */ var _ChooseFloor_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./ChooseFloor.css */ "./resources/js/Pages/ChooseFloor/ChooseFloor.css");
+/* harmony import */ var _img_apartments_bg_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../img/apartments/bg.png */ "./public/img/apartments/bg.png");
+/* harmony import */ var _ChooseFloor_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./ChooseFloor.css */ "./resources/js/Pages/ChooseFloor/ChooseFloor.css");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -3482,6 +3571,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 function _iterableToArrayLimit(arr, i) { var _i = arr && (typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]); if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
 
 
 
@@ -3556,7 +3646,11 @@ var ChooseFloor = function ChooseFloor() {
   }];
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_Layouts_Layout__WEBPACK_IMPORTED_MODULE_4__.default, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
     className: "chooseFloor"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_components_Showcase_Showcase__WEBPACK_IMPORTED_MODULE_3__.default, {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("img", {
+    className: "background",
+    src: _img_apartments_bg_png__WEBPACK_IMPORTED_MODULE_5__.default,
+    alt: ""
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_components_Showcase_Showcase__WEBPACK_IMPORTED_MODULE_3__.default, {
     "short": true
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_components_Buttons_Buttons__WEBPACK_IMPORTED_MODULE_2__.BackButton, {
     color: "#1B2D39"
@@ -3645,6 +3739,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Contact_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Contact.css */ "./resources/js/Pages/Contact/Contact.css");
 /* harmony import */ var _components_Buttons_Buttons__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../components/Buttons/Buttons */ "./resources/js/components/Buttons/Buttons.js");
 /* harmony import */ var _Layouts_Layout__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../Layouts/Layout */ "./resources/js/Layouts/Layout.js");
+/* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! aos */ "./node_modules/aos/dist/aos.js");
+/* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(aos__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var aos_dist_aos_css__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! aos/dist/aos.css */ "./node_modules/aos/dist/aos.css");
+
+
 
 
 
@@ -3654,6 +3753,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var Contact = function Contact() {
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    aos__WEBPACK_IMPORTED_MODULE_7___default().init({
+      duration: 2000
+    });
+  }, []);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Layouts_Layout__WEBPACK_IMPORTED_MODULE_6__.default, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "contactPage"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Showcase_Showcase__WEBPACK_IMPORTED_MODULE_1__.default, {
@@ -3740,6 +3844,11 @@ var Gallery = function Gallery(_ref) {
       showPopup = _useState2[0],
       setShowPopup = _useState2[1];
 
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(),
+      _useState4 = _slicedToArray(_useState3, 2),
+      imgSrc = _useState4[0],
+      setImgsrc = _useState4[1];
+
   var galleryImages = ["/img/gallery/1.png", "/img/gallery/2.png", "/img/gallery/3.png", "/img/gallery/4.png", "/img/gallery/5.png", "/img/gallery/6.png", "/img/gallery/7.png", "/img/gallery/8.png", "/img/gallery/9.png", "/img/gallery/10.png", "/img/gallery/3.png", "/img/gallery/4.png", "/img/gallery/5.png", "/img/gallery/6.png", "/img/gallery/3.png"];
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Layouts_Layout__WEBPACK_IMPORTED_MODULE_8__.default, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "galleryPage"
@@ -3760,7 +3869,8 @@ var Gallery = function Gallery(_ref) {
       className: "img",
       key: i,
       onClick: function onClick() {
-        return setShowPopup(true);
+        setShowPopup(true);
+        setImgsrc("/".concat(img.file.path, "/").concat(img.file.title));
       },
       "data-aos": "zoom-in-up"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
@@ -3776,7 +3886,7 @@ var Gallery = function Gallery(_ref) {
       return setShowPopup(false);
     },
     showPopup: showPopup,
-    image: galleryImages[0]
+    image: imgSrc
   })));
 };
 
@@ -3904,6 +4014,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Buttons_Buttons__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../components/Buttons/Buttons */ "./resources/js/components/Buttons/Buttons.js");
 /* harmony import */ var _components_VideoPopup_VideoPopup__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../components/VideoPopup/VideoPopup */ "./resources/js/components/VideoPopup/VideoPopup.js");
 /* harmony import */ var _Layouts_Layout__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../Layouts/Layout */ "./resources/js/Layouts/Layout.js");
+/* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! aos */ "./node_modules/aos/dist/aos.js");
+/* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(aos__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var aos_dist_aos_css__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! aos/dist/aos.css */ "./node_modules/aos/dist/aos.css");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -3925,8 +4038,15 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
+
+
 var Home = function Home(_ref) {
   var sliders = _ref.sliders;
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    aos__WEBPACK_IMPORTED_MODULE_8___default().init({
+      duration: 2000
+    });
+  }, []);
 
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(0),
       _useState2 = _slicedToArray(_useState, 2),
@@ -4005,7 +4125,14 @@ var Home = function Home(_ref) {
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
       src: "/img/icons/home/play.svg",
       alt: ""
-    })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Facilities_Facilities__WEBPACK_IMPORTED_MODULE_3__.default, null)));
+    })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Facilities_Facilities__WEBPACK_IMPORTED_MODULE_3__.default, null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_VideoPopup_VideoPopup__WEBPACK_IMPORTED_MODULE_6__.VideoPopup // src='https://www.youtube.com/embed/zr4r3n5Smho'
+    , {
+      videoSrc: data.video,
+      showVideo: showVideo,
+      hideVideo: function hideVideo() {
+        return setShowVideo(false);
+      }
+    }));
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "flex centered controllers"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
@@ -4043,11 +4170,6 @@ var Home = function Home(_ref) {
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Buttons_Buttons__WEBPACK_IMPORTED_MODULE_5__.ArrowButton, {
     color: "#fff",
     link: "/"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_VideoPopup_VideoPopup__WEBPACK_IMPORTED_MODULE_6__.VideoPopup, {
-    showVideo: showVideo,
-    hideVideo: function hideVideo() {
-      return setShowVideo(false);
-    }
   })));
 };
 
@@ -4070,8 +4192,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Buttons_Buttons__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/Buttons/Buttons */ "./resources/js/components/Buttons/Buttons.js");
 /* harmony import */ var _components_Showcase_Showcase__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/Showcase/Showcase */ "./resources/js/components/Showcase/Showcase.js");
 /* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
-/* harmony import */ var _Services_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Services.css */ "./resources/js/Pages/Services/Services.css");
-/* harmony import */ var _Layouts_Layout__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../Layouts/Layout */ "./resources/js/Layouts/Layout.js");
+/* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! aos */ "./node_modules/aos/dist/aos.js");
+/* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(aos__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var aos_dist_aos_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! aos/dist/aos.css */ "./node_modules/aos/dist/aos.css");
+/* harmony import */ var _Services_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Services.css */ "./resources/js/Pages/Services/Services.css");
+/* harmony import */ var _Layouts_Layout__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../Layouts/Layout */ "./resources/js/Layouts/Layout.js");
+
+
 
 
 
@@ -4081,8 +4208,13 @@ __webpack_require__.r(__webpack_exports__);
 
 var Services = function Services(_ref) {
   var services = _ref.services;
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    aos__WEBPACK_IMPORTED_MODULE_4___default().init({
+      duration: 2000
+    });
+  }, []);
   console.log(services);
-  console.log(route('client.service.show', 1));
+  console.log(route("client.service.show", 1));
   var serviceBoxes = [{
     icon: "/img/icons/home/bell.svg",
     title: "Recipient / Reception",
@@ -4108,7 +4240,7 @@ var Services = function Services(_ref) {
     title: "Rental And Hotel Services",
     para: "The infrastructure of the complex includes: reception / reception, spa, parking, green yard with children's playground and yard infrastructure, cafe-restaurant"
   }];
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Layouts_Layout__WEBPACK_IMPORTED_MODULE_5__.default, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Layouts_Layout__WEBPACK_IMPORTED_MODULE_7__.default, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "servicePage"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Showcase_Showcase__WEBPACK_IMPORTED_MODULE_2__.default, {
     title: "Services"
@@ -4140,7 +4272,7 @@ var Services = function Services(_ref) {
       __html: services[0].description
     }
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Buttons_Buttons__WEBPACK_IMPORTED_MODULE_1__.MainButton, {
-    link: route('client.service.show', services[0].id),
+    link: route("client.service.show", services[0].id),
     dark: true,
     text: "learn more"
   }))), services.length > 1 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -4160,7 +4292,7 @@ var Services = function Services(_ref) {
       alt: "",
       className: "icon"
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, "Caf\xE9 / Restaurant")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Buttons_Buttons__WEBPACK_IMPORTED_MODULE_1__.MainButton, {
-      link: route('client.service.show', service.id),
+      link: route("client.service.show", service.id),
       dark: true,
       text: "learn more"
     }));
@@ -4184,7 +4316,7 @@ var Services = function Services(_ref) {
     link: "/about-us",
     dark: true,
     text: "more about us"
-  }))), "                  "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  }))), " "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "other_services"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "head"
@@ -4297,6 +4429,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _DragSlide_DragSlide__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./DragSlide/DragSlide */ "./resources/js/Pages/SingleService/DragSlide/DragSlide.js");
 /* harmony import */ var _components_NextServiceBox_NextServiceBox__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../components/NextServiceBox/NextServiceBox */ "./resources/js/components/NextServiceBox/NextServiceBox.js");
 /* harmony import */ var _Layouts_Layout__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../Layouts/Layout */ "./resources/js/Layouts/Layout.js");
+/* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! aos */ "./node_modules/aos/dist/aos.js");
+/* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(aos__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var aos_dist_aos_css__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! aos/dist/aos.css */ "./node_modules/aos/dist/aos.css");
+
+
 
 
 
@@ -4312,6 +4449,11 @@ var SingleService = function SingleService(_ref) {
       nextService = _ref.nextService;
   var sliderImages = ["/img/services/1.png", "/img/services/2.png", "/img/services/3.png", "/img/services/4.png", "/img/services/1.png", "/img/services/2.png", "/img/services/3.png", "/img/services/4.png"];
   console.log(nextService);
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    aos__WEBPACK_IMPORTED_MODULE_9___default().init({
+      duration: 2000
+    });
+  }, []);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Layouts_Layout__WEBPACK_IMPORTED_MODULE_8__.default, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "singleService servicePage"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Showcase_Showcase__WEBPACK_IMPORTED_MODULE_2__.default, {
@@ -4366,7 +4508,7 @@ var SingleService = function SingleService(_ref) {
   })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_DragSlide_DragSlide__WEBPACK_IMPORTED_MODULE_6__.default, {
     sliderData: service.files
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_NextServiceBox_NextServiceBox__WEBPACK_IMPORTED_MODULE_7__.NextServiceBox, {
-    link: route('client.service.show', nextService.id),
+    link: route("client.service.show", nextService.id),
     background: nextService.main_file_1 ? "/" + nextService.main_file_1.path + "/" + nextService.main_file_1.title : "/img/services/2.png",
     title: nextService.title,
     icon: "/img/icons/home/coffee-cup.svg"
@@ -4784,7 +4926,8 @@ __webpack_require__.r(__webpack_exports__);
 
 var VideoPopup = function VideoPopup(_ref) {
   var showVideo = _ref.showVideo,
-      hideVideo = _ref.hideVideo;
+      hideVideo = _ref.hideVideo,
+      videoSrc = _ref.videoSrc;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: showVideo ? "video_popup show" : "video_popup"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -4800,7 +4943,7 @@ var VideoPopup = function VideoPopup(_ref) {
     src: "/img/icons/home/x.svg",
     alt: ""
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("iframe", {
-    src: "https://www.youtube.com/embed/zr4r3n5Smho",
+    src: videoSrc,
     title: "YouTube video player",
     frameborder: "0",
     allow: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture",
@@ -4825,8 +4968,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Buttons_Buttons__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/Buttons/Buttons */ "./resources/js/components/Buttons/Buttons.js");
 /* harmony import */ var _components_Showcase_Showcase__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/Showcase/Showcase */ "./resources/js/components/Showcase/Showcase.js");
 /* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
-/* harmony import */ var _Services_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Services.css */ "./resources/js/pages/Services/Services.css");
-/* harmony import */ var _Layouts_Layout__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../Layouts/Layout */ "./resources/js/Layouts/Layout.js");
+/* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! aos */ "./node_modules/aos/dist/aos.js");
+/* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(aos__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var aos_dist_aos_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! aos/dist/aos.css */ "./node_modules/aos/dist/aos.css");
+/* harmony import */ var _Services_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Services.css */ "./resources/js/pages/Services/Services.css");
+/* harmony import */ var _Layouts_Layout__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../Layouts/Layout */ "./resources/js/Layouts/Layout.js");
+
+
 
 
 
@@ -4836,8 +4984,13 @@ __webpack_require__.r(__webpack_exports__);
 
 var Services = function Services(_ref) {
   var services = _ref.services;
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    aos__WEBPACK_IMPORTED_MODULE_4___default().init({
+      duration: 2000
+    });
+  }, []);
   console.log(services);
-  console.log(route('client.service.show', 1));
+  console.log(route("client.service.show", 1));
   var serviceBoxes = [{
     icon: "/img/icons/home/bell.svg",
     title: "Recipient / Reception",
@@ -4863,7 +5016,7 @@ var Services = function Services(_ref) {
     title: "Rental And Hotel Services",
     para: "The infrastructure of the complex includes: reception / reception, spa, parking, green yard with children's playground and yard infrastructure, cafe-restaurant"
   }];
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Layouts_Layout__WEBPACK_IMPORTED_MODULE_5__.default, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Layouts_Layout__WEBPACK_IMPORTED_MODULE_7__.default, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "servicePage"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Showcase_Showcase__WEBPACK_IMPORTED_MODULE_2__.default, {
     title: "Services"
@@ -4895,7 +5048,7 @@ var Services = function Services(_ref) {
       __html: services[0].description
     }
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Buttons_Buttons__WEBPACK_IMPORTED_MODULE_1__.MainButton, {
-    link: route('client.service.show', services[0].id),
+    link: route("client.service.show", services[0].id),
     dark: true,
     text: "learn more"
   }))), services.length > 1 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -4915,7 +5068,7 @@ var Services = function Services(_ref) {
       alt: "",
       className: "icon"
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, "Caf\xE9 / Restaurant")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Buttons_Buttons__WEBPACK_IMPORTED_MODULE_1__.MainButton, {
-      link: route('client.service.show', service.id),
+      link: route("client.service.show", service.id),
       dark: true,
       text: "learn more"
     }));
@@ -4939,7 +5092,7 @@ var Services = function Services(_ref) {
     link: "/about-us",
     dark: true,
     text: "more about us"
-  }))), "                  "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  }))), " "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "other_services"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "head"
@@ -5377,6 +5530,30 @@ ___CSS_LOADER_EXPORT___.push([module.id, ".aboutPage .flex.one {\r\n  padding: 1
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./resources/js/Pages/Apartment/Apartment.css":
+/*!**************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./resources/js/Pages/Apartment/Apartment.css ***!
+  \**************************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".apartmentPage .wrapper {\r\n    padding: 134px 0;\r\n    background: url(/img/general/line-bg.png);\r\n    background-position: center;\r\n    background-size: contain;\r\n    align-items: flex-end;\r\n}\r\n.apartmentPage .apartment_img {\r\n    margin: 0 30px;\r\n}\r\n.apartmentPage .details {\r\n    color: #334e60;\r\n}\r\n.apartmentPage .details .floor {\r\n    font-size: 46px;\r\n    margin-bottom: 4px;\r\n}\r\n.apartmentPage .details .apartment {\r\n    font-size: 28px;\r\n}\r\n.apartmentPage .details .specifications {\r\n    margin: 40px 0;\r\n}\r\n.apartmentPage .details h6 {\r\n    text-transform: uppercase;\r\n    font-size: 16px;\r\n    opacity: 0.5;\r\n    margin-bottom: 10px;\r\n}\r\n.apartmentPage .details .total_area {\r\n    font-size: 37px;\r\n}\r\n.apartmentPage .details .pdf {\r\n    justify-content: flex-start;\r\n    margin-top: 40px;\r\n}\r\n.apartmentPage .details .pdf p {\r\n    opacity: 0.5;\r\n    margin-left: 10px;\r\n    text-transform: uppercase;\r\n    font-weight: bold;\r\n}\r\n\r\n@media screen and (max-width: 1400px) {\r\n    .apartmentPage .apartment_img {\r\n        width: 60%;\r\n    }\r\n}\r\n@media screen and (max-width: 1100px) {\r\n    .apartmentPage .wrapper {\r\n        display: grid;\r\n        grid-template-columns: repeat(2, 1fr);\r\n        grid-gap: 30px;\r\n        align-items: flex-start;\r\n    }\r\n    .apartmentPage .apartment_img {\r\n        width: 100%;\r\n        grid-column: span 2;\r\n        grid-row: 1;\r\n        margin: 0;\r\n    }\r\n}\r\n@media screen and (max-width: 700px) {\r\n    .apartmentPage .details .floor {\r\n        font-size: 35px;\r\n        margin-bottom: 0px;\r\n    }\r\n    .apartmentPage .details .specifications {\r\n        margin: 21px 0;\r\n    }\r\n    .apartmentPage .details h6 {\r\n        margin-bottom: 7px;\r\n    }\r\n\r\n    .apartmentPage .details .specifications p {\r\n        font-size: 14px;\r\n    }\r\n    .apartmentPage .details .total_area {\r\n        font-size: 30px;\r\n    }\r\n    .apartmentPage .details .pdf {\r\n        margin-top: 19px;\r\n    }\r\n}\r\n@media screen and (max-width: 440px) {\r\n    .apartmentPage .wrapper {\r\n        grid-template-columns: 1fr;\r\n    }\r\n    .apartmentPage .apartment_img {\r\n        grid-column: 1;\r\n    }\r\n    .apartmentPage .details .floor {\r\n        font-size: 29px;\r\n    }\r\n    .apartmentPage .details .apartment {\r\n        font-size: 21px;\r\n    }\r\n    .apartmentPage .details .total_area {\r\n        font-size: 26px;\r\n    }\r\n}\r\n", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./resources/js/Pages/ChooseFloor/ChooseFloor.css":
 /*!******************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./resources/js/Pages/ChooseFloor/ChooseFloor.css ***!
@@ -5394,7 +5571,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".chooseFloor .container {\r\n    width: 1500px;\r\n    height: auto;\r\n    margin: 33px auto;\r\n    position: relative;\r\n}\r\n.chooseFloor .back_button {\r\n    flex-direction: column;\r\n}\r\n.chooseFloor .back_button .text {\r\n    opacity: 1;\r\n    margin-left: 0;\r\n    margin-top: 10px;\r\n}\r\n.chooseFloor .container svg {\r\n    width: 100%;\r\n    height: 100%;\r\n}\r\n.chooseFloor .container svg .st0 {\r\n    opacity: 0;\r\n    transition: 0.2s;\r\n    fill: #7bc2aa;\r\n}\r\n.chooseFloor .container svg a g {\r\n    position: relative;\r\n    width: -webkit-fit-content;\r\n    width: -moz-fit-content;\r\n    width: fit-content;\r\n    height: -webkit-fit-content;\r\n    height: -moz-fit-content;\r\n    height: fit-content;\r\n}\r\n.chooseFloor .container svg a:hover .st0 {\r\n    opacity: 0.6;\r\n}\r\n.chooseFloor .container a.hovered .st0 {\r\n    opacity: 0.6;\r\n}\r\n.chooseFloor .blocks {\r\n    position: absolute;\r\n    top: 0;\r\n    background-color: rgba(255, 255, 255, 0.6);\r\n    height: 100%;\r\n    width: 260px;\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: flex-end;\r\n    padding-bottom: 90px;\r\n    color: #1b2d39;\r\n}\r\n.chooseFloor .block_a {\r\n    left: 0;\r\n    align-items: flex-end;\r\n    padding-right: 30px;\r\n    text-align: right;\r\n}\r\n.chooseFloor .block_a h1 {\r\n    margin-top: 50px;\r\n}\r\n.chooseFloor .block_b {\r\n    right: 0;\r\n    align-items: flex-start;\r\n    padding-left: 30px;\r\n}\r\n.chooseFloor .block_b h1 {\r\n    margin-top: 150px;\r\n}\r\n.chooseFloor .blocks .line {\r\n    margin-bottom: 30px;\r\n    position: relative;\r\n    width: 100%;\r\n}\r\n.chooseFloor .blocks .line::after {\r\n    left: 0;\r\n    bottom: -10px;\r\n    height: 2px;\r\n    width: 100%;\r\n    background-color: #1b2d39;\r\n    transition: 0.4s;\r\n    transform: scaleX(0);\r\n}\r\n.chooseFloor .block_a .line::after {\r\n    transform-origin: left;\r\n}\r\n.chooseFloor .block_b .line::after {\r\n    transform-origin: right;\r\n}\r\n.chooseFloor .blocks .line h5 {\r\n    font-size: 20px;\r\n    transition: 0.4s;\r\n}\r\n.chooseFloor .blocks h1 {\r\n    font-size: 28px;\r\n}\r\n.chooseFloor .blocks .line p {\r\n    font-size: 13px;\r\n    line-height: 100%;\r\n    margin: 0 20px;\r\n    opacity: 0;\r\n    transition: 0.4s;\r\n}\r\n.chooseFloor .blocks .line:hover p,\r\n.chooseFloor .blocks .line.hovered p {\r\n    opacity: 1;\r\n}\r\n.chooseFloor .blocks .line:hover::after,\r\n.chooseFloor .blocks .line.hovered::after {\r\n    transform: scaleX(1);\r\n}\r\n.chooseFloor .blocks .line:hover h5,\r\n.chooseFloor .blocks .line.hovered h5 {\r\n    transform: scale(1.4);\r\n}\r\n\r\n@media screen and (max-width: 1800px) {\r\n    .chooseFloor .container {\r\n        margin-top: 120px;\r\n    }\r\n    .chooseFloor .back_button {\r\n        flex-direction: row;\r\n    }\r\n    .chooseFloor .back_button .text {\r\n        opacity: 1;\r\n        margin-top: 0;\r\n        margin-left: 10px;\r\n    }\r\n}\r\n@media screen and (max-width: 1550px) {\r\n    .chooseFloor .container {\r\n        width: 95%;\r\n    }\r\n    .chooseFloor .block_b h1 {\r\n        margin-top: 118px;\r\n    }\r\n    .chooseFloor .block_a h1 {\r\n        margin-top: 36px;\r\n    }\r\n    .chooseFloor .blocks {\r\n        width: 212px;\r\n    }\r\n    .chooseFloor .block_b {\r\n        padding-left: 15px;\r\n    }\r\n    .chooseFloor .block_a {\r\n        padding-right: 15px;\r\n    }\r\n}\r\n@media screen and (max-width: 1400px) {\r\n    .chooseFloor .blocks {\r\n        padding-bottom: 27px;\r\n    }\r\n    .chooseFloor .blocks h1 {\r\n        margin-top: 20px !important;\r\n        font-size: 23px;\r\n    }\r\n}\r\n@media screen and (max-width: 1150px) {\r\n    .chooseFloor .container {\r\n        margin-top: 96px;\r\n    }\r\n    .chooseFloor .blocks .line {\r\n        flex-direction: column;\r\n        margin-bottom: 17px;\r\n    }\r\n    .chooseFloor .block_a .line {\r\n        flex-direction: column-reverse;\r\n    }\r\n    .chooseFloor .blocks .line p {\r\n        text-align: center !important;\r\n    }\r\n    .chooseFloor .blocks {\r\n        width: 178px;\r\n    }\r\n}\r\n@media screen and (max-width: 1000px) {\r\n    .chooseFloor .blocks {\r\n        position: relative;\r\n        top: auto;\r\n        height: auto;\r\n        width: auto;\r\n        flex-direction: column-reverse;\r\n        align-items: center !important;\r\n    }\r\n    .chooseFloor .both_blocks {\r\n        display: flex;\r\n        align-items: flex-start;\r\n        justify-content: space-between;\r\n        margin-top: 40px;\r\n    }\r\n    .chooseFloor .block_b {\r\n        right: auto;\r\n        padding-left: 0;\r\n    }\r\n    .chooseFloor .block_a {\r\n        left: auto;\r\n        padding-right: 0;\r\n    }\r\n    .chooseFloor .blocks h1 {\r\n        margin-top: 0 !important;\r\n        font-size: 23px;\r\n        margin-bottom: 30px;\r\n    }\r\n    .chooseFloor .blocks .line p {\r\n        opacity: 1;\r\n    }\r\n}\r\n@media screen and (max-width: 500px) {\r\n    .chooseFloor .blocks {\r\n        align-items: flex-start !important;\r\n        text-align: left !important;\r\n    }\r\n    .chooseFloor .blocks .line {\r\n        align-items: flex-start;\r\n        margin-bottom: 20px;\r\n    }\r\n    .chooseFloor .blocks .line p {\r\n        text-align: left !important;\r\n        margin: 0;\r\n    }\r\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".chooseFloor .container {\r\n    width: 1500px;\r\n    height: auto;\r\n    margin: 33px auto;\r\n    position: relative;\r\n}\r\n.chooseFloor .background {\r\n    position: fixed;\r\n    left: 0;\r\n    top: 0;\r\n    z-index: -1;\r\n    height: 100vh;\r\n    width: 100vw;\r\n}\r\n.chooseFloor .back_button {\r\n    flex-direction: column;\r\n}\r\n.chooseFloor .back_button .text {\r\n    opacity: 1;\r\n    margin-left: 0;\r\n    margin-top: 10px;\r\n}\r\n.chooseFloor .container svg {\r\n    width: 100%;\r\n    height: 100%;\r\n}\r\n.chooseFloor .container svg .st0 {\r\n    opacity: 0;\r\n    transition: 0.2s;\r\n    fill: #7bc2aa;\r\n}\r\n.chooseFloor .container svg a g {\r\n    position: relative;\r\n    width: -webkit-fit-content;\r\n    width: -moz-fit-content;\r\n    width: fit-content;\r\n    height: -webkit-fit-content;\r\n    height: -moz-fit-content;\r\n    height: fit-content;\r\n}\r\n.chooseFloor .container svg a:hover .st0 {\r\n    opacity: 0.6;\r\n}\r\n.chooseFloor .container a.hovered .st0 {\r\n    opacity: 0.6;\r\n}\r\n.chooseFloor .blocks {\r\n    position: absolute;\r\n    top: 0;\r\n    background-color: rgba(255, 255, 255, 0.6);\r\n    height: 100%;\r\n    width: 260px;\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: flex-end;\r\n    padding-bottom: 90px;\r\n    color: #1b2d39;\r\n}\r\n.chooseFloor .block_a {\r\n    left: 0;\r\n    align-items: flex-end;\r\n    padding-right: 30px;\r\n    text-align: right;\r\n}\r\n.chooseFloor .block_a h1 {\r\n    margin-top: 50px;\r\n}\r\n.chooseFloor .block_b {\r\n    right: 0;\r\n    align-items: flex-start;\r\n    padding-left: 30px;\r\n}\r\n.chooseFloor .block_b h1 {\r\n    margin-top: 150px;\r\n}\r\n.chooseFloor .blocks .line {\r\n    margin-bottom: 30px;\r\n    position: relative;\r\n    width: 100%;\r\n}\r\n.chooseFloor .blocks .line::after {\r\n    left: 0;\r\n    bottom: -10px;\r\n    height: 2px;\r\n    width: 100%;\r\n    background-color: #1b2d39;\r\n    transition: 0.4s;\r\n    transform: scaleX(0);\r\n}\r\n.chooseFloor .block_a .line::after {\r\n    transform-origin: left;\r\n}\r\n.chooseFloor .block_b .line::after {\r\n    transform-origin: right;\r\n}\r\n.chooseFloor .blocks .line h5 {\r\n    font-size: 20px;\r\n    transition: 0.4s;\r\n}\r\n.chooseFloor .blocks h1 {\r\n    font-size: 28px;\r\n}\r\n.chooseFloor .blocks .line p {\r\n    font-size: 13px;\r\n    line-height: 100%;\r\n    margin: 0 20px;\r\n    opacity: 0;\r\n    transition: 0.4s;\r\n}\r\n.chooseFloor .blocks .line:hover p,\r\n.chooseFloor .blocks .line.hovered p {\r\n    opacity: 1;\r\n}\r\n.chooseFloor .blocks .line:hover::after,\r\n.chooseFloor .blocks .line.hovered::after {\r\n    transform: scaleX(1);\r\n}\r\n.chooseFloor .blocks .line:hover h5,\r\n.chooseFloor .blocks .line.hovered h5 {\r\n    transform: scale(1.4);\r\n}\r\n\r\n@media screen and (max-width: 1800px) {\r\n    .chooseFloor .container {\r\n        margin-top: 120px;\r\n    }\r\n    .chooseFloor .back_button {\r\n        flex-direction: row;\r\n    }\r\n    .chooseFloor .back_button .text {\r\n        opacity: 1;\r\n        margin-top: 0;\r\n        margin-left: 10px;\r\n    }\r\n}\r\n@media screen and (max-width: 1550px) {\r\n    .chooseFloor .container {\r\n        width: 95%;\r\n    }\r\n    .chooseFloor .block_b h1 {\r\n        margin-top: 118px;\r\n    }\r\n    .chooseFloor .block_a h1 {\r\n        margin-top: 36px;\r\n    }\r\n    .chooseFloor .blocks {\r\n        width: 212px;\r\n    }\r\n    .chooseFloor .block_b {\r\n        padding-left: 15px;\r\n    }\r\n    .chooseFloor .block_a {\r\n        padding-right: 15px;\r\n    }\r\n}\r\n@media screen and (max-width: 1400px) {\r\n    .chooseFloor .blocks {\r\n        padding-bottom: 27px;\r\n    }\r\n    .chooseFloor .blocks h1 {\r\n        margin-top: 20px !important;\r\n        font-size: 23px;\r\n    }\r\n}\r\n@media screen and (max-width: 1150px) {\r\n    .chooseFloor .container {\r\n        margin-top: 96px;\r\n    }\r\n    .chooseFloor .blocks .line {\r\n        flex-direction: column;\r\n        margin-bottom: 17px;\r\n    }\r\n    .chooseFloor .block_a .line {\r\n        flex-direction: column-reverse;\r\n    }\r\n    .chooseFloor .blocks .line p {\r\n        text-align: center !important;\r\n    }\r\n    .chooseFloor .blocks {\r\n        width: 178px;\r\n    }\r\n}\r\n@media screen and (max-width: 1000px) {\r\n    .chooseFloor .blocks {\r\n        position: relative;\r\n        top: auto;\r\n        height: auto;\r\n        width: auto;\r\n        flex-direction: column-reverse;\r\n        align-items: center !important;\r\n    }\r\n    .chooseFloor .both_blocks {\r\n        display: flex;\r\n        align-items: flex-start;\r\n        justify-content: space-between;\r\n        margin-top: 40px;\r\n    }\r\n    .chooseFloor .block_b {\r\n        right: auto;\r\n        padding-left: 0;\r\n    }\r\n    .chooseFloor .block_a {\r\n        left: auto;\r\n        padding-right: 0;\r\n    }\r\n    .chooseFloor .blocks h1 {\r\n        margin-top: 0 !important;\r\n        font-size: 23px;\r\n        margin-bottom: 30px;\r\n    }\r\n    .chooseFloor .blocks .line p {\r\n        opacity: 1;\r\n    }\r\n}\r\n@media screen and (max-width: 500px) {\r\n    .chooseFloor .blocks {\r\n        align-items: flex-start !important;\r\n        text-align: left !important;\r\n    }\r\n    .chooseFloor .blocks .line {\r\n        align-items: flex-start;\r\n        margin-bottom: 20px;\r\n    }\r\n    .chooseFloor .blocks .line p {\r\n        text-align: left !important;\r\n        margin: 0;\r\n    }\r\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -5706,7 +5883,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".page_path {\r\n  text-transform: uppercase;\r\n  color: #334e60;\r\n  position: absolute;\r\n  right: 40px;\r\n  top: 245px;\r\n}\r\n.page_path p {\r\n  opacity: 0.5;\r\n  font-weight: bold;\r\n}\r\n.page_path p:last-child {\r\n  opacity: 1;\r\n}\r\n.page_path img {\r\n  margin: 0 10px;\r\n}\r\n@media screen and (max-width: 1350px) {\r\n  .page_path {\r\n    top: 132px;\r\n    right: 21px;\r\n    font-size: 14px;\r\n  }\r\n  .page_path img {\r\n    margin: 0 6px;\r\n  }\r\n}\r\n@media screen and (max-width: 600px) {\r\n  .page_path {\r\n    top: 169px;\r\n    font-size: 11px;\r\n    right: auto;\r\n    left: 10px;\r\n  }\r\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".page_path {\r\n    text-transform: uppercase;\r\n    color: #334e60;\r\n    position: absolute;\r\n    right: 40px;\r\n    top: 245px;\r\n    z-index: 100;\r\n}\r\n.page_path p {\r\n    opacity: 0.5;\r\n    font-weight: bold;\r\n}\r\n.page_path p:last-child {\r\n    opacity: 1;\r\n}\r\n.page_path img {\r\n    margin: 0 10px;\r\n}\r\n@media screen and (max-width: 1350px) {\r\n    .page_path {\r\n        top: 132px;\r\n        right: 21px;\r\n        font-size: 14px;\r\n    }\r\n    .page_path img {\r\n        margin: 0 6px;\r\n    }\r\n}\r\n@media screen and (max-width: 600px) {\r\n    .page_path {\r\n        top: 169px;\r\n        font-size: 11px;\r\n        right: auto;\r\n        left: 10px;\r\n    }\r\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -6454,6 +6631,51 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/3.png?eb622cdf443cacb92feb8735b96c8d43");
+
+/***/ }),
+
+/***/ "./public/img/apartments/1.png":
+/*!*************************************!*\
+  !*** ./public/img/apartments/1.png ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/1.png?061bfe2beaaf787a70ceeb007ba746aa");
+
+/***/ }),
+
+/***/ "./public/img/apartments/bg.png":
+/*!**************************************!*\
+  !*** ./public/img/apartments/bg.png ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/bg.png?4644aac89ed34e6ffdc1a2f0bec4d0f1");
+
+/***/ }),
+
+/***/ "./public/img/icons/apartment/file.svg":
+/*!*********************************************!*\
+  !*** ./public/img/icons/apartment/file.svg ***!
+  \*********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/file.svg?993726d36d2f7728338ea7afa24c61b5");
 
 /***/ }),
 
@@ -44689,6 +44911,36 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 /***/ }),
 
+/***/ "./resources/js/Pages/Apartment/Apartment.css":
+/*!****************************************************!*\
+  !*** ./resources/js/Pages/Apartment/Apartment.css ***!
+  \****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_Apartment_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!../../../../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./Apartment.css */ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./resources/js/Pages/Apartment/Apartment.css");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_Apartment_css__WEBPACK_IMPORTED_MODULE_1__.default, options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_Apartment_css__WEBPACK_IMPORTED_MODULE_1__.default.locals || {});
+
+/***/ }),
+
 /***/ "./resources/js/Pages/ChooseFloor/ChooseFloor.css":
 /*!********************************************************!*\
   !*** ./resources/js/Pages/ChooseFloor/ChooseFloor.css ***!
@@ -45488,6 +45740,9 @@ var map = {
 	"./AboutUs/AboutUs": "./resources/js/Pages/AboutUs/AboutUs.js",
 	"./AboutUs/AboutUs.css": "./resources/js/Pages/AboutUs/AboutUs.css",
 	"./AboutUs/AboutUs.js": "./resources/js/Pages/AboutUs/AboutUs.js",
+	"./Apartment/Apartment": "./resources/js/Pages/Apartment/Apartment.js",
+	"./Apartment/Apartment.css": "./resources/js/Pages/Apartment/Apartment.css",
+	"./Apartment/Apartment.js": "./resources/js/Pages/Apartment/Apartment.js",
 	"./ChooseFloor/ChooseFloor": "./resources/js/Pages/ChooseFloor/ChooseFloor.js",
 	"./ChooseFloor/ChooseFloor.css": "./resources/js/Pages/ChooseFloor/ChooseFloor.css",
 	"./ChooseFloor/ChooseFloor.js": "./resources/js/Pages/ChooseFloor/ChooseFloor.js",
