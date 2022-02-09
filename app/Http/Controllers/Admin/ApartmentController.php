@@ -1,0 +1,96 @@
+<?php
+
+namespace App\Http\Controllers\Admin;
+
+use App\Http\Controllers\Controller;
+use App\Http\Requests\Admin\ApartmentRequest;
+use App\Http\Requests\Admin\ProductRequest;
+use App\Http\Requests\Admin\SettingRequest;
+use App\Models\Apartment;
+use App\Models\Category;
+use App\Models\Product;
+use App\Models\Setting;
+use App\Repositories\ApartmentRepositoryInterface;
+use App\Repositories\CategoryRepositoryInterface;
+use App\Repositories\ProductRepositoryInterface;
+use App\Repositories\SettingRepositoryInterface;
+use Illuminate\Contracts\Foundation\Application;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Contracts\View\View;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Http\Request;
+use Illuminate\Routing\Redirector;
+use Illuminate\Support\Arr;
+
+class ApartmentController extends Controller
+{
+
+    private $apartmentRepository;
+
+
+    public function __construct(
+        ApartmentRepositoryInterface  $apartmentRepository
+    )
+    {
+        $this->apartmentRepository = $apartmentRepository;
+    }
+
+
+    /**
+     * @param SettingRequest $request
+     * @return Application|Factory|View
+     */
+    public function index(SettingRequest $request)
+    {
+        return view('admin.pages.apartment.index', [
+            'apartments' => $this->apartmentRepository->getData($request, ['translations'])
+        ]);
+    }
+
+
+    /**
+     * @param string $locale
+     * @param Setting $setting
+     * @return Application|Factory|View
+     */
+    public function show(string $locale, Apartment $apartment)
+    {
+        return view('admin.pages.apartment.show', [
+            'apartment' => $apartment,
+        ]);
+    }
+
+
+    /**
+     * @param string $locale
+     * @param Setting $setting
+     * @return Application|Factory|View
+     */
+    public function edit(string $locale, Apartment $apartment)
+    {
+        $url = locale_route('apartment.update', $apartment->id, false);
+        $method = 'PUT';
+
+        return view('admin.pages.apartment.form', [
+            'apartment' => $apartment,
+            'url' => $url,
+            'method' => $method,
+        ]);
+    }
+
+
+    /**
+     * @param SettingRequest $request
+     * @param string $locale
+     * @param Setting $setting
+     * @return Application|RedirectResponse|Redirector
+     */
+    public function update(ApartmentRequest $request, string $locale, Apartment $apartment)
+    {
+        $saveData = Arr::except($request->except('_token'), []);
+        $this->apartmentRepository->update($apartment->id,$saveData);
+
+
+        return redirect(locale_route('apartment.show', $apartment->id))->with('success', __('admin.update_successfully'));
+    }
+}

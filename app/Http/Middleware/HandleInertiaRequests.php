@@ -48,12 +48,21 @@ class HandleInertiaRequests extends Middleware
         $currentRoute = url()->current();
         $locale_urls = $this->locale_urls();
 
+
+
         return array_merge(parent::share($request), [
             "localizations" => $trans->loadTranslations("ge", "client"),
             "locales" => $locales,
             "currentLocale" => $currentLocale,
             "pathname" => $currentRoute,
-            "locale_urls" => $locale_urls
+            "locale_urls" => $locale_urls,
+            'urlPrev'	=> function() {
+                if (url()->previous() !== route('login') && url()->previous() !== '' && url()->previous() !== url()->current()) {
+                    return url()->previous();
+                }else {
+                    return null; // used in javascript to disable back button behavior
+                }
+            },
         ]);
     }
 

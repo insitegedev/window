@@ -30,7 +30,7 @@ export const ArrowButton = ({ color, link }) => {
 
 export const BackButton = ({ link, color }) => {
   return (
-    <Link href={link}>
+    <Link href={link ?? "#"}>
       <button className="back_button flex centered">
         <div
           className="circle"

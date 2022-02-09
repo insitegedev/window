@@ -7,7 +7,7 @@ import Layout from "../../Layouts/Layout";
 import Background from "/img/apartments/bg.png";
 import "./ChooseFloor.css";
 
-const ChooseFloor = () => {
+const ChooseFloor = ({apartments, urlPrev}) => {
     const [floorIndex, setFloorIndex] = useState(0);
     const floorList = [
         {
@@ -75,12 +75,22 @@ const ChooseFloor = () => {
             para2: "დარჩენილია 5 ბინა",
         },
     ];
+    floorList.map((floor, key)=>{
+        return apartments.map((apartment) =>{
+            if (apartment.title === floor.floorName){
+                floor.para1 = apartment.floor;
+                floor.para2 = apartment.apartments;
+                return floor;
+            }
+        })
+
+    })
     return (
         <Layout>
             <div className="chooseFloor">
                 <img className="background" src={Background} alt="" />
                 <Showcase short />
-                <BackButton color="#1B2D39" />
+                <BackButton color="#1B2D39" link={urlPrev}/>
                 <div className="container">
                     <svg
                         version="1.1"

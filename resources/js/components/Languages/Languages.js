@@ -12,7 +12,7 @@ export const Languages = () => {
           {Object.keys(locales).map((name, index) => {
               if (locales[name] === currentLocale) {
                   return (
-                      <a href={locales[name]} key={name + "locale"}>{name}</a>
+                      <a href={locale_urls[name]} key={name + "locale"}>{name}</a>
                   );
               }
           })}
