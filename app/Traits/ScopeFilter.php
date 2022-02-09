@@ -108,6 +108,31 @@ trait ScopeFilter
 
     /**
      * @param $query
+     * @param $name
+     *
+     * @return mixed
+     */
+    public function scopeFloor($query, $floor)
+    {
+        return $query->whereHas('translations', function ($query) use ($floor) {
+            return $query->where('floor', 'like', '%' . $floor . '%');
+        });
+    }
+
+    /**
+     * @param $query
+     * @param $name
+     *
+     * @return mixed
+     */
+    public function scopeApartments($query, $apartments)
+    {
+        return $query->whereHas('translations', function ($query) use ($apartments) {
+            return $query->where('apartments', 'like', '%' . $apartments . '%');
+        });    }
+
+    /**
+     * @param $query
      * @param $locale
      *
      * @return mixed

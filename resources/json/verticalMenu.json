@@ -8,6 +8,13 @@
             "slug": "category"
         },
         {
+            "url": "apartment.index",
+            "name": "apartment",
+            "i18n": "apartment",
+            "icon": "language",
+            "slug": "apartment"
+        },
+        {
             "url": "gallery.index",
             "name": "gallery",
             "i18n": "gallery",

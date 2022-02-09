@@ -29,9 +29,5 @@ class HomeController extends Controller
         return Inertia::render('OurDoctors/OurDoctors');
     }
 
-    public function choosefloor()
-    {
-        return Inertia::render('ChooseFloor/ChooseFloor');
-    }
 
 }

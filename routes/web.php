@@ -7,6 +7,7 @@
  * @author Vito Makhatadze <vitomaxatadze@gmail.com>
  */
 
+use App\Http\Controllers\Admin\ApartmentController;
 use App\Http\Controllers\Admin\Auth\LoginController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\CertificateController;
@@ -84,6 +85,11 @@ Route::prefix('{locale?}')
                 Route::resource('certificate', CertificateController::class);
                 Route::get('certificate/{certificate}/destroy', [CertificateController::class, 'destroy'])->name('certificate.destroy');
 
+
+                // Certificate
+                Route::resource('apartment', ApartmentController::class);
+                Route::get('apartment/{apartment}/destroy', [ApartmentController::class, 'destroy'])->name('apartment.destroy');
+
             });
         });
         Route::middleware(['active'])->group(function () {
@@ -92,7 +98,7 @@ Route::prefix('{locale?}')
             Route::get('', [HomeController::class, 'index'])->name('client.home.index');
             Route::get('/gallery', [\App\Http\Controllers\Client\GalleryController::class, 'index'])->name('client.gallery.index');
             Route::get('/doctors', [HomeController::class, 'doctors'])->name('client.doctors.index');
-            Route::get('/choosefloor', [HomeController::class, 'choosefloor'])->name('client.choosefloor.index');
+            Route::get('/choose-floor', [\App\Http\Controllers\Client\ApartmentController::class, 'index'])->name('client.choosefloor.index');
 
 
             // Contact Page
