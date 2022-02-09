@@ -3038,7 +3038,10 @@ var Footer = function Footer() {
       display: pathname === route("client.home.index") ? "none" : "block"
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "body"
+    className: "body",
+    style: {
+      display: pathname === route("client.choosefloor.index") ? "none" : "block"
+    }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "playfair"
   }, "Choose Your Apartment"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "With our 3d model you can easily choose the apartment you would like to buy"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Buttons_Buttons__WEBPACK_IMPORTED_MODULE_1__.MainButton, {
@@ -3093,7 +3096,10 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
+
 var Header = function Header() {
+  var pathname = (0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__.usePage)().props.pathname;
+
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
       _useState2 = _slicedToArray(_useState, 2),
       menu = _useState2[0],
@@ -3104,7 +3110,7 @@ var Header = function Header() {
   };
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "header flex",
+    className: pathname === route("") ? "header flex dark" : "header flex",
     style: {
       position: menu ? "fixed" : "absolute"
     }
@@ -3118,6 +3124,10 @@ var Header = function Header() {
     className: "logo"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
     src: "/img/logo/logo.svg",
+    alt: ""
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    className: "dark-logo",
+    src: "/img/logo/logo-dark.svg",
     alt: ""
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Languages_Languages__WEBPACK_IMPORTED_MODULE_2__.Languages, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Menu_Menu__WEBPACK_IMPORTED_MODULE_3__.default, {
     openMenu: menu,
@@ -3217,19 +3227,19 @@ var Menu = function Menu(_ref) {
     path: route("client.home.index")
   }, {
     name: "Choose Apartment",
-    path: route('client.apartment.index')
+    path: route("client.choosefloor.index")
   }, {
     name: "About Us",
-    path: route('client.about.index')
+    path: route("client.about.index")
   }, {
     name: "Services",
-    path: route('client.service.index')
+    path: route("client.service.index")
   }, {
     name: "Gallery",
-    path: route('client.gallery.index')
+    path: route("client.gallery.index")
   }, {
     name: "Contact Us",
-    path: route('client.contact.index')
+    path: route("client.contact.index")
   }];
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: openMenu ? "menu open" : "menu  "
@@ -3441,6 +3451,179 @@ var AboutUs = function AboutUs() {
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (AboutUs);
+
+/***/ }),
+
+/***/ "./resources/js/Pages/ChooseFloor/ChooseFloor.js":
+/*!*******************************************************!*\
+  !*** ./resources/js/Pages/ChooseFloor/ChooseFloor.js ***!
+  \*******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _components_Buttons_Buttons__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/Buttons/Buttons */ "./resources/js/components/Buttons/Buttons.js");
+/* harmony import */ var _components_Showcase_Showcase__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/Showcase/Showcase */ "./resources/js/components/Showcase/Showcase.js");
+/* harmony import */ var _Layouts_Layout__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../Layouts/Layout */ "./resources/js/Layouts/Layout.js");
+/* harmony import */ var _ChooseFloor_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./ChooseFloor.css */ "./resources/js/Pages/ChooseFloor/ChooseFloor.css");
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr && (typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]); if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+
+
+
+
+
+var ChooseFloor = function ChooseFloor() {
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(0),
+      _useState2 = _slicedToArray(_useState, 2),
+      floorIndex = _useState2[0],
+      setFloorIndex = _useState2[1];
+
+  var floorList = [{
+    key: 1,
+    link: "/",
+    points: "319.4,533.4 517.1,513.2 492,511.2 914.9,467.9 934.7,469.2 938.9,467.9 944,469 1095.1,480 1069,390 919.1,375.5 913.2,375.5 909.6,377.3 582.8,428.9",
+    floorName: "A4",
+    para1: "სართული 4",
+    para2: "დარჩენილია 5 ბინა"
+  }, {
+    key: 2,
+    link: "/",
+    points: "319.4,533.4 517.1,513.2 492,511.2 914.9,467.9 934.7,469.2 938.9,467.9 944,469 1095.1,480 1118.4,557.4 968.2,557.4 962.7,555.4 958.9,558.6 936.2,558.6 913.8,558.6 306,592.1 306,586.8 319.4,586.3",
+    floorName: "A3",
+    para1: "სართული 4",
+    para2: "დარჩენილია 5 ბინა"
+  }, {
+    key: 3,
+    link: "/",
+    points: "306,654 940.4,647.8 963,646 982.5,646 986.7,644 992,645.4 1145.2,645.4 1118.4,557.4 968.2,557.4 962.7,555.4 958.9,558.6 913.8,558.6 317.8,592.1 317.8,648.1 306,648.1",
+    floorName: "A2",
+    para1: "სართული 4",
+    para2: "დარჩენილია 5 ბინა"
+  }, {
+    key: 4,
+    link: "/",
+    points: "317.6,725.4 317.6,654 940.4,647.8 963,646 982.5,646 986.7,644 992,645.4 1145.2,645.4 1149.6,659.7 1011,725.4 925.9,742.9 811.6,742.9",
+    floorName: "A1",
+    para1: "სართული 4",
+    para2: "დარჩენილია 5 ბინა"
+  }, {
+    key: 5,
+    link: "/",
+    points: "1118.7,288.3 1222.7,267.7 1226.9,262.8 1234.2,262.8 1506.9,327.7 1530.7,389.2 1530.7,400.3 1258.9,342.1 1252.4,341.7 1246.7,347.7 1228,343.9 1141.6,356.1 1156.2,359.7 1141.3,360.6 ",
+    floorName: "B4",
+    para1: "სართული 4",
+    para2: "დარჩენილია 5 ბინა"
+  }, {
+    key: 6,
+    link: "/",
+    points: "1166,441 1141.3,360.6 1156.2,359.7 1141.6,356.1 1228,343.9 1246.7,347.7 1252.4,341.7 1258.9,342.1 1530.7,400.3 1530.7,467.2 1288.1,431.7 1280.3,428.1 1273.5,431.1 1255.1,428.6 1170.9,435.7 1187.3,439",
+    floorName: "B3",
+    para1: "სართული 4",
+    para2: "დარჩენილია 5 ბინა"
+  }, {
+    key: 7,
+    link: "/",
+    points: "1190.1,522 1166,441 1187.3,439 1170.9,435.7 1255.1,428.6 1273.5,431.1 1280.3,428.1 1288.1,431.7 1530.7,467.2 1542.8,468.9 1542.8,537.3 1419.6,524 1418.4,520.1 1315.9,516.9 1307.6,513.3 1302.5,514.5 1282.1,513 1192,518.6  1207.7,521.3",
+    floorName: "B2",
+    para1: "სართული 4",
+    para2: "დარჩენილია 5 ბინა"
+  }, {
+    key: 8,
+    link: "/",
+    points: "1216,619.2 1190.1,522 1207.7,521.3 1192,518.6 1282.1,513 1302.5,514.5 1307.6,513.3 1315.9,516.9 1418.4,520.1 1419.6,524 1542.8,537.3 1569.8,540.1 1569.8,616.1 1354.4,606.8 ",
+    floorName: "B1",
+    para1: "სართული 4",
+    para2: "დარჩენილია 5 ბინა"
+  }];
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_Layouts_Layout__WEBPACK_IMPORTED_MODULE_4__.default, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
+    className: "chooseFloor"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_components_Showcase_Showcase__WEBPACK_IMPORTED_MODULE_3__.default, {
+    "short": true
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_components_Buttons_Buttons__WEBPACK_IMPORTED_MODULE_2__.BackButton, {
+    color: "#1B2D39"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
+    className: "container"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("svg", {
+    version: "1.1",
+    id: "Layer_1",
+    x: "0px",
+    y: "0px",
+    viewBox: "0 0 1903 960",
+    style: {
+      enableBackground: "new 0 0 1903 960"
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("image", {
+    style: {
+      overflow: "visible"
+    },
+    width: "1903",
+    height: "960",
+    xlinkHref: "/img/apartments/building.png"
+  }), floorList.map(function (floor) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
+      href: floor.link,
+      onMouseEnter: function onMouseEnter() {
+        return setFloorIndex(floor.key);
+      },
+      onMouseLeave: function onMouseLeave() {
+        return setFloorIndex(0);
+      },
+      className: floorIndex === floor.key ? "hovered" : ""
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("polygon", {
+      className: "st0",
+      points: floor.points
+    }));
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
+    className: "both_blocks"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
+    className: "blocks block_a"
+  }, floorList.slice(0, 4).map(function (floor) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
+      onMouseEnter: function onMouseEnter() {
+        return setFloorIndex(floor.key);
+      },
+      onMouseLeave: function onMouseLeave() {
+        return setFloorIndex(0);
+      },
+      href: floor.link,
+      className: floorIndex === floor.key ? "line flex hovered" : "line flex"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("p", null, floor.para1), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("p", null, floor.para2)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("h5", null, floor.floorName));
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("h1", null, "A BLOCK")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
+    className: "blocks block_b"
+  }, floorList.slice(-4).map(function (floor) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
+      onMouseEnter: function onMouseEnter() {
+        return setFloorIndex(floor.key);
+      },
+      onMouseLeave: function onMouseLeave() {
+        return setFloorIndex(0);
+      },
+      href: floor.link,
+      className: floorIndex === floor.key ? "line flex hovered" : "line flex"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("h5", null, floor.floorName), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("p", null, floor.para1), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("p", null, floor.para2)));
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("h1", null, "B BLOCK"))))));
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ChooseFloor);
 
 /***/ }),
 
@@ -5091,7 +5274,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".footer .body {\n  text-align: center;\n  padding: 228px 0;\n  background: url(/img/general/footer.png) no-repeat;\n  background-position: center;\n  background-size: cover;\n  color: #fff;\n  position: relative;\n}\n.footer .body::before {\n  width: 100%;\n  height: 100%;\n  left: 0;\n  top: 0;\n  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), #134d4d3a);\n  z-index: 0;\n}\n.footer .body .playfair {\n  font-size: 42px;\n  margin-bottom: 30px;\n  position: relative;\n  z-index: 10;\n}\n.footer .body p {\n  max-width: 350px;\n  margin: auto;\n  margin-bottom: 30px;\n  position: relative;\n  z-index: 10;\n}\n.footer .insite {\n  background: #fff;\n  padding: 40px 0;\n}\n.footer .insite img {\n  margin-left: 10px;\n}\n\n@media screen and (max-width: 1350px) {\n  .footer .body {\n    padding: 121px 0;\n  }\n  .footer .insite {\n    padding: 22px 0;\n  }\n}\n@media screen and (max-width: 1000px) {\n  .footer .body .playfair {\n    font-size: 34px;\n    margin-bottom: 19px;\n  }\n  .footer .body p {\n    margin-bottom: 19px;\n  }\n  .footer .body {\n    padding: 83px 0;\n  }\n}\n@media screen and (max-width: 600px) {\n  .footer .insite {\n    padding: 13px 0;\n  }\n  .footer .body .playfair {\n    font-size: 29px;\n    margin-bottom: 11px;\n  }\n  .footer .body p {\n    margin-bottom: 16px;\n    font-size: 14px;\n  }\n  .footer .body {\n    padding: 57px 0;\n  }\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".footer .body {\r\n    text-align: center;\r\n    padding: 228px 0;\r\n    background: url(/img/general/footer.png) no-repeat;\r\n    background-position: center;\r\n    background-size: cover;\r\n    color: #fff;\r\n    position: relative;\r\n}\r\n.footer .body::before {\r\n    width: 100%;\r\n    height: 100%;\r\n    left: 0;\r\n    top: 0;\r\n    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), #134d4d3a);\r\n    z-index: 0;\r\n}\r\n.footer .body .playfair {\r\n    font-size: 42px;\r\n    margin-bottom: 30px;\r\n    position: relative;\r\n    z-index: 10;\r\n}\r\n.footer .body p {\r\n    max-width: 350px;\r\n    margin: auto;\r\n    margin-bottom: 30px;\r\n    position: relative;\r\n    z-index: 10;\r\n}\r\n.footer .insite {\r\n    padding: 40px 0;\r\n}\r\n.footer .insite img {\r\n    margin-left: 10px;\r\n}\r\n\r\n@media screen and (max-width: 1350px) {\r\n    .footer .body {\r\n        padding: 121px 0;\r\n    }\r\n    .footer .insite {\r\n        padding: 22px 0;\r\n    }\r\n}\r\n@media screen and (max-width: 1000px) {\r\n    .footer .body .playfair {\r\n        font-size: 34px;\r\n        margin-bottom: 19px;\r\n    }\r\n    .footer .body p {\r\n        margin-bottom: 19px;\r\n    }\r\n    .footer .body {\r\n        padding: 83px 0;\r\n    }\r\n}\r\n@media screen and (max-width: 600px) {\r\n    .footer .insite {\r\n        padding: 13px 0;\r\n    }\r\n    .footer .body .playfair {\r\n        font-size: 29px;\r\n        margin-bottom: 11px;\r\n    }\r\n    .footer .body p {\r\n        margin-bottom: 16px;\r\n        font-size: 14px;\r\n    }\r\n    .footer .body {\r\n        padding: 57px 0;\r\n    }\r\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -5115,7 +5298,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".header {\r\n  position: absolute;\r\n  left: 0;\r\n  top: 0;\r\n  width: 100%;\r\n  color: #fff;\r\n  padding: 34px 56px;\r\n\r\n  z-index: 1000;\r\n}\r\n.header .menu_btn {\r\n  flex-direction: column;\r\n  position: relative;\r\n  z-index: 10010;\r\n  transition: 0.5s;\r\n}\r\n.header .menu_btn span {\r\n  width: 20px;\r\n  height: 3px;\r\n  background-color: #fff;\r\n  margin: 3px 0;\r\n  transition: 0.5s;\r\n}\r\n.header .menu_btn.clicked span:first-child {\r\n  transform: rotate(-45deg);\r\n  margin: -1.5px 0;\r\n}\r\n.header .menu_btn.clicked span:last-child {\r\n  transform: rotate(45deg);\r\n  margin: -1.5px 0;\r\n}\r\n\r\n@media screen and (max-width: 1500px) {\r\n  .header .menu_btn.clicked {\r\n    transform: translateX(-35px) translateY(-42px);\r\n  }\r\n}\r\n@media screen and (max-width: 1350px) {\r\n  .header {\r\n    padding: 10px 38px;\r\n  }\r\n  .header .menu_btn {\r\n    transform: translateX(-20px);\r\n  }\r\n  .header .menu_btn.clicked {\r\n    transform: none;\r\n    transform: translateX(-20px);\r\n  }\r\n  .header .logo img {\r\n    width: 135px;\r\n  }\r\n}\r\n@media screen and (max-width: 600px) {\r\n  .header .menu_btn {\r\n    width: 49px;\r\n    height: 49px;\r\n  }\r\n  .header .logo img {\r\n    width: 101px;\r\n  }\r\n  .languages {\r\n    font-size: 11px;\r\n    line-height: 100%;\r\n  }\r\n  .header {\r\n    padding: 10px 24px;\r\n  }\r\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".header {\r\n    position: absolute;\r\n    left: 0;\r\n    top: 0;\r\n    width: 100%;\r\n    color: #fff;\r\n    padding: 34px 56px;\r\n\r\n    z-index: 1000;\r\n}\r\n.header .menu_btn {\r\n    flex-direction: column;\r\n    position: relative;\r\n    z-index: 10010;\r\n    transition: 0.5s;\r\n}\r\n.header .logo .dark-logo {\r\n    display: none;\r\n}\r\n.header .menu_btn span {\r\n    width: 20px;\r\n    height: 3px;\r\n    background-color: #fff;\r\n    margin: 3px 0;\r\n    transition: 0.5s;\r\n}\r\n.header .menu_btn.clicked span:first-child {\r\n    transform: rotate(-45deg);\r\n    margin: -1.5px 0;\r\n    background-color: #fff;\r\n}\r\n.header .menu_btn.clicked span:last-child {\r\n    transform: rotate(45deg);\r\n    margin: -1.5px 0;\r\n    background-color: #fff;\r\n}\r\n\r\n/* dark header */\r\n.header.dark .logo img {\r\n    display: none;\r\n}\r\n.header.dark .logo .dark-logo {\r\n    display: inline-block;\r\n}\r\n.header.dark .menu_btn {\r\n    border-color: #1b2d39;\r\n}\r\n.header.dark .menu_btn span {\r\n    background-color: #1b2d39;\r\n}\r\n.header.dark .languages {\r\n    color: #1b2d39;\r\n}\r\n.header .menu_btn.clicked {\r\n    border-color: #fff;\r\n}\r\n\r\n.header.dark .languages .on::before {\r\n    background: url(/img/icons/header/globe-dark.svg) no-repeat;\r\n    background-position: center;\r\n    background-size: contain;\r\n}\r\n.header.dark .languages .on::after {\r\n    background: url(/img/icons/header/arrowdown-dark.svg) no-repeat;\r\n    background-position: center;\r\n    background-size: contain;\r\n}\r\n\r\n@media screen and (max-width: 1500px) {\r\n    .header .menu_btn.clicked {\r\n        transform: translateX(-35px) translateY(-42px);\r\n    }\r\n}\r\n@media screen and (max-width: 1350px) {\r\n    .header {\r\n        padding: 10px 38px;\r\n    }\r\n    .header .menu_btn {\r\n        transform: translateX(-20px);\r\n    }\r\n    .header .menu_btn.clicked {\r\n        transform: none;\r\n        transform: translateX(-20px);\r\n    }\r\n    .header .logo img {\r\n        width: 135px;\r\n    }\r\n}\r\n@media screen and (max-width: 600px) {\r\n    .header .menu_btn {\r\n        width: 49px;\r\n        height: 49px;\r\n    }\r\n    .header .logo img {\r\n        width: 101px;\r\n    }\r\n    .languages {\r\n        font-size: 11px;\r\n        line-height: 100%;\r\n    }\r\n    .header {\r\n        padding: 10px 24px;\r\n    }\r\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -5139,7 +5322,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".languages {\n  position: relative;\n  text-transform: uppercase;\n  cursor: default;\n}\n.languages .drop {\n  position: absolute;\n  left: 0;\n  top: 100%;\n  transform: scaleY(0.5);\n  transform-origin: top;\n  opacity: 0;\n  visibility: hidden;\n  transition: 0.3s;\n}\n.languages .on {\n  position: relative;\n}\n.languages .on::before {\n  left: -20px;\n  width: 15px;\n  height: 15px;\n  top: 50%;\n  transform: translateY(-50%);\n  background: url(/img/icons/header/globe.svg) no-repeat;\n  background-position: center;\n  background-size: contain;\n}\n.languages .on::after {\n  right: -17px;\n  width: 12px;\n  height: 7px;\n  top: 50%;\n  transform: translateY(-50%);\n  background: url(/img/icons/header/arrowdown.svg) no-repeat;\n  background-position: center;\n  background-size: contain;\n  transition: 0.3s;\n  transform-origin: top;\n}\n.languages:hover .drop {\n  opacity: 1;\n  visibility: visible;\n  transform: scaleY(1);\n}\n.languages:hover .on::after {\n  transform: rotate(180deg);\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".languages {\r\n  position: relative;\r\n  text-transform: uppercase;\r\n  cursor: default;\r\n}\r\n.languages .drop {\r\n  position: absolute;\r\n  left: 0;\r\n  top: 100%;\r\n  transform: scaleY(0.5);\r\n  transform-origin: top;\r\n  opacity: 0;\r\n  visibility: hidden;\r\n  transition: 0.3s;\r\n}\r\n.languages .on {\r\n  position: relative;\r\n}\r\n.languages .on::before {\r\n  left: -20px;\r\n  width: 15px;\r\n  height: 15px;\r\n  top: 50%;\r\n  transform: translateY(-50%);\r\n  background: url(/img/icons/header/globe.svg) no-repeat;\r\n  background-position: center;\r\n  background-size: contain;\r\n}\r\n.languages .on::after {\r\n  right: -17px;\r\n  width: 12px;\r\n  height: 7px;\r\n  top: 50%;\r\n  transform: translateY(-50%);\r\n  background: url(/img/icons/header/arrowdown.svg) no-repeat;\r\n  background-position: center;\r\n  background-size: contain;\r\n  transition: 0.3s;\r\n  transform-origin: top;\r\n}\r\n.languages:hover .drop {\r\n  opacity: 1;\r\n  visibility: visible;\r\n  transform: scaleY(1);\r\n}\r\n.languages:hover .on::after {\r\n  transform: rotate(180deg);\r\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -5163,7 +5346,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".menu {\n  width: 100vw;\n  height: 100vh;\n  z-index: 1000;\n  position: fixed;\n  left: 0;\n  top: 0;\n  transition: 1s;\n  visibility: hidden;\n}\n.menu.open {\n  visibility: visible;\n}\n.menu .container {\n  width: 100%;\n  height: 100%;\n}\n.menu .right {\n  background: url(/img/home/3.png) no-repeat;\n  background-position: center;\n  background-size: cover;\n  width: 55%;\n  height: 100%;\n  position: relative;\n  transition: 1s;\n  transform: translateX(100%);\n}\n.menu.open .right {\n  transform: translateX(0);\n}\n.menu .right img {\n  z-index: 100;\n  width: 350px;\n}\n.menu .right::after {\n  width: 100%;\n  height: 100%;\n  left: 0;\n  top: 0;\n  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), #134d4d3a);\n  z-index: 0;\n}\n.menu .left {\n  height: 100%;\n  width: 45%;\n  padding: 70px;\n  -webkit-backdrop-filter: blur(40px);\n          backdrop-filter: blur(40px);\n  transform: translateX(200%);\n  transition: 1.2s;\n  opacity: 0;\n  position: relative;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n}\n.menu.open .left {\n  transform: translateX(0);\n  opacity: 1;\n}\n.menu .left .bottom {\n  align-items: flex-end;\n}\n.menu .left .top {\n  padding-left: 100px;\n}\n.menu .left .navigation a {\n  display: block;\n  font-family: \"playfair\";\n  font-size: 42px;\n  text-align: right;\n  margin-top: 15px;\n  opacity: 0.5;\n  white-space: nowrap;\n  transition: 0.3s;\n}\n.menu .left .navigation a:hover {\n  opacity: 1;\n}\n.menu .left .navigation a.active {\n  opacity: 1;\n}\n\n@media screen and (max-width: 1500px) {\n  .menu .left {\n    padding: 30px;\n  }\n}\n@media screen and (max-width: 1400px) {\n  .menu .left .navigation a {\n    font-size: 35px;\n    margin-top: 12px;\n  }\n}\n@media screen and (max-width: 1200px) {\n  .menu .left .navigation a {\n    font-size: 24px;\n    margin-top: 8px;\n  }\n  .menu .left .top {\n    padding-left: 84px;\n  }\n  .menu .main_button {\n    width: 151px;\n    height: 47px;\n    font-size: 14px;\n  }\n  .menu .right img {\n    width: 224px;\n  }\n}\n@media screen and (max-width: 1000px) {\n  .menu .right {\n    width: 40%;\n  }\n  .menu.open .left {\n    width: 60%;\n  }\n}\n@media screen and (max-width: 800px) {\n  .menu .right img {\n    width: 159px;\n  }\n  .menu .left .navigation a {\n    font-size: 20px;\n  }\n}\n@media screen and (max-width: 650px) {\n  .menu .right {\n    display: none;\n  }\n  .menu.open .left {\n    width: 100%;\n  }\n}\n@media screen and (max-width: 600px) {\n  .menu .left {\n    padding-top: 20px;\n  }\n  .menu .left .top {\n    padding-left: 73px;\n  }\n}\n@media screen and (max-width: 400px) {\n  .menu .left {\n    padding: 16px;\n    padding-top: 24px;\n  }\n  .menu .main_button {\n    width: 127px;\n    height: 40px;\n    font-size: 13px;\n  }\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".menu {\r\n  width: 100vw;\r\n  height: 100vh;\r\n  z-index: 1000;\r\n  position: fixed;\r\n  left: 0;\r\n  top: 0;\r\n  transition: 1s;\r\n  visibility: hidden;\r\n}\r\n.menu.open {\r\n  visibility: visible;\r\n}\r\n.menu .container {\r\n  width: 100%;\r\n  height: 100%;\r\n}\r\n.menu .right {\r\n  background: url(/img/home/3.png) no-repeat;\r\n  background-position: center;\r\n  background-size: cover;\r\n  width: 55%;\r\n  height: 100%;\r\n  position: relative;\r\n  transition: 1s;\r\n  transform: translateX(100%);\r\n}\r\n.menu.open .right {\r\n  transform: translateX(0);\r\n}\r\n.menu .right img {\r\n  z-index: 100;\r\n  width: 350px;\r\n}\r\n.menu .right::after {\r\n  width: 100%;\r\n  height: 100%;\r\n  left: 0;\r\n  top: 0;\r\n  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), #134d4d3a);\r\n  z-index: 0;\r\n}\r\n.menu .left {\r\n  height: 100%;\r\n  width: 45%;\r\n  padding: 70px;\r\n  -webkit-backdrop-filter: blur(40px);\r\n          backdrop-filter: blur(40px);\r\n  transform: translateX(200%);\r\n  transition: 1.2s;\r\n  opacity: 0;\r\n  position: relative;\r\n  display: flex;\r\n  flex-direction: column;\r\n  justify-content: space-between;\r\n}\r\n.menu.open .left {\r\n  transform: translateX(0);\r\n  opacity: 1;\r\n}\r\n.menu .left .bottom {\r\n  align-items: flex-end;\r\n}\r\n.menu .left .top {\r\n  padding-left: 100px;\r\n}\r\n.menu .left .navigation a {\r\n  display: block;\r\n  font-family: \"playfair\";\r\n  font-size: 42px;\r\n  text-align: right;\r\n  margin-top: 15px;\r\n  opacity: 0.5;\r\n  white-space: nowrap;\r\n  transition: 0.3s;\r\n}\r\n.menu .left .navigation a:hover {\r\n  opacity: 1;\r\n}\r\n.menu .left .navigation a.active {\r\n  opacity: 1;\r\n}\r\n\r\n@media screen and (max-width: 1500px) {\r\n  .menu .left {\r\n    padding: 30px;\r\n  }\r\n}\r\n@media screen and (max-width: 1400px) {\r\n  .menu .left .navigation a {\r\n    font-size: 35px;\r\n    margin-top: 12px;\r\n  }\r\n}\r\n@media screen and (max-width: 1200px) {\r\n  .menu .left .navigation a {\r\n    font-size: 24px;\r\n    margin-top: 8px;\r\n  }\r\n  .menu .left .top {\r\n    padding-left: 84px;\r\n  }\r\n  .menu .main_button {\r\n    width: 151px;\r\n    height: 47px;\r\n    font-size: 14px;\r\n  }\r\n  .menu .right img {\r\n    width: 224px;\r\n  }\r\n}\r\n@media screen and (max-width: 1000px) {\r\n  .menu .right {\r\n    width: 40%;\r\n  }\r\n  .menu.open .left {\r\n    width: 60%;\r\n  }\r\n}\r\n@media screen and (max-width: 800px) {\r\n  .menu .right img {\r\n    width: 159px;\r\n  }\r\n  .menu .left .navigation a {\r\n    font-size: 20px;\r\n  }\r\n}\r\n@media screen and (max-width: 650px) {\r\n  .menu .right {\r\n    display: none;\r\n  }\r\n  .menu.open .left {\r\n    width: 100%;\r\n  }\r\n}\r\n@media screen and (max-width: 600px) {\r\n  .menu .left {\r\n    padding-top: 20px;\r\n  }\r\n  .menu .left .top {\r\n    padding-left: 73px;\r\n  }\r\n}\r\n@media screen and (max-width: 400px) {\r\n  .menu .left {\r\n    padding: 16px;\r\n    padding-top: 24px;\r\n  }\r\n  .menu .main_button {\r\n    width: 127px;\r\n    height: 40px;\r\n    font-size: 13px;\r\n  }\r\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -5187,7 +5370,31 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".aboutPage .flex.one {\n  padding: 100px 0;\n}\n.aboutPage .wrapper .playfair {\n  font-size: 42px;\n  margin-bottom: 25px;\n  max-width: 523px;\n}\n.aboutPage p {\n  text-align: justify;\n}\n.aboutPage .flex.one p {\n  margin-bottom: 40px;\n}\n.aboutPage .flex.one .content {\n  margin-right: 100px;\n}\n.aboutPage .flex.one .map {\n  width: 100%;\n  height: 185px;\n}\n.aboutPage .services {\n  background: url(/img/home/1.png) no-repeat;\n  background-position: center;\n  background-size: cover;\n  background-attachment: fixed;\n  padding: 130px 0;\n  color: #fff;\n  position: relative;\n}\n.aboutPage .services::before {\n  width: 100%;\n  height: 100%;\n  left: 0;\n  top: 0;\n  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), #134d4d3a);\n  z-index: 0;\n}\n.aboutPage .services p {\n  max-width: 600px;\n  margin-bottom: 40px;\n}\n.aboutPage .services .facilities {\n  grid-template-columns: repeat(2, 1fr);\n  grid-gap: 34px 17px;\n  margin-left: 30px;\n}\n.aboutPage .bottom {\n  background-color: #faf8f5;\n  padding: 100px 0;\n  background-image: url(/img/general/line-bg.png);\n  background-position: center;\n  background-size: contain;\n}\n.aboutPage .bottom .flex {\n  margin-bottom: 57px;\n}\n.aboutPage .bottom .img {\n  width: 700px;\n  height: 365px;\n  overflow: hidden;\n}\n.aboutPage .bottom p {\n  background: #fff;\n  padding: 22px 33px;\n  box-shadow: 10px 3px 25px #23243034;\n  max-width: 573px;\n  position: relative;\n  z-index: 100;\n}\n.aboutPage .bottom .top p {\n  margin-left: -50px;\n}\n.aboutPage .bottom .end p {\n  margin-right: -50px;\n}\n\n@media screen and (max-width: 1300px) {\n  .aboutPage .flex.one {\n    align-items: flex-start;\n  }\n  .aboutPage .flex.one .content {\n    margin-right: 36px;\n  }\n  .aboutPage .flex.one img {\n    width: 50%;\n  }\n}\n@media screen and (max-width: 1100px) {\n  .aboutPage .bottom .img {\n    width: 60%;\n    flex-shrink: 0;\n  }\n  .aboutPage .bottom .top p {\n    margin-left: -196px;\n  }\n  .aboutPage .bottom .end p {\n    margin-right: -196px;\n  }\n}\n@media screen and (max-width: 1000px) {\n  .aboutPage .wrapper .playfair {\n    font-size: 34px;\n    margin-bottom: 15px;\n  }\n  .aboutPage .flex.one {\n    padding: 56px 0;\n  }\n  .aboutPage .services .wrapper {\n    flex-direction: column;\n  }\n  .aboutPage .services p {\n    max-width: none;\n    margin-bottom: 24px;\n  }\n  .aboutPage .services .facilities {\n    grid-template-columns: repeat(2, 1fr);\n    grid-gap: 34px 17px;\n    margin-left: 0;\n    margin-top: 40px;\n  }\n  .aboutPage .services {\n    padding: 56px 0;\n  }\n}\n@media screen and (max-width: 800px) {\n  .aboutPage .flex.one {\n    flex-direction: column;\n  }\n  .aboutPage .flex.one p {\n    margin-bottom: 20px;\n  }\n  .aboutPage .wrapper .playfair {\n    font-size: 30px;\n  }\n  .aboutPage .flex.one img {\n    width: 100%;\n  }\n  .aboutPage .flex.one .content {\n    margin-right: 0;\n    margin-bottom: 35px;\n  }\n}\n@media screen and (max-width: 600px) {\n  .aboutPage .services .facilities {\n    grid-template-columns: 1fr;\n  }\n  .aboutPage .bottom .flex {\n    flex-direction: column;\n  }\n  .aboutPage .bottom .flex.end {\n    flex-direction: column-reverse;\n  }\n  .aboutPage .bottom .img {\n    width: 100%;\n    height: auto;\n  }\n  .aboutPage .bottom .top p,\n  .aboutPage .bottom .end p {\n    margin-left: 0;\n    margin-right: 0;\n    margin-top: -50px;\n    width: 90%;\n  }\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".aboutPage .flex.one {\r\n  padding: 100px 0;\r\n}\r\n.aboutPage .wrapper .playfair {\r\n  font-size: 42px;\r\n  margin-bottom: 25px;\r\n  max-width: 523px;\r\n}\r\n.aboutPage p {\r\n  text-align: justify;\r\n}\r\n.aboutPage .flex.one p {\r\n  margin-bottom: 40px;\r\n}\r\n.aboutPage .flex.one .content {\r\n  margin-right: 100px;\r\n}\r\n.aboutPage .flex.one .map {\r\n  width: 100%;\r\n  height: 185px;\r\n}\r\n.aboutPage .services {\r\n  background: url(/img/home/1.png) no-repeat;\r\n  background-position: center;\r\n  background-size: cover;\r\n  background-attachment: fixed;\r\n  padding: 130px 0;\r\n  color: #fff;\r\n  position: relative;\r\n}\r\n.aboutPage .services::before {\r\n  width: 100%;\r\n  height: 100%;\r\n  left: 0;\r\n  top: 0;\r\n  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), #134d4d3a);\r\n  z-index: 0;\r\n}\r\n.aboutPage .services p {\r\n  max-width: 600px;\r\n  margin-bottom: 40px;\r\n}\r\n.aboutPage .services .facilities {\r\n  grid-template-columns: repeat(2, 1fr);\r\n  grid-gap: 34px 17px;\r\n  margin-left: 30px;\r\n}\r\n.aboutPage .bottom {\r\n  background-color: #faf8f5;\r\n  padding: 100px 0;\r\n  background-image: url(/img/general/line-bg.png);\r\n  background-position: center;\r\n  background-size: contain;\r\n}\r\n.aboutPage .bottom .flex {\r\n  margin-bottom: 57px;\r\n}\r\n.aboutPage .bottom .img {\r\n  width: 700px;\r\n  height: 365px;\r\n  overflow: hidden;\r\n}\r\n.aboutPage .bottom p {\r\n  background: #fff;\r\n  padding: 22px 33px;\r\n  box-shadow: 10px 3px 25px #23243034;\r\n  max-width: 573px;\r\n  position: relative;\r\n  z-index: 100;\r\n}\r\n.aboutPage .bottom .top p {\r\n  margin-left: -50px;\r\n}\r\n.aboutPage .bottom .end p {\r\n  margin-right: -50px;\r\n}\r\n\r\n@media screen and (max-width: 1300px) {\r\n  .aboutPage .flex.one {\r\n    align-items: flex-start;\r\n  }\r\n  .aboutPage .flex.one .content {\r\n    margin-right: 36px;\r\n  }\r\n  .aboutPage .flex.one img {\r\n    width: 50%;\r\n  }\r\n}\r\n@media screen and (max-width: 1100px) {\r\n  .aboutPage .bottom .img {\r\n    width: 60%;\r\n    flex-shrink: 0;\r\n  }\r\n  .aboutPage .bottom .top p {\r\n    margin-left: -196px;\r\n  }\r\n  .aboutPage .bottom .end p {\r\n    margin-right: -196px;\r\n  }\r\n}\r\n@media screen and (max-width: 1000px) {\r\n  .aboutPage .wrapper .playfair {\r\n    font-size: 34px;\r\n    margin-bottom: 15px;\r\n  }\r\n  .aboutPage .flex.one {\r\n    padding: 56px 0;\r\n  }\r\n  .aboutPage .services .wrapper {\r\n    flex-direction: column;\r\n  }\r\n  .aboutPage .services p {\r\n    max-width: none;\r\n    margin-bottom: 24px;\r\n  }\r\n  .aboutPage .services .facilities {\r\n    grid-template-columns: repeat(2, 1fr);\r\n    grid-gap: 34px 17px;\r\n    margin-left: 0;\r\n    margin-top: 40px;\r\n  }\r\n  .aboutPage .services {\r\n    padding: 56px 0;\r\n  }\r\n}\r\n@media screen and (max-width: 800px) {\r\n  .aboutPage .flex.one {\r\n    flex-direction: column;\r\n  }\r\n  .aboutPage .flex.one p {\r\n    margin-bottom: 20px;\r\n  }\r\n  .aboutPage .wrapper .playfair {\r\n    font-size: 30px;\r\n  }\r\n  .aboutPage .flex.one img {\r\n    width: 100%;\r\n  }\r\n  .aboutPage .flex.one .content {\r\n    margin-right: 0;\r\n    margin-bottom: 35px;\r\n  }\r\n}\r\n@media screen and (max-width: 600px) {\r\n  .aboutPage .services .facilities {\r\n    grid-template-columns: 1fr;\r\n  }\r\n  .aboutPage .bottom .flex {\r\n    flex-direction: column;\r\n  }\r\n  .aboutPage .bottom .flex.end {\r\n    flex-direction: column-reverse;\r\n  }\r\n  .aboutPage .bottom .img {\r\n    width: 100%;\r\n    height: auto;\r\n  }\r\n  .aboutPage .bottom .top p,\r\n  .aboutPage .bottom .end p {\r\n    margin-left: 0;\r\n    margin-right: 0;\r\n    margin-top: -50px;\r\n    width: 90%;\r\n  }\r\n}\r\n", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./resources/js/Pages/ChooseFloor/ChooseFloor.css":
+/*!******************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./resources/js/Pages/ChooseFloor/ChooseFloor.css ***!
+  \******************************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".chooseFloor .container {\r\n    width: 1500px;\r\n    height: auto;\r\n    margin: 33px auto;\r\n    position: relative;\r\n}\r\n.chooseFloor .back_button {\r\n    flex-direction: column;\r\n}\r\n.chooseFloor .back_button .text {\r\n    opacity: 1;\r\n    margin-left: 0;\r\n    margin-top: 10px;\r\n}\r\n.chooseFloor .container svg {\r\n    width: 100%;\r\n    height: 100%;\r\n}\r\n.chooseFloor .container svg .st0 {\r\n    opacity: 0;\r\n    transition: 0.2s;\r\n    fill: #7bc2aa;\r\n}\r\n.chooseFloor .container svg a g {\r\n    position: relative;\r\n    width: -webkit-fit-content;\r\n    width: -moz-fit-content;\r\n    width: fit-content;\r\n    height: -webkit-fit-content;\r\n    height: -moz-fit-content;\r\n    height: fit-content;\r\n}\r\n.chooseFloor .container svg a:hover .st0 {\r\n    opacity: 0.6;\r\n}\r\n.chooseFloor .container a.hovered .st0 {\r\n    opacity: 0.6;\r\n}\r\n.chooseFloor .blocks {\r\n    position: absolute;\r\n    top: 0;\r\n    background-color: rgba(255, 255, 255, 0.6);\r\n    height: 100%;\r\n    width: 260px;\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: flex-end;\r\n    padding-bottom: 90px;\r\n    color: #1b2d39;\r\n}\r\n.chooseFloor .block_a {\r\n    left: 0;\r\n    align-items: flex-end;\r\n    padding-right: 30px;\r\n    text-align: right;\r\n}\r\n.chooseFloor .block_a h1 {\r\n    margin-top: 50px;\r\n}\r\n.chooseFloor .block_b {\r\n    right: 0;\r\n    align-items: flex-start;\r\n    padding-left: 30px;\r\n}\r\n.chooseFloor .block_b h1 {\r\n    margin-top: 150px;\r\n}\r\n.chooseFloor .blocks .line {\r\n    margin-bottom: 30px;\r\n    position: relative;\r\n    width: 100%;\r\n}\r\n.chooseFloor .blocks .line::after {\r\n    left: 0;\r\n    bottom: -10px;\r\n    height: 2px;\r\n    width: 100%;\r\n    background-color: #1b2d39;\r\n    transition: 0.4s;\r\n    transform: scaleX(0);\r\n}\r\n.chooseFloor .block_a .line::after {\r\n    transform-origin: left;\r\n}\r\n.chooseFloor .block_b .line::after {\r\n    transform-origin: right;\r\n}\r\n.chooseFloor .blocks .line h5 {\r\n    font-size: 20px;\r\n    transition: 0.4s;\r\n}\r\n.chooseFloor .blocks h1 {\r\n    font-size: 28px;\r\n}\r\n.chooseFloor .blocks .line p {\r\n    font-size: 13px;\r\n    line-height: 100%;\r\n    margin: 0 20px;\r\n    opacity: 0;\r\n    transition: 0.4s;\r\n}\r\n.chooseFloor .blocks .line:hover p,\r\n.chooseFloor .blocks .line.hovered p {\r\n    opacity: 1;\r\n}\r\n.chooseFloor .blocks .line:hover::after,\r\n.chooseFloor .blocks .line.hovered::after {\r\n    transform: scaleX(1);\r\n}\r\n.chooseFloor .blocks .line:hover h5,\r\n.chooseFloor .blocks .line.hovered h5 {\r\n    transform: scale(1.4);\r\n}\r\n\r\n@media screen and (max-width: 1800px) {\r\n    .chooseFloor .container {\r\n        margin-top: 120px;\r\n    }\r\n    .chooseFloor .back_button {\r\n        flex-direction: row;\r\n    }\r\n    .chooseFloor .back_button .text {\r\n        opacity: 1;\r\n        margin-top: 0;\r\n        margin-left: 10px;\r\n    }\r\n}\r\n@media screen and (max-width: 1550px) {\r\n    .chooseFloor .container {\r\n        width: 95%;\r\n    }\r\n    .chooseFloor .block_b h1 {\r\n        margin-top: 118px;\r\n    }\r\n    .chooseFloor .block_a h1 {\r\n        margin-top: 36px;\r\n    }\r\n    .chooseFloor .blocks {\r\n        width: 212px;\r\n    }\r\n    .chooseFloor .block_b {\r\n        padding-left: 15px;\r\n    }\r\n    .chooseFloor .block_a {\r\n        padding-right: 15px;\r\n    }\r\n}\r\n@media screen and (max-width: 1400px) {\r\n    .chooseFloor .blocks {\r\n        padding-bottom: 27px;\r\n    }\r\n    .chooseFloor .blocks h1 {\r\n        margin-top: 20px !important;\r\n        font-size: 23px;\r\n    }\r\n}\r\n@media screen and (max-width: 1150px) {\r\n    .chooseFloor .container {\r\n        margin-top: 96px;\r\n    }\r\n    .chooseFloor .blocks .line {\r\n        flex-direction: column;\r\n        margin-bottom: 17px;\r\n    }\r\n    .chooseFloor .block_a .line {\r\n        flex-direction: column-reverse;\r\n    }\r\n    .chooseFloor .blocks .line p {\r\n        text-align: center !important;\r\n    }\r\n    .chooseFloor .blocks {\r\n        width: 178px;\r\n    }\r\n}\r\n@media screen and (max-width: 1000px) {\r\n    .chooseFloor .blocks {\r\n        position: relative;\r\n        top: auto;\r\n        height: auto;\r\n        width: auto;\r\n        flex-direction: column-reverse;\r\n        align-items: center !important;\r\n    }\r\n    .chooseFloor .both_blocks {\r\n        display: flex;\r\n        align-items: flex-start;\r\n        justify-content: space-between;\r\n        margin-top: 40px;\r\n    }\r\n    .chooseFloor .block_b {\r\n        right: auto;\r\n        padding-left: 0;\r\n    }\r\n    .chooseFloor .block_a {\r\n        left: auto;\r\n        padding-right: 0;\r\n    }\r\n    .chooseFloor .blocks h1 {\r\n        margin-top: 0 !important;\r\n        font-size: 23px;\r\n        margin-bottom: 30px;\r\n    }\r\n    .chooseFloor .blocks .line p {\r\n        opacity: 1;\r\n    }\r\n}\r\n@media screen and (max-width: 500px) {\r\n    .chooseFloor .blocks {\r\n        align-items: flex-start !important;\r\n        text-align: left !important;\r\n    }\r\n    .chooseFloor .blocks .line {\r\n        align-items: flex-start;\r\n        margin-bottom: 20px;\r\n    }\r\n    .chooseFloor .blocks .line p {\r\n        text-align: left !important;\r\n        margin: 0;\r\n    }\r\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -5211,7 +5418,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".contactPage .body {\n  display: grid;\n  grid-template-columns: repeat(2, 1fr);\n  grid-gap: 77px;\n  width: 1300px;\n  margin: auto;\n  padding-top: 58px;\n  padding-bottom: 80px;\n  background: url(/img/general/line-bg.png);\n  background-position: center;\n  background-size: contain;\n}\n.contactPage .contact_info .title:first-child {\n  margin-top: 0;\n}\n.contactPage .body .img {\n  width: 100%;\n}\n\n@media screen and (max-width: 1350px) {\n  .contactPage .body {\n    width: 95%;\n  }\n}\n\n@media screen and (max-width: 1000px) {\n  .contactPage .body {\n    grid-gap: 41px;\n  }\n}\n\n@media screen and (max-width: 850px) {\n  .form .playfair {\n    font-size: 33px;\n    margin: 12px 0;\n  }\n  .form input,\n  .form textarea {\n    height: 49px;\n    margin-bottom: 14px;\n  }\n  .form textarea {\n    padding-top: 16px;\n    height: 104px;\n  }\n  .contactPage .body {\n    grid-gap: 22px;\n  }\n  .form .grid {\n    grid-gap: 11px;\n  }\n}\n@media screen and (max-width: 700px) {\n  .contactPage .body {\n    grid-template-columns: 1fr;\n  }\n  .contactPage .body .form {\n    grid-row: 1;\n  }\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".contactPage .body {\r\n  display: grid;\r\n  grid-template-columns: repeat(2, 1fr);\r\n  grid-gap: 77px;\r\n  width: 1300px;\r\n  margin: auto;\r\n  padding-top: 58px;\r\n  padding-bottom: 80px;\r\n  background: url(/img/general/line-bg.png);\r\n  background-position: center;\r\n  background-size: contain;\r\n}\r\n.contactPage .contact_info .title:first-child {\r\n  margin-top: 0;\r\n}\r\n.contactPage .body .img {\r\n  width: 100%;\r\n}\r\n\r\n@media screen and (max-width: 1350px) {\r\n  .contactPage .body {\r\n    width: 95%;\r\n  }\r\n}\r\n\r\n@media screen and (max-width: 1000px) {\r\n  .contactPage .body {\r\n    grid-gap: 41px;\r\n  }\r\n}\r\n\r\n@media screen and (max-width: 850px) {\r\n  .form .playfair {\r\n    font-size: 33px;\r\n    margin: 12px 0;\r\n  }\r\n  .form input,\r\n  .form textarea {\r\n    height: 49px;\r\n    margin-bottom: 14px;\r\n  }\r\n  .form textarea {\r\n    padding-top: 16px;\r\n    height: 104px;\r\n  }\r\n  .contactPage .body {\r\n    grid-gap: 22px;\r\n  }\r\n  .form .grid {\r\n    grid-gap: 11px;\r\n  }\r\n}\r\n@media screen and (max-width: 700px) {\r\n  .contactPage .body {\r\n    grid-template-columns: 1fr;\r\n  }\r\n  .contactPage .body .form {\r\n    grid-row: 1;\r\n  }\r\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -5235,7 +5442,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".galleryPage {\n  background: url(/img/general/line-bg.png);\n  background-position: center;\n  background-size: contain;\n  padding-bottom: 66px;\n}\n.galleryPage .gallery_grid {\n  display: grid;\n  grid-template-columns: repeat(5, 1fr);\n  grid-gap: 16px;\n  padding-top: 88px;\n  margin-bottom: 50px;\n}\n.galleryPage .gallery_grid .img {\n  position: relative;\n  width: 100%;\n  height: 100%;\n  cursor: pointer;\n}\n.galleryPage .gallery_grid .img::before {\n  width: 100%;\n  height: 100%;\n  left: 0;\n  top: 0;\n  background: #334e60;\n  opacity: 0;\n  transition: 0.5s;\n  z-index: 100;\n}\n.galleryPage .gallery_grid .img::after {\n  width: 18px;\n  height: 18px;\n  left: 50%;\n  top: 50%;\n  transform: translate(-50%, -50%) scale(1.5);\n  background: url(/img/icons/magnifier.svg) no-repeat;\n  background-position: center;\n  background-size: contain;\n  z-index: 100;\n  transition: 0.5s;\n  opacity: 0;\n}\n.galleryPage .gallery_grid .img img {\n  transition: 0.5s;\n}\n.galleryPage .gallery_grid .img:hover::before {\n  opacity: 0.5;\n}\n.galleryPage .gallery_grid .img:hover::after {\n  opacity: 1;\n  transform: translate(-50%, -50%) scale(1);\n}\n.galleryPage .gallery_grid .img:hover img {\n  transform: scale(1.2);\n}\n\n@media screen and (max-width: 1200px) {\n  .galleryPage .gallery_grid {\n    grid-template-columns: repeat(4, 1fr);\n  }\n}\n@media screen and (max-width: 900px) {\n  .galleryPage .gallery_grid {\n    grid-template-columns: repeat(3, 1fr);\n  }\n}\n@media screen and (max-width: 600px) {\n  .galleryPage .gallery_grid {\n    grid-template-columns: repeat(2, 1fr);\n  }\n}\n@media screen and (max-width: 450px) {\n  .galleryPage .gallery_grid {\n    grid-template-columns: 1fr;\n  }\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".galleryPage {\r\n  background: url(/img/general/line-bg.png);\r\n  background-position: center;\r\n  background-size: contain;\r\n  padding-bottom: 66px;\r\n}\r\n.galleryPage .gallery_grid {\r\n  display: grid;\r\n  grid-template-columns: repeat(5, 1fr);\r\n  grid-gap: 16px;\r\n  padding-top: 88px;\r\n  margin-bottom: 50px;\r\n}\r\n.galleryPage .gallery_grid .img {\r\n  position: relative;\r\n  width: 100%;\r\n  height: 100%;\r\n  cursor: pointer;\r\n}\r\n.galleryPage .gallery_grid .img::before {\r\n  width: 100%;\r\n  height: 100%;\r\n  left: 0;\r\n  top: 0;\r\n  background: #334e60;\r\n  opacity: 0;\r\n  transition: 0.5s;\r\n  z-index: 100;\r\n}\r\n.galleryPage .gallery_grid .img::after {\r\n  width: 18px;\r\n  height: 18px;\r\n  left: 50%;\r\n  top: 50%;\r\n  transform: translate(-50%, -50%) scale(1.5);\r\n  background: url(/img/icons/magnifier.svg) no-repeat;\r\n  background-position: center;\r\n  background-size: contain;\r\n  z-index: 100;\r\n  transition: 0.5s;\r\n  opacity: 0;\r\n}\r\n.galleryPage .gallery_grid .img img {\r\n  transition: 0.5s;\r\n}\r\n.galleryPage .gallery_grid .img:hover::before {\r\n  opacity: 0.5;\r\n}\r\n.galleryPage .gallery_grid .img:hover::after {\r\n  opacity: 1;\r\n  transform: translate(-50%, -50%) scale(1);\r\n}\r\n.galleryPage .gallery_grid .img:hover img {\r\n  transform: scale(1.2);\r\n}\r\n\r\n@media screen and (max-width: 1200px) {\r\n  .galleryPage .gallery_grid {\r\n    grid-template-columns: repeat(4, 1fr);\r\n  }\r\n}\r\n@media screen and (max-width: 900px) {\r\n  .galleryPage .gallery_grid {\r\n    grid-template-columns: repeat(3, 1fr);\r\n  }\r\n}\r\n@media screen and (max-width: 600px) {\r\n  .galleryPage .gallery_grid {\r\n    grid-template-columns: repeat(2, 1fr);\r\n  }\r\n}\r\n@media screen and (max-width: 450px) {\r\n  .galleryPage .gallery_grid {\r\n    grid-template-columns: 1fr;\r\n  }\r\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -5331,7 +5538,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".servicePage .container {\n  background: url(/img/general/line-bg.png);\n  background-position: center;\n  background-size: contain;\n  padding-top: 50px;\n  padding-bottom: 130px;\n  width: 1700px;\n  margin: auto;\n}\n.servicePage .container .playfair {\n  font-size: 42px;\n  max-width: 523px;\n  color: #334e60;\n}\n.servicePage .first.flex {\n  align-items: flex-start;\n  margin-top: 30px;\n  margin-bottom: 50px;\n}\n.servicePage .spabox {\n  width: 70%;\n  height: 600px;\n  background: url(/img/services/1.png) no-repeat;\n  background-position: center;\n  background-size: cover;\n  margin-right: 30px;\n}\n.servicePage .spabox .inner_box {\n  padding: 45px 64px;\n  background: linear-gradient(\n    to bottom,\n    rgba(255, 255, 255, 0.8),\n    rgba(255, 255, 255, 0)\n  );\n  text-align: center;\n}\n.servicePage .spabox p {\n  margin: 18px 0;\n}\n.servicePage .icon {\n  background: #334e60;\n  padding: 5px;\n}\n.servicePage .side_boxes {\n  width: 35%;\n}\n.servicePage .side_boxes .sidebox {\n  width: 100%;\n  height: 288px;\n}\n.servicePage .side_boxes .sb1 {\n  background: url(/img/services/2.png) no-repeat;\n  background-position: center;\n  background-size: cover;\n  position: relative;\n  height: 288px;\n  margin-bottom: 25px;\n  align-items: flex-end;\n  padding: 30px 40px;\n}\n.servicePage .side_boxes .sb1::before {\n  left: 0;\n  top: 0;\n  width: 100%;\n  height: 100%;\n  background: linear-gradient(\n    to top,\n    rgba(255, 255, 255, 0.8),\n    rgba(255, 255, 255, 0)\n  );\n}\n.servicePage .side_boxes .sb2 {\n  background: #eeeeee;\n  padding: 40px;\n  text-align: right;\n}\n.servicePage .service_title {\n  display: flex;\n  align-items: center;\n  justify-content: flex-start;\n  z-index: 100;\n}\n.servicePage .service_title img {\n  margin-right: 15px;\n}\n.servicePage .side_boxes .sb2 p {\n  text-align: left;\n  margin-bottom: 50px;\n}\n\n.servicePage .other_services .head {\n  text-align: center;\n  margin-bottom: 37px;\n}\n.servicePage .other_services .head h6 {\n  font-weight: bold;\n  margin-bottom: 20px;\n  text-transform: uppercase;\n  font-size: 16px;\n}\n.servicePage .other_services .head p {\n  max-width: 350px;\n  margin: auto;\n}\n.servicePage .other_services .grid {\n  display: grid;\n  grid-template-columns: repeat(3, 1fr);\n  grid-gap: 16px;\n}\n.servicePage .other_services .grid .box {\n  width: 100%;\n  height: 100%;\n  padding: 25px;\n  background: #f2f2f2;\n  padding-bottom: 50px;\n  position: relative;\n}\n.servicePage .other_services .grid .box .bg {\n  height: 97%;\n  width: auto;\n  position: absolute;\n  right: 0;\n  bottom: 0;\n  z-index: 0;\n  opacity: 0.5;\n}\n.servicePage .other_services .grid .box .service_title {\n  position: relative;\n  z-index: 10;\n  margin-bottom: 25px;\n}\n.servicePage .other_services .grid .box p {\n  position: relative;\n  z-index: 10;\n}\n\n@media screen and (max-width: 1750px) {\n  .servicePage .container {\n    width: 95%;\n  }\n}\n@media screen and (max-width: 1500px) {\n  .servicePage .side_boxes .sb2 p {\n    margin-bottom: 23px;\n  }\n  .servicePage .side_boxes .sb1 {\n    padding: 20px;\n  }\n  .servicePage .side_boxes .sb2 {\n    padding: 20px;\n  }\n}\n@media screen and (max-width: 1300px) {\n  .servicePage .spabox {\n    margin-right: 14px;\n  }\n  .servicePage .side_boxes .sb1 {\n    flex-direction: column;\n    align-items: flex-start;\n    justify-content: flex-end;\n  }\n  .servicePage .side_boxes .sb1 .service_title {\n    margin-bottom: 10px;\n  }\n}\n@media screen and (max-width: 1100px) {\n  .servicePage .other_services .grid {\n    grid-template-columns: repeat(2, 1fr);\n  }\n}\n@media screen and (max-width: 1000px) {\n  .servicePage .first.flex {\n    flex-direction: column;\n  }\n  .servicePage .spabox {\n    width: 100%;\n    margin-right: 0;\n    margin-bottom: 20px;\n    height: 460px;\n  }\n  .servicePage .side_boxes {\n    width: 100%;\n    display: flex;\n  }\n  .servicePage .side_boxes .sb1 {\n    margin-bottom: 0;\n    margin-right: 20px;\n  }\n}\n@media screen and (max-width: 700px) {\n  .servicePage .container .playfair {\n    font-size: 27px;\n  }\n  .servicePage .spabox .inner_box {\n    padding: 26px 17px;\n  }\n  .servicePage .spabox p {\n    margin: 9px 0;\n  }\n  .servicePage .spabox {\n    height: 347px;\n  }\n  .servicePage .side_boxes {\n    width: 100%;\n    flex-direction: column;\n  }\n  .servicePage .side_boxes .sb1 {\n    margin-bottom: 20px;\n    margin-right: 0;\n    height: auto;\n    padding-top: 100px;\n  }\n  .servicePage .side_boxes .sb2 {\n    height: auto;\n  }\n  .servicePage .other_services .grid {\n    grid-template-columns: 1fr;\n  }\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".servicePage .container {\r\n  background: url(/img/general/line-bg.png);\r\n  background-position: center;\r\n  background-size: contain;\r\n  padding-top: 50px;\r\n  padding-bottom: 130px;\r\n  width: 1700px;\r\n  margin: auto;\r\n}\r\n.servicePage .container .playfair {\r\n  font-size: 42px;\r\n  max-width: 523px;\r\n  color: #334e60;\r\n}\r\n.servicePage .first.flex {\r\n  align-items: flex-start;\r\n  margin-top: 30px;\r\n  margin-bottom: 50px;\r\n}\r\n.servicePage .spabox {\r\n  width: 70%;\r\n  height: 600px;\r\n  background: url(/img/services/1.png) no-repeat;\r\n  background-position: center;\r\n  background-size: cover;\r\n  margin-right: 30px;\r\n}\r\n.servicePage .spabox .inner_box {\r\n  padding: 45px 64px;\r\n  background: linear-gradient(\r\n    to bottom,\r\n    rgba(255, 255, 255, 0.8),\r\n    rgba(255, 255, 255, 0)\r\n  );\r\n  text-align: center;\r\n}\r\n.servicePage .spabox p {\r\n  margin: 18px 0;\r\n}\r\n.servicePage .icon {\r\n  background: #334e60;\r\n  padding: 5px;\r\n}\r\n.servicePage .side_boxes {\r\n  width: 35%;\r\n}\r\n.servicePage .side_boxes .sidebox {\r\n  width: 100%;\r\n  height: 288px;\r\n}\r\n.servicePage .side_boxes .sb1 {\r\n  background: url(/img/services/2.png) no-repeat;\r\n  background-position: center;\r\n  background-size: cover;\r\n  position: relative;\r\n  height: 288px;\r\n  margin-bottom: 25px;\r\n  align-items: flex-end;\r\n  padding: 30px 40px;\r\n}\r\n.servicePage .side_boxes .sb1::before {\r\n  left: 0;\r\n  top: 0;\r\n  width: 100%;\r\n  height: 100%;\r\n  background: linear-gradient(\r\n    to top,\r\n    rgba(255, 255, 255, 0.8),\r\n    rgba(255, 255, 255, 0)\r\n  );\r\n}\r\n.servicePage .side_boxes .sb2 {\r\n  background: #eeeeee;\r\n  padding: 40px;\r\n  text-align: right;\r\n}\r\n.servicePage .service_title {\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: flex-start;\r\n  z-index: 100;\r\n}\r\n.servicePage .service_title img {\r\n  margin-right: 15px;\r\n}\r\n.servicePage .side_boxes .sb2 p {\r\n  text-align: left;\r\n  margin-bottom: 50px;\r\n}\r\n\r\n.servicePage .other_services .head {\r\n  text-align: center;\r\n  margin-bottom: 37px;\r\n}\r\n.servicePage .other_services .head h6 {\r\n  font-weight: bold;\r\n  margin-bottom: 20px;\r\n  text-transform: uppercase;\r\n  font-size: 16px;\r\n}\r\n.servicePage .other_services .head p {\r\n  max-width: 350px;\r\n  margin: auto;\r\n}\r\n.servicePage .other_services .grid {\r\n  display: grid;\r\n  grid-template-columns: repeat(3, 1fr);\r\n  grid-gap: 16px;\r\n}\r\n.servicePage .other_services .grid .box {\r\n  width: 100%;\r\n  height: 100%;\r\n  padding: 25px;\r\n  background: #f2f2f2;\r\n  padding-bottom: 50px;\r\n  position: relative;\r\n}\r\n.servicePage .other_services .grid .box .bg {\r\n  height: 97%;\r\n  width: auto;\r\n  position: absolute;\r\n  right: 0;\r\n  bottom: 0;\r\n  z-index: 0;\r\n  opacity: 0.5;\r\n}\r\n.servicePage .other_services .grid .box .service_title {\r\n  position: relative;\r\n  z-index: 10;\r\n  margin-bottom: 25px;\r\n}\r\n.servicePage .other_services .grid .box p {\r\n  position: relative;\r\n  z-index: 10;\r\n}\r\n\r\n@media screen and (max-width: 1750px) {\r\n  .servicePage .container {\r\n    width: 95%;\r\n  }\r\n}\r\n@media screen and (max-width: 1500px) {\r\n  .servicePage .side_boxes .sb2 p {\r\n    margin-bottom: 23px;\r\n  }\r\n  .servicePage .side_boxes .sb1 {\r\n    padding: 20px;\r\n  }\r\n  .servicePage .side_boxes .sb2 {\r\n    padding: 20px;\r\n  }\r\n}\r\n@media screen and (max-width: 1300px) {\r\n  .servicePage .spabox {\r\n    margin-right: 14px;\r\n  }\r\n  .servicePage .side_boxes .sb1 {\r\n    flex-direction: column;\r\n    align-items: flex-start;\r\n    justify-content: flex-end;\r\n  }\r\n  .servicePage .side_boxes .sb1 .service_title {\r\n    margin-bottom: 10px;\r\n  }\r\n}\r\n@media screen and (max-width: 1100px) {\r\n  .servicePage .other_services .grid {\r\n    grid-template-columns: repeat(2, 1fr);\r\n  }\r\n}\r\n@media screen and (max-width: 1000px) {\r\n  .servicePage .first.flex {\r\n    flex-direction: column;\r\n  }\r\n  .servicePage .spabox {\r\n    width: 100%;\r\n    margin-right: 0;\r\n    margin-bottom: 20px;\r\n    height: 460px;\r\n  }\r\n  .servicePage .side_boxes {\r\n    width: 100%;\r\n    display: flex;\r\n  }\r\n  .servicePage .side_boxes .sb1 {\r\n    margin-bottom: 0;\r\n    margin-right: 20px;\r\n  }\r\n}\r\n@media screen and (max-width: 700px) {\r\n  .servicePage .container .playfair {\r\n    font-size: 27px;\r\n  }\r\n  .servicePage .spabox .inner_box {\r\n    padding: 26px 17px;\r\n  }\r\n  .servicePage .spabox p {\r\n    margin: 9px 0;\r\n  }\r\n  .servicePage .spabox {\r\n    height: 347px;\r\n  }\r\n  .servicePage .side_boxes {\r\n    width: 100%;\r\n    flex-direction: column;\r\n  }\r\n  .servicePage .side_boxes .sb1 {\r\n    margin-bottom: 20px;\r\n    margin-right: 0;\r\n    height: auto;\r\n    padding-top: 100px;\r\n  }\r\n  .servicePage .side_boxes .sb2 {\r\n    height: auto;\r\n  }\r\n  .servicePage .other_services .grid {\r\n    grid-template-columns: 1fr;\r\n  }\r\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -5523,7 +5730,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".showcase {\n  position: relative;\n  width: 100%;\n  height: 330px;\n  background: url(/img/home/1.png) no-repeat;\n  background-position: center;\n  background-size: cover;\n  background-attachment: fixed;\n  display: flex;\n  align-items: flex-end;\n  justify-content: center;\n  padding-bottom: 37px;\n  color: #fff;\n  font-size: 42px;\n}\n.showcase.short {\n  height: 210px;\n}\n.showcase::after {\n  width: 100%;\n  height: 100%;\n  left: 0;\n  top: 0;\n  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), #134d4d3a);\n  z-index: 0;\n}\n.showcase .title {\n  position: relative;\n  z-index: 100;\n}\n\n@media screen and (max-width: 1350px) {\n  .showcase {\n    height: 208px;\n    padding-bottom: 20px;\n    font-size: 36px;\n  }\n  .showcase.short {\n    height: 123px;\n  }\n}\n@media screen and (max-width: 600px) {\n  .showcase {\n    height: 161px;\n    padding-bottom: 14px;\n    font-size: 30px;\n  }\n  .showcase.short {\n    height: 94px;\n  }\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".showcase {\r\n  position: relative;\r\n  width: 100%;\r\n  height: 330px;\r\n  background: url(/img/home/1.png) no-repeat;\r\n  background-position: center;\r\n  background-size: cover;\r\n  background-attachment: fixed;\r\n  display: flex;\r\n  align-items: flex-end;\r\n  justify-content: center;\r\n  padding-bottom: 37px;\r\n  color: #fff;\r\n  font-size: 42px;\r\n}\r\n.showcase.short {\r\n  height: 210px;\r\n}\r\n.showcase::after {\r\n  width: 100%;\r\n  height: 100%;\r\n  left: 0;\r\n  top: 0;\r\n  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), #134d4d3a);\r\n  z-index: 0;\r\n}\r\n.showcase .title {\r\n  position: relative;\r\n  z-index: 100;\r\n}\r\n\r\n@media screen and (max-width: 1350px) {\r\n  .showcase {\r\n    height: 208px;\r\n    padding-bottom: 20px;\r\n    font-size: 36px;\r\n  }\r\n  .showcase.short {\r\n    height: 123px;\r\n  }\r\n}\r\n@media screen and (max-width: 600px) {\r\n  .showcase {\r\n    height: 161px;\r\n    padding-bottom: 14px;\r\n    font-size: 30px;\r\n  }\r\n  .showcase.short {\r\n    height: 94px;\r\n  }\r\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -5571,7 +5778,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".servicePage .container {\n  background: url(/img/general/line-bg.png);\n  background-position: center;\n  background-size: contain;\n  padding-top: 50px;\n  padding-bottom: 130px;\n  width: 1700px;\n  margin: auto;\n}\n.servicePage .container .playfair {\n  font-size: 42px;\n  max-width: 523px;\n  color: #334e60;\n}\n.servicePage .first.flex {\n  align-items: flex-start;\n  margin-top: 30px;\n  margin-bottom: 50px;\n}\n.servicePage .spabox {\n  width: 70%;\n  height: 600px;\n  background: url(/img/services/1.png) no-repeat;\n  background-position: center;\n  background-size: cover;\n  margin-right: 30px;\n}\n.servicePage .spabox .inner_box {\n  padding: 45px 64px;\n  background: linear-gradient(\n    to bottom,\n    rgba(255, 255, 255, 0.8),\n    rgba(255, 255, 255, 0)\n  );\n  text-align: center;\n}\n.servicePage .spabox p {\n  margin: 18px 0;\n}\n.servicePage .icon {\n  background: #334e60;\n  padding: 5px;\n}\n.servicePage .side_boxes {\n  width: 35%;\n}\n.servicePage .side_boxes .sidebox {\n  width: 100%;\n  height: 288px;\n}\n.servicePage .side_boxes .sb1 {\n  background: url(/img/services/2.png) no-repeat;\n  background-position: center;\n  background-size: cover;\n  position: relative;\n  height: 288px;\n  margin-bottom: 25px;\n  align-items: flex-end;\n  padding: 30px 40px;\n}\n.servicePage .side_boxes .sb1::before {\n  left: 0;\n  top: 0;\n  width: 100%;\n  height: 100%;\n  background: linear-gradient(\n    to top,\n    rgba(255, 255, 255, 0.8),\n    rgba(255, 255, 255, 0)\n  );\n}\n.servicePage .side_boxes .sb2 {\n  background: #eeeeee;\n  padding: 40px;\n  text-align: right;\n}\n.servicePage .service_title {\n  display: flex;\n  align-items: center;\n  justify-content: flex-start;\n  z-index: 100;\n}\n.servicePage .service_title img {\n  margin-right: 15px;\n}\n.servicePage .side_boxes .sb2 p {\n  text-align: left;\n  margin-bottom: 50px;\n}\n\n.servicePage .other_services .head {\n  text-align: center;\n  margin-bottom: 37px;\n}\n.servicePage .other_services .head h6 {\n  font-weight: bold;\n  margin-bottom: 20px;\n  text-transform: uppercase;\n  font-size: 16px;\n}\n.servicePage .other_services .head p {\n  max-width: 350px;\n  margin: auto;\n}\n.servicePage .other_services .grid {\n  display: grid;\n  grid-template-columns: repeat(3, 1fr);\n  grid-gap: 16px;\n}\n.servicePage .other_services .grid .box {\n  width: 100%;\n  height: 100%;\n  padding: 25px;\n  background: #f2f2f2;\n  padding-bottom: 50px;\n  position: relative;\n}\n.servicePage .other_services .grid .box .bg {\n  height: 97%;\n  width: auto;\n  position: absolute;\n  right: 0;\n  bottom: 0;\n  z-index: 0;\n  opacity: 0.5;\n}\n.servicePage .other_services .grid .box .service_title {\n  position: relative;\n  z-index: 10;\n  margin-bottom: 25px;\n}\n.servicePage .other_services .grid .box p {\n  position: relative;\n  z-index: 10;\n}\n\n@media screen and (max-width: 1750px) {\n  .servicePage .container {\n    width: 95%;\n  }\n}\n@media screen and (max-width: 1500px) {\n  .servicePage .side_boxes .sb2 p {\n    margin-bottom: 23px;\n  }\n  .servicePage .side_boxes .sb1 {\n    padding: 20px;\n  }\n  .servicePage .side_boxes .sb2 {\n    padding: 20px;\n  }\n}\n@media screen and (max-width: 1300px) {\n  .servicePage .spabox {\n    margin-right: 14px;\n  }\n  .servicePage .side_boxes .sb1 {\n    flex-direction: column;\n    align-items: flex-start;\n    justify-content: flex-end;\n  }\n  .servicePage .side_boxes .sb1 .service_title {\n    margin-bottom: 10px;\n  }\n}\n@media screen and (max-width: 1100px) {\n  .servicePage .other_services .grid {\n    grid-template-columns: repeat(2, 1fr);\n  }\n}\n@media screen and (max-width: 1000px) {\n  .servicePage .first.flex {\n    flex-direction: column;\n  }\n  .servicePage .spabox {\n    width: 100%;\n    margin-right: 0;\n    margin-bottom: 20px;\n    height: 460px;\n  }\n  .servicePage .side_boxes {\n    width: 100%;\n    display: flex;\n  }\n  .servicePage .side_boxes .sb1 {\n    margin-bottom: 0;\n    margin-right: 20px;\n  }\n}\n@media screen and (max-width: 700px) {\n  .servicePage .container .playfair {\n    font-size: 27px;\n  }\n  .servicePage .spabox .inner_box {\n    padding: 26px 17px;\n  }\n  .servicePage .spabox p {\n    margin: 9px 0;\n  }\n  .servicePage .spabox {\n    height: 347px;\n  }\n  .servicePage .side_boxes {\n    width: 100%;\n    flex-direction: column;\n  }\n  .servicePage .side_boxes .sb1 {\n    margin-bottom: 20px;\n    margin-right: 0;\n    height: auto;\n    padding-top: 100px;\n  }\n  .servicePage .side_boxes .sb2 {\n    height: auto;\n  }\n  .servicePage .other_services .grid {\n    grid-template-columns: 1fr;\n  }\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".servicePage .container {\r\n  background: url(/img/general/line-bg.png);\r\n  background-position: center;\r\n  background-size: contain;\r\n  padding-top: 50px;\r\n  padding-bottom: 130px;\r\n  width: 1700px;\r\n  margin: auto;\r\n}\r\n.servicePage .container .playfair {\r\n  font-size: 42px;\r\n  max-width: 523px;\r\n  color: #334e60;\r\n}\r\n.servicePage .first.flex {\r\n  align-items: flex-start;\r\n  margin-top: 30px;\r\n  margin-bottom: 50px;\r\n}\r\n.servicePage .spabox {\r\n  width: 70%;\r\n  height: 600px;\r\n  background: url(/img/services/1.png) no-repeat;\r\n  background-position: center;\r\n  background-size: cover;\r\n  margin-right: 30px;\r\n}\r\n.servicePage .spabox .inner_box {\r\n  padding: 45px 64px;\r\n  background: linear-gradient(\r\n    to bottom,\r\n    rgba(255, 255, 255, 0.8),\r\n    rgba(255, 255, 255, 0)\r\n  );\r\n  text-align: center;\r\n}\r\n.servicePage .spabox p {\r\n  margin: 18px 0;\r\n}\r\n.servicePage .icon {\r\n  background: #334e60;\r\n  padding: 5px;\r\n}\r\n.servicePage .side_boxes {\r\n  width: 35%;\r\n}\r\n.servicePage .side_boxes .sidebox {\r\n  width: 100%;\r\n  height: 288px;\r\n}\r\n.servicePage .side_boxes .sb1 {\r\n  background: url(/img/services/2.png) no-repeat;\r\n  background-position: center;\r\n  background-size: cover;\r\n  position: relative;\r\n  height: 288px;\r\n  margin-bottom: 25px;\r\n  align-items: flex-end;\r\n  padding: 30px 40px;\r\n}\r\n.servicePage .side_boxes .sb1::before {\r\n  left: 0;\r\n  top: 0;\r\n  width: 100%;\r\n  height: 100%;\r\n  background: linear-gradient(\r\n    to top,\r\n    rgba(255, 255, 255, 0.8),\r\n    rgba(255, 255, 255, 0)\r\n  );\r\n}\r\n.servicePage .side_boxes .sb2 {\r\n  background: #eeeeee;\r\n  padding: 40px;\r\n  text-align: right;\r\n}\r\n.servicePage .service_title {\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: flex-start;\r\n  z-index: 100;\r\n}\r\n.servicePage .service_title img {\r\n  margin-right: 15px;\r\n}\r\n.servicePage .side_boxes .sb2 p {\r\n  text-align: left;\r\n  margin-bottom: 50px;\r\n}\r\n\r\n.servicePage .other_services .head {\r\n  text-align: center;\r\n  margin-bottom: 37px;\r\n}\r\n.servicePage .other_services .head h6 {\r\n  font-weight: bold;\r\n  margin-bottom: 20px;\r\n  text-transform: uppercase;\r\n  font-size: 16px;\r\n}\r\n.servicePage .other_services .head p {\r\n  max-width: 350px;\r\n  margin: auto;\r\n}\r\n.servicePage .other_services .grid {\r\n  display: grid;\r\n  grid-template-columns: repeat(3, 1fr);\r\n  grid-gap: 16px;\r\n}\r\n.servicePage .other_services .grid .box {\r\n  width: 100%;\r\n  height: 100%;\r\n  padding: 25px;\r\n  background: #f2f2f2;\r\n  padding-bottom: 50px;\r\n  position: relative;\r\n}\r\n.servicePage .other_services .grid .box .bg {\r\n  height: 97%;\r\n  width: auto;\r\n  position: absolute;\r\n  right: 0;\r\n  bottom: 0;\r\n  z-index: 0;\r\n  opacity: 0.5;\r\n}\r\n.servicePage .other_services .grid .box .service_title {\r\n  position: relative;\r\n  z-index: 10;\r\n  margin-bottom: 25px;\r\n}\r\n.servicePage .other_services .grid .box p {\r\n  position: relative;\r\n  z-index: 10;\r\n}\r\n\r\n@media screen and (max-width: 1750px) {\r\n  .servicePage .container {\r\n    width: 95%;\r\n  }\r\n}\r\n@media screen and (max-width: 1500px) {\r\n  .servicePage .side_boxes .sb2 p {\r\n    margin-bottom: 23px;\r\n  }\r\n  .servicePage .side_boxes .sb1 {\r\n    padding: 20px;\r\n  }\r\n  .servicePage .side_boxes .sb2 {\r\n    padding: 20px;\r\n  }\r\n}\r\n@media screen and (max-width: 1300px) {\r\n  .servicePage .spabox {\r\n    margin-right: 14px;\r\n  }\r\n  .servicePage .side_boxes .sb1 {\r\n    flex-direction: column;\r\n    align-items: flex-start;\r\n    justify-content: flex-end;\r\n  }\r\n  .servicePage .side_boxes .sb1 .service_title {\r\n    margin-bottom: 10px;\r\n  }\r\n}\r\n@media screen and (max-width: 1100px) {\r\n  .servicePage .other_services .grid {\r\n    grid-template-columns: repeat(2, 1fr);\r\n  }\r\n}\r\n@media screen and (max-width: 1000px) {\r\n  .servicePage .first.flex {\r\n    flex-direction: column;\r\n  }\r\n  .servicePage .spabox {\r\n    width: 100%;\r\n    margin-right: 0;\r\n    margin-bottom: 20px;\r\n    height: 460px;\r\n  }\r\n  .servicePage .side_boxes {\r\n    width: 100%;\r\n    display: flex;\r\n  }\r\n  .servicePage .side_boxes .sb1 {\r\n    margin-bottom: 0;\r\n    margin-right: 20px;\r\n  }\r\n}\r\n@media screen and (max-width: 700px) {\r\n  .servicePage .container .playfair {\r\n    font-size: 27px;\r\n  }\r\n  .servicePage .spabox .inner_box {\r\n    padding: 26px 17px;\r\n  }\r\n  .servicePage .spabox p {\r\n    margin: 9px 0;\r\n  }\r\n  .servicePage .spabox {\r\n    height: 347px;\r\n  }\r\n  .servicePage .side_boxes {\r\n    width: 100%;\r\n    flex-direction: column;\r\n  }\r\n  .servicePage .side_boxes .sb1 {\r\n    margin-bottom: 20px;\r\n    margin-right: 0;\r\n    height: auto;\r\n    padding-top: 100px;\r\n  }\r\n  .servicePage .side_boxes .sb2 {\r\n    height: auto;\r\n  }\r\n  .servicePage .other_services .grid {\r\n    grid-template-columns: 1fr;\r\n  }\r\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -44482,6 +44689,36 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 /***/ }),
 
+/***/ "./resources/js/Pages/ChooseFloor/ChooseFloor.css":
+/*!********************************************************!*\
+  !*** ./resources/js/Pages/ChooseFloor/ChooseFloor.css ***!
+  \********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_ChooseFloor_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!../../../../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./ChooseFloor.css */ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./resources/js/Pages/ChooseFloor/ChooseFloor.css");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_ChooseFloor_css__WEBPACK_IMPORTED_MODULE_1__.default, options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_ChooseFloor_css__WEBPACK_IMPORTED_MODULE_1__.default.locals || {});
+
+/***/ }),
+
 /***/ "./resources/js/Pages/Contact/Contact.css":
 /*!************************************************!*\
   !*** ./resources/js/Pages/Contact/Contact.css ***!
@@ -45251,6 +45488,9 @@ var map = {
 	"./AboutUs/AboutUs": "./resources/js/Pages/AboutUs/AboutUs.js",
 	"./AboutUs/AboutUs.css": "./resources/js/Pages/AboutUs/AboutUs.css",
 	"./AboutUs/AboutUs.js": "./resources/js/Pages/AboutUs/AboutUs.js",
+	"./ChooseFloor/ChooseFloor": "./resources/js/Pages/ChooseFloor/ChooseFloor.js",
+	"./ChooseFloor/ChooseFloor.css": "./resources/js/Pages/ChooseFloor/ChooseFloor.css",
+	"./ChooseFloor/ChooseFloor.js": "./resources/js/Pages/ChooseFloor/ChooseFloor.js",
 	"./Contact/Contact": "./resources/js/Pages/Contact/Contact.js",
 	"./Contact/Contact.css": "./resources/js/Pages/Contact/Contact.css",
 	"./Contact/Contact.js": "./resources/js/Pages/Contact/Contact.js",
