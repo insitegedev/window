@@ -11,6 +11,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 
 const Home = ({ sliders }) => {
+    console.log(sliders);
     useEffect(() => {
         Aos.init({ duration: 2000 });
     }, []);
@@ -90,7 +91,7 @@ const Home = ({ sliders }) => {
                             </div>
                             <VideoPopup
                                 // src='https://www.youtube.com/embed/zr4r3n5Smho'
-                                videoSrc={data.video}
+                                videoSrc={"https://www.youtube.com/embed/"+data.youtube_url}
                                 showVideo={showVideo}
                                 hideVideo={() => setShowVideo(false)}
                             />

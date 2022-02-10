@@ -1,8 +1,5 @@
 import React, { useEffect } from "react";
 import Showcase from "../../components/Showcase/Showcase";
-import Img1 from "/img/about/1.png";
-import Img2 from "/img/about/2.png";
-import Img3 from "/img/about/3.png";
 import "./AboutUs.css";
 import { ArrowButton, MainButton } from "../../components/Buttons/Buttons";
 import Facilities from "../Home/Facilities/Facilities";
