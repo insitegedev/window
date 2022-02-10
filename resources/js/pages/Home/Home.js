@@ -9,9 +9,21 @@ import { VideoPopup } from "../../components/VideoPopup/VideoPopup";
 import Layout from "../../Layouts/Layout";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import {usePage} from "@inertiajs/inertia-react";
 
 const Home = ({ sliders }) => {
-    console.log(sliders);
+    const sharedData = usePage().props.localizations;
+
+
+    function __(key, replace = {}) {
+        let translation = sharedData[key] || key;
+
+        Object.keys(replace).forEach(function (key) {
+            translation = translation.replace(':' + key, replace[key])
+        });
+
+        return translation;
+    }
     useEffect(() => {
         Aos.init({ duration: 2000 });
     }, []);
@@ -71,14 +83,14 @@ const Home = ({ sliders }) => {
                                     data-aos="fade-right"
                                 >
                                     <MainButton
-                                        text="contact us"
+                                        text={__("contact_us")}
                                         link={route("client.contact.index")}
                                     />
                                     <div
                                         className="play_vid flex center"
                                         onClick={() => setShowVideo(true)}
                                     >
-                                        <div>Watch the video</div>
+                                        <div>{__("watch_the_video")}</div>
                                         <div className="circle">
                                             <img
                                                 src="/img/icons/home/play.svg"

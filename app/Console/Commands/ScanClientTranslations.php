@@ -61,8 +61,9 @@ class ScanClientTranslations extends Command
                 break;
             }
 
-            $keys = array_keys($result);
-            foreach ($keys as $key) {
+//            $keys = array_keys($result);
+            foreach ($result as $key => $value) {
+
                 $text = [];
                 $languageLine = LanguageLine::where('group',$group)
                     ->where('key',$key)->first();
@@ -70,7 +71,7 @@ class ScanClientTranslations extends Command
                     continue;
                 }
 
-                $text[$defaultLanguage->locale] = $key;
+                $text[$defaultLanguage->locale] = !empty($value)? $value : $key;
                 $this->info('Insert into language lines -  '. $key);
                 LanguageLine::create([
                     'group' => $group,

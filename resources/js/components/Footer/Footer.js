@@ -5,6 +5,18 @@ import "./Footer.css";
 import { usePage } from "@inertiajs/inertia-react";
 
 const Footer = () => {
+    const sharedData = usePage().props.localizations;
+
+
+    function __(key, replace = {}) {
+        let translation = sharedData[key] || key;
+
+        Object.keys(replace).forEach(function (key) {
+            translation = translation.replace(':' + key, replace[key])
+        });
+
+        return translation;
+    }
     const { pathname } = usePage().props;
     return (
         <div
@@ -23,12 +35,11 @@ const Footer = () => {
                             : "block",
                 }}
             >
-                <div className="playfair">Choose Your Apartment</div>
+                <div className="playfair">{__("choose_your_apartment")}</div>
                 <p>
-                    With our 3d model you can easily choose the apartment you
-                    would like to buy
+                    {__("choose_your_apartment_description")}
                 </p>
-                <MainButton text="Learn more" link="/" />
+                <MainButton text={__('learn_more')} link={route('client.choosefloor.index')} />
             </div>
             <div className="insite flex centered">
                 <div>Designed by</div>

@@ -3031,6 +3031,17 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var Footer = function Footer() {
+  var sharedData = (0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_4__.usePage)().props.localizations;
+
+  function __(key) {
+    var replace = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+    var translation = sharedData[key] || key;
+    Object.keys(replace).forEach(function (key) {
+      translation = translation.replace(':' + key, replace[key]);
+    });
+    return translation;
+  }
+
   var pathname = (0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_4__.usePage)().props.pathname;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "footer",
@@ -3044,9 +3055,9 @@ var Footer = function Footer() {
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "playfair"
-  }, "Choose Your Apartment"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "With our 3d model you can easily choose the apartment you would like to buy"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Buttons_Buttons__WEBPACK_IMPORTED_MODULE_1__.MainButton, {
-    text: "Learn more",
-    link: "/"
+  }, __("choose_your_apartment")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, __("choose_your_apartment_description")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Buttons_Buttons__WEBPACK_IMPORTED_MODULE_1__.MainButton, {
+    text: __('learn_more'),
+    link: route('client.choosefloor.index')
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "insite flex centered"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, "Designed by"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
@@ -3368,6 +3379,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! aos */ "./node_modules/aos/dist/aos.js");
 /* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(aos__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var aos_dist_aos_css__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! aos/dist/aos.css */ "./node_modules/aos/dist/aos.css");
+/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
+
 
 
 
@@ -3378,6 +3391,17 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var AboutUs = function AboutUs() {
+  var sharedData = (0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_8__.usePage)().props.localizations;
+
+  function __(key) {
+    var replace = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+    var translation = sharedData[key] || key;
+    Object.keys(replace).forEach(function (key) {
+      translation = translation.replace(':' + key, replace[key]);
+    });
+    return translation;
+  }
+
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
     aos__WEBPACK_IMPORTED_MODULE_6___default().init({
       duration: 2000
@@ -3389,7 +3413,7 @@ var AboutUs = function AboutUs() {
     link: "/",
     color: "#334E60"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Showcase_Showcase__WEBPACK_IMPORTED_MODULE_1__.default, {
-    title: "About Us"
+    title: __("about_us")
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "wrapper flex one"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -3424,7 +3448,7 @@ var AboutUs = function AboutUs() {
     className: "playfair"
   }, "Services You Have When Living In Window Bakuriani"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "\u10D1\u10D0\u10D9\u10E3\u10E0\u10D8\u10D0\u10DC\u10D8 \u10D8\u10E1\u10E2\u10DD\u10E0\u10D8\u10E3\u10DA\u10D0\u10D3 \u10EA\u10DC\u10DD\u10D1\u10D8\u10DA\u10D8 \u10E1\u10D0\u10DB\u10D7\u10DD \u10E0\u10D4\u10D9\u10E0\u10D4\u10D0\u10EA\u10D8\u10E3\u10DA\u10D8 \u10D9\u10E3\u10E0\u10DD\u10E0\u10E2\u10D8\u10D0. \u10DE\u10E0\u10DD\u10D4\u10E5\u10E2\u10D8 \u10DB\u10D3\u10D4\u10D1\u10D0\u10E0\u10D4\u10DD\u10D1\u10E1 \u10D3\u10D8\u10D3\u10D5\u10D4\u10DA\u10D8\u10E1 \u10E1\u10D0\u10D1\u10D0\u10D2\u10D8\u10E0\u10DD\u10E1\u10D7\u10D0\u10DC \u10D0\u10EE\u10DA\u10DD\u10E1. \u10DB\u10D8\u10DB\u10D3\u10D4\u10D1\u10D0\u10E0\u10D4\u10D3 \u10D0\u10E8\u10D4\u10DC\u10D4\u10D1\u10E3\u10DA\u10D8 \u10EA\u10DC\u10DD\u10D1\u10D8\u10DA\u10D8 \u10D3\u10D4\u10D5\u10D4\u10DA\u10DD\u10DE\u10D4\u10E0\u10E3\u10DA\u10D8 \u10D9\u10DD\u10DB\u10DE\u10D0\u10DC\u10D8\u10D4\u10D1\u10D8\u10E1 \u10DB\u10D8\u10D4\u10E0 \u10E1\u10EE\u10D5\u10D0\u10D3\u10D0\u10E1\u10EE\u10D5\u10D0 \u10E2\u10D8\u10DE\u10D8\u10E1 \u10E1\u10D0\u10E1\u10E2\u10E3\u10DB\u10E0\u10DD \u10D8\u10DC\u10E4\u10E0\u10D0\u10E1\u10E2\u10E0\u10E3\u10E5\u10E2\u10E3\u10E0\u10D8\u10E1 \u10D9\u10DD\u10DB\u10DE\u10D0\u10DC\u10D8\u10D4\u10D1\u10D8. \u10D4\u10E0\u10D7\u10D8 \u10DB\u10EE\u10E0\u10D8\u10D3\u10D0\u10DC \u10E2\u10E7\u10D8\u10E1 \u10DB\u10D0\u10E1\u10D8\u10D5\u10D8 \u10D4\u10DB\u10D8\u10EF\u10DC\u10D4\u10D1\u10D0, \u10EC\u10D8\u10DC\u10D0 \u10DB\u10EE\u10D0\u10E0\u10D4\u10E1 \u10D9\u10D8 \u10D0\u10E5\u10D5\u10E1 \u10D2\u10D0\u10E0\u10D0\u10DC\u10E2\u10D8\u10E0\u10D4\u10D1\u10E3\u10DA\u10D8 \u10EE\u10D4\u10D3\u10D4\u10D1\u10D8 \u10DB\u10D7\u10D4\u10D1\u10D6\u10D4."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Buttons_Buttons__WEBPACK_IMPORTED_MODULE_3__.MainButton, {
     link: "/",
-    text: "Learn more"
+    text: __("learn_more")
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Home_Facilities_Facilities__WEBPACK_IMPORTED_MODULE_4__.default, null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "bottom"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -3956,34 +3980,47 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var _Facilities_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Facilities.css */ "./resources/js/Pages/Home/Facilities/Facilities.css");
+/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
+
 
 
 
 var Facilities = function Facilities() {
+  var sharedData = (0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_2__.usePage)().props.localizations;
+
+  function __(key) {
+    var replace = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+    var translation = sharedData[key] || key;
+    Object.keys(replace).forEach(function (key) {
+      translation = translation.replace(':' + key, replace[key]);
+    });
+    return translation;
+  }
+
   var facilityList = [{
     icon: "/img/icons/home/bell.svg",
-    name: "Recipient / Reception"
+    name: __("recipient_recreation")
   }, {
     icon: "/img/icons/home/spa.svg",
-    name: "Spa & Aesthetics Center"
+    name: __("spa_aesthetics")
   }, {
     icon: "/img/icons/home/parking-area.svg",
-    name: "Parking Area"
+    name: __("parking_area")
   }, {
     icon: "/img/icons/home/tree.svg",
-    name: "Recreation Area With Kids Playground"
+    name: __("recreation_area_with_kids_playground")
   }, {
     icon: "/img/icons/home/coffee-cup.svg",
-    name: "Café / Restaurant"
+    name: __("cafe_restaurant")
   }, {
     icon: "/img/icons/home/cctv-camera.svg",
-    name: "24/7 Video Monitoring"
+    name: __("video_monitoring")
   }, {
     icon: "/img/icons/home/secure-shield.svg",
     name: "Security Service"
   }, {
     icon: "/img/icons/home/key.svg",
-    name: "Rental And Hotel Services"
+    name: __("security_service")
   }];
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "facilities"
@@ -4024,6 +4061,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! aos */ "./node_modules/aos/dist/aos.js");
 /* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(aos__WEBPACK_IMPORTED_MODULE_8__);
 /* harmony import */ var aos_dist_aos_css__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! aos/dist/aos.css */ "./node_modules/aos/dist/aos.css");
+/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -4047,9 +4085,20 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
+
 var Home = function Home(_ref) {
   var sliders = _ref.sliders;
-  console.log(sliders);
+  var sharedData = (0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_10__.usePage)().props.localizations;
+
+  function __(key) {
+    var replace = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+    var translation = sharedData[key] || key;
+    Object.keys(replace).forEach(function (key) {
+      translation = translation.replace(':' + key, replace[key]);
+    });
+    return translation;
+  }
+
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
     aos__WEBPACK_IMPORTED_MODULE_8___default().init({
       duration: 2000
@@ -4121,14 +4170,14 @@ var Home = function Home(_ref) {
       },
       "data-aos": "fade-right"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Buttons_Buttons__WEBPACK_IMPORTED_MODULE_5__.MainButton, {
-      text: "contact us",
+      text: __("contact_us"),
       link: route("client.contact.index")
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
       className: "play_vid flex center",
       onClick: function onClick() {
         return setShowVideo(true);
       }
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, "Watch the video"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, __("watch_the_video")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
       className: "circle"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
       src: "/img/icons/home/play.svg",
@@ -4216,36 +4265,45 @@ __webpack_require__.r(__webpack_exports__);
 
 var Services = function Services(_ref) {
   var services = _ref.services;
+  var sharedData = (0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_3__.usePage)().props.localizations;
+
+  function __(key) {
+    var replace = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+    var translation = sharedData[key] || key;
+    Object.keys(replace).forEach(function (key) {
+      translation = translation.replace(':' + key, replace[key]);
+    });
+    return translation;
+  }
+
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
     aos__WEBPACK_IMPORTED_MODULE_4___default().init({
       duration: 2000
     });
   }, []);
-  console.log(services);
-  console.log(route("client.service.show", 1));
   var serviceBoxes = [{
     icon: "/img/icons/home/bell.svg",
-    title: "Recipient / Reception",
+    title: __("recipient_recreation"),
     para: "The infrastructure of the complex includes: reception / reception, spa, parking, green yard"
   }, {
     icon: "/img/icons/home/tree.svg",
-    title: "Recreation Area With Kids Playground",
+    title: __("recreation_area_with_kids_playground"),
     para: "The infrastructure of the complex includes: reception / reception, spa, parking, green yard with children's playground and yard infrastructure, cafe-restaurant, 24-hour video surveillance."
   }, {
     icon: "/img/icons/home/parking-area.svg",
-    title: "Parking Area",
+    title: __("parking_area"),
     para: "The infrastructure of the complex includes: reception / reception, spa, parking, green yard with children's playground and yard infrastructure, cafe-restaurant"
   }, {
     icon: "/img/icons/home/secure-shield.svg",
-    title: "Security Service",
+    title: __("security_service"),
     para: "The infrastructure of the complex includes: reception / reception"
   }, {
     icon: "/img/icons/home/cctv-camera.svg",
-    title: "24/7 Video Monitoring",
+    title: __("video_monitoring"),
     para: "The infrastructure of the complex includes: reception / reception, spa, parking, green yard with children's"
   }, {
     icon: "/img/icons/home/key.svg",
-    title: "Rental And Hotel Services",
+    title: __("rental_and_hotel_services"),
     para: "The infrastructure of the complex includes: reception / reception, spa, parking, green yard with children's playground and yard infrastructure, cafe-restaurant"
   }];
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Layouts_Layout__WEBPACK_IMPORTED_MODULE_7__.default, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -4703,16 +4761,29 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var _Buttons_Buttons__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Buttons/Buttons */ "./resources/js/components/Buttons/Buttons.js");
 /* harmony import */ var _Form_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Form.css */ "./resources/js/components/Form/Form.css");
+/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
+
 
 
 
 
 var Form = function Form() {
+  var sharedData = (0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_3__.usePage)().props.localizations;
+
+  function __(key) {
+    var replace = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+    var translation = sharedData[key] || key;
+    Object.keys(replace).forEach(function (key) {
+      translation = translation.replace(':' + key, replace[key]);
+    });
+    return translation;
+  }
+
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "form"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Have any questions or suggestions?"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, __("have_any_questions")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "playfair"
-  }, "Write To Us"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  }, __("write_to_us")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "grid"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
     type: "text",
@@ -4992,36 +5063,45 @@ __webpack_require__.r(__webpack_exports__);
 
 var Services = function Services(_ref) {
   var services = _ref.services;
+  var sharedData = (0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_3__.usePage)().props.localizations;
+
+  function __(key) {
+    var replace = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+    var translation = sharedData[key] || key;
+    Object.keys(replace).forEach(function (key) {
+      translation = translation.replace(':' + key, replace[key]);
+    });
+    return translation;
+  }
+
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
     aos__WEBPACK_IMPORTED_MODULE_4___default().init({
       duration: 2000
     });
   }, []);
-  console.log(services);
-  console.log(route("client.service.show", 1));
   var serviceBoxes = [{
     icon: "/img/icons/home/bell.svg",
-    title: "Recipient / Reception",
+    title: __("recipient_recreation"),
     para: "The infrastructure of the complex includes: reception / reception, spa, parking, green yard"
   }, {
     icon: "/img/icons/home/tree.svg",
-    title: "Recreation Area With Kids Playground",
+    title: __("recreation_area_with_kids_playground"),
     para: "The infrastructure of the complex includes: reception / reception, spa, parking, green yard with children's playground and yard infrastructure, cafe-restaurant, 24-hour video surveillance."
   }, {
     icon: "/img/icons/home/parking-area.svg",
-    title: "Parking Area",
+    title: __("parking_area"),
     para: "The infrastructure of the complex includes: reception / reception, spa, parking, green yard with children's playground and yard infrastructure, cafe-restaurant"
   }, {
     icon: "/img/icons/home/secure-shield.svg",
-    title: "Security Service",
+    title: __("security_service"),
     para: "The infrastructure of the complex includes: reception / reception"
   }, {
     icon: "/img/icons/home/cctv-camera.svg",
-    title: "24/7 Video Monitoring",
+    title: __("video_monitoring"),
     para: "The infrastructure of the complex includes: reception / reception, spa, parking, green yard with children's"
   }, {
     icon: "/img/icons/home/key.svg",
-    title: "Rental And Hotel Services",
+    title: __("rental_and_hotel_services"),
     para: "The infrastructure of the complex includes: reception / reception, spa, parking, green yard with children's playground and yard infrastructure, cafe-restaurant"
   }];
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Layouts_Layout__WEBPACK_IMPORTED_MODULE_7__.default, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {

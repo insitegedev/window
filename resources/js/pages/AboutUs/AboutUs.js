@@ -6,16 +6,29 @@ import Facilities from "../Home/Facilities/Facilities";
 import Layout from "../../Layouts/Layout";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import {usePage} from "@inertiajs/inertia-react";
 
 const AboutUs = () => {
+    const sharedData = usePage().props.localizations;
+
+
+    function __(key, replace = {}) {
+        let translation = sharedData[key] || key;
+
+        Object.keys(replace).forEach(function (key) {
+            translation = translation.replace(':' + key, replace[key])
+        });
+
+        return translation;
+    }
     useEffect(() => {
         Aos.init({ duration: 2000 });
     }, []);
     return (
         <Layout>
             <div className="aboutPage">
-                <ArrowButton link="/" color="#334E60" />
-                <Showcase title="About Us" />
+                <ArrowButton  link="/" color="#334E60" />
+                <Showcase title={__("about_us")} />
                 <div className="wrapper flex one">
                     <div className="content" data-aos="fade-right">
                         <div className="playfair">About Project</div>
@@ -75,7 +88,7 @@ const AboutUs = () => {
                                 მხრიდან ტყის მასივი ემიჯნება, წინა მხარეს კი
                                 აქვს გარანტირებული ხედები მთებზე.
                             </p>
-                            <MainButton link="/" text="Learn more" />
+                            <MainButton link="/" text={__("learn_more")} />
                         </div>
                         <Facilities />
                     </div>

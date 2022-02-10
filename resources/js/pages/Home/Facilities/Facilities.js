@@ -1,32 +1,45 @@
 import React from "react";
 
 import "./Facilities.css";
+import {usePage} from "@inertiajs/inertia-react";
 
 const Facilities = () => {
+    const sharedData = usePage().props.localizations;
+
+    function __(key, replace = {}) {
+        let translation = sharedData[key] || key;
+
+        Object.keys(replace).forEach(function (key) {
+            translation = translation.replace(':' + key, replace[key])
+        });
+
+        return translation;
+    }
+
   const facilityList = [
     {
       icon: "/img/icons/home/bell.svg",
-      name: "Recipient / Reception",
+      name: __("recipient_recreation"),
     },
     {
       icon: "/img/icons/home/spa.svg",
-      name: "Spa & Aesthetics Center",
+      name: __("spa_aesthetics"),
     },
     {
       icon: "/img/icons/home/parking-area.svg",
-      name: "Parking Area",
+      name: __("parking_area"),
     },
     {
       icon: "/img/icons/home/tree.svg",
-      name: "Recreation Area With Kids Playground",
+      name: __("recreation_area_with_kids_playground"),
     },
     {
       icon: "/img/icons/home/coffee-cup.svg",
-      name: "Café / Restaurant",
+      name: __("cafe_restaurant"),
     },
     {
       icon: "/img/icons/home/cctv-camera.svg",
-      name: "24/7 Video Monitoring",
+      name: __("video_monitoring"),
     },
     {
       icon: "/img/icons/home/secure-shield.svg",
@@ -34,7 +47,7 @@ const Facilities = () => {
     },
     {
       icon: "/img/icons/home/key.svg",
-      name: "Rental And Hotel Services",
+      name: __("security_service"),
     },
   ];
   return (

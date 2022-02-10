@@ -5,7 +5,7 @@ import {
     MainButton,
 } from "../../components/Buttons/Buttons";
 import Showcase from "../../components/Showcase/Showcase";
-import { Link } from "@inertiajs/inertia-react";
+import {Link, usePage} from "@inertiajs/inertia-react";
 
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -13,40 +13,50 @@ import "./Services.css";
 import Layout from "../../Layouts/Layout";
 
 const Services = ({ services }) => {
+    const sharedData = usePage().props.localizations;
+
+
+    function __(key, replace = {}) {
+        let translation = sharedData[key] || key;
+
+        Object.keys(replace).forEach(function (key) {
+            translation = translation.replace(':' + key, replace[key])
+        });
+
+        return translation;
+    }
     useEffect(() => {
         Aos.init({ duration: 2000 });
     }, []);
-    console.log(services);
-    console.log(route("client.service.show", 1));
     const serviceBoxes = [
         {
             icon: "/img/icons/home/bell.svg",
-            title: "Recipient / Reception",
+            title: __("recipient_recreation"),
             para: "The infrastructure of the complex includes: reception / reception, spa, parking, green yard",
         },
         {
             icon: "/img/icons/home/tree.svg",
-            title: "Recreation Area With Kids Playground",
+            title: __("recreation_area_with_kids_playground"),
             para: "The infrastructure of the complex includes: reception / reception, spa, parking, green yard with children's playground and yard infrastructure, cafe-restaurant, 24-hour video surveillance.",
         },
         {
             icon: "/img/icons/home/parking-area.svg",
-            title: "Parking Area",
+            title: __("parking_area"),
             para: "The infrastructure of the complex includes: reception / reception, spa, parking, green yard with children's playground and yard infrastructure, cafe-restaurant",
         },
         {
             icon: "/img/icons/home/secure-shield.svg",
-            title: "Security Service",
+            title: __("security_service"),
             para: "The infrastructure of the complex includes: reception / reception",
         },
         {
             icon: "/img/icons/home/cctv-camera.svg",
-            title: "24/7 Video Monitoring",
+            title: __("video_monitoring"),
             para: "The infrastructure of the complex includes: reception / reception, spa, parking, green yard with children's",
         },
         {
             icon: "/img/icons/home/key.svg",
-            title: "Rental And Hotel Services",
+            title: __("rental_and_hotel_services"),
             para: "The infrastructure of the complex includes: reception / reception, spa, parking, green yard with children's playground and yard infrastructure, cafe-restaurant",
         },
     ];
