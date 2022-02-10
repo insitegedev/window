@@ -46,6 +46,6 @@ class ContactController extends Controller
             }
 
         }
-        return redirect()->route("client.contact.index");
+        return Inertia::render('Contact/Contact');
     }
 }
