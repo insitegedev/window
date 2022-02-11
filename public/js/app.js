@@ -3227,6 +3227,17 @@ __webpack_require__.r(__webpack_exports__);
 var Menu = function Menu(_ref) {
   var openMenu = _ref.openMenu,
       linkClicked = _ref.linkClicked;
+  var sharedData = (0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_4__.usePage)().props.localizations;
+
+  function __(key) {
+    var replace = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+    var translation = sharedData[key] || key;
+    Object.keys(replace).forEach(function (key) {
+      translation = translation.replace(':' + key, replace[key]);
+    });
+    return translation;
+  }
+
   var pathname = (0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_4__.usePage)().props.pathname;
   var darkBg = true;
 
@@ -3234,23 +3245,24 @@ var Menu = function Menu(_ref) {
     darkBg = false;
   }
 
+  console.log(__("choose_apartment"));
   var navbar = [{
-    name: "Home",
+    name: __("home"),
     path: route("client.home.index")
   }, {
-    name: "Choose Apartment",
+    name: __("choose_apartment"),
     path: route("client.choosefloor.index")
   }, {
-    name: "About Us",
+    name: __("about_us"),
     path: route("client.about.index")
   }, {
-    name: "Services",
+    name: __("services"),
     path: route("client.service.index")
   }, {
-    name: "Gallery",
+    name: __("gallery"),
     path: route("client.gallery.index")
   }, {
-    name: "Contact Us",
+    name: __("contact_us"),
     path: route("client.contact.index")
   }];
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
