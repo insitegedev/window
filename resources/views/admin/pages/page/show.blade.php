@@ -72,8 +72,16 @@
                                         <td>{{$page->translate($locale)->title ?? ''}}</td>
                                     </tr>
                                     <tr>
+                                        <td>@lang('admin.title_2'):</td>
+                                        <td>{{$page->translate($locale)->title_2 ?? ''}}</td>
+                                    </tr>
+                                    <tr>
                                         <td>@lang('admin.description'):</td>
                                         <td>{{$page->translate($locale)->description ?? ''}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>@lang('admin.description_2'):</td>
+                                        <td>{{$page->translate($locale)->description_2 ?? ''}}</td>
                                     </tr>
                                     <tr>
                                         <td>@lang('admin.meta_title'):</td>

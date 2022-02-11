@@ -6,10 +6,10 @@ import Showcase from "../../components/Showcase/Showcase";
 import Layout from "../../Layouts/Layout";
 import ApartmentImg from "/img/apartments/1.png";
 import "./Apartment.css";
-import { Link } from "@inertiajs/inertia-react";
+import { Link, Head } from "@inertiajs/inertia-react";
 import Pdf from "/img/icons/apartment/file.svg";
 
-const Apartment = () => {
+const Apartment = ({page}) => {
     const specifications = [
         "Hall - 6.3 m",
         "Bathroom - 4.4 m",
@@ -20,6 +20,10 @@ const Apartment = () => {
     ];
     return (
         <Layout>
+            <Head>
+                <title>{page.meta_title}</title>
+                <meta name="description" content={page.meta_description} />
+            </Head>
             <div className="apartmentPage">
                 <Showcase short />
                 <BackButton color="#334E60" />

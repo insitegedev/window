@@ -11,12 +11,7 @@ class AboutUsController extends Controller
 {
     public function index()
     {
-        $aboutPage = Page::where('key', 'about')->firstOrFail();
-        $certificates = Certificate::query()->with(['file', 'translations']);;
-        return Inertia::render('AboutUs/AboutUs', ["about" => $aboutPage]);
-        return view('client.pages.about.index', [
-            "aboutPage" => $aboutPage,
-            "certificates" => $certificates->get()
-        ]);
+        $page = Page::where('key', 'about')->firstOrFail();
+        return Inertia::render('AboutUs/AboutUs', ["page" => $page]);
     }
 }

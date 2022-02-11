@@ -6,9 +6,10 @@ import Facilities from "../Home/Facilities/Facilities";
 import Layout from "../../Layouts/Layout";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import {usePage} from "@inertiajs/inertia-react";
+import {usePage, Head} from "@inertiajs/inertia-react";
 
-const AboutUs = () => {
+
+const AboutUs = ({ page }) => {
     const sharedData = usePage().props.localizations;
 
 
@@ -26,39 +27,27 @@ const AboutUs = () => {
     }, []);
     return (
         <Layout>
+            <Head>
+                <title>{page.meta_title}</title>
+                <meta name="description" content={page.meta_description} />
+            </Head>
             <div className="aboutPage">
-                <ArrowButton  link="/" color="#334E60" />
+                <ArrowButton  link={route('client.choosefloor.index')} color="#334E60" text={__("choose_apartment")} />
                 <Showcase title={__("about_us")} />
                 <div className="wrapper flex one">
                     <div className="content" data-aos="fade-right">
-                        <div className="playfair">About Project</div>
-                        <p>
-                            პრემიუმ კლასის სასტუმროს ტიპის კომპლექსი ბაკურიანში,
-                            რაც წლის ყველა სეზონზე დასვენებას კიდევ უფრო
-                            სასიამოვნოს, კომფორტულს და ჰარმონიულს გახდის.
-                            <br />
-                            <br />
-                            კომპლექსის ინფრასტრუქტურა მოიცავს:
-                            მიმღები/რეცეფშენი, სპა, პარკინგი, გამწვანებული ეზო
-                            ბავშთა გასართობი მოედანით და ეზოს ინფრასტრუქტურით,
-                            კაფე-რესტორანი, 24-საათიანი ვიდეომეთვალყურეობა,
-                            დაცვა, გაქირავებისა და სასტუმროს სერვისები.
-                            <br />
-                            <br />
-                            პროექტში აპარტამენტების შეძენა ხელსაყრელია როგორც
-                            დასასვენებლად ასევე საინვესტიციოთ (გაქირავებიდან
-                            შემოსავლის მიღების მიზნით)
-                        </p>
-                        <div className="playfair">About Location</div>
-                        <p>
-                            ბაკურიანი ისტორიულად ცნობილი სამთო რეკრეაციული
-                            კურორტია. პროექტი მდებარეობს დიდველის საბაგიროსთან
-                            ახლოს. მიმდებარედ აშენებული ცნობილი დეველოპერული
-                            კომპანიების მიერ სხვადასხვა ტიპის სასტუმრო
-                            ინფრასტრუქტურის კომპანიები. ერთი მხრიდან ტყის მასივი
-                            ემიჯნება, წინა მხარეს კი აქვს გარანტირებული ხედები
-                            მთებზე.
-                        </p>
+                        <div className="playfair">{page.title}</div>
+                        <p
+                            dangerouslySetInnerHTML={{
+                                __html: page.description,
+                            }}
+                        ></p>
+                        <div className="playfair">{page.title_2}</div>
+                        <p
+                            dangerouslySetInnerHTML={{
+                                __html: page.description_2,
+                            }}
+                        ></p>
                         <div className="map" data-aos="fade-up">
                             <iframe
                                 src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d11909.044506590086!2d44.7621418!3d41.7364602!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sge!4v1643612359314!5m2!1sen!2sge"
@@ -76,17 +65,10 @@ const AboutUs = () => {
                     <div className="wrapper flex">
                         <div>
                             <div className="playfair">
-                                Services You Have When Living In Window
-                                Bakuriani
+                                {__("services_you_have_when_living_in_window_bakuriani")}
                             </div>
                             <p>
-                                ბაკურიანი ისტორიულად ცნობილი სამთო რეკრეაციული
-                                კურორტია. პროექტი მდებარეობს დიდველის
-                                საბაგიროსთან ახლოს. მიმდებარედ აშენებული ცნობილი
-                                დეველოპერული კომპანიების მიერ სხვადასხვა ტიპის
-                                სასტუმრო ინფრასტრუქტურის კომპანიები. ერთი
-                                მხრიდან ტყის მასივი ემიჯნება, წინა მხარეს კი
-                                აქვს გარანტირებული ხედები მთებზე.
+                                {__("services_you_have_when_living_in_window_bakuriani_description")}
                             </p>
                             <MainButton link="/" text={__("learn_more")} />
                         </div>
@@ -103,13 +85,7 @@ const AboutUs = () => {
                             <div className="img">
                                 <img src="/img/about/2.png" alt="" />
                             </div>
-                            <p>
-                                აპარტამენტების მფლობელების კომფორტისთვისა და
-                                უკეთ დასვევნებისთვის კომპლექსი მოიცავს:
-                                კაფე-რესტორანი, მისაღები/რეცეფშენი, პარკინგი,
-                                ეზო მოსასვენებელი სივრცეებითა და ბავშთა
-                                გასართობი მოედანით. ბინები ბარდება სრული
-                                რემონტით/ავეჯით.
+                            <p>{__("services_little_description_1")}
                             </p>
                         </div>
                         <div
@@ -117,11 +93,7 @@ const AboutUs = () => {
                             style={{ justifyContent: "flex-end" }}
                             data-aos="fade-up-left"
                         >
-                            <p>
-                                პროექტი კარგად ერწყმის ბაკურიანის ადგილობრივ
-                                ლანდშაფტს. დაპროექტებისას გათვალისწინებულია
-                                ადგილობრივი კლიმატის თავისებურებები. ჯამში
-                                დაგეგმარებულია 53 აპარტამენტი.
+                            <p>{__("services_little_description_1")}
                             </p>
                             <div className="img">
                                 <img src="/img/about/3.png" alt="" />

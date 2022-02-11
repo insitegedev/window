@@ -9,9 +9,9 @@ import { VideoPopup } from "../../components/VideoPopup/VideoPopup";
 import Layout from "../../Layouts/Layout";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import {usePage} from "@inertiajs/inertia-react";
+import {usePage, Head} from "@inertiajs/inertia-react";
 
-const Home = ({ sliders }) => {
+const Home = ({ sliders, page }) => {
     const sharedData = usePage().props.localizations;
 
 
@@ -55,6 +55,10 @@ const Home = ({ sliders }) => {
     const [showVideo, setShowVideo] = useState(false);
     return (
         <Layout>
+            <Head>
+                <title>{page.meta_title}</title>
+                <meta name="description" content={page.meta_description} />
+            </Head>
             <div className="mainSlider">
                 {sliders.map((data, indexData) => {
                     let position = "nextSlide";
@@ -145,7 +149,7 @@ const Home = ({ sliders }) => {
                     </button>
                 </div>
                 <SocialMedia color="#fff" />
-                <ArrowButton color="#fff" link="/" />
+                <ArrowButton color="#fff" link={route('client.choosefloor.index')} text={__("choose_apartment")} />
             </div>
         </Layout>
     );

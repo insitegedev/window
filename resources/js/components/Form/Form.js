@@ -46,7 +46,7 @@ const Form = () => {
             <p>{__("have_any_questions")}</p>
             <div className="playfair">{__("write_to_us")}</div>
             <div className="grid">
-                {errors.name && <div>{errors.name}</div>}
+                {errors.name && <div>{__(errors.name.split(".")[1])}</div>}
                 {errors.phone && <div>{errors.phone}</div>}
             </div>
             <div className="grid">

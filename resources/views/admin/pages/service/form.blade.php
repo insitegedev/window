@@ -39,6 +39,39 @@
                                 @foreach(config('translatable.locales') as $locale)
                                     <div id="lang-{{$locale}}" class="col s12  mt-5">
                                         <div class="input-field ">
+                                            {!! Form::text($locale.'[meta_title]',$service->translate($locale)->meta_title ?? '',['class' => 'validate '. $errors->has($locale.'.meta_title') ? '' : 'valid']) !!}
+                                            {!! Form::label($locale.'[meta_title]',__('admin.meta_title')) !!}
+                                            @error($locale.'.meta_title')
+                                            <small class="errorTxt4">
+                                                <div class="error">
+                                                    {{$message}}
+                                                </div>
+                                            </small>
+                                            @enderror
+                                        </div>
+                                        <div class="input-field ">
+                                            {!! Form::text($locale.'[meta_description]',$service->translate($locale)->meta_description ?? '',['class' => 'validate '. $errors->has($locale.'.meta_description') ? '' : 'valid']) !!}
+                                            {!! Form::label($locale.'[meta_description]',__('admin.meta_description')) !!}
+                                            @error($locale.'.meta_description')
+                                            <small class="errorTxt4">
+                                                <div class="error">
+                                                    {{$message}}
+                                                </div>
+                                            </small>
+                                            @enderror
+                                        </div>
+                                        <div class="input-field ">
+                                            {!! Form::text($locale.'[meta_keyword]',$service->translate($locale)->meta_keyword ?? '',['class' => 'validate '. $errors->has($locale.'.meta_keyword') ? '' : 'valid']) !!}
+                                            {!! Form::label($locale.'[meta_keyword]',__('admin.meta_keyword')) !!}
+                                            @error($locale.'.meta_keyword')
+                                            <small class="errorTxt4">
+                                                <div class="error">
+                                                    {{$message}}
+                                                </div>
+                                            </small>
+                                            @enderror
+                                        </div>
+                                        <div class="input-field ">
                                             {!! Form::text($locale.'[title]',$service->translate($locale)->title ?? '',['class' => 'validate '. $errors->has($locale.'.title') ? '' : 'valid']) !!}
                                             {!! Form::label($locale.'[title]',__('admin.title')) !!}
                                             @error($locale.'.title')

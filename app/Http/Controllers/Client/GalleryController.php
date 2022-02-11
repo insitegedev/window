@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Client;
 
 use App\Http\Controllers\Controller;
 use App\Models\Gallery;
+use App\Models\Page;
 use Inertia\Inertia;
 
 class GalleryController extends Controller
@@ -13,10 +14,10 @@ class GalleryController extends Controller
 
 
         $galleries = Gallery::query()->where("status", 1)->with(['file'])->paginate(15);
+        $page = Page::where('key', 'gallery')->firstOrFail();
 
-//        dd($galleries);
 
-        return Inertia::render('Gallery/Gallery', ["galleries" => $galleries]);
+        return Inertia::render('Gallery/Gallery', ["galleries" => $galleries, "page" =>$page]);
 
     }
 

@@ -43,6 +43,17 @@
                                             </small>
                                             @enderror
                                         </div>
+                                        <div class="input-field ">
+                                            {!! Form::text($locale.'[title_2]',$page->translate($locale)->title_2 ?? '',['class' => 'validate '. $errors->has($locale.'.title_2') ? '' : 'valid']) !!}
+                                            {!! Form::label($locale.'[title_2]',__('admin.title_2')) !!}
+                                            @error($locale.'.title_2')
+                                            <small class="errorTxt4">
+                                                <div class="error">
+                                                    {{$message}}
+                                                </div>
+                                            </small>
+                                            @enderror
+                                        </div>
                                         <div class="input-field">
                                             <h5 for="description">@lang('admin.description')</h5>
                                             <textarea class="form-control" id="description-{{$locale}}"
@@ -50,6 +61,20 @@
                                                 {!! $page->translate($locale)->description ?? '' !!}
                                             </textarea>
                                             @error($locale.'.description')
+                                            <small class="errorTxt4">
+                                                <div class="error">
+                                                    {{$message}}
+                                                </div>
+                                            </small>
+                                            @enderror
+                                        </div>
+                                        <div class="input-field">
+                                            <h5 for="description_2">@lang('admin.description_2')</h5>
+                                            <textarea class="form-control" id="description_2-{{$locale}}"
+                                                      name="{{$locale}}[description_2]'">
+                                                {!! $page->translate($locale)->description_2 ?? '' !!}
+                                            </textarea>
+                                            @error($locale.'.description_2')
                                             <small class="errorTxt4">
                                                 <div class="error">
                                                     {{$message}}
@@ -113,6 +138,10 @@
     <script>
         @foreach(config('translatable.locales') as $locale)
         CKEDITOR.replace('description-{{$locale}}', {
+            filebrowserUploadUrl: "{{route('upload', ['_token' => csrf_token() ])}}",
+            filebrowserUploadMethod: 'form'
+        });
+        CKEDITOR.replace('description_2-{{$locale}}', {
             filebrowserUploadUrl: "{{route('upload', ['_token' => csrf_token() ])}}",
             filebrowserUploadMethod: 'form'
         });

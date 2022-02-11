@@ -8,6 +8,8 @@ import { PagePath } from "../../components/PagePath/PagePath";
 import DragSlide from "./DragSlide/DragSlide";
 import { NextServiceBox } from "../../components/NextServiceBox/NextServiceBox";
 import Layout from "../../Layouts/Layout";
+import {Head} from "@inertiajs/inertia-react";
+
 
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -29,6 +31,11 @@ const SingleService = ({ service, nextService }) => {
     }, []);
     return (
         <Layout>
+            <Head>
+                <title>{service.meta_title}</title>
+                <meta name="description" content={service.meta_description} />
+                <meta name="keywords" content={service.meta_keyword} />
+            </Head>
             <div className="singleService servicePage">
                 <Showcase short />
                 <BackButton color="#334E60" link="/services" />

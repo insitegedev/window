@@ -79,6 +79,18 @@
                                 <table class="striped">
                                     <tbody>
                                     <tr>
+                                        <td>@lang('admin.meta_title'):</td>
+                                        <td>{{$service->translate($locale)->meta_title ?? ''}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>@lang('admin.meta_description'):</td>
+                                        <td>{{$service->translate($locale)->meta_description ?? ''}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>@lang('admin.meta_keyword'):</td>
+                                        <td>{{$service->translate($locale)->meta_keyword ?? ''}}</td>
+                                    </tr>
+                                    <tr>
                                         <td>@lang('admin.title'):</td>
                                         <td>{{$service->translate($locale)->title ?? ''}}</td>
                                     </tr>

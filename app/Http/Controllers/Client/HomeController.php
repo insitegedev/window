@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Client;
 
 use App\Http\Controllers\Controller;
+use App\Models\Page;
 use App\Models\Slider;
 use Inertia\Inertia;
 
@@ -12,10 +13,10 @@ class HomeController extends Controller
     {
 
 
-//        $news = News::where("status", 1)->with(['file', 'translations'])->take(6)->get();
+        $page = Page::where('key', 'home')->firstOrFail();
         $sliders = Slider::query()->where("status", 1)->with(['file', 'translations']);
 
-        return Inertia::render('Home/Home', ["sliders" => $sliders->get()]);
+        return Inertia::render('Home/Home', ["sliders" => $sliders->get(), "page" => $page]);
 
     }
 
@@ -33,7 +34,7 @@ class HomeController extends Controller
     {
         return Inertia::render('ChooseFloor/ChooseFloor');
     }
-    
+
     public function apartment()
     {
         return Inertia::render('Apartment/Apartment');

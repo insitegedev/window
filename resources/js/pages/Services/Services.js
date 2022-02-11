@@ -5,14 +5,15 @@ import {
     MainButton,
 } from "../../components/Buttons/Buttons";
 import Showcase from "../../components/Showcase/Showcase";
-import {Link, usePage} from "@inertiajs/inertia-react";
+import {Link, usePage, Head} from "@inertiajs/inertia-react";
 
 import Aos from "aos";
 import "aos/dist/aos.css";
 import "./Services.css";
 import Layout from "../../Layouts/Layout";
 
-const Services = ({ services }) => {
+
+const Services = ({ services, page, urlPrev }) => {
     const sharedData = usePage().props.localizations;
 
 
@@ -32,43 +33,50 @@ const Services = ({ services }) => {
         {
             icon: "/img/icons/home/bell.svg",
             title: __("recipient_recreation"),
-            para: "The infrastructure of the complex includes: reception / reception, spa, parking, green yard",
+            para: __("recipient_recreation_description"),
         },
         {
             icon: "/img/icons/home/tree.svg",
             title: __("recreation_area_with_kids_playground"),
-            para: "The infrastructure of the complex includes: reception / reception, spa, parking, green yard with children's playground and yard infrastructure, cafe-restaurant, 24-hour video surveillance.",
+            para: __("recreation_area_with_kids_playground_description"),
         },
         {
             icon: "/img/icons/home/parking-area.svg",
             title: __("parking_area"),
-            para: "The infrastructure of the complex includes: reception / reception, spa, parking, green yard with children's playground and yard infrastructure, cafe-restaurant",
+            para: __("parking_area_description"),
         },
         {
             icon: "/img/icons/home/secure-shield.svg",
             title: __("security_service"),
-            para: "The infrastructure of the complex includes: reception / reception",
+            para: __("security_service_description"),
         },
         {
             icon: "/img/icons/home/cctv-camera.svg",
             title: __("video_monitoring"),
-            para: "The infrastructure of the complex includes: reception / reception, spa, parking, green yard with children's",
+            para: __("video_monitoring_description"),
         },
         {
             icon: "/img/icons/home/key.svg",
             title: __("rental_and_hotel_services"),
-            para: "The infrastructure of the complex includes: reception / reception, spa, parking, green yard with children's playground and yard infrastructure, cafe-restaurant",
+            para: __("rental_and_hotel_services_description"),
         },
     ];
+
     return (
         <Layout>
+            <Head>
+                <title>{page.meta_title}</title>
+                <meta name="description" content={page.meta_description} />
+            </Head>
             <div className="servicePage">
-                <Showcase title="Services" />
-                <BackButton color="#fff" link="/" />
-                <ArrowButton color="#334E60" link="/" />
+                <Showcase title={page.title} />
+                <BackButton color="#fff" link={urlPrev} />
+                <ArrowButton color="#334E60" link={route('client.choosefloor.index')} text={__("choose_apartment")}/>
                 <div className="container">
-                    <div className="playfair">
-                        Services You Have When Living In Window Bakuriani
+                    <div className="playfair" dangerouslySetInnerHTML={{
+                        __html: page.description,
+                    }}>
+
                     </div>
                     <div className="flex first">
                         {services.length > 0 && (
@@ -104,7 +112,6 @@ const Services = ({ services }) => {
                         {services.length > 1 && (
                             <div className="side_boxes">
                                 {services.map((service) => {
-                                    console.log(service.main_file_1);
                                     return (
                                         <div
                                             className="sidebox sb1 flex"
@@ -124,11 +131,11 @@ const Services = ({ services }) => {
                                         >
                                             <div className="service_title">
                                                 <img
-                                                    src="/img/icons/home/coffee-cup.svg"
+                                                    src="/img/icons/home/spa.svg"
                                                     alt=""
                                                     className="icon"
                                                 />
-                                                <div>Café / Restaurant</div>
+                                                <div>{service.title}</div>
                                             </div>
                                             <MainButton
                                                 link={route(
@@ -136,7 +143,7 @@ const Services = ({ services }) => {
                                                     service.id
                                                 )}
                                                 dark
-                                                text="learn more"
+                                                text={__("learn_more")}
                                             />
                                         </div>
                                     );
@@ -172,7 +179,7 @@ const Services = ({ services }) => {
                                         hotel services.
                                     </p>
                                     <MainButton
-                                        link="/about-us"
+                                        link={route('client.about.index')}
                                         dark
                                         text="more about us"
                                     />
@@ -182,10 +189,10 @@ const Services = ({ services }) => {
                     </div>
                     <div className="other_services">
                         <div className="head">
-                            <h6>other services</h6>
-                            <p>
-                                “Sometimes the most productive thing you can do
-                                is relax
+                            <h6>{page.title_2}</h6>
+                            <p dangerouslySetInnerHTML={{
+                                __html: page.description_2
+                            }}>
                             </p>
                         </div>
                         <div className="grid">

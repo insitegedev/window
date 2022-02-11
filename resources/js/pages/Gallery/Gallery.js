@@ -8,9 +8,21 @@ import GalleryPopup from "./GalleryPopup/GalleryPopup";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import Layout from "../../Layouts/Layout";
+import {usePage, Head} from "@inertiajs/inertia-react";
 
-const Gallery = ({ galleries }) => {
-    console.log(galleries);
+const Gallery = ({ galleries, urlPrev, page }) => {
+    const sharedData = usePage().props.localizations;
+
+
+    function __(key, replace = {}) {
+        let translation = sharedData[key] || key;
+
+        Object.keys(replace).forEach(function (key) {
+            translation = translation.replace(':' + key, replace[key])
+        });
+
+        return translation;
+    }
     useEffect(() => {
         Aos.init({ duration: 2000 });
     }, []);
@@ -36,9 +48,13 @@ const Gallery = ({ galleries }) => {
     ];
     return (
         <Layout>
+            <Head>
+                <title>{page.meta_title}</title>
+                <meta name="description" content={page.meta_description} />
+            </Head>
             <div className="galleryPage">
-                <BackButton link="/" color="#fff" />
-                <ArrowButton color="#334E60" link="#334E60" />
+                <BackButton link={urlPrev} color="#fff" />
+                <ArrowButton color="#334E60" link="#334E60" text={__("choose_apartment")}/>
                 <Showcase title="Gallery" />
                 <div className="wrapper">
                     <div className="gallery_grid">

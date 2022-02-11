@@ -11,7 +11,9 @@ class PageTranslation extends BaseTranslationModel
 
     protected $fillable = [
         'title',
+        'title_2',
         'description',
+        'description_2',
         "meta_title",
         "meta_description"
     ];

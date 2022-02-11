@@ -1,4 +1,4 @@
-import { Link } from "@inertiajs/inertia-react";
+import { Link, Head } from "@inertiajs/inertia-react";
 import React from "react";
 import { useState } from "react";
 import { BackButton } from "../../components/Buttons/Buttons";
@@ -7,7 +7,7 @@ import Layout from "../../Layouts/Layout";
 import Background from "/img/apartments/bg.png";
 import "./ChooseFloor.css";
 
-const ChooseFloor = ({apartments, urlPrev}) => {
+const ChooseFloor = ({apartments, page, urlPrev}) => {
     const [floorIndex, setFloorIndex] = useState(0);
     const floorList = [
         {
@@ -87,6 +87,10 @@ const ChooseFloor = ({apartments, urlPrev}) => {
     })
     return (
         <Layout>
+            <Head>
+                <title>{page.meta_title}</title>
+                <meta name="description" content={page.meta_description} />
+            </Head>
             <div className="chooseFloor">
                 <img className="background" src={Background} alt="" />
                 <Showcase short />

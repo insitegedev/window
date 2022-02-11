@@ -26,7 +26,9 @@ class Page extends Model
 
     public $translatedAttributes = [
         'title',
+        'title_2',
         'description',
+        'description_2',
         "meta_title",
         "meta_description"
     ];

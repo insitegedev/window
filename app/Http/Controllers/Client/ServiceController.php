@@ -20,7 +20,7 @@ class ServiceController extends Controller
         $services = Service::where('status',true)->with(['mainFile_1','translations'])->get();
 //        dd($services);
 
-        return Inertia::render("Services/Services", ["services"=> $services]);
+        return Inertia::render("Services/Services", ["services"=> $services, "page" => $page]);
         return view('client.pages.service.index', [
             'services' => $services,
             'page' => $page

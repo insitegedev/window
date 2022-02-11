@@ -15,11 +15,8 @@ class ContactController extends Controller
     public function index()
     {
         $page = Page::where('key', 'contact')->firstOrFail();
-        return Inertia::render('Contact/Contact');
+        return Inertia::render('Contact/Contact', ["page" => $page]);
 
-        return view('client.pages.contact.index', [
-            "page" => $page
-        ]);
     }
 
     public function mail(Request $request)

@@ -2913,7 +2913,8 @@ var MainButton = function MainButton(_ref) {
 };
 var ArrowButton = function ArrowButton(_ref2) {
   var color = _ref2.color,
-      link = _ref2.link;
+      link = _ref2.link,
+      text = _ref2.text;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__.Link, {
     href: link
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -2923,7 +2924,7 @@ var ArrowButton = function ArrowButton(_ref2) {
     style: {
       color: color
     }
-  }, "CHOOSE APARTMENT"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  }, text), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "circle",
     style: {
       borderColor: color
@@ -3390,7 +3391,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var AboutUs = function AboutUs() {
+var AboutUs = function AboutUs(_ref) {
+  var page = _ref.page;
   var sharedData = (0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_8__.usePage)().props.localizations;
 
   function __(key) {
@@ -3407,11 +3409,15 @@ var AboutUs = function AboutUs() {
       duration: 2000
     });
   }, []);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Layouts_Layout__WEBPACK_IMPORTED_MODULE_5__.default, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Layouts_Layout__WEBPACK_IMPORTED_MODULE_5__.default, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_8__.Head, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("title", null, page.meta_title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("meta", {
+    name: "description",
+    content: page.meta_description
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "aboutPage"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Buttons_Buttons__WEBPACK_IMPORTED_MODULE_3__.ArrowButton, {
-    link: "/",
-    color: "#334E60"
+    link: route('client.choosefloor.index'),
+    color: "#334E60",
+    text: __("choose_apartment")
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Showcase_Showcase__WEBPACK_IMPORTED_MODULE_1__.default, {
     title: __("about_us")
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -3421,9 +3427,17 @@ var AboutUs = function AboutUs() {
     "data-aos": "fade-right"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "playfair"
-  }, "About Project"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "\u10DE\u10E0\u10D4\u10DB\u10D8\u10E3\u10DB \u10D9\u10DA\u10D0\u10E1\u10D8\u10E1 \u10E1\u10D0\u10E1\u10E2\u10E3\u10DB\u10E0\u10DD\u10E1 \u10E2\u10D8\u10DE\u10D8\u10E1 \u10D9\u10DD\u10DB\u10DE\u10DA\u10D4\u10E5\u10E1\u10D8 \u10D1\u10D0\u10D9\u10E3\u10E0\u10D8\u10D0\u10DC\u10E8\u10D8, \u10E0\u10D0\u10EA \u10EC\u10DA\u10D8\u10E1 \u10E7\u10D5\u10D4\u10DA\u10D0 \u10E1\u10D4\u10D6\u10DD\u10DC\u10D6\u10D4 \u10D3\u10D0\u10E1\u10D5\u10D4\u10DC\u10D4\u10D1\u10D0\u10E1 \u10D9\u10D8\u10D3\u10D4\u10D5 \u10E3\u10E4\u10E0\u10DD \u10E1\u10D0\u10E1\u10D8\u10D0\u10DB\u10DD\u10D5\u10DC\u10DD\u10E1, \u10D9\u10DD\u10DB\u10E4\u10DD\u10E0\u10E2\u10E3\u10DA\u10E1 \u10D3\u10D0 \u10F0\u10D0\u10E0\u10DB\u10DD\u10DC\u10D8\u10E3\u10DA\u10E1 \u10D2\u10D0\u10EE\u10D3\u10D8\u10E1.", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), "\u10D9\u10DD\u10DB\u10DE\u10DA\u10D4\u10E5\u10E1\u10D8\u10E1 \u10D8\u10DC\u10E4\u10E0\u10D0\u10E1\u10E2\u10E0\u10E3\u10E5\u10E2\u10E3\u10E0\u10D0 \u10DB\u10DD\u10D8\u10EA\u10D0\u10D5\u10E1: \u10DB\u10D8\u10DB\u10E6\u10D4\u10D1\u10D8/\u10E0\u10D4\u10EA\u10D4\u10E4\u10E8\u10D4\u10DC\u10D8, \u10E1\u10DE\u10D0, \u10DE\u10D0\u10E0\u10D9\u10D8\u10DC\u10D2\u10D8, \u10D2\u10D0\u10DB\u10EC\u10D5\u10D0\u10DC\u10D4\u10D1\u10E3\u10DA\u10D8 \u10D4\u10D6\u10DD \u10D1\u10D0\u10D5\u10E8\u10D7\u10D0 \u10D2\u10D0\u10E1\u10D0\u10E0\u10D7\u10DD\u10D1\u10D8 \u10DB\u10DD\u10D4\u10D3\u10D0\u10DC\u10D8\u10D7 \u10D3\u10D0 \u10D4\u10D6\u10DD\u10E1 \u10D8\u10DC\u10E4\u10E0\u10D0\u10E1\u10E2\u10E0\u10E3\u10E5\u10E2\u10E3\u10E0\u10D8\u10D7, \u10D9\u10D0\u10E4\u10D4-\u10E0\u10D4\u10E1\u10E2\u10DD\u10E0\u10D0\u10DC\u10D8, 24-\u10E1\u10D0\u10D0\u10D7\u10D8\u10D0\u10DC\u10D8 \u10D5\u10D8\u10D3\u10D4\u10DD\u10DB\u10D4\u10D7\u10D5\u10D0\u10DA\u10E7\u10E3\u10E0\u10D4\u10DD\u10D1\u10D0, \u10D3\u10D0\u10EA\u10D5\u10D0, \u10D2\u10D0\u10E5\u10D8\u10E0\u10D0\u10D5\u10D4\u10D1\u10D8\u10E1\u10D0 \u10D3\u10D0 \u10E1\u10D0\u10E1\u10E2\u10E3\u10DB\u10E0\u10DD\u10E1 \u10E1\u10D4\u10E0\u10D5\u10D8\u10E1\u10D4\u10D1\u10D8.", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), "\u10DE\u10E0\u10DD\u10D4\u10E5\u10E2\u10E8\u10D8 \u10D0\u10DE\u10D0\u10E0\u10E2\u10D0\u10DB\u10D4\u10DC\u10E2\u10D4\u10D1\u10D8\u10E1 \u10E8\u10D4\u10EB\u10D4\u10DC\u10D0 \u10EE\u10D4\u10DA\u10E1\u10D0\u10E7\u10E0\u10D4\u10DA\u10D8\u10D0 \u10E0\u10DD\u10D2\u10DD\u10E0\u10EA \u10D3\u10D0\u10E1\u10D0\u10E1\u10D5\u10D4\u10DC\u10D4\u10D1\u10DA\u10D0\u10D3 \u10D0\u10E1\u10D4\u10D5\u10D4 \u10E1\u10D0\u10D8\u10DC\u10D5\u10D4\u10E1\u10E2\u10D8\u10EA\u10D8\u10DD\u10D7 (\u10D2\u10D0\u10E5\u10D8\u10E0\u10D0\u10D5\u10D4\u10D1\u10D8\u10D3\u10D0\u10DC \u10E8\u10D4\u10DB\u10DD\u10E1\u10D0\u10D5\u10DA\u10D8\u10E1 \u10DB\u10D8\u10E6\u10D4\u10D1\u10D8\u10E1 \u10DB\u10D8\u10D6\u10DC\u10D8\u10D7)"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  }, page.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+    dangerouslySetInnerHTML: {
+      __html: page.description
+    }
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "playfair"
-  }, "About Location"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "\u10D1\u10D0\u10D9\u10E3\u10E0\u10D8\u10D0\u10DC\u10D8 \u10D8\u10E1\u10E2\u10DD\u10E0\u10D8\u10E3\u10DA\u10D0\u10D3 \u10EA\u10DC\u10DD\u10D1\u10D8\u10DA\u10D8 \u10E1\u10D0\u10DB\u10D7\u10DD \u10E0\u10D4\u10D9\u10E0\u10D4\u10D0\u10EA\u10D8\u10E3\u10DA\u10D8 \u10D9\u10E3\u10E0\u10DD\u10E0\u10E2\u10D8\u10D0. \u10DE\u10E0\u10DD\u10D4\u10E5\u10E2\u10D8 \u10DB\u10D3\u10D4\u10D1\u10D0\u10E0\u10D4\u10DD\u10D1\u10E1 \u10D3\u10D8\u10D3\u10D5\u10D4\u10DA\u10D8\u10E1 \u10E1\u10D0\u10D1\u10D0\u10D2\u10D8\u10E0\u10DD\u10E1\u10D7\u10D0\u10DC \u10D0\u10EE\u10DA\u10DD\u10E1. \u10DB\u10D8\u10DB\u10D3\u10D4\u10D1\u10D0\u10E0\u10D4\u10D3 \u10D0\u10E8\u10D4\u10DC\u10D4\u10D1\u10E3\u10DA\u10D8 \u10EA\u10DC\u10DD\u10D1\u10D8\u10DA\u10D8 \u10D3\u10D4\u10D5\u10D4\u10DA\u10DD\u10DE\u10D4\u10E0\u10E3\u10DA\u10D8 \u10D9\u10DD\u10DB\u10DE\u10D0\u10DC\u10D8\u10D4\u10D1\u10D8\u10E1 \u10DB\u10D8\u10D4\u10E0 \u10E1\u10EE\u10D5\u10D0\u10D3\u10D0\u10E1\u10EE\u10D5\u10D0 \u10E2\u10D8\u10DE\u10D8\u10E1 \u10E1\u10D0\u10E1\u10E2\u10E3\u10DB\u10E0\u10DD \u10D8\u10DC\u10E4\u10E0\u10D0\u10E1\u10E2\u10E0\u10E3\u10E5\u10E2\u10E3\u10E0\u10D8\u10E1 \u10D9\u10DD\u10DB\u10DE\u10D0\u10DC\u10D8\u10D4\u10D1\u10D8. \u10D4\u10E0\u10D7\u10D8 \u10DB\u10EE\u10E0\u10D8\u10D3\u10D0\u10DC \u10E2\u10E7\u10D8\u10E1 \u10DB\u10D0\u10E1\u10D8\u10D5\u10D8 \u10D4\u10DB\u10D8\u10EF\u10DC\u10D4\u10D1\u10D0, \u10EC\u10D8\u10DC\u10D0 \u10DB\u10EE\u10D0\u10E0\u10D4\u10E1 \u10D9\u10D8 \u10D0\u10E5\u10D5\u10E1 \u10D2\u10D0\u10E0\u10D0\u10DC\u10E2\u10D8\u10E0\u10D4\u10D1\u10E3\u10DA\u10D8 \u10EE\u10D4\u10D3\u10D4\u10D1\u10D8 \u10DB\u10D7\u10D4\u10D1\u10D6\u10D4."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  }, page.title_2), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+    dangerouslySetInnerHTML: {
+      __html: page.description_2
+    }
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "map",
     "data-aos": "fade-up"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("iframe", {
@@ -3446,7 +3460,7 @@ var AboutUs = function AboutUs() {
     className: "wrapper flex"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "playfair"
-  }, "Services You Have When Living In Window Bakuriani"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "\u10D1\u10D0\u10D9\u10E3\u10E0\u10D8\u10D0\u10DC\u10D8 \u10D8\u10E1\u10E2\u10DD\u10E0\u10D8\u10E3\u10DA\u10D0\u10D3 \u10EA\u10DC\u10DD\u10D1\u10D8\u10DA\u10D8 \u10E1\u10D0\u10DB\u10D7\u10DD \u10E0\u10D4\u10D9\u10E0\u10D4\u10D0\u10EA\u10D8\u10E3\u10DA\u10D8 \u10D9\u10E3\u10E0\u10DD\u10E0\u10E2\u10D8\u10D0. \u10DE\u10E0\u10DD\u10D4\u10E5\u10E2\u10D8 \u10DB\u10D3\u10D4\u10D1\u10D0\u10E0\u10D4\u10DD\u10D1\u10E1 \u10D3\u10D8\u10D3\u10D5\u10D4\u10DA\u10D8\u10E1 \u10E1\u10D0\u10D1\u10D0\u10D2\u10D8\u10E0\u10DD\u10E1\u10D7\u10D0\u10DC \u10D0\u10EE\u10DA\u10DD\u10E1. \u10DB\u10D8\u10DB\u10D3\u10D4\u10D1\u10D0\u10E0\u10D4\u10D3 \u10D0\u10E8\u10D4\u10DC\u10D4\u10D1\u10E3\u10DA\u10D8 \u10EA\u10DC\u10DD\u10D1\u10D8\u10DA\u10D8 \u10D3\u10D4\u10D5\u10D4\u10DA\u10DD\u10DE\u10D4\u10E0\u10E3\u10DA\u10D8 \u10D9\u10DD\u10DB\u10DE\u10D0\u10DC\u10D8\u10D4\u10D1\u10D8\u10E1 \u10DB\u10D8\u10D4\u10E0 \u10E1\u10EE\u10D5\u10D0\u10D3\u10D0\u10E1\u10EE\u10D5\u10D0 \u10E2\u10D8\u10DE\u10D8\u10E1 \u10E1\u10D0\u10E1\u10E2\u10E3\u10DB\u10E0\u10DD \u10D8\u10DC\u10E4\u10E0\u10D0\u10E1\u10E2\u10E0\u10E3\u10E5\u10E2\u10E3\u10E0\u10D8\u10E1 \u10D9\u10DD\u10DB\u10DE\u10D0\u10DC\u10D8\u10D4\u10D1\u10D8. \u10D4\u10E0\u10D7\u10D8 \u10DB\u10EE\u10E0\u10D8\u10D3\u10D0\u10DC \u10E2\u10E7\u10D8\u10E1 \u10DB\u10D0\u10E1\u10D8\u10D5\u10D8 \u10D4\u10DB\u10D8\u10EF\u10DC\u10D4\u10D1\u10D0, \u10EC\u10D8\u10DC\u10D0 \u10DB\u10EE\u10D0\u10E0\u10D4\u10E1 \u10D9\u10D8 \u10D0\u10E5\u10D5\u10E1 \u10D2\u10D0\u10E0\u10D0\u10DC\u10E2\u10D8\u10E0\u10D4\u10D1\u10E3\u10DA\u10D8 \u10EE\u10D4\u10D3\u10D4\u10D1\u10D8 \u10DB\u10D7\u10D4\u10D1\u10D6\u10D4."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Buttons_Buttons__WEBPACK_IMPORTED_MODULE_3__.MainButton, {
+  }, __("services_you_have_when_living_in_window_bakuriani")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, __("services_you_have_when_living_in_window_bakuriani_description")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Buttons_Buttons__WEBPACK_IMPORTED_MODULE_3__.MainButton, {
     link: "/",
     text: __("learn_more")
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Home_Facilities_Facilities__WEBPACK_IMPORTED_MODULE_4__.default, null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -3464,13 +3478,13 @@ var AboutUs = function AboutUs() {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
     src: "/img/about/2.png",
     alt: ""
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "\u10D0\u10DE\u10D0\u10E0\u10E2\u10D0\u10DB\u10D4\u10DC\u10E2\u10D4\u10D1\u10D8\u10E1 \u10DB\u10E4\u10DA\u10DD\u10D1\u10D4\u10DA\u10D4\u10D1\u10D8\u10E1 \u10D9\u10DD\u10DB\u10E4\u10DD\u10E0\u10E2\u10D8\u10E1\u10D7\u10D5\u10D8\u10E1\u10D0 \u10D3\u10D0 \u10E3\u10D9\u10D4\u10D7 \u10D3\u10D0\u10E1\u10D5\u10D4\u10D5\u10DC\u10D4\u10D1\u10D8\u10E1\u10D7\u10D5\u10D8\u10E1 \u10D9\u10DD\u10DB\u10DE\u10DA\u10D4\u10E5\u10E1\u10D8 \u10DB\u10DD\u10D8\u10EA\u10D0\u10D5\u10E1: \u10D9\u10D0\u10E4\u10D4-\u10E0\u10D4\u10E1\u10E2\u10DD\u10E0\u10D0\u10DC\u10D8, \u10DB\u10D8\u10E1\u10D0\u10E6\u10D4\u10D1\u10D8/\u10E0\u10D4\u10EA\u10D4\u10E4\u10E8\u10D4\u10DC\u10D8, \u10DE\u10D0\u10E0\u10D9\u10D8\u10DC\u10D2\u10D8, \u10D4\u10D6\u10DD \u10DB\u10DD\u10E1\u10D0\u10E1\u10D5\u10D4\u10DC\u10D4\u10D1\u10D4\u10DA\u10D8 \u10E1\u10D8\u10D5\u10E0\u10EA\u10D4\u10D4\u10D1\u10D8\u10D7\u10D0 \u10D3\u10D0 \u10D1\u10D0\u10D5\u10E8\u10D7\u10D0 \u10D2\u10D0\u10E1\u10D0\u10E0\u10D7\u10DD\u10D1\u10D8 \u10DB\u10DD\u10D4\u10D3\u10D0\u10DC\u10D8\u10D7. \u10D1\u10D8\u10DC\u10D4\u10D1\u10D8 \u10D1\u10D0\u10E0\u10D3\u10D4\u10D1\u10D0 \u10E1\u10E0\u10E3\u10DA\u10D8 \u10E0\u10D4\u10DB\u10DD\u10DC\u10E2\u10D8\u10D7/\u10D0\u10D5\u10D4\u10EF\u10D8\u10D7.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, __("services_little_description_1"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "flex  end",
     style: {
       justifyContent: "flex-end"
     },
     "data-aos": "fade-up-left"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "\u10DE\u10E0\u10DD\u10D4\u10E5\u10E2\u10D8 \u10D9\u10D0\u10E0\u10D2\u10D0\u10D3 \u10D4\u10E0\u10EC\u10E7\u10DB\u10D8\u10E1 \u10D1\u10D0\u10D9\u10E3\u10E0\u10D8\u10D0\u10DC\u10D8\u10E1 \u10D0\u10D3\u10D2\u10D8\u10DA\u10DD\u10D1\u10E0\u10D8\u10D5 \u10DA\u10D0\u10DC\u10D3\u10E8\u10D0\u10E4\u10E2\u10E1. \u10D3\u10D0\u10DE\u10E0\u10DD\u10D4\u10E5\u10E2\u10D4\u10D1\u10D8\u10E1\u10D0\u10E1 \u10D2\u10D0\u10D7\u10D5\u10D0\u10DA\u10D8\u10E1\u10EC\u10D8\u10DC\u10D4\u10D1\u10E3\u10DA\u10D8\u10D0 \u10D0\u10D3\u10D2\u10D8\u10DA\u10DD\u10D1\u10E0\u10D8\u10D5\u10D8 \u10D9\u10DA\u10D8\u10DB\u10D0\u10E2\u10D8\u10E1 \u10D7\u10D0\u10D5\u10D8\u10E1\u10D4\u10D1\u10E3\u10E0\u10D4\u10D1\u10D4\u10D1\u10D8. \u10EF\u10D0\u10DB\u10E8\u10D8 \u10D3\u10D0\u10D2\u10D4\u10D2\u10DB\u10D0\u10E0\u10D4\u10D1\u10E3\u10DA\u10D8\u10D0 53 \u10D0\u10DE\u10D0\u10E0\u10E2\u10D0\u10DB\u10D4\u10DC\u10E2\u10D8."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, __("services_little_description_1")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "img"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
     src: "/img/about/3.png",
@@ -3514,9 +3528,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var Apartment = function Apartment() {
+var Apartment = function Apartment(_ref) {
+  var page = _ref.page;
   var specifications = ["Hall - 6.3 m", "Bathroom - 4.4 m", "living room - 12.7 m", "Master bedroom - 14.8 m", "Bedroom - 8.5 m", "Balcony - 4.5 m"];
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Layouts_Layout__WEBPACK_IMPORTED_MODULE_5__.default, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Layouts_Layout__WEBPACK_IMPORTED_MODULE_5__.default, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_8__.Head, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("title", null, page.meta_title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("meta", {
+    name: "description",
+    content: page.meta_description
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "apartmentPage"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Showcase_Showcase__WEBPACK_IMPORTED_MODULE_4__.default, {
     "short": true
@@ -3601,6 +3619,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 var ChooseFloor = function ChooseFloor(_ref) {
   var apartments = _ref.apartments,
+      page = _ref.page,
       urlPrev = _ref.urlPrev;
 
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(0),
@@ -3674,7 +3693,10 @@ var ChooseFloor = function ChooseFloor(_ref) {
       }
     });
   });
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_Layouts_Layout__WEBPACK_IMPORTED_MODULE_4__.default, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_Layouts_Layout__WEBPACK_IMPORTED_MODULE_4__.default, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Head, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("title", null, page.meta_title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("meta", {
+    name: "description",
+    content: page.meta_description
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
     className: "chooseFloor"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("img", {
     className: "background",
@@ -3773,6 +3795,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! aos */ "./node_modules/aos/dist/aos.js");
 /* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(aos__WEBPACK_IMPORTED_MODULE_7__);
 /* harmony import */ var aos_dist_aos_css__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! aos/dist/aos.css */ "./node_modules/aos/dist/aos.css");
+/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
 
 
 
@@ -3783,13 +3806,29 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var Contact = function Contact() {
+
+var Contact = function Contact(_ref) {
+  var page = _ref.page;
+  var sharedData = (0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_9__.usePage)().props.localizations;
+
+  function __(key) {
+    var replace = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+    var translation = sharedData[key] || key;
+    Object.keys(replace).forEach(function (key) {
+      translation = translation.replace(':' + key, replace[key]);
+    });
+    return translation;
+  }
+
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
     aos__WEBPACK_IMPORTED_MODULE_7___default().init({
       duration: 2000
     });
   }, []);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Layouts_Layout__WEBPACK_IMPORTED_MODULE_6__.default, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Layouts_Layout__WEBPACK_IMPORTED_MODULE_6__.default, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_9__.Head, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("title", null, page.meta_title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("meta", {
+    name: "description",
+    content: page.meta_description
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "contactPage"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Showcase_Showcase__WEBPACK_IMPORTED_MODULE_1__.default, {
     title: "Contact Us"
@@ -3810,7 +3849,8 @@ var Contact = function Contact() {
     "data-aos": "fade-left"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Buttons_Buttons__WEBPACK_IMPORTED_MODULE_5__.ArrowButton, {
     color: "#334E60",
-    link: "/"
+    link: route('client.choosefloor.index'),
+    text: __("choose_apartment")
   })));
 };
 
@@ -3839,6 +3879,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(aos__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var aos_dist_aos_css__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! aos/dist/aos.css */ "./node_modules/aos/dist/aos.css");
 /* harmony import */ var _Layouts_Layout__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../Layouts/Layout */ "./resources/js/Layouts/Layout.js");
+/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -3861,9 +3902,22 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
+
 var Gallery = function Gallery(_ref) {
-  var galleries = _ref.galleries;
-  console.log(galleries);
+  var galleries = _ref.galleries,
+      urlPrev = _ref.urlPrev,
+      page = _ref.page;
+  var sharedData = (0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_9__.usePage)().props.localizations;
+
+  function __(key) {
+    var replace = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+    var translation = sharedData[key] || key;
+    Object.keys(replace).forEach(function (key) {
+      translation = translation.replace(':' + key, replace[key]);
+    });
+    return translation;
+  }
+
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
     aos__WEBPACK_IMPORTED_MODULE_6___default().init({
       duration: 2000
@@ -3881,14 +3935,18 @@ var Gallery = function Gallery(_ref) {
       setImgsrc = _useState4[1];
 
   var galleryImages = ["/img/gallery/1.png", "/img/gallery/2.png", "/img/gallery/3.png", "/img/gallery/4.png", "/img/gallery/5.png", "/img/gallery/6.png", "/img/gallery/7.png", "/img/gallery/8.png", "/img/gallery/9.png", "/img/gallery/10.png", "/img/gallery/3.png", "/img/gallery/4.png", "/img/gallery/5.png", "/img/gallery/6.png", "/img/gallery/3.png"];
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Layouts_Layout__WEBPACK_IMPORTED_MODULE_8__.default, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Layouts_Layout__WEBPACK_IMPORTED_MODULE_8__.default, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_9__.Head, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("title", null, page.meta_title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("meta", {
+    name: "description",
+    content: page.meta_description
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "galleryPage"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Buttons_Buttons__WEBPACK_IMPORTED_MODULE_3__.BackButton, {
-    link: "/",
+    link: urlPrev,
     color: "#fff"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Buttons_Buttons__WEBPACK_IMPORTED_MODULE_3__.ArrowButton, {
     color: "#334E60",
-    link: "#334E60"
+    link: "#334E60",
+    text: __("choose_apartment")
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Showcase_Showcase__WEBPACK_IMPORTED_MODULE_2__.default, {
     title: "Gallery"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -4087,7 +4145,8 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 var Home = function Home(_ref) {
-  var sliders = _ref.sliders;
+  var sliders = _ref.sliders,
+      page = _ref.page;
   var sharedData = (0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_10__.usePage)().props.localizations;
 
   function __(key) {
@@ -4138,7 +4197,10 @@ var Home = function Home(_ref) {
       showVideo = _useState4[0],
       setShowVideo = _useState4[1];
 
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Layouts_Layout__WEBPACK_IMPORTED_MODULE_7__.default, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Layouts_Layout__WEBPACK_IMPORTED_MODULE_7__.default, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_10__.Head, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("title", null, page.meta_title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("meta", {
+    name: "description",
+    content: page.meta_description
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "mainSlider"
   }, sliders.map(function (data, indexData) {
     var position = "nextSlide";
@@ -4226,7 +4288,8 @@ var Home = function Home(_ref) {
     color: "#fff"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Buttons_Buttons__WEBPACK_IMPORTED_MODULE_5__.ArrowButton, {
     color: "#fff",
-    link: "/"
+    link: route('client.choosefloor.index'),
+    text: __("choose_apartment")
   })));
 };
 
@@ -4264,7 +4327,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var Services = function Services(_ref) {
-  var services = _ref.services;
+  var services = _ref.services,
+      page = _ref.page,
+      urlPrev = _ref.urlPrev;
   var sharedData = (0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_3__.usePage)().props.localizations;
 
   function __(key) {
@@ -4284,43 +4349,50 @@ var Services = function Services(_ref) {
   var serviceBoxes = [{
     icon: "/img/icons/home/bell.svg",
     title: __("recipient_recreation"),
-    para: "The infrastructure of the complex includes: reception / reception, spa, parking, green yard"
+    para: __("recipient_recreation_description")
   }, {
     icon: "/img/icons/home/tree.svg",
     title: __("recreation_area_with_kids_playground"),
-    para: "The infrastructure of the complex includes: reception / reception, spa, parking, green yard with children's playground and yard infrastructure, cafe-restaurant, 24-hour video surveillance."
+    para: __("recreation_area_with_kids_playground_description")
   }, {
     icon: "/img/icons/home/parking-area.svg",
     title: __("parking_area"),
-    para: "The infrastructure of the complex includes: reception / reception, spa, parking, green yard with children's playground and yard infrastructure, cafe-restaurant"
+    para: __("parking_area_description")
   }, {
     icon: "/img/icons/home/secure-shield.svg",
     title: __("security_service"),
-    para: "The infrastructure of the complex includes: reception / reception"
+    para: __("security_service_description")
   }, {
     icon: "/img/icons/home/cctv-camera.svg",
     title: __("video_monitoring"),
-    para: "The infrastructure of the complex includes: reception / reception, spa, parking, green yard with children's"
+    para: __("video_monitoring_description")
   }, {
     icon: "/img/icons/home/key.svg",
     title: __("rental_and_hotel_services"),
-    para: "The infrastructure of the complex includes: reception / reception, spa, parking, green yard with children's playground and yard infrastructure, cafe-restaurant"
+    para: __("rental_and_hotel_services_description")
   }];
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Layouts_Layout__WEBPACK_IMPORTED_MODULE_7__.default, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Layouts_Layout__WEBPACK_IMPORTED_MODULE_7__.default, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_3__.Head, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("title", null, page.meta_title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("meta", {
+    name: "description",
+    content: page.meta_description
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "servicePage"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Showcase_Showcase__WEBPACK_IMPORTED_MODULE_2__.default, {
-    title: "Services"
+    title: page.title
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Buttons_Buttons__WEBPACK_IMPORTED_MODULE_1__.BackButton, {
     color: "#fff",
-    link: "/"
+    link: urlPrev
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Buttons_Buttons__WEBPACK_IMPORTED_MODULE_1__.ArrowButton, {
     color: "#334E60",
-    link: "/"
+    link: route('client.choosefloor.index'),
+    text: __("choose_apartment")
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "container"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "playfair"
-  }, "Services You Have When Living In Window Bakuriani"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "playfair",
+    dangerouslySetInnerHTML: {
+      __html: page.description
+    }
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "flex first"
   }, services.length > 0 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "spabox flex centered",
@@ -4344,7 +4416,6 @@ var Services = function Services(_ref) {
   }))), services.length > 1 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "side_boxes"
   }, services.map(function (service) {
-    console.log(service.main_file_1);
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
       className: "sidebox sb1 flex",
       style: {
@@ -4354,13 +4425,13 @@ var Services = function Services(_ref) {
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
       className: "service_title"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-      src: "/img/icons/home/coffee-cup.svg",
+      src: "/img/icons/home/spa.svg",
       alt: "",
       className: "icon"
-    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, "Caf\xE9 / Restaurant")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Buttons_Buttons__WEBPACK_IMPORTED_MODULE_1__.MainButton, {
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, service.title)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Buttons_Buttons__WEBPACK_IMPORTED_MODULE_1__.MainButton, {
       link: route("client.service.show", service.id),
       dark: true,
-      text: "learn more"
+      text: __("learn_more")
     }));
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "sidebox sb1 flex",
@@ -4379,14 +4450,18 @@ var Services = function Services(_ref) {
     className: "sidebox sb2",
     "data-aos": "flip-left"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "The infrastructure of the complex includes: reception, spa, parking, green yard with children's playground and yard infrastructure, cafe-restaurant, 24-hour video surveillance, security, rental and hotel services."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Buttons_Buttons__WEBPACK_IMPORTED_MODULE_1__.MainButton, {
-    link: "/about-us",
+    link: route('client.about.index'),
     dark: true,
     text: "more about us"
   }))), " "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "other_services"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "head"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h6", null, "other services"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "\u201CSometimes the most productive thing you can do is relax")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h6", null, page.title_2), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+    dangerouslySetInnerHTML: {
+      __html: page.description_2
+    }
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "grid"
   }, serviceBoxes.map(function (box) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -4495,9 +4570,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _DragSlide_DragSlide__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./DragSlide/DragSlide */ "./resources/js/Pages/SingleService/DragSlide/DragSlide.js");
 /* harmony import */ var _components_NextServiceBox_NextServiceBox__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../components/NextServiceBox/NextServiceBox */ "./resources/js/components/NextServiceBox/NextServiceBox.js");
 /* harmony import */ var _Layouts_Layout__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../Layouts/Layout */ "./resources/js/Layouts/Layout.js");
-/* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! aos */ "./node_modules/aos/dist/aos.js");
-/* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(aos__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var aos_dist_aos_css__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! aos/dist/aos.css */ "./node_modules/aos/dist/aos.css");
+/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
+/* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! aos */ "./node_modules/aos/dist/aos.js");
+/* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(aos__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var aos_dist_aos_css__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! aos/dist/aos.css */ "./node_modules/aos/dist/aos.css");
+
 
 
 
@@ -4516,11 +4593,17 @@ var SingleService = function SingleService(_ref) {
   var sliderImages = ["/img/services/1.png", "/img/services/2.png", "/img/services/3.png", "/img/services/4.png", "/img/services/1.png", "/img/services/2.png", "/img/services/3.png", "/img/services/4.png"];
   console.log(nextService);
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
-    aos__WEBPACK_IMPORTED_MODULE_9___default().init({
+    aos__WEBPACK_IMPORTED_MODULE_10___default().init({
       duration: 2000
     });
   }, []);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Layouts_Layout__WEBPACK_IMPORTED_MODULE_8__.default, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Layouts_Layout__WEBPACK_IMPORTED_MODULE_8__.default, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_9__.Head, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("title", null, service.meta_title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("meta", {
+    name: "description",
+    content: service.meta_description
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("meta", {
+    name: "keywords",
+    content: service.meta_keyword
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "singleService servicePage"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Showcase_Showcase__WEBPACK_IMPORTED_MODULE_2__.default, {
     "short": true
@@ -4652,7 +4735,8 @@ var MainButton = function MainButton(_ref) {
 };
 var ArrowButton = function ArrowButton(_ref2) {
   var color = _ref2.color,
-      link = _ref2.link;
+      link = _ref2.link,
+      text = _ref2.text;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__.Link, {
     href: link
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -4662,7 +4746,7 @@ var ArrowButton = function ArrowButton(_ref2) {
     style: {
       color: color
     }
-  }, "CHOOSE APARTMENT"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  }, text), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "circle",
     style: {
       borderColor: color
@@ -4828,7 +4912,7 @@ var Form = function Form() {
     className: "playfair"
   }, __("write_to_us")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "grid"
-  }, errors.name && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, errors.name), errors.phone && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, errors.phone)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  }, errors.name && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, __(errors.name.split(".")[1])), errors.phone && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, errors.phone)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "grid"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
     id: "name",
@@ -5118,7 +5202,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var Services = function Services(_ref) {
-  var services = _ref.services;
+  var services = _ref.services,
+      page = _ref.page,
+      urlPrev = _ref.urlPrev;
   var sharedData = (0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_3__.usePage)().props.localizations;
 
   function __(key) {
@@ -5138,43 +5224,50 @@ var Services = function Services(_ref) {
   var serviceBoxes = [{
     icon: "/img/icons/home/bell.svg",
     title: __("recipient_recreation"),
-    para: "The infrastructure of the complex includes: reception / reception, spa, parking, green yard"
+    para: __("recipient_recreation_description")
   }, {
     icon: "/img/icons/home/tree.svg",
     title: __("recreation_area_with_kids_playground"),
-    para: "The infrastructure of the complex includes: reception / reception, spa, parking, green yard with children's playground and yard infrastructure, cafe-restaurant, 24-hour video surveillance."
+    para: __("recreation_area_with_kids_playground_description")
   }, {
     icon: "/img/icons/home/parking-area.svg",
     title: __("parking_area"),
-    para: "The infrastructure of the complex includes: reception / reception, spa, parking, green yard with children's playground and yard infrastructure, cafe-restaurant"
+    para: __("parking_area_description")
   }, {
     icon: "/img/icons/home/secure-shield.svg",
     title: __("security_service"),
-    para: "The infrastructure of the complex includes: reception / reception"
+    para: __("security_service_description")
   }, {
     icon: "/img/icons/home/cctv-camera.svg",
     title: __("video_monitoring"),
-    para: "The infrastructure of the complex includes: reception / reception, spa, parking, green yard with children's"
+    para: __("video_monitoring_description")
   }, {
     icon: "/img/icons/home/key.svg",
     title: __("rental_and_hotel_services"),
-    para: "The infrastructure of the complex includes: reception / reception, spa, parking, green yard with children's playground and yard infrastructure, cafe-restaurant"
+    para: __("rental_and_hotel_services_description")
   }];
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Layouts_Layout__WEBPACK_IMPORTED_MODULE_7__.default, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Layouts_Layout__WEBPACK_IMPORTED_MODULE_7__.default, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_3__.Head, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("title", null, page.meta_title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("meta", {
+    name: "description",
+    content: page.meta_description
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "servicePage"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Showcase_Showcase__WEBPACK_IMPORTED_MODULE_2__.default, {
-    title: "Services"
+    title: page.title
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Buttons_Buttons__WEBPACK_IMPORTED_MODULE_1__.BackButton, {
     color: "#fff",
-    link: "/"
+    link: urlPrev
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Buttons_Buttons__WEBPACK_IMPORTED_MODULE_1__.ArrowButton, {
     color: "#334E60",
-    link: "/"
+    link: route('client.choosefloor.index'),
+    text: __("choose_apartment")
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "container"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "playfair"
-  }, "Services You Have When Living In Window Bakuriani"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "playfair",
+    dangerouslySetInnerHTML: {
+      __html: page.description
+    }
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "flex first"
   }, services.length > 0 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "spabox flex centered",
@@ -5198,7 +5291,6 @@ var Services = function Services(_ref) {
   }))), services.length > 1 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "side_boxes"
   }, services.map(function (service) {
-    console.log(service.main_file_1);
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
       className: "sidebox sb1 flex",
       style: {
@@ -5208,13 +5300,13 @@ var Services = function Services(_ref) {
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
       className: "service_title"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-      src: "/img/icons/home/coffee-cup.svg",
+      src: "/img/icons/home/spa.svg",
       alt: "",
       className: "icon"
-    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, "Caf\xE9 / Restaurant")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Buttons_Buttons__WEBPACK_IMPORTED_MODULE_1__.MainButton, {
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, service.title)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Buttons_Buttons__WEBPACK_IMPORTED_MODULE_1__.MainButton, {
       link: route("client.service.show", service.id),
       dark: true,
-      text: "learn more"
+      text: __("learn_more")
     }));
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "sidebox sb1 flex",
@@ -5233,14 +5325,18 @@ var Services = function Services(_ref) {
     className: "sidebox sb2",
     "data-aos": "flip-left"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "The infrastructure of the complex includes: reception, spa, parking, green yard with children's playground and yard infrastructure, cafe-restaurant, 24-hour video surveillance, security, rental and hotel services."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Buttons_Buttons__WEBPACK_IMPORTED_MODULE_1__.MainButton, {
-    link: "/about-us",
+    link: route('client.about.index'),
     dark: true,
     text: "more about us"
   }))), " "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "other_services"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "head"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h6", null, "other services"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "\u201CSometimes the most productive thing you can do is relax")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h6", null, page.title_2), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+    dangerouslySetInnerHTML: {
+      __html: page.description_2
+    }
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "grid"
   }, serviceBoxes.map(function (box) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {

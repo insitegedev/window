@@ -25,5 +25,9 @@ class ServiceTranslation extends BaseTranslationModel
         "content_1",
         "content_2",
         'description',
+        'meta_title',
+        'meta_description',
+        'meta_keyword',
     ];
+
 }

@@ -20,16 +20,17 @@ class PageSeeder extends Seeder
                 'key' => 'home'
             ],
             [
-                'key' => 'product'
-            ],
-            [
-                'key' => 'service'
+                'key' => 'choose_apartment'
             ],
             [
                 'key' => 'about'
             ],
+
             [
-                'key' => 'project'
+                'key' => 'service'
+            ],
+            [
+                'key' => 'gallery'
             ],
             [
                 'key' => 'contact'
