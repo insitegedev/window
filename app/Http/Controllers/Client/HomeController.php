@@ -35,9 +35,6 @@ class HomeController extends Controller
         return Inertia::render('ChooseFloor/ChooseFloor');
     }
 
-    public function apartment()
-    {
-        return Inertia::render('Apartment/Apartment');
-    }
+
 
 }
