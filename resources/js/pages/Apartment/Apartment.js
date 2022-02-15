@@ -9,7 +9,7 @@ import "./Apartment.css";
 import { Link, Head } from "@inertiajs/inertia-react";
 import Pdf from "/img/icons/apartment/file.svg";
 
-const Apartment = ({page}) => {
+const Apartment = ({ page }) => {
     const specifications = [
         "Hall - 6.3 m",
         "Bathroom - 4.4 m",
@@ -20,10 +20,6 @@ const Apartment = ({page}) => {
     ];
     return (
         <Layout>
-            <Head>
-                <title>{page.meta_title}</title>
-                <meta name="description" content={page.meta_description} />
-            </Head>
             <div className="apartmentPage">
                 <Showcase short />
                 <BackButton color="#334E60" />
