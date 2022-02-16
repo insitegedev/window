@@ -30,7 +30,7 @@ class GalleryController extends Controller
      * @param GalleryRepositoryInterface $galleryRepository
      */
     public function __construct(
-        GalleryRepositoryInterface  $galleryRepository,
+        GalleryRepositoryInterface  $galleryRepository
     )
     {
         $this->galleryRepository = $galleryRepository;
