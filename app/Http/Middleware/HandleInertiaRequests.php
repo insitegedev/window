@@ -66,6 +66,9 @@ class HandleInertiaRequests extends Middleware
         ]);
     }
 
+    /**
+     * @return array
+     */
     protected function locale_urls()
     {
         $locales = config("translatable.locales");
@@ -87,8 +90,7 @@ class HandleInertiaRequests extends Middleware
         $ginstagram = "";
         $gfacebook = "";
 
-        $settings = Setting::query()->with(['translations']);
-        $settings = $settings->get();
+        $settings = Setting::with(['translations'])->get();
         foreach ($settings as $setting) {
             switch ($setting->key) {
                 case "phone":
