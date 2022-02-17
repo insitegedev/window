@@ -33,7 +33,7 @@ const Contact = ({page}) => {
                 <meta name="description" content={page.meta_description} />
             </Head>
             <div className="contactPage">
-                <Showcase title="Contact Us" />
+                <Showcase title={page.title} />
                 <div className="body grid">
                     <img
                         className="img"

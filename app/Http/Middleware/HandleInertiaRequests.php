@@ -46,24 +46,31 @@ class HandleInertiaRequests extends Middleware
         $locales = config("translatable.locales");
         $currentLocale = App::getLocale();
         $currentRoute = url()->current();
+        //Generates urls for language switcher with each locale
         $locale_urls = $this->locale_urls();
-
-
-
+        //Generates link for go back button
+        $urlPrev = $this->urlPrev();
         return array_merge(parent::share($request), [
             "localizations" => $trans->loadTranslations("ge", "client"),
             "locales" => $locales,
             "currentLocale" => $currentLocale,
             "pathname" => $currentRoute,
             "locale_urls" => $locale_urls,
-            'urlPrev'	=> function() {
-                if (url()->previous() !== route('login') && url()->previous() !== '' && url()->previous() !== url()->current()) {
-                    return url()->previous();
-                }else {
-                    return null; // used in javascript to disable back button behavior
-                }
-            },
+            'urlPrev'	=> $urlPrev
         ]);
+    }
+
+    /**
+     * @return string
+     */
+    protected function urlPrev()
+    {
+        //Generates link for go back button
+        if (url()->previous() !== route('login') && url()->previous() !== '' && url()->previous() !== url()->current()) {
+            return url()->previous();
+        }else {
+            return "/";
+        }
     }
 
     /**

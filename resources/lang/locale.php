@@ -36,6 +36,13 @@ return [
     "services" => "Services",
     "gallery" => "Gallery",
     "contact_us" => "Contact us",
+    "more_about_us" => "More about us",
+    "more_about_us_description" => "The infrastructure of the complex
+                                        includes: reception, spa, parking, green
+                                        yard with children's playground and yard
+                                        infrastructure, cafe-restaurant, 24-hour
+                                        video surveillance, security, rental and
+                                        hotel services."
 
 
 ];

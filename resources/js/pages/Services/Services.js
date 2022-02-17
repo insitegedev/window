@@ -15,6 +15,7 @@ import Layout from "../../Layouts/Layout";
 
 const Services = ({ services, page, urlPrev }) => {
     const sharedData = usePage().props.localizations;
+    console.log(services);
 
 
     function __(key, replace = {}) {
@@ -111,27 +112,27 @@ const Services = ({ services, page, urlPrev }) => {
                         )}
                         {services.length > 1 && (
                             <div className="side_boxes">
-                                {services.map((service) => {
+                                {services.slice(1).map((service) => {
                                     return (
                                         <div
                                             className="sidebox sb1 flex"
-                                            style={{
-                                                background: `url(${
-                                                    service.main_file_1
-                                                        ? "/" +
-                                                          service.main_file_1
-                                                              .path +
-                                                          "/" +
-                                                          service.main_file_1
-                                                              .title
-                                                        : "/img/services/2.png"
-                                                })`,
-                                            }}
+                                            // style={{
+                                            //     background: `url(${
+                                            //         service.main_file_1
+                                            //             ? "/" +
+                                            //               service.main_file_1
+                                            //                   .path +
+                                            //               "/" +
+                                            //               service.main_file_1
+                                            //                   .title
+                                            //             : "/img/services/2.png"
+                                            //     })`,
+                                            // }}
                                             data-aos="flip-right"
                                         >
                                             <div className="service_title">
                                                 <img
-                                                    src="/img/icons/home/spa.svg"
+                                                    src="/img/icons/home/coffee-cup.svg"
                                                     alt=""
                                                     className="icon"
                                                 />
@@ -148,40 +149,35 @@ const Services = ({ services, page, urlPrev }) => {
                                         </div>
                                     );
                                 })}
-                                <div
-                                    className="sidebox sb1 flex"
-                                    data-aos="flip-right"
-                                >
-                                    <div className="service_title">
-                                        <img
-                                            src="/img/icons/home/coffee-cup.svg"
-                                            alt=""
-                                            className="icon"
-                                        />
-                                        <div>Café / Restaurant</div>
-                                    </div>
-                                    <MainButton
-                                        link="/single-service"
-                                        dark
-                                        text="learn more"
-                                    />
-                                </div>
+                                {/*<div*/}
+                                {/*    className="sidebox sb1 flex"*/}
+                                {/*    data-aos="flip-right"*/}
+                                {/*>*/}
+                                {/*    <div className="service_title">*/}
+                                {/*        <img*/}
+                                {/*            src="/img/icons/home/coffee-cup.svg"*/}
+                                {/*            alt=""*/}
+                                {/*            className="icon"*/}
+                                {/*        />*/}
+                                {/*        <div>Café / Restaurant</div>*/}
+                                {/*    </div>*/}
+                                {/*    <MainButton*/}
+                                {/*        link="/single-service"*/}
+                                {/*        dark*/}
+                                {/*        text="learn more"*/}
+                                {/*    />*/}
+                                {/*</div>*/}
                                 <div
                                     className="sidebox sb2"
                                     data-aos="flip-left"
                                 >
                                     <p>
-                                        The infrastructure of the complex
-                                        includes: reception, spa, parking, green
-                                        yard with children's playground and yard
-                                        infrastructure, cafe-restaurant, 24-hour
-                                        video surveillance, security, rental and
-                                        hotel services.
+                                        {__("more_about_us_description")}
                                     </p>
                                     <MainButton
                                         link={route('client.about.index')}
                                         dark
-                                        text="more about us"
+                                        text={__("more_about_us")}
                                     />
                                 </div>
                             </div>

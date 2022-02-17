@@ -3848,7 +3848,7 @@ var Contact = function Contact(_ref) {
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "contactPage"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Showcase_Showcase__WEBPACK_IMPORTED_MODULE_1__.default, {
-    title: "Contact Us"
+    title: page.title
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "body grid"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
@@ -3965,7 +3965,7 @@ var Gallery = function Gallery(_ref) {
     link: "#334E60",
     text: __("choose_apartment")
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Showcase_Showcase__WEBPACK_IMPORTED_MODULE_2__.default, {
-    title: "Gallery"
+    title: page.title
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "wrapper"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -4348,6 +4348,7 @@ var Services = function Services(_ref) {
       page = _ref.page,
       urlPrev = _ref.urlPrev;
   var sharedData = (0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_3__.usePage)().props.localizations;
+  console.log(services);
 
   function __(key) {
     var replace = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
@@ -4432,17 +4433,26 @@ var Services = function Services(_ref) {
     text: "learn more"
   }))), services.length > 1 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "side_boxes"
-  }, services.map(function (service) {
+  }, services.slice(1).map(function (service) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-      className: "sidebox sb1 flex",
-      style: {
-        background: "url(".concat(service.main_file_1 ? "/" + service.main_file_1.path + "/" + service.main_file_1.title : "/img/services/2.png", ")")
-      },
+      className: "sidebox sb1 flex" // style={{
+      //     background: `url(${
+      //         service.main_file_1
+      //             ? "/" +
+      //               service.main_file_1
+      //                   .path +
+      //               "/" +
+      //               service.main_file_1
+      //                   .title
+      //             : "/img/services/2.png"
+      //     })`,
+      // }}
+      ,
       "data-aos": "flip-right"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
       className: "service_title"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-      src: "/img/icons/home/spa.svg",
+      src: "/img/icons/home/coffee-cup.svg",
       alt: "",
       className: "icon"
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, service.title)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Buttons_Buttons__WEBPACK_IMPORTED_MODULE_1__.MainButton, {
@@ -4451,25 +4461,12 @@ var Services = function Services(_ref) {
       text: __("learn_more")
     }));
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "sidebox sb1 flex",
-    "data-aos": "flip-right"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "service_title"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-    src: "/img/icons/home/coffee-cup.svg",
-    alt: "",
-    className: "icon"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, "Caf\xE9 / Restaurant")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Buttons_Buttons__WEBPACK_IMPORTED_MODULE_1__.MainButton, {
-    link: "/single-service",
-    dark: true,
-    text: "learn more"
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "sidebox sb2",
     "data-aos": "flip-left"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "The infrastructure of the complex includes: reception, spa, parking, green yard with children's playground and yard infrastructure, cafe-restaurant, 24-hour video surveillance, security, rental and hotel services."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Buttons_Buttons__WEBPACK_IMPORTED_MODULE_1__.MainButton, {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, __("more_about_us_description")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Buttons_Buttons__WEBPACK_IMPORTED_MODULE_1__.MainButton, {
     link: route('client.about.index'),
     dark: true,
-    text: "more about us"
+    text: __("more_about_us")
   }))), " "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "other_services"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -4606,9 +4603,9 @@ __webpack_require__.r(__webpack_exports__);
 
 var SingleService = function SingleService(_ref) {
   var service = _ref.service,
-      nextService = _ref.nextService;
+      nextService = _ref.nextService,
+      urlPrev = _ref.urlPrev;
   var sliderImages = ["/img/services/1.png", "/img/services/2.png", "/img/services/3.png", "/img/services/4.png", "/img/services/1.png", "/img/services/2.png", "/img/services/3.png", "/img/services/4.png"];
-  console.log(nextService);
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
     aos__WEBPACK_IMPORTED_MODULE_10___default().init({
       duration: 2000
@@ -4626,7 +4623,7 @@ var SingleService = function SingleService(_ref) {
     "short": true
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Buttons_Buttons__WEBPACK_IMPORTED_MODULE_1__.BackButton, {
     color: "#334E60",
-    link: "/services"
+    link: urlPrev
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_PagePath_PagePath__WEBPACK_IMPORTED_MODULE_5__.PagePath, {
     loc1: "home",
     loc2: "Services",
@@ -5223,6 +5220,7 @@ var Services = function Services(_ref) {
       page = _ref.page,
       urlPrev = _ref.urlPrev;
   var sharedData = (0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_3__.usePage)().props.localizations;
+  console.log(services);
 
   function __(key) {
     var replace = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
@@ -5307,17 +5305,26 @@ var Services = function Services(_ref) {
     text: "learn more"
   }))), services.length > 1 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "side_boxes"
-  }, services.map(function (service) {
+  }, services.slice(1).map(function (service) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-      className: "sidebox sb1 flex",
-      style: {
-        background: "url(".concat(service.main_file_1 ? "/" + service.main_file_1.path + "/" + service.main_file_1.title : "/img/services/2.png", ")")
-      },
+      className: "sidebox sb1 flex" // style={{
+      //     background: `url(${
+      //         service.main_file_1
+      //             ? "/" +
+      //               service.main_file_1
+      //                   .path +
+      //               "/" +
+      //               service.main_file_1
+      //                   .title
+      //             : "/img/services/2.png"
+      //     })`,
+      // }}
+      ,
       "data-aos": "flip-right"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
       className: "service_title"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-      src: "/img/icons/home/spa.svg",
+      src: "/img/icons/home/coffee-cup.svg",
       alt: "",
       className: "icon"
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, service.title)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Buttons_Buttons__WEBPACK_IMPORTED_MODULE_1__.MainButton, {
@@ -5326,25 +5333,12 @@ var Services = function Services(_ref) {
       text: __("learn_more")
     }));
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "sidebox sb1 flex",
-    "data-aos": "flip-right"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "service_title"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-    src: "/img/icons/home/coffee-cup.svg",
-    alt: "",
-    className: "icon"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, "Caf\xE9 / Restaurant")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Buttons_Buttons__WEBPACK_IMPORTED_MODULE_1__.MainButton, {
-    link: "/single-service",
-    dark: true,
-    text: "learn more"
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "sidebox sb2",
     "data-aos": "flip-left"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "The infrastructure of the complex includes: reception, spa, parking, green yard with children's playground and yard infrastructure, cafe-restaurant, 24-hour video surveillance, security, rental and hotel services."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Buttons_Buttons__WEBPACK_IMPORTED_MODULE_1__.MainButton, {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, __("more_about_us_description")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Buttons_Buttons__WEBPACK_IMPORTED_MODULE_1__.MainButton, {
     link: route('client.about.index'),
     dark: true,
-    text: "more about us"
+    text: __("more_about_us")
   }))), " "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "other_services"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {

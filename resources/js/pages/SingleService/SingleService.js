@@ -14,7 +14,7 @@ import {Head} from "@inertiajs/inertia-react";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
-const SingleService = ({ service, nextService }) => {
+const SingleService = ({ service, nextService, urlPrev }) => {
     const sliderImages = [
         "/img/services/1.png",
         "/img/services/2.png",
@@ -25,7 +25,6 @@ const SingleService = ({ service, nextService }) => {
         "/img/services/3.png",
         "/img/services/4.png",
     ];
-    console.log(nextService);
     useEffect(() => {
         Aos.init({ duration: 2000 });
     }, []);
@@ -38,7 +37,7 @@ const SingleService = ({ service, nextService }) => {
             </Head>
             <div className="singleService servicePage">
                 <Showcase short />
-                <BackButton color="#334E60" link="/services" />
+                <BackButton color="#334E60" link={urlPrev} />
                 <PagePath
                     loc1="home"
                     loc2="Services"

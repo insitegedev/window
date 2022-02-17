@@ -55,7 +55,7 @@ const Gallery = ({ galleries, urlPrev, page }) => {
             <div className="galleryPage">
                 <BackButton link={urlPrev} color="#fff" />
                 <ArrowButton color="#334E60" link="#334E60" text={__("choose_apartment")}/>
-                <Showcase title="Gallery" />
+                <Showcase title={page.title} />
                 <div className="wrapper">
                     <div className="gallery_grid">
                         {galleries.data.map((img, i) => {
