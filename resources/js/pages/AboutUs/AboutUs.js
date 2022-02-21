@@ -6,7 +6,7 @@ import Facilities from "../Home/Facilities/Facilities";
 import Layout from "../../Layouts/Layout";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import {usePage, Head} from "@inertiajs/inertia-react";
+import { usePage, Head } from "@inertiajs/inertia-react";
 
 
 const AboutUs = ({ page }) => {
@@ -17,7 +17,7 @@ const AboutUs = ({ page }) => {
         let translation = sharedData[key] || key;
 
         Object.keys(replace).forEach(function (key) {
-            translation = translation.replace(':' + key, replace[key])
+            translation = translation.replace(":" + key, replace[key]);
         });
 
         return translation;
@@ -32,7 +32,11 @@ const AboutUs = ({ page }) => {
                 <meta name="description" content={page.meta_description} />
             </Head>
             <div className="aboutPage">
-                <ArrowButton  link={route('client.choosefloor.index')} color="#334E60" text={__("choose_apartment")} />
+                <ArrowButton
+                    link={route("client.choosefloor.index")}
+                    color="#334E60"
+                    text={__("choose_apartment")}
+                />
                 <Showcase title={__("about_us")} />
                 <div className="wrapper flex one">
                     <div className="content" data-aos="fade-right">
@@ -59,16 +63,35 @@ const AboutUs = ({ page }) => {
                             ></iframe>
                         </div>
                     </div>
-                    <img src="/img/about/1.png" alt="" data-aos="fade-left" />
+                    <div className="images">
+                        <div className="img">
+                            <img
+                                src="/img/about/1.png"
+                                alt=""
+                                data-aos="fade-left"
+                            />
+                        </div>
+                        <div className="img b">
+                            <img
+                                src="/img/about/1.png"
+                                alt=""
+                                data-aos="fade-left"
+                            />
+                        </div>
+                    </div>
                 </div>
                 <div className="services" data-aos="fade-up">
                     <div className="wrapper flex">
                         <div>
                             <div className="playfair">
-                                {__("services_you_have_when_living_in_window_bakuriani")}
+                                {__(
+                                    "services_you_have_when_living_in_window_bakuriani"
+                                )}
                             </div>
                             <p>
-                                {__("services_you_have_when_living_in_window_bakuriani_description")}
+                                {__(
+                                    "services_you_have_when_living_in_window_bakuriani_description"
+                                )}
                             </p>
                             <MainButton link="/" text={__("learn_more")} />
                         </div>
@@ -85,8 +108,7 @@ const AboutUs = ({ page }) => {
                             <div className="img">
                                 <img src="/img/about/2.png" alt="" />
                             </div>
-                            <p>{__("services_little_description_1")}
-                            </p>
+                            <p>{__("services_little_description_1")}</p>
                         </div>
                         <div
                             className="flex  end"
