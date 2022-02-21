@@ -43,11 +43,11 @@ const Facilities = () => {
     },
     {
       icon: "/img/icons/home/secure-shield.svg",
-      name: "Security Service",
+        name: __("security_service"),
     },
     {
       icon: "/img/icons/home/key.svg",
-      name: __("security_service"),
+      name: __("rental_and_hotel_services"),
     },
   ];
   return (

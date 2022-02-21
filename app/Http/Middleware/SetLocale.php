@@ -15,6 +15,8 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\URL;
 use Inertia\Inertia;
+use Spatie\TranslationLoader\TranslationLoaders\Db;
+
 
 
 /**
@@ -55,7 +57,11 @@ class SetLocale
             return $this->redirectTo($segments);
         }
         app()->setLocale($language->locale);
+        //languages for inertia
+        $trans = new Db();
+
         Inertia::share("currentLocale", $language->locale);
+        Inertia::share( "localizations", $trans->loadTranslations($language->locale, "client"));
         return $next($request);
     }
 

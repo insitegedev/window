@@ -1,21 +1,41 @@
-@font-face {
-    font-family: "bpg";
-    src: url(/fonts/geo/bpg2010.ttf) !important;
-}
-@font-face {
-    font-family: "igv";
-    src: url(/fonts/geo/igv2014.ttf) !important;
-}
+/*@font-face {*/
+/*    font-family: "bpg";*/
+/*    src: url(/fonts/geo/bpg2010.ttf) !important;*/
+/*}*/
+/*@font-face {*/
+/*    font-family: "igv";*/
+/*    src: url(/fonts/geo/igv2014.ttf) !important;*/
+/*}*/
 
+/**,*/
+/**::after,*/
+/**::before {*/
+/*    font-family: "bpg";*/
+/*}*/
+/*body {*/
+/*    font-family: "bpg";*/
+/*}*/
+/*.playfair {*/
+/*    font-family: "igv";*/
+/*}*/
+@font-face {
+    font-family: "worksans";
+    src: url(/fonts/geo/bpg2010.ttf);
+}
+@font-face {
+    font-family: "playfair";
+    src: url(/fonts/geo/igv2014.ttf);
+}
 *,
 *::after,
 *::before {
-    font-family: "bpg";
+    font-family: "worksans";
 }
 body {
-    font-family: "bpg";
+    font-family: "worksans";
+
 }
 .playfair {
-    font-family: "igv";
+    font-family: "playfair";
 }
 

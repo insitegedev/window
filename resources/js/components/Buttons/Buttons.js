@@ -28,7 +28,7 @@ export const ArrowButton = ({ color, link, text }) => {
   );
 };
 
-export const BackButton = ({ link, color }) => {
+export const BackButton = ({ link, color, text }) => {
   return (
     <Link href={link ?? "#"}>
       <button className="back_button flex centered">
@@ -39,7 +39,7 @@ export const BackButton = ({ link, color }) => {
           <ArrowRight color={color} />
         </div>
         <div className="text" style={{ color: color }}>
-          Go back
+            {text}
         </div>
       </button>
     </Link>

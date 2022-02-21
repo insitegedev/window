@@ -15,7 +15,6 @@ import Layout from "../../Layouts/Layout";
 
 const Services = ({ services, page, urlPrev }) => {
     const sharedData = usePage().props.localizations;
-    console.log(services);
 
 
     function __(key, replace = {}) {
@@ -71,7 +70,7 @@ const Services = ({ services, page, urlPrev }) => {
             </Head>
             <div className="servicePage">
                 <Showcase title={page.title} />
-                <BackButton color="#fff" link={urlPrev} />
+                <BackButton color="#fff" link={urlPrev} text={__("go_back")} />
                 <ArrowButton color="#334E60" link={route('client.choosefloor.index')} text={__("choose_apartment")}/>
                 <div className="container">
                     <div className="playfair" dangerouslySetInnerHTML={{

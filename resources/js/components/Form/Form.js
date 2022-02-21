@@ -50,15 +50,15 @@ const Form = () => {
                 {errors.phone && <div>{errors.phone}</div>}
             </div>
             <div className="grid">
-                <input id="name" value={values.name} onChange={handleChange} type="text" placeholder="Name & Surname"/>
-                <input id="phone" value={values.phone} onChange={handleChange} type="tel" placeholder="Phone Number"/>
+                <input id="name" value={values.name} onChange={handleChange} type="text" placeholder={__("name_surname")}/>
+                <input id="phone" value={values.phone} onChange={handleChange} type="tel" placeholder={__("phone_number")}/>
             </div>
             {errors.mail && <div>{errors.mail}</div>}
-            <input id="mail" value={values.mail} onChange={handleChange} type="text" placeholder="Email address"/>
+            <input id="mail" value={values.mail} onChange={handleChange} type="text" placeholder={__("email_address")}/>
             {errors.message && <div>{errors.message}</div>}
-            <textarea id="message" value={values.message} onChange={handleChange} placeholder="Message here"></textarea>
+            <textarea id="message" value={values.message} onChange={handleChange} placeholder={__("message_here")}></textarea>
             <button type="submit" className="main_button dark">
-                send
+                {__("send")}
             </button>
         </form>
     );

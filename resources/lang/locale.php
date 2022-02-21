@@ -42,7 +42,17 @@ return [
                                         yard with children's playground and yard
                                         infrastructure, cafe-restaurant, 24-hour
                                         video surveillance, security, rental and
-                                        hotel services."
+                                        hotel services.",
+    "address_info" => "Address",
+    "contact_info" => "Contact",
+    "name_surname" => "Name & Surname",
+    "phone_number" => "Phone Number",
+    "email_address" => "Email address",
+    "message_here" => "Message here",
+    "send" => "send",
+    "go_back" => "Go Back",
+    "a_block" => "A BLOCK",
+    "b_block" => "B BLOCK",
 
 
 ];

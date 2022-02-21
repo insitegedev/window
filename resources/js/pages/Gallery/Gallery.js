@@ -53,7 +53,7 @@ const Gallery = ({ galleries, urlPrev, page }) => {
                 <meta name="description" content={page.meta_description} />
             </Head>
             <div className="galleryPage">
-                <BackButton link={urlPrev} color="#fff" />
+                <BackButton link={urlPrev} color="#fff" text={__("go_back")} />
                 <ArrowButton color="#334E60" link="#334E60" text={__("choose_apartment")}/>
                 <Showcase title={page.title} />
                 <div className="wrapper">

@@ -63,7 +63,7 @@ const Menu = ({ openMenu, linkClicked }) => {
                 >
                     <div className="flex top">
                         <Languages />
-                        <MainButton link="/" text="contact us" />
+                        <MainButton link={route('client.contact.index')} text={__("contact_us")} />
                     </div>
                     <div className="flex bottom">
                         <ContactInfo color="#fff" />

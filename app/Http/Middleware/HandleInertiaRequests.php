@@ -4,10 +4,8 @@ namespace App\Http\Middleware;
 
 use App\Models\Setting;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\App;
 use Inertia\Inertia;
 use Inertia\Middleware;
-use Spatie\TranslationLoader\TranslationLoaders\Db;
 
 class HandleInertiaRequests extends Middleware
 {
@@ -40,23 +38,20 @@ class HandleInertiaRequests extends Middleware
      */
     public function share(Request $request)
     {
-        $trans = new Db();
-
         $this->settings();
         $locales = config("translatable.locales");
-        $currentLocale = App::getLocale();
         $currentRoute = url()->current();
+
         //Generates urls for language switcher with each locale
         $locale_urls = $this->locale_urls();
         //Generates link for go back button
         $urlPrev = $this->urlPrev();
         return array_merge(parent::share($request), [
-            "localizations" => $trans->loadTranslations("ge", "client"),
             "locales" => $locales,
-            "currentLocale" => $currentLocale,
             "pathname" => $currentRoute,
             "locale_urls" => $locale_urls,
-            'urlPrev'	=> $urlPrev
+            'urlPrev'	=> $urlPrev,
+
         ]);
     }
 

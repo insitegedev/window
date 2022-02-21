@@ -1,4 +1,4 @@
-import { Link, Head } from "@inertiajs/inertia-react";
+import {Link, Head, usePage} from "@inertiajs/inertia-react";
 import React from "react";
 import { useState } from "react";
 import { BackButton } from "../../components/Buttons/Buttons";
@@ -8,6 +8,18 @@ import Background from "/img/apartments/bg.png";
 import "./ChooseFloor.css";
 
 const ChooseFloor = ({ apartments, page, urlPrev }) => {
+    const sharedData = usePage().props.localizations;
+
+
+    function __(key, replace = {}) {
+        let translation = sharedData[key] || key;
+
+        Object.keys(replace).forEach(function (key) {
+            translation = translation.replace(':' + key, replace[key])
+        });
+
+        return translation;
+    }
     const [floorIndex, setFloorIndex] = useState(0);
     const floorList = [
         {
@@ -101,7 +113,7 @@ const ChooseFloor = ({ apartments, page, urlPrev }) => {
             <div className="chooseFloor">
                 <img className="background" src={Background} alt="" />
                 <Showcase short />
-                <BackButton color="#1B2D39" link={urlPrev} />
+                <BackButton color="#1B2D39" link={urlPrev} text={__("go_back")} />
                 <div className="container">
                     <svg
                         version="1.1"
@@ -164,7 +176,7 @@ const ChooseFloor = ({ apartments, page, urlPrev }) => {
                                     </Link>
                                 );
                             })}
-                            <h1>A BLOCK</h1>
+                            <h1>{__("a_block")}</h1>
                         </div>
                         <div className="blocks block_b">
                             {floorList.slice(-4).map((floor) => {
@@ -189,7 +201,7 @@ const ChooseFloor = ({ apartments, page, urlPrev }) => {
                                     </Link>
                                 );
                             })}
-                            <h1>B BLOCK</h1>
+                            <h1>{__("b_block")}</h1>
                         </div>
                     </div>
                 </div>

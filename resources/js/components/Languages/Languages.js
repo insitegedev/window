@@ -4,6 +4,7 @@ import "./Languages.css";
 
 export const Languages = () => {
     const {locales, currentLocale, locale_urls} = usePage().props;
+    console.log(currentLocale);
 
 
     return (

@@ -93,7 +93,7 @@ const AboutUs = ({ page }) => {
                             style={{ justifyContent: "flex-end" }}
                             data-aos="fade-up-left"
                         >
-                            <p>{__("services_little_description_1")}
+                            <p>{__("services_little_description_2")}
                             </p>
                             <div className="img">
                                 <img src="/img/about/3.png" alt="" />
