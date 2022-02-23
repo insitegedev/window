@@ -53,13 +53,14 @@
     z-index: 0;
 }
 .aboutPage .services p {
-    max-width: 600px;
+    max-width: 524px;
     margin-bottom: 40px;
 }
 .aboutPage .services .facilities {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 34px 17px;
-    margin-left: 30px;
+    margin-left: 78px;
+    max-width: 40%;
 }
 .aboutPage .bottom {
     background-color: #faf8f5;
@@ -99,6 +100,26 @@
         margin-right: 36px;
     }
 }
+@media screen and (max-width: 1200px) {
+    .aboutPage .services .wrapper {
+        flex-direction: column;
+    }
+    .aboutPage .services p {
+        max-width: none;
+        margin-bottom: 24px;
+    }
+    .aboutPage .services .facilities {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 34px 17px;
+        margin-left: 0;
+        margin-top: 40px;
+        max-width: none;
+    }
+    .aboutPage .services {
+        padding: 56px 0;
+    }
+}
+
 @media screen and (max-width: 1100px) {
     .aboutPage .bottom .img {
         width: 60%;
@@ -117,22 +138,6 @@
         margin-bottom: 15px;
     }
     .aboutPage .flex.one {
-        padding: 56px 0;
-    }
-    .aboutPage .services .wrapper {
-        flex-direction: column;
-    }
-    .aboutPage .services p {
-        max-width: none;
-        margin-bottom: 24px;
-    }
-    .aboutPage .services .facilities {
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 34px 17px;
-        margin-left: 0;
-        margin-top: 40px;
-    }
-    .aboutPage .services {
         padding: 56px 0;
     }
 }

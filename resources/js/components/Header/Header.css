@@ -16,6 +16,9 @@
 .header .logo .dark-logo {
     display: none;
 }
+.header .logo img {
+    width: 130px;
+}
 .header .menu_btn span {
     width: 20px;
     height: 3px;

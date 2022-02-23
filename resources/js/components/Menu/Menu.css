@@ -66,9 +66,9 @@
 .menu .left .navigation a {
     display: block;
     font-family: "playfair";
-    font-size: 42px;
+    font-size: 38px;
     text-align: right;
-    margin-top: 15px;
+    margin-top: 9px;
     opacity: 0.5;
     white-space: nowrap;
     transition: 0.3s;
@@ -84,12 +84,12 @@
     .menu .left {
         padding: 30px;
     }
+    .menu .left .navigation a {
+        font-size: 34px;
+        margin-top: 9px;
+    }
 }
 @media screen and (max-width: 1400px) {
-    .menu .left .navigation a {
-        font-size: 35px;
-        margin-top: 12px;
-    }
 }
 @media screen and (max-width: 1200px) {
     .menu .left .navigation a {

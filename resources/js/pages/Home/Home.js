@@ -9,19 +9,17 @@ import { VideoPopup } from "../../components/VideoPopup/VideoPopup";
 import Layout from "../../Layouts/Layout";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import {usePage, Head} from "@inertiajs/inertia-react";
+import { usePage, Head } from "@inertiajs/inertia-react";
 
 const Home = ({ sliders, page }) => {
     const sharedData = usePage().props.localizations;
-    const {gfacebook, ginstagram} = usePage().props;
-
-
+    const { gfacebook, ginstagram } = usePage().props;
 
     function __(key, replace = {}) {
         let translation = sharedData[key] || key;
 
         Object.keys(replace).forEach(function (key) {
-            translation = translation.replace(':' + key, replace[key])
+            translation = translation.replace(":" + key, replace[key]);
         });
 
         return translation;
@@ -82,7 +80,10 @@ const Home = ({ sliders, page }) => {
                                 />
                             </div>
                             <div className="content ">
-                                <div className="playfair">{data.title}</div>
+                                <div className="playfair">
+                                    Your Luxury Holiday <br /> Home In
+                                    <span>W Bakuriani</span>
+                                </div>
                                 <div
                                     className="flex"
                                     style={{ justifyContent: "flex-start" }}
@@ -109,7 +110,10 @@ const Home = ({ sliders, page }) => {
                             </div>
                             <VideoPopup
                                 // src='https://www.youtube.com/embed/zr4r3n5Smho'
-                                videoSrc={"https://www.youtube.com/embed/"+data.youtube_url}
+                                videoSrc={
+                                    "https://www.youtube.com/embed/" +
+                                    data.youtube_url
+                                }
                                 showVideo={showVideo}
                                 hideVideo={() => setShowVideo(false)}
                             />
@@ -150,8 +154,16 @@ const Home = ({ sliders, page }) => {
                         <ArrowRight color="#fff" />
                     </button>
                 </div>
-                <SocialMedia color="#fff" ginstagram={ginstagram.value} gfacebook={gfacebook.value}  />
-                <ArrowButton color="#fff" link={route('client.choosefloor.index')} text={__("choose_apartment")} />
+                <SocialMedia
+                    color="#fff"
+                    ginstagram={ginstagram.value}
+                    gfacebook={gfacebook.value}
+                />
+                <ArrowButton
+                    color="#fff"
+                    link={route("client.choosefloor.index")}
+                    text={__("choose_apartment")}
+                />
             </div>
         </Layout>
     );
