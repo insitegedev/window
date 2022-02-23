@@ -66,14 +66,14 @@ const AboutUs = ({ page }) => {
                     <div className="images">
                         <div className="img">
                             <img
-                                src="/img/about/1.png"
+                                src="/img/about/4.png"
                                 alt=""
                                 data-aos="fade-left"
                             />
                         </div>
                         <div className="img b">
                             <img
-                                src="/img/about/1.png"
+                                src="/img/about/5.png"
                                 alt=""
                                 data-aos="fade-left"
                             />
