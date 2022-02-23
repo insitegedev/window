@@ -12,7 +12,9 @@ use App\Breadcrumbs\Breadcrumbs;
 use App\Models\Language;
 use App\Observers\LanguageObserver;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\URL;
 use Illuminate\Support\ServiceProvider;
+
 
 /**
  * Class AppServiceProvider
