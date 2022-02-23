@@ -1,34 +1,10 @@
-/*@font-face {*/
-/*    font-family: "bpg";*/
-/*    src: url(/fonts/geo/bpg2010.ttf) !important;*/
-/*}*/
-/*@font-face {*/
-/*    font-family: "igv";*/
-/*    src: url(/fonts/geo/igv2014.ttf) !important;*/
-/*}*/
-
-/**,*/
-/**::after,*/
-/**::before {*/
-/*    font-family: "bpg";*/
-/*}*/
-/*body {*/
-/*    font-family: "bpg";*/
-/*}*/
-/*.playfair {*/
-/*    font-family: "igv";*/
-/*}*/
 @font-face {
     font-family: "worksans";
     src: url(/fonts/geo/bpg2010.ttf);
 }
 @font-face {
     font-family: "playfair";
-<<<<<<< HEAD
     src: url(/fonts/geo/alk_tommaso.ttf);
-=======
-    src: url(/fonts/geo/igv2014.ttf);
->>>>>>> d5282cc4a9c72023828dc6c0cc0ac7b5e6fb5fbf
 }
 *,
 *::after,
@@ -37,10 +13,6 @@
 }
 body {
     font-family: "worksans";
-<<<<<<< HEAD
-=======
-
->>>>>>> d5282cc4a9c72023828dc6c0cc0ac7b5e6fb5fbf
 }
 .playfair {
     font-family: "playfair";

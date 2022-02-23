@@ -2988,7 +2988,7 @@ var ContactInfo = function ContactInfo(_ref) {
     var replace = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
     var translation = sharedData[key] || key;
     Object.keys(replace).forEach(function (key) {
-      translation = translation.replace(':' + key, replace[key]);
+      translation = translation.replace(":" + key, replace[key]);
     });
     return translation;
   }
@@ -3007,9 +3007,9 @@ var ContactInfo = function ContactInfo(_ref) {
       color: color
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "title"
+    className: "title playfair"
   }, __("address_info")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, gaddress.value), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, gcity.value), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, gcountry.value), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "title"
+    className: "title playfair"
   }, __("contact_info")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, gemail.value), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, gphone.value), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_SocialMedia_SocialMedia__WEBPACK_IMPORTED_MODULE_1__.SocialMedia, {
     color: color,
     ginstagram: ginstagram.value,
@@ -4875,7 +4875,7 @@ var ContactInfo = function ContactInfo(_ref) {
     var replace = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
     var translation = sharedData[key] || key;
     Object.keys(replace).forEach(function (key) {
-      translation = translation.replace(':' + key, replace[key]);
+      translation = translation.replace(":" + key, replace[key]);
     });
     return translation;
   }
@@ -4894,9 +4894,9 @@ var ContactInfo = function ContactInfo(_ref) {
       color: color
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "title"
+    className: "title playfair"
   }, __("address_info")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, gaddress.value), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, gcity.value), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, gcountry.value), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "title"
+    className: "title playfair"
   }, __("contact_info")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, gemail.value), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, gphone.value), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_SocialMedia_SocialMedia__WEBPACK_IMPORTED_MODULE_1__.SocialMedia, {
     color: color,
     ginstagram: ginstagram.value,
