@@ -1,4 +1,4 @@
-import {Link, Head, usePage} from "@inertiajs/inertia-react";
+import { Link, Head, usePage } from "@inertiajs/inertia-react";
 import React from "react";
 import { useState } from "react";
 import { BackButton } from "../../components/Buttons/Buttons";
@@ -10,26 +10,25 @@ import "./ChooseFloor.css";
 const ChooseFloor = ({ apartments, page, urlPrev }) => {
     const sharedData = usePage().props.localizations;
 
-
     function __(key, replace = {}) {
         let translation = sharedData[key] || key;
 
         Object.keys(replace).forEach(function (key) {
-            translation = translation.replace(':' + key, replace[key])
+            translation = translation.replace(":" + key, replace[key]);
         });
 
         return translation;
     }
     const [floorIndex, setFloorIndex] = useState(0);
     const floorList = [
-        {
-            key: 1,
-            link: "/",
-            points: "576.9,511.11 886.28,465.78 900.01,457.79 909.59,462.26 917.25,457.79 1068.91,480.14 1045.29,398.73 894.27,370.95 885.96,377.65 887.56,387.23 ",
-            floorName: "A5",
-            para1: "სართული 5",
-            para2: "დარჩენილია 5 ბინა",
-        },
+        // {
+        //     key: 1,
+        //     link: "/",
+        //     points: "576.9,511.11 886.28,465.78 900.01,457.79 909.59,462.26 917.25,457.79 1068.91,480.14 1045.29,398.73 894.27,370.95 885.96,377.65 887.56,387.23 ",
+        //     floorName: "A5",
+        //     para1: "სართული 5",
+        //     para2: "დარჩენილია 5 ბინა",
+        // },
         {
             key: 2,
             link: "/",
@@ -113,7 +112,11 @@ const ChooseFloor = ({ apartments, page, urlPrev }) => {
             <div className="chooseFloor">
                 <img className="background" src={Background} alt="" />
                 <Showcase short />
-                <BackButton color="#1B2D39" link={urlPrev} text={__("go_back")} />
+                <BackButton
+                    color="#1B2D39"
+                    link={urlPrev}
+                    text={__("go_back")}
+                />
                 <div className="container">
                     <svg
                         version="1.1"
@@ -154,7 +157,7 @@ const ChooseFloor = ({ apartments, page, urlPrev }) => {
                     </svg>
                     <div className="both_blocks">
                         <div className="blocks block_a">
-                            {floorList.slice(0, 5).map((floor) => {
+                            {floorList.slice(0, 4).map((floor) => {
                                 return (
                                     <Link
                                         onMouseEnter={() =>
