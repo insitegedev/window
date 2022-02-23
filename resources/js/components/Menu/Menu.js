@@ -23,7 +23,6 @@ const Menu = ({ openMenu, linkClicked }) => {
     if (pathname === route("client.home.index")) {
         darkBg = false;
     }
-    console.log( __("choose_apartment"));
     const navbar = [
         {
             name: __("home"),
