@@ -220,3 +220,8 @@
         grid-template-columns: 1fr;
     }
 }
+@media screen and (max-width: 550px) {
+    .servicePage .back_button .text {
+        display: none;
+    }
+}
