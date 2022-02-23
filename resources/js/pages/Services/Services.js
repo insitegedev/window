@@ -104,7 +104,7 @@ const Services = ({ services, page, urlPrev }) => {
                                             services[0].id
                                         )}
                                         dark
-                                        text="learn more"
+                                        text={__("learn_more")}
                                     />
                                 </div>
                             </div>

@@ -13,6 +13,8 @@ import {usePage, Head} from "@inertiajs/inertia-react";
 
 const Home = ({ sliders, page }) => {
     const sharedData = usePage().props.localizations;
+    const {gfacebook, ginstagram} = usePage().props;
+
 
 
     function __(key, replace = {}) {
@@ -148,7 +150,7 @@ const Home = ({ sliders, page }) => {
                         <ArrowRight color="#fff" />
                     </button>
                 </div>
-                <SocialMedia color="#fff" />
+                <SocialMedia color="#fff" ginstagram={ginstagram.value} gfacebook={gfacebook.value}  />
                 <ArrowButton color="#fff" link={route('client.choosefloor.index')} text={__("choose_apartment")} />
             </div>
         </Layout>

@@ -3187,7 +3187,6 @@ var Languages = function Languages() {
       locales = _usePage$props.locales,
       currentLocale = _usePage$props.currentLocale,
       locale_urls = _usePage$props.locale_urls;
-  console.log(currentLocale);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "languages"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -3258,7 +3257,6 @@ var Menu = function Menu(_ref) {
     darkBg = false;
   }
 
-  console.log(__("choose_apartment"));
   var navbar = [{
     name: __("home"),
     path: route("client.home.index")
@@ -4201,6 +4199,9 @@ var Home = function Home(_ref) {
   var sliders = _ref.sliders,
       page = _ref.page;
   var sharedData = (0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_10__.usePage)().props.localizations;
+  var _usePage$props = (0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_10__.usePage)().props,
+      gfacebook = _usePage$props.gfacebook,
+      ginstagram = _usePage$props.ginstagram;
 
   function __(key) {
     var replace = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
@@ -4338,7 +4339,9 @@ var Home = function Home(_ref) {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_img_icons_sm_smIcons__WEBPACK_IMPORTED_MODULE_1__.ArrowRight, {
     color: "#fff"
   }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_SocialMedia_SocialMedia__WEBPACK_IMPORTED_MODULE_4__.SocialMedia, {
-    color: "#fff"
+    color: "#fff",
+    ginstagram: ginstagram.value,
+    gfacebook: gfacebook.value
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Buttons_Buttons__WEBPACK_IMPORTED_MODULE_5__.ArrowButton, {
     color: "#fff",
     link: route('client.choosefloor.index'),
@@ -4466,7 +4469,7 @@ var Services = function Services(_ref) {
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Buttons_Buttons__WEBPACK_IMPORTED_MODULE_1__.MainButton, {
     link: route("client.service.show", services[0].id),
     dark: true,
-    text: "learn more"
+    text: __("learn_more")
   }))), services.length > 1 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "side_boxes"
   }, services.slice(1).map(function (service) {
@@ -5362,7 +5365,7 @@ var Services = function Services(_ref) {
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Buttons_Buttons__WEBPACK_IMPORTED_MODULE_1__.MainButton, {
     link: route("client.service.show", services[0].id),
     dark: true,
-    text: "learn more"
+    text: __("learn_more")
   }))), services.length > 1 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "side_boxes"
   }, services.slice(1).map(function (service) {
