@@ -1,7 +1,6 @@
 import React from "react";
-
+import { Link, usePage } from "@inertiajs/inertia-react";
 import "./Facilities.css";
-import { usePage } from "@inertiajs/inertia-react";
 
 const Facilities = () => {
     const sharedData = usePage().props.localizations;
@@ -54,10 +53,14 @@ const Facilities = () => {
         <div className="facilities">
             {facilityList.map((Facility) => {
                 return (
-                    <div className="flex" data-aos="fade-up">
+                    <Link
+                        href={route("client.service.index")}
+                        className="flex"
+                        data-aos="fade-up"
+                    >
                         <img src={Facility.icon} alt="" />
                         <div>{Facility.name}</div>
-                    </div>
+                    </Link>
                 );
             })}
         </div>

@@ -120,7 +120,7 @@ const SingleService = ({ service, nextService, urlPrev }) => {
                               nextService.main_file_1.path +
                               "/" +
                               nextService.main_file_1.title
-                            : "/img/services/2.jpg"
+                            : "/img/services/2.png"
                     }
                     title={nextService.title}
                     icon="/img/icons/home/pool.svg"
