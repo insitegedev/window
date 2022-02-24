@@ -5,23 +5,21 @@ import {
     MainButton,
 } from "../../components/Buttons/Buttons";
 import Showcase from "../../components/Showcase/Showcase";
-import {Link, usePage, Head} from "@inertiajs/inertia-react";
+import { Link, usePage, Head } from "@inertiajs/inertia-react";
 
 import Aos from "aos";
 import "aos/dist/aos.css";
 import "./Services.css";
 import Layout from "../../Layouts/Layout";
 
-
 const Services = ({ services, page, urlPrev }) => {
     const sharedData = usePage().props.localizations;
-
 
     function __(key, replace = {}) {
         let translation = sharedData[key] || key;
 
         Object.keys(replace).forEach(function (key) {
-            translation = translation.replace(':' + key, replace[key])
+            translation = translation.replace(":" + key, replace[key]);
         });
 
         return translation;
@@ -71,13 +69,18 @@ const Services = ({ services, page, urlPrev }) => {
             <div className="servicePage">
                 <Showcase title={page.title} />
                 <BackButton color="#fff" link={urlPrev} text={__("go_back")} />
-                <ArrowButton color="#334E60" link={route('client.choosefloor.index')} text={__("choose_apartment")}/>
+                <ArrowButton
+                    color="#334E60"
+                    link={route("client.choosefloor.index")}
+                    text={__("choose_apartment")}
+                />
                 <div className="container">
-                    <div className="playfair" dangerouslySetInnerHTML={{
-                        __html: page.description,
-                    }}>
-
-                    </div>
+                    <div
+                        className="playfair"
+                        dangerouslySetInnerHTML={{
+                            __html: page.description,
+                        }}
+                    ></div>
                     <div className="flex first">
                         {services.length > 0 && (
                             <div
@@ -131,7 +134,7 @@ const Services = ({ services, page, urlPrev }) => {
                                         >
                                             <div className="service_title">
                                                 <img
-                                                    src="/img/icons/home/coffee-cup.svg"
+                                                    src="/img/icons/home/pool.svg"
                                                     alt=""
                                                     className="icon"
                                                 />
@@ -170,11 +173,9 @@ const Services = ({ services, page, urlPrev }) => {
                                     className="sidebox sb2"
                                     data-aos="flip-left"
                                 >
-                                    <p>
-                                        {__("more_about_us_description")}
-                                    </p>
+                                    <p>{__("more_about_us_description")}</p>
                                     <MainButton
-                                        link={route('client.about.index')}
+                                        link={route("client.about.index")}
                                         dark
                                         text={__("more_about_us")}
                                     />
@@ -185,10 +186,11 @@ const Services = ({ services, page, urlPrev }) => {
                     <div className="other_services">
                         <div className="head">
                             <h6>{page.title_2}</h6>
-                            <p dangerouslySetInnerHTML={{
-                                __html: page.description_2
-                            }}>
-                            </p>
+                            <p
+                                dangerouslySetInnerHTML={{
+                                    __html: page.description_2,
+                                }}
+                            ></p>
                         </div>
                         <div className="grid">
                             {serviceBoxes.map((box) => {

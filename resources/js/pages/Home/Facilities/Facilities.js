@@ -1,7 +1,7 @@
 import React from "react";
 
 import "./Facilities.css";
-import {usePage} from "@inertiajs/inertia-react";
+import { usePage } from "@inertiajs/inertia-react";
 
 const Facilities = () => {
     const sharedData = usePage().props.localizations;
@@ -10,58 +10,58 @@ const Facilities = () => {
         let translation = sharedData[key] || key;
 
         Object.keys(replace).forEach(function (key) {
-            translation = translation.replace(':' + key, replace[key])
+            translation = translation.replace(":" + key, replace[key]);
         });
 
         return translation;
     }
 
-  const facilityList = [
-    {
-      icon: "/img/icons/home/bell.svg",
-      name: __("recipient_recreation"),
-    },
-    {
-      icon: "/img/icons/home/spa.svg",
-      name: __("spa_aesthetics"),
-    },
-    {
-      icon: "/img/icons/home/parking-area.svg",
-      name: __("parking_area"),
-    },
-    {
-      icon: "/img/icons/home/tree.svg",
-      name: __("recreation_area_with_kids_playground"),
-    },
-    {
-      icon: "/img/icons/home/coffee-cup.svg",
-      name: __("cafe_restaurant"),
-    },
-    {
-      icon: "/img/icons/home/cctv-camera.svg",
-      name: __("video_monitoring"),
-    },
-    {
-      icon: "/img/icons/home/secure-shield.svg",
-        name: __("security_service"),
-    },
-    {
-      icon: "/img/icons/home/key.svg",
-      name: __("rental_and_hotel_services"),
-    },
-  ];
-  return (
-    <div className="facilities">
-      {facilityList.map((Facility) => {
-        return (
-          <div className="flex" data-aos="fade-up">
-            <img src={Facility.icon} alt="" />
-            <div>{Facility.name}</div>
-          </div>
-        );
-      })}
-    </div>
-  );
+    const facilityList = [
+        {
+            icon: "/img/icons/home/bell.svg",
+            name: __("recipient_recreation"),
+        },
+        {
+            icon: "/img/icons/home/spa.svg",
+            name: __("spa_aesthetics"),
+        },
+        {
+            icon: "/img/icons/home/parking-area.svg",
+            name: __("parking_area"),
+        },
+        {
+            icon: "/img/icons/home/tree.svg",
+            name: __("recreation_area_with_kids_playground"),
+        },
+        {
+            icon: "/img/icons/home/pool.svg",
+            name: __("cafe_restaurant"),
+        },
+        {
+            icon: "/img/icons/home/cctv-camera.svg",
+            name: __("video_monitoring"),
+        },
+        {
+            icon: "/img/icons/home/secure-shield.svg",
+            name: __("security_service"),
+        },
+        {
+            icon: "/img/icons/home/key.svg",
+            name: __("rental_and_hotel_services"),
+        },
+    ];
+    return (
+        <div className="facilities">
+            {facilityList.map((Facility) => {
+                return (
+                    <div className="flex" data-aos="fade-up">
+                        <img src={Facility.icon} alt="" />
+                        <div>{Facility.name}</div>
+                    </div>
+                );
+            })}
+        </div>
+    );
 };
 
 export default Facilities;

@@ -17,3 +17,11 @@ body {
 .playfair {
     font-family: "playfair";
 }
+.mainSlider .content .playfair {
+    max-width: 620px !important;
+}
+@media screen and (max-width: 1350px) {
+    .mainSlider .content .playfair {
+        max-width: 281px !important;
+    }
+}

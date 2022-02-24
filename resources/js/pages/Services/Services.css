@@ -52,7 +52,7 @@
     height: 288px;
 }
 .servicePage .side_boxes .sb1 {
-    background: url(/img/services/2.png) no-repeat;
+    background: url(/img/services/2.jpg) no-repeat;
     background-position: center;
     background-size: cover;
     position: relative;
@@ -60,8 +60,12 @@
     margin-bottom: 25px;
     align-items: flex-end;
     padding: 30px 40px;
+    color: #fff;
 }
-.servicePage .side_boxes .sb1::before {
+.servicePage .side_boxes .icon {
+    width: 40px;
+}
+/* .servicePage .side_boxes .sb1::before {
     left: 0;
     top: 0;
     width: 100%;
@@ -71,7 +75,7 @@
         rgba(255, 255, 255, 0.8),
         rgba(255, 255, 255, 0)
     );
-}
+} */
 .servicePage .side_boxes .sb2 {
     background: #eeeeee;
     padding: 40px;

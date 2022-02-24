@@ -224,7 +224,7 @@
         font-size: 12px;
     }
     .mainSlider .facilities img {
-        width: 30px;
+        width: 30px !important;
     }
     .mainSlider .facilities .flex img {
         margin-right: 9px;
