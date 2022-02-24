@@ -4279,7 +4279,7 @@ var Home = function Home(_ref) {
       className: "content "
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
       className: "playfair"
-    }, "Your Luxury Holiday Home In", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", null, "W Bakuriani")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    }, data.title, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", null, data.title_2)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
       className: "flex",
       style: {
         justifyContent: "flex-start"
@@ -5038,10 +5038,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var _Buttons_Buttons__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Buttons/Buttons */ "./resources/js/components/Buttons/Buttons.js");
 /* harmony import */ var _NextServiceBox_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./NextServiceBox.css */ "./resources/js/components/NextServiceBox/NextServiceBox.css");
+/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
+
 
 
 
 var NextServiceBox = function NextServiceBox(props) {
+  var sharedData = (0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_3__.usePage)().props.localizations;
+
+  function __(key) {
+    var replace = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+    var translation = sharedData[key] || key;
+    Object.keys(replace).forEach(function (key) {
+      translation = translation.replace(':' + key, replace[key]);
+    });
+    return translation;
+  }
+
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "next_service_box",
     style: {
@@ -5055,7 +5068,7 @@ var NextServiceBox = function NextServiceBox(props) {
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, props.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Buttons_Buttons__WEBPACK_IMPORTED_MODULE_1__.MainButton, {
     dark: true,
     link: props.link,
-    text: "learn more"
+    text: __("learn_more")
   }));
 };
 
@@ -5909,7 +5922,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".contactPage .body {\r\n  display: grid;\r\n  grid-template-columns: repeat(2, 1fr);\r\n  grid-gap: 77px;\r\n  width: 1300px;\r\n  margin: auto;\r\n  padding-top: 58px;\r\n  padding-bottom: 80px;\r\n  background: url(/img/general/line-bg.png);\r\n  background-position: center;\r\n  background-size: contain;\r\n}\r\n.contactPage .contact_info .title:first-child {\r\n  margin-top: 0;\r\n}\r\n.contactPage .body .img {\r\n  width: 100%;\r\n}\r\n\r\n@media screen and (max-width: 1350px) {\r\n  .contactPage .body {\r\n    width: 95%;\r\n  }\r\n}\r\n\r\n@media screen and (max-width: 1000px) {\r\n  .contactPage .body {\r\n    grid-gap: 41px;\r\n  }\r\n}\r\n\r\n@media screen and (max-width: 850px) {\r\n  .form .playfair {\r\n    font-size: 33px;\r\n    margin: 12px 0;\r\n  }\r\n  .form input,\r\n  .form textarea {\r\n    height: 49px;\r\n    margin-bottom: 14px;\r\n  }\r\n  .form textarea {\r\n    padding-top: 16px;\r\n    height: 104px;\r\n  }\r\n  .contactPage .body {\r\n    grid-gap: 22px;\r\n  }\r\n  .form .grid {\r\n    grid-gap: 11px;\r\n  }\r\n}\r\n@media screen and (max-width: 700px) {\r\n  .contactPage .body {\r\n    grid-template-columns: 1fr;\r\n  }\r\n  .contactPage .body .form {\r\n    grid-row: 1;\r\n  }\r\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".contactPage .body {\n  display: grid;\n  grid-template-columns: repeat(2, 1fr);\n  grid-gap: 77px;\n  width: 1300px;\n  margin: auto;\n  padding-top: 58px;\n  padding-bottom: 80px;\n  background: url(/img/general/line-bg.png);\n  background-position: center;\n  background-size: contain;\n}\n.contactPage .contact_info .title:first-child {\n  margin-top: 0;\n}\n.contactPage .body .img {\n  width: 100%;\n}\n\n@media screen and (max-width: 1350px) {\n  .contactPage .body {\n    width: 95%;\n  }\n}\n\n@media screen and (max-width: 1000px) {\n  .contactPage .body {\n    grid-gap: 41px;\n  }\n}\n\n@media screen and (max-width: 850px) {\n  .form .playfair {\n    font-size: 33px;\n    margin: 12px 0;\n  }\n  .form input,\n  .form textarea {\n    height: 49px;\n    margin-bottom: 14px;\n  }\n  .form textarea {\n    padding-top: 16px;\n    height: 104px;\n  }\n  .contactPage .body {\n    grid-gap: 22px;\n  }\n  .form .grid {\n    grid-gap: 11px;\n  }\n}\n@media screen and (max-width: 700px) {\n  .contactPage .body {\n    grid-template-columns: 1fr;\n  }\n  .contactPage .body .form {\n    grid-row: 1;\n  }\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -6221,7 +6234,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".showcase {\r\n  position: relative;\r\n  width: 100%;\r\n  height: 330px;\r\n  background: url(/img/home/1.png) no-repeat;\r\n  background-position: center;\r\n  background-size: cover;\r\n  background-attachment: fixed;\r\n  display: flex;\r\n  align-items: flex-end;\r\n  justify-content: center;\r\n  padding-bottom: 37px;\r\n  color: #fff;\r\n  font-size: 42px;\r\n}\r\n.showcase.short {\r\n  height: 210px;\r\n}\r\n.showcase::after {\r\n  width: 100%;\r\n  height: 100%;\r\n  left: 0;\r\n  top: 0;\r\n  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), #134d4d3a);\r\n  z-index: 0;\r\n}\r\n.showcase .title {\r\n  position: relative;\r\n  z-index: 100;\r\n}\r\n\r\n@media screen and (max-width: 1350px) {\r\n  .showcase {\r\n    height: 208px;\r\n    padding-bottom: 20px;\r\n    font-size: 36px;\r\n  }\r\n  .showcase.short {\r\n    height: 123px;\r\n  }\r\n}\r\n@media screen and (max-width: 600px) {\r\n  .showcase {\r\n    height: 161px;\r\n    padding-bottom: 14px;\r\n    font-size: 30px;\r\n  }\r\n  .showcase.short {\r\n    height: 94px;\r\n  }\r\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".showcase {\n  position: relative;\n  width: 100%;\n  height: 330px;\n  background: url(/img/home/1.png) no-repeat;\n  background-position: center;\n  background-size: cover;\n  background-attachment: fixed;\n  display: flex;\n  align-items: flex-end;\n  justify-content: center;\n  padding-bottom: 37px;\n  color: #fff;\n  font-size: 42px;\n}\n.showcase.short {\n  height: 210px;\n}\n.showcase::after {\n  width: 100%;\n  height: 100%;\n  left: 0;\n  top: 0;\n  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), #134d4d3a);\n  z-index: 0;\n}\n.showcase .title {\n  position: relative;\n  z-index: 100;\n}\n\n@media screen and (max-width: 1350px) {\n  .showcase {\n    height: 208px;\n    padding-bottom: 20px;\n    font-size: 36px;\n  }\n  .showcase.short {\n    height: 123px;\n  }\n}\n@media screen and (max-width: 600px) {\n  .showcase {\n    height: 161px;\n    padding-bottom: 14px;\n    font-size: 30px;\n  }\n  .showcase.short {\n    height: 94px;\n  }\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

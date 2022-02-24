@@ -90,6 +90,10 @@
                                         <td>{{$slider->translate($locale)->title ?? ''}}</td>
                                     </tr>
                                     <tr>
+                                        <td>@lang('admin.title_2'):</td>
+                                        <td>{{$slider->translate($locale)->title_2 ?? ''}}</td>
+                                    </tr>
+                                    <tr>
                                         <td>@lang('admin.description'):</td>
                                         <td>{{$slider->translate($locale)->description ?? ''}}</td>
                                     </tr>
