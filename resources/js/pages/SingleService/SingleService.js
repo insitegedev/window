@@ -8,8 +8,7 @@ import { PagePath } from "../../components/PagePath/PagePath";
 import DragSlide from "./DragSlide/DragSlide";
 import { NextServiceBox } from "../../components/NextServiceBox/NextServiceBox";
 import Layout from "../../Layouts/Layout";
-import {Head, usePage} from "@inertiajs/inertia-react";
-
+import { Head, usePage } from "@inertiajs/inertia-react";
 
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -17,12 +16,11 @@ import "aos/dist/aos.css";
 const SingleService = ({ service, nextService, urlPrev }) => {
     const sharedData = usePage().props.localizations;
 
-
     function __(key, replace = {}) {
         let translation = sharedData[key] || key;
 
         Object.keys(replace).forEach(function (key) {
-            translation = translation.replace(':' + key, replace[key])
+            translation = translation.replace(":" + key, replace[key]);
         });
 
         return translation;
@@ -49,7 +47,11 @@ const SingleService = ({ service, nextService, urlPrev }) => {
             </Head>
             <div className="singleService servicePage">
                 <Showcase short />
-                <BackButton color="#334E60" link={urlPrev} text={__("go_back")} />
+                <BackButton
+                    color="#334E60"
+                    link={urlPrev}
+                    text={__("go_back")}
+                />
                 <PagePath
                     loc1="home"
                     loc2="Services"
@@ -118,10 +120,10 @@ const SingleService = ({ service, nextService, urlPrev }) => {
                               nextService.main_file_1.path +
                               "/" +
                               nextService.main_file_1.title
-                            : "/img/services/2.png"
+                            : "/img/services/2.jpg"
                     }
                     title={nextService.title}
-                    icon="/img/icons/home/coffee-cup.svg"
+                    icon="/img/icons/home/pool.svg"
                 />
             </div>
         </Layout>

@@ -8,10 +8,8 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import { usePage, Head } from "@inertiajs/inertia-react";
 
-
 const AboutUs = ({ page }) => {
     const sharedData = usePage().props.localizations;
-
 
     function __(key, replace = {}) {
         let translation = sharedData[key] || key;
@@ -68,14 +66,14 @@ const AboutUs = ({ page }) => {
                             <img
                                 src="/img/about/4.png"
                                 alt=""
-                                data-aos="fade-left"
+                                data-aos="zoom-in"
                             />
                         </div>
                         <div className="img b">
                             <img
                                 src="/img/about/5.png"
                                 alt=""
-                                data-aos="fade-left"
+                                data-aos="zoom-in"
                             />
                         </div>
                     </div>
@@ -113,10 +111,9 @@ const AboutUs = ({ page }) => {
                         <div
                             className="flex  end"
                             style={{ justifyContent: "flex-end" }}
-                            data-aos="fade-up-left"
+                            data-aos="fade-up"
                         >
-                            <p>{__("services_little_description_2")}
-                            </p>
+                            <p>{__("services_little_description_2")}</p>
                             <div className="img">
                                 <img src="/img/about/3.png" alt="" />
                             </div>

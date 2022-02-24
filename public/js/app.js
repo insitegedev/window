@@ -3479,13 +3479,13 @@ var AboutUs = function AboutUs(_ref) {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
     src: "/img/about/4.png",
     alt: "",
-    "data-aos": "fade-left"
+    "data-aos": "zoom-in"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "img b"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
     src: "/img/about/5.png",
     alt: "",
-    "data-aos": "fade-left"
+    "data-aos": "zoom-in"
   })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "services",
     "data-aos": "fade-up"
@@ -3516,7 +3516,7 @@ var AboutUs = function AboutUs(_ref) {
     style: {
       justifyContent: "flex-end"
     },
-    "data-aos": "fade-up-left"
+    "data-aos": "fade-up"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, __("services_little_description_2")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "img"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
@@ -3865,7 +3865,7 @@ var Contact = function Contact(_ref) {
     var replace = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
     var translation = sharedData[key] || key;
     Object.keys(replace).forEach(function (key) {
-      translation = translation.replace(':' + key, replace[key]);
+      translation = translation.replace(":" + key, replace[key]);
     });
     return translation;
   }
@@ -3896,10 +3896,10 @@ var Contact = function Contact(_ref) {
     className: "img",
     src: "/img/contact/2.png",
     alt: "",
-    "data-aos": "fade-left"
+    "data-aos": "fade-up"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Buttons_Buttons__WEBPACK_IMPORTED_MODULE_5__.ArrowButton, {
     color: "#334E60",
-    link: route('client.choosefloor.index'),
+    link: route("client.choosefloor.index"),
     text: __("choose_apartment")
   })));
 };
@@ -4650,7 +4650,7 @@ var SingleService = function SingleService(_ref) {
     var replace = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
     var translation = sharedData[key] || key;
     Object.keys(replace).forEach(function (key) {
-      translation = translation.replace(':' + key, replace[key]);
+      translation = translation.replace(":" + key, replace[key]);
     });
     return translation;
   }
@@ -4723,9 +4723,9 @@ var SingleService = function SingleService(_ref) {
     sliderData: service.files
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_NextServiceBox_NextServiceBox__WEBPACK_IMPORTED_MODULE_7__.NextServiceBox, {
     link: route("client.service.show", nextService.id),
-    background: nextService.main_file_1 ? "/" + nextService.main_file_1.path + "/" + nextService.main_file_1.title : "/img/services/2.png",
+    background: nextService.main_file_1 ? "/" + nextService.main_file_1.path + "/" + nextService.main_file_1.title : "/img/services/2.jpg",
     title: nextService.title,
-    icon: "/img/icons/home/coffee-cup.svg"
+    icon: "/img/icons/home/pool.svg"
   })));
 };
 
@@ -5778,7 +5778,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".header {\r\n    position: absolute;\r\n    left: 0;\r\n    top: 0;\r\n    width: 100%;\r\n    color: #fff;\r\n    padding: 34px 56px;\r\n    z-index: 1000;\r\n}\r\n.header .menu_btn {\r\n    flex-direction: column;\r\n    position: relative;\r\n    z-index: 10010;\r\n    transition: 0.5s;\r\n}\r\n.header .logo .dark-logo {\r\n    display: none;\r\n}\r\n.header .logo img {\r\n    width: 130px;\r\n}\r\n.header .menu_btn span {\r\n    width: 20px;\r\n    height: 3px;\r\n    background-color: #fff;\r\n    margin: 3px 0;\r\n    transition: 0.5s;\r\n}\r\n.header .menu_btn.clicked span:first-child {\r\n    transform: rotate(-45deg);\r\n    margin: -1.5px 0;\r\n    background-color: #fff;\r\n}\r\n.header .menu_btn.clicked span:last-child {\r\n    transform: rotate(45deg);\r\n    margin: -1.5px 0;\r\n    background-color: #fff;\r\n}\r\n\r\n/* dark header */\r\n.header.dark .logo img {\r\n    display: none;\r\n}\r\n.header.dark .logo .dark-logo {\r\n    display: inline-block;\r\n}\r\n.header.dark .menu_btn {\r\n    border-color: #1b2d39;\r\n}\r\n.header.dark .menu_btn span {\r\n    background-color: #1b2d39;\r\n}\r\n.header.dark .languages {\r\n    color: #1b2d39;\r\n}\r\n.header .menu_btn.clicked {\r\n    border-color: #fff;\r\n}\r\n\r\n.header.dark .languages .on::before {\r\n    background: url(/img/icons/header/globe-dark.svg) no-repeat;\r\n    background-position: center;\r\n    background-size: contain;\r\n}\r\n.header.dark .languages .on::after {\r\n    background: url(/img/icons/header/arrowdown-dark.svg) no-repeat;\r\n    background-position: center;\r\n    background-size: contain;\r\n}\r\n\r\n@media screen and (max-width: 1500px) {\r\n    .header .menu_btn.clicked {\r\n        transform: translateX(-43px) translateY(-23px);\r\n    }\r\n}\r\n@media screen and (max-width: 1350px) {\r\n    .header {\r\n        padding: 10px 38px;\r\n    }\r\n    .header .menu_btn {\r\n        transform: translateX(-20px);\r\n    }\r\n    .header .menu_btn.clicked {\r\n        transform: none;\r\n        transform: translateX(-20px) translateY(-3px);\r\n    }\r\n    .header .logo img {\r\n        width: 135px;\r\n    }\r\n}\r\n@media screen and (max-width: 600px) {\r\n    .header .menu_btn {\r\n        width: 49px;\r\n        height: 49px;\r\n    }\r\n    .header .logo img {\r\n        width: 101px;\r\n    }\r\n    .languages {\r\n        font-size: 11px;\r\n        line-height: 100%;\r\n    }\r\n    .header {\r\n        padding: 10px 24px;\r\n    }\r\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".header {\r\n    position: absolute;\r\n    left: 0;\r\n    top: 0;\r\n    width: 100%;\r\n    color: #fff;\r\n    padding: 34px 56px;\r\n    z-index: 1000;\r\n}\r\n.header .menu_btn {\r\n    flex-direction: column;\r\n    position: relative;\r\n    z-index: 10010;\r\n    transition: 0.5s;\r\n}\r\n.header .logo .dark-logo {\r\n    display: none;\r\n}\r\n.header .logo img {\r\n    width: 130px;\r\n}\r\n.header .menu_btn span {\r\n    width: 20px;\r\n    height: 3px;\r\n    background-color: #fff;\r\n    margin: 3px 0;\r\n    transition: 0.5s;\r\n}\r\n.header .menu_btn.clicked span:first-child {\r\n    transform: rotate(-45deg);\r\n    margin: -1.5px 0;\r\n    background-color: #fff;\r\n}\r\n.header .menu_btn.clicked span:last-child {\r\n    transform: rotate(45deg);\r\n    margin: -1.5px 0;\r\n    background-color: #fff;\r\n}\r\n\r\n/* dark header */\r\n.header.dark .logo img {\r\n    display: none;\r\n}\r\n.header.dark .logo .dark-logo {\r\n    display: inline-block;\r\n}\r\n.header.dark .menu_btn {\r\n    border-color: #1b2d39;\r\n}\r\n.header.dark .menu_btn span {\r\n    background-color: #1b2d39;\r\n}\r\n.header.dark .languages {\r\n    color: #1b2d39;\r\n}\r\n.header .menu_btn.clicked {\r\n    border-color: #fff;\r\n}\r\n\r\n.header.dark .languages .on::before {\r\n    background: url(/img/icons/header/globe-dark.svg) no-repeat;\r\n    background-position: center;\r\n    background-size: contain;\r\n}\r\n.header.dark .languages .on::after {\r\n    background: url(/img/icons/header/arrowdown-dark.svg) no-repeat;\r\n    background-position: center;\r\n    background-size: contain;\r\n}\r\n\r\n@media screen and (max-width: 1500px) {\r\n}\r\n@media screen and (max-width: 1350px) {\r\n    .header {\r\n        padding: 10px 38px;\r\n    }\r\n    .header .menu_btn {\r\n        transform: translateX(-20px);\r\n    }\r\n\r\n    .header .logo img {\r\n        width: 135px;\r\n    }\r\n}\r\n@media screen and (max-width: 600px) {\r\n    .header .menu_btn {\r\n        width: 49px;\r\n        height: 49px;\r\n    }\r\n    .header .logo img {\r\n        width: 101px;\r\n    }\r\n    .languages {\r\n        font-size: 11px;\r\n        line-height: 100%;\r\n    }\r\n    .header {\r\n        padding: 10px 24px;\r\n    }\r\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -5826,7 +5826,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".menu {\r\n    width: 100vw;\r\n    height: 100vh;\r\n    z-index: 1000;\r\n    position: fixed;\r\n    left: 0;\r\n    top: 0;\r\n    transition: 1s;\r\n    visibility: hidden;\r\n}\r\n.menu.open {\r\n    visibility: visible;\r\n}\r\n.menu .container {\r\n    width: 100%;\r\n    height: 100%;\r\n}\r\n.menu .right {\r\n    background: url(/img/home/4.png) no-repeat;\r\n    background-position: center;\r\n    background-size: cover;\r\n    width: 55%;\r\n    height: 100%;\r\n    position: relative;\r\n    transition: 1s;\r\n    transform: translateX(100%);\r\n}\r\n.menu.open .right {\r\n    transform: translateX(0);\r\n}\r\n.menu .right img {\r\n    z-index: 100;\r\n    width: 350px;\r\n}\r\n.menu .right::after {\r\n    width: 100%;\r\n    height: 100%;\r\n    left: 0;\r\n    top: 0;\r\n    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), #134d4d3a);\r\n    z-index: 0;\r\n}\r\n.menu .left {\r\n    height: 100%;\r\n    width: 45%;\r\n    padding: 53px;\r\n    -webkit-backdrop-filter: blur(40px);\r\n            backdrop-filter: blur(40px);\r\n    transform: translateX(200%);\r\n    transition: 1.2s;\r\n    opacity: 0;\r\n    position: relative;\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: space-between;\r\n}\r\n.menu.open .left {\r\n    transform: translateX(0);\r\n    opacity: 1;\r\n}\r\n.menu .left .bottom {\r\n    align-items: flex-end;\r\n}\r\n.menu .left .top {\r\n    padding-left: 100px;\r\n}\r\n.menu .left .navigation a {\r\n    display: block;\r\n    font-family: \"playfair\";\r\n    font-size: 38px;\r\n    text-align: right;\r\n    margin-top: 9px;\r\n    opacity: 0.5;\r\n    white-space: nowrap;\r\n    transition: 0.3s;\r\n}\r\n.menu .left .navigation a:hover {\r\n    opacity: 1;\r\n}\r\n.menu .left .navigation a.active {\r\n    opacity: 1;\r\n}\r\n\r\n@media screen and (max-width: 1500px) {\r\n    .menu .left {\r\n        padding: 30px;\r\n    }\r\n    .menu .left .navigation a {\r\n        font-size: 34px;\r\n        margin-top: 9px;\r\n    }\r\n}\r\n@media screen and (max-width: 1400px) {\r\n}\r\n@media screen and (max-width: 1200px) {\r\n    .menu .left .navigation a {\r\n        font-size: 24px;\r\n        margin-top: 8px;\r\n    }\r\n    .menu .left .top {\r\n        padding-left: 84px;\r\n    }\r\n    .menu .main_button {\r\n        width: 151px;\r\n        height: 47px;\r\n        font-size: 14px;\r\n    }\r\n    .menu .right img {\r\n        width: 224px;\r\n    }\r\n}\r\n@media screen and (max-width: 1000px) {\r\n    .menu .right {\r\n        width: 40%;\r\n    }\r\n    .menu.open .left {\r\n        width: 60%;\r\n    }\r\n}\r\n@media screen and (max-width: 800px) {\r\n    .menu .right img {\r\n        width: 159px;\r\n    }\r\n    .menu .left .navigation a {\r\n        font-size: 20px;\r\n    }\r\n}\r\n@media screen and (max-width: 650px) {\r\n    .menu .right {\r\n        display: none;\r\n    }\r\n    .menu.open .left {\r\n        width: 100%;\r\n    }\r\n    .menu .left {\r\n        padding-bottom: 100px;\r\n    }\r\n}\r\n@media screen and (max-width: 600px) {\r\n    .menu .left {\r\n        padding-top: 20px;\r\n    }\r\n    .menu .left .top {\r\n        padding-left: 73px;\r\n    }\r\n}\r\n@media screen and (max-width: 400px) {\r\n    .menu .left {\r\n        padding: 16px;\r\n        padding-top: 24px;\r\n    }\r\n    .menu .main_button {\r\n        width: 127px;\r\n        height: 40px;\r\n        font-size: 11px;\r\n    }\r\n    .menu .left {\r\n        padding-bottom: 100px;\r\n    }\r\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".menu {\r\n    width: 100vw;\r\n    height: 100vh;\r\n    z-index: 1000;\r\n    position: fixed;\r\n    left: 0;\r\n    top: 0;\r\n    transition: 1s;\r\n    visibility: hidden;\r\n}\r\n.menu.open {\r\n    visibility: visible;\r\n}\r\n.menu .container {\r\n    width: 100%;\r\n    height: 100%;\r\n}\r\n.menu .right {\r\n    background: url(/img/home/4.png) no-repeat;\r\n    background-position: center;\r\n    background-size: cover;\r\n    width: 55%;\r\n    height: 100%;\r\n    position: relative;\r\n    transition: 1s;\r\n    transform: translateX(100%);\r\n}\r\n.menu.open .right {\r\n    transform: translateX(0);\r\n}\r\n.menu .right img {\r\n    z-index: 100;\r\n    width: 350px;\r\n}\r\n.menu .right::after {\r\n    width: 100%;\r\n    height: 100%;\r\n    left: 0;\r\n    top: 0;\r\n    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), #134d4d3a);\r\n    z-index: 0;\r\n}\r\n.menu .left {\r\n    height: 100%;\r\n    width: 45%;\r\n    padding: 53px;\r\n    -webkit-backdrop-filter: blur(40px);\r\n            backdrop-filter: blur(40px);\r\n    transform: translateX(200%);\r\n    transition: 1.2s;\r\n    opacity: 0;\r\n    position: relative;\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: space-between;\r\n}\r\n.menu.open .left {\r\n    transform: translateX(0);\r\n    opacity: 1;\r\n}\r\n.menu .left .bottom {\r\n    align-items: flex-end;\r\n}\r\n.menu .left .top {\r\n    padding-left: 100px;\r\n}\r\n.menu .left .navigation a {\r\n    display: block;\r\n    font-family: \"playfair\";\r\n    font-size: 38px;\r\n    text-align: right;\r\n    margin-top: 9px;\r\n    opacity: 0.5;\r\n    white-space: nowrap;\r\n    transition: 0.3s;\r\n}\r\n.menu .left .navigation a:hover {\r\n    opacity: 1;\r\n}\r\n.menu .left .navigation a.active {\r\n    opacity: 1;\r\n}\r\n\r\n@media screen and (max-width: 1500px) {\r\n    .menu .left .navigation a {\r\n        font-size: 34px;\r\n        margin-top: 9px;\r\n    }\r\n}\r\n@media screen and (max-width: 1350px) {\r\n    .menu .left {\r\n        padding: 30px;\r\n    }\r\n}\r\n@media screen and (max-width: 1200px) {\r\n    .menu .left .navigation a {\r\n        font-size: 24px;\r\n        margin-top: 8px;\r\n    }\r\n    .menu .left .top {\r\n        padding-left: 84px;\r\n    }\r\n    .menu .main_button {\r\n        width: 151px;\r\n        height: 47px;\r\n        font-size: 14px;\r\n    }\r\n    .menu .right img {\r\n        width: 224px;\r\n    }\r\n}\r\n@media screen and (max-width: 1000px) {\r\n    .menu .right {\r\n        width: 40%;\r\n    }\r\n    .menu.open .left {\r\n        width: 60%;\r\n    }\r\n}\r\n@media screen and (max-width: 800px) {\r\n    .menu .right img {\r\n        width: 159px;\r\n    }\r\n    .menu .left .navigation a {\r\n        font-size: 20px;\r\n    }\r\n}\r\n@media screen and (max-width: 650px) {\r\n    .menu .right {\r\n        display: none;\r\n    }\r\n    .menu.open .left {\r\n        width: 100%;\r\n    }\r\n    .menu .left {\r\n        padding-bottom: 100px;\r\n    }\r\n}\r\n@media screen and (max-width: 600px) {\r\n    .menu .left {\r\n        padding-top: 20px;\r\n    }\r\n    .menu .left .top {\r\n        padding-left: 73px;\r\n    }\r\n}\r\n@media screen and (max-width: 400px) {\r\n    .menu .left {\r\n        padding: 16px;\r\n        padding-top: 24px;\r\n    }\r\n    .menu .main_button {\r\n        width: 127px;\r\n        height: 40px;\r\n        font-size: 11px;\r\n    }\r\n    .menu .left {\r\n        padding-bottom: 100px;\r\n    }\r\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -6186,7 +6186,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".next_service_box {\r\n  width: 550px;\r\n  padding: 73px 20px;\r\n  text-align: center;\r\n  background-position: center !important;\r\n  background-size: cover !important;\r\n  background-repeat: no-repeat !important;\r\n  margin: auto;\r\n  position: relative;\r\n}\r\n.next_service_box::before {\r\n  left: 0;\r\n  top: 0;\r\n  width: 100%;\r\n  height: 100%;\r\n  background: linear-gradient(\r\n    to top,\r\n    rgba(255, 255, 255, 0.8),\r\n    rgba(255, 255, 255, 0)\r\n  );\r\n}\r\n.next_service_box p {\r\n  margin: 15px 0;\r\n  z-index: 100;\r\n  position: relative;\r\n}\r\n.next_service_box img {\r\n  z-index: 100;\r\n  position: relative;\r\n}\r\n@media screen and (max-width: 600px) {\r\n  .next_service_box {\r\n    width: 95%;\r\n  }\r\n}\r\n@media screen and (max-width: 450px) {\r\n  .next_service_box {\r\n    padding: 31px 20px;\r\n  }\r\n  .next_service_box p {\r\n    margin: 7px 0;\r\n  }\r\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".next_service_box {\r\n    width: 550px;\r\n    padding: 73px 20px;\r\n    text-align: center;\r\n    background-position: center !important;\r\n    background-size: cover !important;\r\n    background-repeat: no-repeat !important;\r\n    margin: auto;\r\n    position: relative;\r\n}\r\n.next_service_box::before {\r\n    left: 0;\r\n    top: 0;\r\n    width: 100%;\r\n    height: 100%;\r\n    background: linear-gradient(\r\n        to top,\r\n        rgba(255, 255, 255, 0.8),\r\n        rgba(255, 255, 255, 0)\r\n    );\r\n}\r\n.next_service_box p {\r\n    margin: 15px 0;\r\n    z-index: 100;\r\n    position: relative;\r\n}\r\n.next_service_box img {\r\n    z-index: 100;\r\n    position: relative;\r\n    width: 40px;\r\n}\r\n@media screen and (max-width: 600px) {\r\n    .next_service_box {\r\n        width: 95%;\r\n    }\r\n}\r\n@media screen and (max-width: 450px) {\r\n    .next_service_box {\r\n        padding: 31px 20px;\r\n    }\r\n    .next_service_box p {\r\n        margin: 7px 0;\r\n    }\r\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

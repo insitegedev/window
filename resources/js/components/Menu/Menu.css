@@ -81,15 +81,15 @@
 }
 
 @media screen and (max-width: 1500px) {
-    .menu .left {
-        padding: 30px;
-    }
     .menu .left .navigation a {
         font-size: 34px;
         margin-top: 9px;
     }
 }
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1350px) {
+    .menu .left {
+        padding: 30px;
+    }
 }
 @media screen and (max-width: 1200px) {
     .menu .left .navigation a {

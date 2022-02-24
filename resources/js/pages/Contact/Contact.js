@@ -8,17 +8,16 @@ import { ArrowButton } from "../../components/Buttons/Buttons";
 import Layout from "../../Layouts/Layout";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import {usePage, Head} from "@inertiajs/inertia-react";
+import { usePage, Head } from "@inertiajs/inertia-react";
 
-const Contact = ({page}) => {
+const Contact = ({ page }) => {
     const sharedData = usePage().props.localizations;
-
 
     function __(key, replace = {}) {
         let translation = sharedData[key] || key;
 
         Object.keys(replace).forEach(function (key) {
-            translation = translation.replace(':' + key, replace[key])
+            translation = translation.replace(":" + key, replace[key]);
         });
 
         return translation;
@@ -47,10 +46,14 @@ const Contact = ({page}) => {
                         className="img"
                         src="/img/contact/2.png"
                         alt=""
-                        data-aos="fade-left"
+                        data-aos="fade-up"
                     />
                 </div>
-                <ArrowButton color="#334E60" link={route('client.choosefloor.index')} text={__("choose_apartment")}/>
+                <ArrowButton
+                    color="#334E60"
+                    link={route("client.choosefloor.index")}
+                    text={__("choose_apartment")}
+                />
             </div>
         </Layout>
     );
