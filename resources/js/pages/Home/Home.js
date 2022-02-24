@@ -81,7 +81,7 @@ const Home = ({ sliders, page }) => {
                             </div>
                             <div className="content ">
                                 <div className="playfair">
-                                    Your Luxury Holiday <br /> Home In
+                                    Your Luxury Holiday Home In
                                     <span>W Bakuriani</span>
                                 </div>
                                 <div
