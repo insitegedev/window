@@ -10,6 +10,7 @@ class SliderTranslation extends BaseTranslationModel
     use HasFactory;
     protected $fillable = [
         'title',
+        'title_2',
         'description'
     ];
 }

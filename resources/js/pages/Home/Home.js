@@ -81,8 +81,8 @@ const Home = ({ sliders, page }) => {
                             </div>
                             <div className="content ">
                                 <div className="playfair">
-                                    Your Luxury Holiday <br /> Home In
-                                    <span>W Bakuriani</span>
+                                    {data.title}
+                                    <span>{data.title_2}</span>
                                 </div>
                                 <div
                                     className="flex"

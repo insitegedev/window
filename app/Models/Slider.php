@@ -30,6 +30,7 @@ class Slider extends Model
     /** @var array */
     public $translatedAttributes = [
         'title',
+        'title_2',
         'description'
     ];
 

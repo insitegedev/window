@@ -43,6 +43,17 @@
                                             </small>
                                             @enderror
                                         </div>
+                                        <div class="input-field ">
+                                            {!! Form::text($locale.'[title_2]',$slider->translate($locale)->title_2 ?? '',['class' => 'validate '. $errors->has($locale.'.title_2') ? '' : 'valid']) !!}
+                                            {!! Form::label($locale.'[title_2]',__('admin.title_2')) !!}
+                                            @error($locale.'.title_2')
+                                            <small class="errorTxt4">
+                                                <div class="error">
+                                                    {{$message}}
+                                                </div>
+                                            </small>
+                                            @enderror
+                                        </div>
 
 
                                         <div class="input-field">
