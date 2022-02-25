@@ -102,6 +102,9 @@ Route::prefix('{locale?}')
             Route::get('/apartment', [\App\Http\Controllers\Client\ApartmentController::class, 'show'])->name('client.apartment.index');
             Route::get('/choose-floor', [\App\Http\Controllers\Client\ApartmentController::class, 'index'])->name('client.choosefloor.index');
 
+            // Floor Plan
+            Route::get('/floorA1', [HomeController::class, 'floorA1'])->name('client.floorA1.index');
+
 
             // Contact Page
             Route::get('/contact', [ContactController::class, 'index'])->name('client.contact.index');

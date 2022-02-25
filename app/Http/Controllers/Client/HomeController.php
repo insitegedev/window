@@ -35,6 +35,15 @@ class HomeController extends Controller
         return Inertia::render('ChooseFloor/ChooseFloor');
     }
 
+    // FloorPlan
+
+    public function floorA1()
+    {
+        $page = Page::where('key', 'home')->firstOrFail();
+
+        return Inertia::render('FloorPlan/A1', [ "page" => $page]);
+    }
+ 
 
 
 }

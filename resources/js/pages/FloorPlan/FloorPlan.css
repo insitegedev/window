@@ -1,0 +1,91 @@
+.floorPlan {
+    padding-bottom: 240px;
+}
+.floorPlan .background {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+.floorPlan .back_button {
+    flex-direction: column;
+}
+.floorPlan .back_button .text {
+    opacity: 1;
+    margin-left: 0;
+    margin-top: 10px;
+}
+.floorPlan .head {
+    text-align: center;
+    color: #334e60;
+    text-transform: uppercase;
+    margin-bottom: 84px;
+    padding-top: 32px;
+    font-weight: bold;
+}
+.floorPlan .head .block {
+    opacity: 0.5;
+    font-size: 29px;
+    margin-bottom: 10px;
+}
+.floorPlan .head .flex .bold {
+    font-size: 46px;
+    margin: 0px 15px;
+}
+.floorPlan .head .left {
+    transform: rotate(180deg) translateY(5px);
+}
+.floorPlan .container {
+    width: 1500px;
+    margin: auto;
+    position: relative;
+}
+.floorPlan .container svg {
+    width: 100%;
+}
+.floorPlan .st0 {
+    opacity: 0;
+    transition: 0.3s;
+    fill: #126d2a;
+}
+.floorPlan .st0:hover {
+    opacity: 0.6;
+}
+
+.floorPlan .dimensions {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 90%;
+    top: 170px;
+    left: 0;
+}
+.floorPlan .dimension_box {
+    /* position: absolute;
+    top: 170px; */
+    width: 188px;
+    height: 50px;
+    flex-shrink: 0;
+    margin: 0 -30px;
+    color: #334e60;
+    border-radius: 5px;
+    box-shadow: 0 3px 6px #11111111;
+    z-index: 100;
+    background-color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    opacity: 0;
+    transition: 0.3s;
+}
+.floorPlan .dimension_box.show {
+    opacity: 1;
+}
+.floorPlan .tooltip {
+    color: #334e60;
+    border-radius: 5px;
+    box-shadow: 0 3px 6px #11111111;
+    z-index: 100;
+    background-color: #fff;
+}

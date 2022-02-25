@@ -25,3 +25,4 @@ class ApartmentController extends Controller
         return Inertia::render('Apartment/Apartment', ["apartments" => $apartments, "page" => $page]);
     }
 }
+ 

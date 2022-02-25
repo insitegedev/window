@@ -7,12 +7,11 @@ import { usePage } from "@inertiajs/inertia-react";
 const Footer = () => {
     const sharedData = usePage().props.localizations;
 
-
     function __(key, replace = {}) {
         let translation = sharedData[key] || key;
 
         Object.keys(replace).forEach(function (key) {
-            translation = translation.replace(':' + key, replace[key])
+            translation = translation.replace(":" + key, replace[key]);
         });
 
         return translation;
@@ -36,10 +35,11 @@ const Footer = () => {
                 }}
             >
                 <div className="playfair">{__("choose_your_apartment")}</div>
-                <p>
-                    {__("choose_your_apartment_description")}
-                </p>
-                <MainButton text={__('learn_more')} link={route('client.choosefloor.index')} />
+                <p>{__("choose_your_apartment_description")}</p>
+                <MainButton
+                    text={__("learn_more")}
+                    link={route("client.choosefloor.index")}
+                />
             </div>
             <div className="insite flex centered">
                 <div>Designed by</div>

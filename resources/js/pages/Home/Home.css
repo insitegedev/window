@@ -170,6 +170,11 @@
         margin: 0 40px;
     }
 }
+@media screen and (max-height: 750px) {
+    .mainSlider .controllers {
+        top: 253px !important;
+    }
+}
 @media screen and (max-height: 700px) and (max-width: 900px) {
     .mainSlider .controllers {
         top: 272px !important;
@@ -238,7 +243,6 @@
         transform: none;
         left: auto;
         right: 134px;
-        top: 300px !important;
     }
     .mainSlider .controllers button {
         font-size: 29px;
