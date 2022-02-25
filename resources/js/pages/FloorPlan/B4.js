@@ -71,7 +71,7 @@ const ChooseFloor = ({ urlPrev }) => {
                     <div className=" block">B block</div>
                     <div className="flex centered">
                         <Link
-                            href={route("client.floorB3.index")}
+                            href={route('client.showFloor.index', "B3")}
                             className="left"
                         >
                             <ArrowRight color="#334E60" />

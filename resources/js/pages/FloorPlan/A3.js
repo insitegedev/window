@@ -93,13 +93,13 @@ const ChooseFloor = ({ urlPrev }) => {
                     <div className=" block">A block</div>
                     <div className="flex centered">
                         <Link
-                            href={route("client.floorA2.index")}
+                            href={route('client.showFloor.index', "A2")}
                             className="left"
                         >
                             <ArrowRight color="#334E60" />
                         </Link>
                         <div className="bold">Floor 3</div>
-                        <Link href={route("client.floorA4.index")}>
+                        <Link href={route('client.showFloor.index', "A4")}>
                             <ArrowRight color="#334E60" />
                         </Link>
                     </div>

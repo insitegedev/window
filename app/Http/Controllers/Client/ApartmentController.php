@@ -18,6 +18,13 @@ class ApartmentController extends Controller
         return Inertia::render('ChooseFloor/ChooseFloor', ["apartments" => $apartments, "page" => $page]);
     }
 
+    public function showFloor($locale, $slug)
+    {
+        $page = Page::where('key', 'home')->firstOrFail();
+
+        return Inertia::render('FloorPlan/'.$slug, [ "page" => $page]);
+    }
+
     public function show()
     {
         $apartments = Apartment::with(['translations'])->get();
@@ -25,4 +32,3 @@ class ApartmentController extends Controller
         return Inertia::render('Apartment/Apartment', ["apartments" => $apartments, "page" => $page]);
     }
 }
- 

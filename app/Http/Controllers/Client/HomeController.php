@@ -35,51 +35,6 @@ class HomeController extends Controller
         return Inertia::render('ChooseFloor/ChooseFloor');
     }
 
-    // FloorPlan
-
-    public function floorA1()
-    {
-        $page = Page::where('key', 'home')->firstOrFail();
-
-        return Inertia::render('FloorPlan/A1', [ "page" => $page]);
-    }
-    public function floorA2()
-    {
-        $page = Page::where('key', 'home')->firstOrFail();
-
-        return Inertia::render('FloorPlan/A2', [ "page" => $page]);
-    }
-    public function floorA3()
-    {
-        $page = Page::where('key', 'home')->firstOrFail();
-
-        return Inertia::render('FloorPlan/A3', [ "page" => $page]);
-    }
-    public function floorA4()
-    {
-        $page = Page::where('key', 'home')->firstOrFail();
-
-        return Inertia::render('FloorPlan/A4', [ "page" => $page]);
-    }
-    public function floorB2()
-    {
-        $page = Page::where('key', 'home')->firstOrFail();
-
-        return Inertia::render('FloorPlan/B2', [ "page" => $page]);
-    }
-    public function floorB3()
-    {
-        $page = Page::where('key', 'home')->firstOrFail();
-
-        return Inertia::render('FloorPlan/B3', [ "page" => $page]);
-    }
-    public function floorB4()
-    {
-        $page = Page::where('key', 'home')->firstOrFail();
-
-        return Inertia::render('FloorPlan/B4', [ "page" => $page]);
-    }
- 
 
 
 }

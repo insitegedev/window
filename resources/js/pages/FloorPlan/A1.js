@@ -91,7 +91,7 @@ const ChooseFloor = ({ urlPrev }) => {
                             <ArrowRight color="#334E60" />
                         </div>
                         <div className="bold">Floor 1</div>
-                        <Link href={route("client.floorA2.index")}>
+                        <Link href={route('client.showFloor.index', "A2")}>
                             <ArrowRight color="#334E60" />
                         </Link>
                     </div>

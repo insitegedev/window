@@ -7578,56 +7578,56 @@ var ChooseFloor = function ChooseFloor(_ref) {
   // },
   {
     key: 2,
-    link: route("client.floorA4.index"),
+    link: route('client.showFloor.index', "A4"),
     points: "576.9,511.11 886.28,465.78 900.01,457.79 909.59,462.26 917.25,457.79 1068.91,480.14 1089.35,548.15 939.92,539.05 933.7,548.15 912.14,545.76 493.2,589.82 509.85,591.25 322.11,611.37 ",
     floorName: "A4",
     para1: "სართული 4",
     para2: "დარჩენილია 5 ბინა"
   }, {
     key: 3,
-    link: route("client.floorA3.index"),
+    link: route('client.showFloor.index', "A3"),
     points: "321.53,611.43 509.85,591.25 493.2,589.82 912.14,545.76 933.7,548.15 939.92,539.05 1089.35,548.15 1113.61,629.57 964.19,629.57 956.95,637.55 933.22,637.55 921.08,637.55 308.22,670.99 308.22,665.01 321.4,664.55",
     floorName: "A3",
     para1: "სართული 4",
     para2: "დარჩენილია 5 ბინა"
   }, {
     key: 4,
-    link: route("client.floorA2.index"),
+    link: route('client.showFloor.index', "A2"),
     points: "320.19,670.34 921.08,637.55 933.22,637.55 956.95,637.55 964.19,629.57 1113.61,629.57 1138.2,723.44 988.77,723.44 982.55,727.75 981.11,722.48 960.04,724.39 937.53,725.83 308.22,732.06 308.22,726.31 322.11,725.35 ",
     floorName: "A2",
     para1: "სართული 4",
     para2: "დარჩენილია 5 ბინა"
   }, {
     key: 5,
-    link: route("client.floorA1.index"),
+    link: route('client.showFloor.index', "A1"),
     points: "320.51,732.06 937.53,725.83 960.04,724.39 981.11,722.48 982.55,727.75 988.77,723.44 1138.2,723.44 1138.2,740.36 1008.25,802.62 938.33,802.62 906.4,802.62 897.46,802.62 897.78,809.01  811.25,809.01 322.11,794.32 ",
     floorName: "A1",
     para1: "სართული 4",
     para2: "დარჩენილია 5 ბინა"
   }, {
     key: 6,
-    link: route("client.floorB4.index"),
+    link: route('client.showFloor.index', "B4"),
     points: "1043.74,342.87 1121.23,357.12 1244.6,326.94 1490.84,393.57 1492.77,466 1271.63,421.58 1266.32,420.13 1242.18,424.47 1224.32,420.13 1137.41,430.75 1155.75,435.74 1144.17,435.74 1070.26,432.32 ",
     floorName: "B4",
     para1: "სართული 4",
     para2: "დარჩენილია 5 ბინა"
   }, {
     key: 7,
-    link: route("client.floorB3.index"),
+    link: route('client.showFloor.index', "B3"),
     points: "1070.26,432.32 1155.75,435.74 1137.41,430.75 1224.32,420.13 1242.18,424.47 1266.32,420.13 1492.77,466  1507.9,468.41 1507.9,531.18 1310.26,499.96 1299.64,499.96 1299.64,503.5 1292.56,503.5 1271.31,505.75 1251.35,502.53 1164.93,511.87 1180.38,515.25 1170.24,516.21 1092.98,516.21",
     floorName: "B3",
     para1: "სართული 4",
     para2: "დარჩენილია 5 ბინა"
   }, {
     key: 8,
-    link: route("client.floorB2.index"),
+    link: route('client.showFloor.index', "B2"),
     points: "1092.98,516.21 1180.38,515.25 1164.93,511.87 1251.35,502.53 1271.31,505.75 1292.56,503.5 1299.64,503.5  1299.64,499.96 1310.26,499.96 1507.9,531.18 1538.64,537.46 1538.64,605.05 1565.68,607.47 1565.68,617.12 1329.33,591.53 1322.33,590.09 1295.29,592.02 1277.43,588.64 1186.17,594.43 1205.49,597.33 1187.62,601.07 1119.06,601.07",
     floorName: "B2",
     para1: "სართული 4",
     para2: "დარჩენილია 5 ბინა"
   }, {
     key: 9,
-    link: route("client.floorA1.index"),
+    link: route('client.showFloor.index', "A1"),
     points: "1119.06,601.07 1187.62,601.07 1205.49,597.33 1186.17,594.43 1277.43,588.64 1295.29,592.02 1322.33,590.09 1565.68,617.12 1565.68,685.69 1268.25,679.41 1259.56,679.89 1142.72,685.69",
     floorName: "B1",
     para1: "სართული 4",
@@ -7936,7 +7936,7 @@ var ChooseFloor = function ChooseFloor(_ref) {
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
     className: "bold"
   }, "Floor 1"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
-    href: route("client.floorA2.index")
+    href: route('client.showFloor.index', "A2")
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_img_icons_sm_smIcons__WEBPACK_IMPORTED_MODULE_2__.ArrowRight, {
     color: "#334E60"
   })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
@@ -8121,14 +8121,14 @@ var ChooseFloor = function ChooseFloor(_ref) {
   }, "A block"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
     className: "flex centered"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
-    href: route("client.floorA1.index"),
+    href: route('client.showFloor.index', "A1"),
     className: "left"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_img_icons_sm_smIcons__WEBPACK_IMPORTED_MODULE_2__.ArrowRight, {
     color: "#334E60"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
     className: "bold"
   }, "Floor 2"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
-    href: route("client.floorA3.index")
+    href: route('client.showFloor.index', "A3")
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_img_icons_sm_smIcons__WEBPACK_IMPORTED_MODULE_2__.ArrowRight, {
     color: "#334E60"
   })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
@@ -8313,14 +8313,14 @@ var ChooseFloor = function ChooseFloor(_ref) {
   }, "A block"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
     className: "flex centered"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
-    href: route("client.floorA2.index"),
+    href: route('client.showFloor.index', "A2"),
     className: "left"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_img_icons_sm_smIcons__WEBPACK_IMPORTED_MODULE_2__.ArrowRight, {
     color: "#334E60"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
     className: "bold"
   }, "Floor 3"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
-    href: route("client.floorA4.index")
+    href: route('client.showFloor.index', "A4")
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_img_icons_sm_smIcons__WEBPACK_IMPORTED_MODULE_2__.ArrowRight, {
     color: "#334E60"
   })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
@@ -8489,14 +8489,14 @@ var ChooseFloor = function ChooseFloor(_ref) {
   }, "A block"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
     className: "flex centered"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
-    href: route("client.floorA3.index"),
+    href: route('client.showFloor.index', "A3"),
     className: "left"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_img_icons_sm_smIcons__WEBPACK_IMPORTED_MODULE_2__.ArrowRight, {
     color: "#334E60"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
     className: "bold"
   }, "Floor 4"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
-    href: route("client.floorB2.index")
+    href: route('client.showFloor.index', "B2")
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_img_icons_sm_smIcons__WEBPACK_IMPORTED_MODULE_2__.ArrowRight, {
     color: "#334E60"
   })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
@@ -8653,14 +8653,14 @@ var ChooseFloor = function ChooseFloor(_ref) {
   }, "B block"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
     className: "flex centered"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
-    href: route("client.floorA4.index"),
+    href: route('client.showFloor.index', "A4"),
     className: "left"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_img_icons_sm_smIcons__WEBPACK_IMPORTED_MODULE_2__.ArrowRight, {
     color: "#334E60"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
     className: "bold"
   }, "Floor 2"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
-    href: route("client.floorB3.index")
+    href: route('client.showFloor.index', "B3")
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_img_icons_sm_smIcons__WEBPACK_IMPORTED_MODULE_2__.ArrowRight, {
     color: "#334E60"
   })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
@@ -8825,14 +8825,14 @@ var ChooseFloor = function ChooseFloor(_ref) {
   }, "B block"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
     className: "flex centered"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
-    href: route("client.floorB2.index"),
+    href: route('client.showFloor.index', "B2"),
     className: "left"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_img_icons_sm_smIcons__WEBPACK_IMPORTED_MODULE_2__.ArrowRight, {
     color: "#334E60"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
     className: "bold"
   }, "Floor 3"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
-    href: route("client.floorB4.index")
+    href: route('client.showFloor.index', "B4")
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_img_icons_sm_smIcons__WEBPACK_IMPORTED_MODULE_2__.ArrowRight, {
     color: "#334E60"
   })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
@@ -9001,7 +9001,7 @@ var ChooseFloor = function ChooseFloor(_ref) {
   }, "B block"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
     className: "flex centered"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
-    href: route("client.floorB3.index"),
+    href: route('client.showFloor.index', "B3"),
     className: "left"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_img_icons_sm_smIcons__WEBPACK_IMPORTED_MODULE_2__.ArrowRight, {
     color: "#334E60"
@@ -11108,7 +11108,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".contactPage .body {\r\n  display: grid;\r\n  grid-template-columns: repeat(2, 1fr);\r\n  grid-gap: 77px;\r\n  width: 1300px;\r\n  margin: auto;\r\n  padding-top: 58px;\r\n  padding-bottom: 80px;\r\n  background: url(/img/general/line-bg.png);\r\n  background-position: center;\r\n  background-size: contain;\r\n}\r\n.contactPage .contact_info .title:first-child {\r\n  margin-top: 0;\r\n}\r\n.contactPage .body .img {\r\n  width: 100%;\r\n}\r\n\r\n@media screen and (max-width: 1350px) {\r\n  .contactPage .body {\r\n    width: 95%;\r\n  }\r\n}\r\n\r\n@media screen and (max-width: 1000px) {\r\n  .contactPage .body {\r\n    grid-gap: 41px;\r\n  }\r\n}\r\n\r\n@media screen and (max-width: 850px) {\r\n  .form .playfair {\r\n    font-size: 33px;\r\n    margin: 12px 0;\r\n  }\r\n  .form input,\r\n  .form textarea {\r\n    height: 49px;\r\n    margin-bottom: 14px;\r\n  }\r\n  .form textarea {\r\n    padding-top: 16px;\r\n    height: 104px;\r\n  }\r\n  .contactPage .body {\r\n    grid-gap: 22px;\r\n  }\r\n  .form .grid {\r\n    grid-gap: 11px;\r\n  }\r\n}\r\n@media screen and (max-width: 700px) {\r\n  .contactPage .body {\r\n    grid-template-columns: 1fr;\r\n  }\r\n  .contactPage .body .form {\r\n    grid-row: 1;\r\n  }\r\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".contactPage .body {\n  display: grid;\n  grid-template-columns: repeat(2, 1fr);\n  grid-gap: 77px;\n  width: 1300px;\n  margin: auto;\n  padding-top: 58px;\n  padding-bottom: 80px;\n  background: url(/img/general/line-bg.png);\n  background-position: center;\n  background-size: contain;\n}\n.contactPage .contact_info .title:first-child {\n  margin-top: 0;\n}\n.contactPage .body .img {\n  width: 100%;\n}\n\n@media screen and (max-width: 1350px) {\n  .contactPage .body {\n    width: 95%;\n  }\n}\n\n@media screen and (max-width: 1000px) {\n  .contactPage .body {\n    grid-gap: 41px;\n  }\n}\n\n@media screen and (max-width: 850px) {\n  .form .playfair {\n    font-size: 33px;\n    margin: 12px 0;\n  }\n  .form input,\n  .form textarea {\n    height: 49px;\n    margin-bottom: 14px;\n  }\n  .form textarea {\n    padding-top: 16px;\n    height: 104px;\n  }\n  .contactPage .body {\n    grid-gap: 22px;\n  }\n  .form .grid {\n    grid-gap: 11px;\n  }\n}\n@media screen and (max-width: 700px) {\n  .contactPage .body {\n    grid-template-columns: 1fr;\n  }\n  .contactPage .body .form {\n    grid-row: 1;\n  }\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -11156,7 +11156,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".floorPlan {\r\n    padding-bottom: 240px;\r\n}\r\n.floorPlan .background {\r\n    position: fixed;\r\n    left: 0;\r\n    top: 0;\r\n    width: 100%;\r\n    height: 100vh;\r\n    z-index: -1;\r\n}\r\n.floorPlan .back_button {\r\n    flex-direction: column;\r\n}\r\n.floorPlan .back_button .text {\r\n    opacity: 1;\r\n    margin-left: 0;\r\n    margin-top: 10px;\r\n}\r\n.floorPlan .head {\r\n    text-align: center;\r\n    color: #334e60;\r\n    text-transform: uppercase;\r\n    margin-bottom: 84px;\r\n    padding-top: 32px;\r\n    font-weight: bold;\r\n}\r\n.floorPlan .head .block {\r\n    opacity: 0.5;\r\n    font-size: 29px;\r\n    margin-bottom: 10px;\r\n}\r\n.floorPlan .head .disabled {\r\n    opacity: 0.5;\r\n    cursor: default;\r\n}\r\n.floorPlan .head .flex .bold {\r\n    font-size: 46px;\r\n    margin: 0px 15px;\r\n}\r\n.floorPlan .head .left {\r\n    transform: rotate(180deg) translateY(5px);\r\n}\r\n.floorPlan .container {\r\n    width: 1500px;\r\n    margin: auto;\r\n    position: relative;\r\n}\r\n.floorPlan .container svg {\r\n    width: 100%;\r\n}\r\n.floorPlan .st0 {\r\n    opacity: 0;\r\n    transition: 0.3s;\r\n    fill: #126d2a;\r\n}\r\n.floorPlan .st0:hover {\r\n    opacity: 0.6;\r\n}\r\n:root {\r\n    --tooltip-position: translateY(180px) translateX(-50%);\r\n}\r\n\r\n@media screen and (max-width: 1550px) {\r\n    .floorPlan .container {\r\n        width: 95%;\r\n    }\r\n}\r\n@media screen and (max-width: 1200px) {\r\n    .floorPlan .head .block {\r\n        font-size: 20px;\r\n        margin-bottom: 5px;\r\n    }\r\n    .floorPlan .head .flex .bold {\r\n        font-size: 30px;\r\n        margin: 0px 12px;\r\n    }\r\n    .floorPlan .head .flex svg {\r\n        width: 18px;\r\n    }\r\n}\r\n@media screen and (max-width: 1000px) {\r\n    :root {\r\n        --tooltip-position: translateY(50px) translateX(-50%);\r\n    }\r\n}\r\n@media screen and (max-width: 700px) {\r\n    :root {\r\n        --tooltip-position: translateY(0) translateX(-50%);\r\n    }\r\n    .floorPlan .head {\r\n        margin-bottom: 47px;\r\n        padding-top: 141px;\r\n    }\r\n    .floorPlan .back_button {\r\n        flex-direction: row;\r\n    }\r\n    .floorPlan .back_button .text {\r\n        margin-left: 10px;\r\n        margin-top: 0;\r\n    }\r\n    .floorPlan {\r\n        padding-bottom: 83px;\r\n    }\r\n}\r\n@media screen and (max-width: 500px) {\r\n    .floorPlan {\r\n        padding-bottom: 129px;\r\n    }\r\n    .floor .floorPlan .head {\r\n        padding-top: 85px;\r\n    }\r\n    .floorPlan .head .flex .bold {\r\n        font-size: 25px;\r\n    }\r\n    .floorPlan .head .block {\r\n        font-size: 17px;\r\n        margin-bottom: 9px;\r\n    }\r\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".floorPlan {\r\n    padding-bottom: 240px;\r\n}\r\n.floorPlan .background {\r\n    position: fixed;\r\n    left: 0;\r\n    top: 0;\r\n    width: 100%;\r\n    height: 100vh;\r\n    z-index: -1;\r\n}\r\n.floorPlan .back_button {\r\n    flex-direction: column;\r\n}\r\n.floorPlan .back_button .text {\r\n    opacity: 1;\r\n    margin-left: 0;\r\n    margin-top: 10px;\r\n}\r\n.floorPlan .head {\r\n    text-align: center;\r\n    color: #334e60;\r\n    text-transform: uppercase;\r\n    margin-bottom: 84px;\r\n    padding-top: 32px;\r\n    font-weight: bold;\r\n}\r\n.floorPlan .head .block {\r\n    opacity: 0.5;\r\n    font-size: 29px;\r\n    margin-bottom: 10px;\r\n}\r\n.floorPlan .head .disabled {\r\n    opacity: 0.5;\r\n    cursor: default;\r\n}\r\n.floorPlan .head .flex .bold {\r\n    font-size: 46px;\r\n    margin: 0px 15px;\r\n}\r\n.floorPlan .head .left {\r\n    transform: rotate(180deg) translateY(5px);\r\n}\r\n.floorPlan .container {\r\n    width: 1500px;\r\n    margin: auto;\r\n    position: relative;\r\n}\r\n.floorPlan .container svg {\r\n    width: 100%;\r\n}\r\n.floorPlan .st0 {\r\n    opacity: 0;\r\n    transition: 0.3s;\r\n    fill: #126d2a;\r\n}\r\n.floorPlan .st0:hover {\r\n    opacity: 0.6;\r\n}\r\n:root {\r\n    --tooltip-position: translateY(180px) translateX(-50%);\r\n    --tooltip-position2: translateY(50px) translateX(-50%);\r\n}\r\n\r\n@media screen and (max-width: 1550px) {\r\n    .floorPlan .container {\r\n        width: 95%;\r\n    }\r\n}\r\n@media screen and (max-width: 1200px) {\r\n    .floorPlan .head .block {\r\n        font-size: 20px;\r\n        margin-bottom: 5px;\r\n    }\r\n    .floorPlan .head .flex .bold {\r\n        font-size: 30px;\r\n        margin: 0px 12px;\r\n    }\r\n    .floorPlan .head .flex svg {\r\n        width: 18px;\r\n    }\r\n}\r\n@media screen and (max-width: 1000px) {\r\n    :root {\r\n        --tooltip-position: translateY(50px) translateX(-50%);\r\n        --tooltip-position2: translateY(0px) translateX(-50%);\r\n    }\r\n}\r\n@media screen and (max-width: 700px) {\r\n    :root {\r\n        --tooltip-position: translateY(0) translateX(-50%);\r\n    }\r\n    .floorPlan .head {\r\n        margin-bottom: 47px;\r\n        padding-top: 141px;\r\n    }\r\n    .floorPlan .back_button {\r\n        flex-direction: row;\r\n    }\r\n    .floorPlan .back_button .text {\r\n        margin-left: 10px;\r\n        margin-top: 0;\r\n    }\r\n    .floorPlan {\r\n        padding-bottom: 83px;\r\n    }\r\n}\r\n@media screen and (max-width: 500px) {\r\n    .floorPlan {\r\n        padding-bottom: 129px;\r\n    }\r\n    .floor .floorPlan .head {\r\n        padding-top: 85px;\r\n    }\r\n    .floorPlan .head .flex .bold {\r\n        font-size: 25px;\r\n    }\r\n    .floorPlan .head .block {\r\n        font-size: 17px;\r\n        margin-bottom: 9px;\r\n    }\r\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -11468,7 +11468,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".showcase {\r\n  position: relative;\r\n  width: 100%;\r\n  height: 330px;\r\n  background: url(/img/home/1.png) no-repeat;\r\n  background-position: center;\r\n  background-size: cover;\r\n  background-attachment: fixed;\r\n  display: flex;\r\n  align-items: flex-end;\r\n  justify-content: center;\r\n  padding-bottom: 37px;\r\n  color: #fff;\r\n  font-size: 42px;\r\n}\r\n.showcase.short {\r\n  height: 210px;\r\n}\r\n.showcase::after {\r\n  width: 100%;\r\n  height: 100%;\r\n  left: 0;\r\n  top: 0;\r\n  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), #134d4d3a);\r\n  z-index: 0;\r\n}\r\n.showcase .title {\r\n  position: relative;\r\n  z-index: 100;\r\n}\r\n\r\n@media screen and (max-width: 1350px) {\r\n  .showcase {\r\n    height: 208px;\r\n    padding-bottom: 20px;\r\n    font-size: 36px;\r\n  }\r\n  .showcase.short {\r\n    height: 123px;\r\n  }\r\n}\r\n@media screen and (max-width: 600px) {\r\n  .showcase {\r\n    height: 161px;\r\n    padding-bottom: 14px;\r\n    font-size: 30px;\r\n  }\r\n  .showcase.short {\r\n    height: 94px;\r\n  }\r\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".showcase {\n  position: relative;\n  width: 100%;\n  height: 330px;\n  background: url(/img/home/1.png) no-repeat;\n  background-position: center;\n  background-size: cover;\n  background-attachment: fixed;\n  display: flex;\n  align-items: flex-end;\n  justify-content: center;\n  padding-bottom: 37px;\n  color: #fff;\n  font-size: 42px;\n}\n.showcase.short {\n  height: 210px;\n}\n.showcase::after {\n  width: 100%;\n  height: 100%;\n  left: 0;\n  top: 0;\n  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), #134d4d3a);\n  z-index: 0;\n}\n.showcase .title {\n  position: relative;\n  z-index: 100;\n}\n\n@media screen and (max-width: 1350px) {\n  .showcase {\n    height: 208px;\n    padding-bottom: 20px;\n    font-size: 36px;\n  }\n  .showcase.short {\n    height: 123px;\n  }\n}\n@media screen and (max-width: 600px) {\n  .showcase {\n    height: 161px;\n    padding-bottom: 14px;\n    font-size: 30px;\n  }\n  .showcase.short {\n    height: 94px;\n  }\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -53969,7 +53969,7 @@ webpackContext.id = "./resources/js/Pages sync recursive ^\\.\\/.*$";
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"_from":"axios@0.21.4","_id":"axios@0.21.4","_inBundle":false,"_integrity":"sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==","_location":"/axios","_phantomChildren":{},"_requested":{"type":"version","registry":true,"raw":"axios@0.21.4","name":"axios","escapedName":"axios","rawSpec":"0.21.4","saveSpec":null,"fetchSpec":"0.21.4"},"_requiredBy":["#DEV:/","#USER","/@inertiajs/inertia"],"_resolved":"https://registry.npmjs.org/axios/-/axios-0.21.4.tgz","_shasum":"c67b90dc0568e5c1cf2b0b858c43ba28e2eda575","_spec":"axios@0.21.4","_where":"C:\\\\Users\\\\Shamisa\\\\Desktop\\\\local-projects\\\\window","author":{"name":"Matt Zabriskie"},"browser":{"./lib/adapters/http.js":"./lib/adapters/xhr.js"},"bugs":{"url":"https://github.com/axios/axios/issues"},"bundleDependencies":false,"bundlesize":[{"path":"./dist/axios.min.js","threshold":"5kB"}],"dependencies":{"follow-redirects":"^1.14.0"},"deprecated":false,"description":"Promise based HTTP client for the browser and node.js","devDependencies":{"coveralls":"^3.0.0","es6-promise":"^4.2.4","grunt":"^1.3.0","grunt-banner":"^0.6.0","grunt-cli":"^1.2.0","grunt-contrib-clean":"^1.1.0","grunt-contrib-watch":"^1.0.0","grunt-eslint":"^23.0.0","grunt-karma":"^4.0.0","grunt-mocha-test":"^0.13.3","grunt-ts":"^6.0.0-beta.19","grunt-webpack":"^4.0.2","istanbul-instrumenter-loader":"^1.0.0","jasmine-core":"^2.4.1","karma":"^6.3.2","karma-chrome-launcher":"^3.1.0","karma-firefox-launcher":"^2.1.0","karma-jasmine":"^1.1.1","karma-jasmine-ajax":"^0.1.13","karma-safari-launcher":"^1.0.0","karma-sauce-launcher":"^4.3.6","karma-sinon":"^1.0.5","karma-sourcemap-loader":"^0.3.8","karma-webpack":"^4.0.2","load-grunt-tasks":"^3.5.2","minimist":"^1.2.0","mocha":"^8.2.1","sinon":"^4.5.0","terser-webpack-plugin":"^4.2.3","typescript":"^4.0.5","url-search-params":"^0.10.0","webpack":"^4.44.2","webpack-dev-server":"^3.11.0"},"homepage":"https://axios-http.com","jsdelivr":"dist/axios.min.js","keywords":["xhr","http","ajax","promise","node"],"license":"MIT","main":"index.js","name":"axios","repository":{"type":"git","url":"git+https://github.com/axios/axios.git"},"scripts":{"build":"NODE_ENV=production grunt build","coveralls":"cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js","examples":"node ./examples/server.js","fix":"eslint --fix lib/**/*.js","postversion":"git push && git push --tags","preversion":"npm test","start":"node ./sandbox/server.js","test":"grunt test","version":"npm run build && grunt version && git add -A dist && git add CHANGELOG.md bower.json package.json"},"typings":"./index.d.ts","unpkg":"dist/axios.min.js","version":"0.21.4"}');
+module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"Promise based HTTP client for the browser and node.js","main":"index.js","scripts":{"test":"grunt test","start":"node ./sandbox/server.js","build":"NODE_ENV=production grunt build","preversion":"npm test","version":"npm run build && grunt version && git add -A dist && git add CHANGELOG.md bower.json package.json","postversion":"git push && git push --tags","examples":"node ./examples/server.js","coveralls":"cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js","fix":"eslint --fix lib/**/*.js"},"repository":{"type":"git","url":"https://github.com/axios/axios.git"},"keywords":["xhr","http","ajax","promise","node"],"author":"Matt Zabriskie","license":"MIT","bugs":{"url":"https://github.com/axios/axios/issues"},"homepage":"https://axios-http.com","devDependencies":{"coveralls":"^3.0.0","es6-promise":"^4.2.4","grunt":"^1.3.0","grunt-banner":"^0.6.0","grunt-cli":"^1.2.0","grunt-contrib-clean":"^1.1.0","grunt-contrib-watch":"^1.0.0","grunt-eslint":"^23.0.0","grunt-karma":"^4.0.0","grunt-mocha-test":"^0.13.3","grunt-ts":"^6.0.0-beta.19","grunt-webpack":"^4.0.2","istanbul-instrumenter-loader":"^1.0.0","jasmine-core":"^2.4.1","karma":"^6.3.2","karma-chrome-launcher":"^3.1.0","karma-firefox-launcher":"^2.1.0","karma-jasmine":"^1.1.1","karma-jasmine-ajax":"^0.1.13","karma-safari-launcher":"^1.0.0","karma-sauce-launcher":"^4.3.6","karma-sinon":"^1.0.5","karma-sourcemap-loader":"^0.3.8","karma-webpack":"^4.0.2","load-grunt-tasks":"^3.5.2","minimist":"^1.2.0","mocha":"^8.2.1","sinon":"^4.5.0","terser-webpack-plugin":"^4.2.3","typescript":"^4.0.5","url-search-params":"^0.10.0","webpack":"^4.44.2","webpack-dev-server":"^3.11.0"},"browser":{"./lib/adapters/http.js":"./lib/adapters/xhr.js"},"jsdelivr":"dist/axios.min.js","unpkg":"dist/axios.min.js","typings":"./index.d.ts","dependencies":{"follow-redirects":"^1.14.0"},"bundlesize":[{"path":"./dist/axios.min.js","threshold":"5kB"}]}');
 
 /***/ })
 
