@@ -9,7 +9,6 @@ import Background from "/img/apartments/bg.png";
 import "./floorPlan.css";
 import Tippy from "@tippyjs/react";
 import "tippy.js/dist/tippy.css";
-import { followCursor } from "tippy.js";
 
 const ChooseFloor = ({ urlPrev }) => {
     const sharedData = usePage().props.localizations;
@@ -27,49 +26,28 @@ const ChooseFloor = ({ urlPrev }) => {
     const flatList = [
         {
             link: "/",
-            points: "91.3,350.9 11.6,350.9 11.6,4 179,4 179,33.6 174.2,33.6 160.6,67.1 171.9,71.6 179,71.6 179,77.2 164.4,77.2 164.4,350.9 142.5,350.9 142.5,346.5 91.6,346.5",
+            points: "39.5,9.6 303.9,9.6 303.9,228.6 300,228.6 290,232.3 302,255.8 305.5,255.8 305.5,274.3 42.9,274.3  42.9,278.6 7.6,278.6 7.6,149.3 40.2,149.3 ",
             dimensions: "Flat 1 / 35.6",
         },
         {
             link: "/",
-            points: "189.3,350.9 164.4,350.9 164.4,77.2 179,77.2 179,71.6 190.3,71.6 190.3,78.2 218.5,94.3 222.4,80.9 222.4,71.6 308.2,71.6 308.2,350.9 284.4,350.9 284.2,347.3 189.1,347.3",
+            points: "7.6,278.6 42.9,278.6 42.9,274.3 305.5,274.3 305.5,293.9 301.7,293.9 288.8,316.8 303.7,320.6  305.5,320.6 305.5,400.8 42.6,400.8 42.6,404.1 7.6,404.1 ",
             dimensions: "Flat 2 / 35.6",
         },
         {
             link: "/",
-            points: "308.2,350.9 308.2,71.6 394.7,71.6 394.7,81.3 398.9,94.3 427.3,78 427.3,71.6 450.2,71.6 450.2,350.9 428,350.9 428,346.7 331.4,346.7 331.4,350.9 ",
+            points: "7.6,404.1 42.6,404.1 42.6,400.8 305.5,400.8 305.5,476.2 300.5,476.2 289.4,479.1 302.6,504.5  305.5,504.5 305.5,530.6 38.7,530.6 38.7,519.4 7.6,519.4  ",
             dimensions: "Flat 3 / 35.6",
         },
         {
             link: "/",
-            points: "450.2,350.9 450.2,71.6 474.6,71.6 474.6,78.3 502.7,94.3 506.3,81 506.3,71.6 593.8,71.6 593.8,350.9 570.4,350.9 570.4,346.9 474.5,346.9 474.5,351 ",
+            points: "303.9,9.6 567,9.6 567,274.3 353.7,274.3 353.7,210.6 346.3,210.6 346.3,204.4 343.6,192.6  320.5,204.1 320.5,210 303.9,210",
             dimensions: "Flat 4 / 35.6",
         },
         {
             link: "/",
-            points: "593.8,350.9 593.8,71.6 680.3,71.6 680.3,81.3 684.4,94.3 712.9,78 712.9,71.6 735.8,71.6 735.8,350.9 713.6,350.9 713.6,346.7 617,346.7 617,350.9 ",
+            points: "353.7,274.3 567,274.3 567,540.4 537.1,540.4 537.1,565.3 419.1,565.3 419.1,527.1 353.7,527.1  353.7,405.9 362.6,405.9 369.4,399 358.4,378.6 353.7,378.6 ",
             dimensions: "Flat 5 / 35.6",
-        },
-        {
-            link: "/",
-            points: "735.3,350.9 735.3,71.6 759.7,71.6 759.7,78.3 787.8,94.3 791.4,81 791.4,71.6 878.9,71.6 878.9,350.9 855.5,350.9 855.5,346.9 759.6,346.9 759.6,351 ",
-            dimensions: "Flat 6 / 35.6",
-        },
-        {
-            link: "/",
-            points: "878.9,350.9 878.9,71.6 965.4,71.6 965.4,81.3 969.6,94.3 998,78 998,71.6 1020.9,71.6 1020.9,350.9 998.7,350.9 998.7,346.7 902.1,346.7 902.1,350.9 ",
-            dimensions: "Flat 7 / 35.6",
-        },
-        {
-            link: "/",
-            points: "1020.9,350.9 1020.9,71.6 1045.2,71.6 1045.2,78.3 1073.3,94.3 1077,81 1077,71.6 1164.4,71.6 1164.4,350.9 1141,350.9 1141,346.9 1045.2,346.9 1045.2,351",
-            dimensions: "Flat 8 / 35.6",
-        },
-
-        {
-            link: "/",
-            points: "1164.4,350.9 1164.4,71.6 1251,71.6 1251,81.3 1255.1,94.3 1283.6,78 1283.6,71.6 1306.4,71.6 1306.4,350.9 1284.2,350.9 1284.2,346.7 1187.7,346.7 1187.7,350.9 ",
-            dimensions: "Flat 9 / 35.6",
         },
     ];
     const [flatIndex, setFlatIndex] = useState(0);
@@ -85,13 +63,16 @@ const ChooseFloor = ({ urlPrev }) => {
                     text={__("go_back")}
                 />
                 <div className="head">
-                    <div className=" block">A block</div>
+                    <div className=" block">B block</div>
                     <div className="flex centered">
-                        <div className="left disabled">
+                        <Link
+                            href={route("client.floorB2.index")}
+                            className="left"
+                        >
                             <ArrowRight color="#334E60" />
-                        </div>
-                        <div className="bold">Floor 1</div>
-                        <Link href={route("client.floorA2.index")}>
+                        </Link>
+                        <div className="bold">Floor 3</div>
+                        <Link href={route("client.floorB4.index")}>
                             <ArrowRight color="#334E60" />
                         </Link>
                     </div>
@@ -102,16 +83,16 @@ const ChooseFloor = ({ urlPrev }) => {
                         id="Layer_1"
                         x="0px"
                         y="0px"
-                        viewBox="0 0 1582 486"
-                        style={{ enableBackground: "new 0 0 1582 486" }}
+                        viewBox="0 0 700 600"
+                        style={{ enableBackground: "new 0 0 700 600" }}
                         xmlSpace="preserve"
                     >
                         <image
                             style={{ overflow: "visible" }}
-                            width="1567"
-                            height="486"
-                            xlinkHref="/img/floorplan/A1.png"
-                            transform="matrix(1 0 0 1 7.5 0)"
+                            width="693"
+                            height="589"
+                            xlinkHref="/img/floorplan/B3.png"
+                            transform="matrix(1 0 0 1 3.5 5.5)"
                         ></image>
                         {flatList.map((flat, index) => {
                             return (

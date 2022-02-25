@@ -30,6 +30,10 @@
     font-size: 29px;
     margin-bottom: 10px;
 }
+.floorPlan .head .disabled {
+    opacity: 0.5;
+    cursor: default;
+}
 .floorPlan .head .flex .bold {
     font-size: 46px;
     margin: 0px 15px;
@@ -53,39 +57,66 @@
 .floorPlan .st0:hover {
     opacity: 0.6;
 }
+:root {
+    --tooltip-position: translateY(180px) translateX(-50%);
+    --tooltip-position2: translateY(50px) translateX(-50%);
+}
 
-.floorPlan .dimensions {
-    display: flex;
-    justify-content: space-between;
-    position: absolute;
-    width: 90%;
-    top: 170px;
-    left: 0;
+@media screen and (max-width: 1550px) {
+    .floorPlan .container {
+        width: 95%;
+    }
 }
-.floorPlan .dimension_box {
-    /* position: absolute;
-    top: 170px; */
-    width: 188px;
-    height: 50px;
-    flex-shrink: 0;
-    margin: 0 -30px;
-    color: #334e60;
-    border-radius: 5px;
-    box-shadow: 0 3px 6px #11111111;
-    z-index: 100;
-    background-color: #fff;
-    font-size: 16px;
-    font-weight: bold;
-    opacity: 0;
-    transition: 0.3s;
+@media screen and (max-width: 1200px) {
+    .floorPlan .head .block {
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+    .floorPlan .head .flex .bold {
+        font-size: 30px;
+        margin: 0px 12px;
+    }
+    .floorPlan .head .flex svg {
+        width: 18px;
+    }
 }
-.floorPlan .dimension_box.show {
-    opacity: 1;
+@media screen and (max-width: 1000px) {
+    :root {
+        --tooltip-position: translateY(50px) translateX(-50%);
+        --tooltip-position2: translateY(0px) translateX(-50%);
+    }
 }
-.floorPlan .tooltip {
-    color: #334e60;
-    border-radius: 5px;
-    box-shadow: 0 3px 6px #11111111;
-    z-index: 100;
-    background-color: #fff;
+@media screen and (max-width: 700px) {
+    :root {
+        --tooltip-position: translateY(0) translateX(-50%);
+    }
+    .floorPlan .head {
+        margin-bottom: 47px;
+        padding-top: 141px;
+    }
+    .floorPlan .back_button {
+        flex-direction: row;
+    }
+    .floorPlan .back_button .text {
+        margin-left: 10px;
+        margin-top: 0;
+    }
+    .floorPlan {
+        padding-bottom: 83px;
+    }
+}
+@media screen and (max-width: 500px) {
+    .floorPlan {
+        padding-bottom: 129px;
+    }
+    .floor .floorPlan .head {
+        padding-top: 85px;
+    }
+    .floorPlan .head .flex .bold {
+        font-size: 25px;
+    }
+    .floorPlan .head .block {
+        font-size: 17px;
+        margin-bottom: 9px;
+    }
 }

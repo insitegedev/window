@@ -104,6 +104,12 @@ Route::prefix('{locale?}')
 
             // Floor Plan
             Route::get('/floorA1', [HomeController::class, 'floorA1'])->name('client.floorA1.index');
+            Route::get('/floorA2', [HomeController::class, 'floorA2'])->name('client.floorA2.index');
+            Route::get('/floorA3', [HomeController::class, 'floorA3'])->name('client.floorA3.index');
+            Route::get('/floorA4', [HomeController::class, 'floorA4'])->name('client.floorA4.index');
+            Route::get('/floorB2', [HomeController::class, 'floorB2'])->name('client.floorB2.index');
+            Route::get('/floorB3', [HomeController::class, 'floorB3'])->name('client.floorB3.index');
+            Route::get('/floorB4', [HomeController::class, 'floorB4'])->name('client.floorB4.index');
 
 
             // Contact Page
