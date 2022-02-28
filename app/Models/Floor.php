@@ -8,6 +8,9 @@ use App\Traits\ScopeFilter;
 use Astrotomic\Translatable\Translatable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\MorphMany;
+use Illuminate\Database\Eloquent\Relations\MorphOne;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Floor extends Model
@@ -59,4 +62,29 @@ class Floor extends Model
 
         ];
     }
+
+    /**
+     * @return BelongsTo
+     */
+    public function apartment(): BelongsTo
+    {
+        return $this->belongsTo(Apartment::class, 'apartment_id', 'id');
+    }
+
+    /**
+     * @return MorphMany
+     */
+    public function files(): MorphMany
+    {
+        return $this->morphMany(File::class, 'fileable');
+    }
+
+    /**
+     * @return MorphOne
+     */
+    public function file(): MorphOne
+    {
+        return $this->morphOne(File::class, 'fileable');
+    }
+
 }

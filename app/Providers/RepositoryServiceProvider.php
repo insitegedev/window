@@ -17,6 +17,7 @@ use App\Repositories\Eloquent\Base\BaseRepository;
 use App\Repositories\Eloquent\Base\EloquentRepositoryInterface;
 use App\Repositories\Eloquent\CategoryRepository;
 use App\Repositories\Eloquent\CertificateRepository;
+use App\Repositories\Eloquent\FloorRepository;
 use App\Repositories\Eloquent\GalleryRepository;
 use App\Repositories\Eloquent\LanguageRepository;
 use App\Repositories\Eloquent\PageRepository;
@@ -26,6 +27,7 @@ use App\Repositories\Eloquent\SettingRepository;
 use App\Repositories\Eloquent\ServiceRepository;
 use App\Repositories\Eloquent\SliderRepository;
 use App\Repositories\Eloquent\TranslationRepository;
+use App\Repositories\FloorRepositoryInterface;
 use App\Repositories\GalleryRepositoryInterface;
 use App\Repositories\LanguageRepositoryInterface;
 use App\Repositories\PageRepositoryInterface;
@@ -74,6 +76,7 @@ class RepositoryServiceProvider extends ServiceProvider
         $this->app->bind(CertificateRepositoryInterface::class,CertificateRepository::class);
         $this->app->bind(GalleryRepositoryInterface::class,GalleryRepository::class);
         $this->app->bind(ApartmentRepositoryInterface::class,ApartmentRepository::class);
+        $this->app->bind(FloorRepositoryInterface::class,FloorRepository::class);
 
     }
 }

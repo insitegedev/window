@@ -9,7 +9,7 @@ import "./Apartment.css";
 import { Link, Head } from "@inertiajs/inertia-react";
 import Pdf from "/img/icons/apartment/file.svg";
 
-const Apartment = ({ page }) => {
+const Apartment = ({ page, apartment }) => {
     const specifications = [
         "Hall - 6.3 m",
         "Bathroom - 4.4 m",
@@ -30,20 +30,25 @@ const Apartment = ({ page }) => {
                 />
                 <div className="wrapper flex">
                     <div className="details">
-                        <h1 className="floor">Floor 4</h1>
-                        <h1 className="apartment">apartment 53</h1>
+                        <h1 className="floor">{apartment.title}</h1>
+                        <h1 className="apartment">{apartment.apartment}</h1>
                         <div className="specifications">
                             <h6>Specifications</h6>
-                            <ol>
-                                {specifications.map((item, i) => {
-                                    return (
-                                        <p>
-                                            {i + 1}. {item}
-                                            <sup>2</sup>
-                                        </p>
-                                    );
-                                })}
-                            </ol>
+                            <p
+                                dangerouslySetInnerHTML={{
+                                    __html: apartment.specifications,
+                                }}
+                            ></p>
+                            {/*<ol>*/}
+                            {/*    {specifications.map((item, i) => {*/}
+                            {/*        return (*/}
+                            {/*            <p>*/}
+                            {/*                {i + 1}. {item}*/}
+                            {/*                <sup>2</sup>*/}
+                            {/*            </p>*/}
+                            {/*        );*/}
+                            {/*    })}*/}
+                            {/*</ol>*/}
                         </div>
                         <h6>total area</h6>
                         <h1 className="total_area">
@@ -54,7 +59,7 @@ const Apartment = ({ page }) => {
                             <p>Download pdf</p>
                         </Link>
                     </div>
-                    <img className="apartment_img" src={ApartmentImg} alt="" />
+                    {apartment.file && <img className="apartment_img" src={"/"+apartment.file.path+"/"+apartment.file.title} alt="" />}
                     <ContactInfo color="#334E60" right />
                 </div>
             </div>

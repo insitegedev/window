@@ -11,6 +11,7 @@ use App\Http\Controllers\Admin\ApartmentController;
 use App\Http\Controllers\Admin\Auth\LoginController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\CertificateController;
+use App\Http\Controllers\Admin\FloorController;
 use App\Http\Controllers\Admin\GalleryController;
 use App\Http\Controllers\Admin\LanguageController;
 use App\Http\Controllers\Admin\PageController;
@@ -86,9 +87,13 @@ Route::prefix('{locale?}')
                 Route::get('certificate/{certificate}/destroy', [CertificateController::class, 'destroy'])->name('certificate.destroy');
 
 
-                // Certificate
+                // Apartment
                 Route::resource('apartment', ApartmentController::class);
                 Route::get('apartment/{apartment}/destroy', [ApartmentController::class, 'destroy'])->name('apartment.destroy');
+
+                // Floor
+                Route::resource('floor', FloorController::class);
+                Route::get('floor/{floor}/destroy', [FloorController::class, 'destroy'])->name('floor.destroy');
 
             });
         });
@@ -99,11 +104,11 @@ Route::prefix('{locale?}')
             Route::get('/gallery', [\App\Http\Controllers\Client\GalleryController::class, 'index'])->name('client.gallery.index');
             Route::get('/doctors', [HomeController::class, 'doctors'])->name('client.doctors.index');
             Route::get('/choosefloor', [HomeController::class, 'choosefloor'])->name('client.choosefloor.index');
-            Route::get('/apartment', [\App\Http\Controllers\Client\ApartmentController::class, 'show'])->name('client.apartment.index');
+            Route::get('/apartment/{apartment?}', [\App\Http\Controllers\Client\ApartmentController::class, 'show'])->name('client.apartment.index');
             Route::get('/choose-floor', [\App\Http\Controllers\Client\ApartmentController::class, 'index'])->name('client.choosefloor.index');
 
             // Floor Plan
-            Route::get('/choose-floor/{floor?}', [\App\Http\Controllers\Client\ApartmentController::class, 'showFloor'])->name('client.showFloor.index');
+            Route::get('/choose-apartment/{floor?}', [\App\Http\Controllers\Client\ApartmentController::class, 'showFloor'])->name('client.showFloor.index');
 
 
             // Contact Page
