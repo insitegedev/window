@@ -12,6 +12,7 @@ import "tippy.js/dist/tippy.css";
 import { followCursor } from "tippy.js";
 
 const ChooseFloor = ({ urlPrev, apartments }) => {
+    console.log(apartments);
     const sharedData = usePage().props.localizations;
 
     function __(key, replace = {}) {
@@ -23,7 +24,6 @@ const ChooseFloor = ({ urlPrev, apartments }) => {
 
         return translation;
     }
-    const flatList = apartments;
 
     // const flatList = [
     //     {
@@ -86,12 +86,12 @@ const ChooseFloor = ({ urlPrev, apartments }) => {
                     text={__("go_back")}
                 />
                 <div className="head">
-                    <div className=" block">A block</div>
+                    <div className=" block">{__("a_block")}</div>
                     <div className="flex centered">
                         <div className="left disabled">
                             <ArrowRight color="#334E60" />
                         </div>
-                        <div className="bold">Floor 1</div>
+                        <div className="bold">{apartments.floor}</div>
                         <Link href={route('client.showFloor.index', "A2")}>
                             <ArrowRight color="#334E60" />
                         </Link>
@@ -114,7 +114,7 @@ const ChooseFloor = ({ urlPrev, apartments }) => {
                             xlinkHref="/img/floorplan/A1.png"
                             transform="matrix(1 0 0 1 7.5 0)"
                         ></image>
-                        {flatList.map((flat, index) => {
+                        {apartments.floors.map((flat, index) => {
                             return (
                                 <Tippy
                                     maxWidth="0"

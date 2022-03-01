@@ -8,6 +8,7 @@ use App\Traits\ScopeFilter;
 use Astrotomic\Translatable\Translatable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Apartment extends Model
@@ -50,5 +51,13 @@ class Apartment extends Model
             ],
 
         ];
+    }
+
+    /**
+     * @return HasMany
+     */
+    public function floors(): HasMany
+    {
+        return $this->hasMany(Floor::class);
     }
 }

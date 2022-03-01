@@ -54,10 +54,11 @@ const Apartment = ({ page, apartment }) => {
                         <h1 className="total_area">
                             58.3 M<sup>2</sup>
                         </h1>
-                        <Link href="/" className="flex centered pdf">
-                            <img src={Pdf} alt="" />
+                        {apartment.pdf && <a href={"/" + apartment.pdf.path + "/" + apartment.pdf.title} target="_blank"
+                            className="flex centered pdf">
+                            <img src={Pdf} alt=""/>
                             <p>Download pdf</p>
-                        </Link>
+                        </a>}
                     </div>
                     {apartment.file && <img className="apartment_img" src={"/"+apartment.file.path+"/"+apartment.file.title} alt="" />}
                     <ContactInfo color="#334E60" right />

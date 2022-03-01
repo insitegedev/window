@@ -10,7 +10,7 @@ import "./floorPlan.css";
 import Tippy from "@tippyjs/react";
 import "tippy.js/dist/tippy.css";
 
-const ChooseFloor = ({ urlPrev }) => {
+const ChooseFloor = ({ urlPrev, apartments }) => {
     const sharedData = usePage().props.localizations;
 
     function __(key, replace = {}) {
@@ -63,7 +63,7 @@ const ChooseFloor = ({ urlPrev }) => {
                     text={__("go_back")}
                 />
                 <div className="head">
-                    <div className=" block">B block</div>
+                    <div className=" block">{__("b_block")}</div>
                     <div className="flex centered">
                         <Link
                             href={route('client.showFloor.index', "B2")}
@@ -71,7 +71,7 @@ const ChooseFloor = ({ urlPrev }) => {
                         >
                             <ArrowRight color="#334E60" />
                         </Link>
-                        <div className="bold">Floor 3</div>
+                        <div className="bold">{apartments.floor}</div>
                         <Link href={route('client.showFloor.index', "B4")}>
                             <ArrowRight color="#334E60" />
                         </Link>
@@ -94,7 +94,7 @@ const ChooseFloor = ({ urlPrev }) => {
                             xlinkHref="/img/floorplan/B3.png"
                             transform="matrix(1 0 0 1 3.5 5.5)"
                         ></image>
-                        {flatList.map((flat, index) => {
+                        {apartments.floors.map((flat, index) => {
                             return (
                                 <Tippy
                                     maxWidth="0"
@@ -115,12 +115,12 @@ const ChooseFloor = ({ urlPrev }) => {
                                                 fontWeight: "bold",
                                             }}
                                         >
-                                            {flat.dimensions} <sup>2</sup>
+                                            {flat.dimension} <sup>2</sup>
                                         </button>
                                     }
                                 >
                                     <Link
-                                        href={flat.link}
+                                        href={route("client.apartment.index", flat.slug)}
                                         onMouseEnter={() =>
                                             setFlatIndex(index + 1)
                                         }

@@ -15,6 +15,13 @@
             "slug": "apartment"
         },
         {
+            "url": "floor.index",
+            "name": "floor",
+            "i18n": "floor",
+            "icon": "language",
+            "slug": "floor"
+        },
+        {
             "url": "gallery.index",
             "name": "gallery",
             "i18n": "gallery",

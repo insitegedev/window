@@ -10,6 +10,8 @@
 {{-- setting style --}}
 @section('page-style')
     <link rel="stylesheet" type="text/css" href="{{asset('css/pages/form-select2.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('vendors/dropify/css/dropify.min.css')}}">
+
 @endsection
 
 @section('content')
@@ -172,6 +174,20 @@
                                 </div>
 
                             </div>
+                            <div>
+                                <h5>@lang('admin.pdf')</h5>
+                                <div class="input-field">
+                                    <input
+                                        type="file"
+                                        id="input-file-events"
+                                        class="dropify"
+                                        name="pdf"
+                                        @if($floor->pdf)
+                                        data-default-file="{{asset($floor->pdf->path. '/'. $floor->pdf->title)}}"
+                                        @endif
+                                    />
+                                </div>
+                            </div>
 
                             <div class="form-group">
                                 <div class="input-images"></div>
@@ -202,11 +218,14 @@
 {{-- vendor script --}}
 @section('vendor-script')
     <script src="{{asset('vendors/select2/select2.full.min.js')}}"></script>
+    <script src="{{asset('vendors/dropify/js/dropify.min.js')}}"></script>
+
 @endsection
 
 {{-- page script --}}
 @section('page-script')
     <script src="{{asset('js/scripts/form-select2.js')}}"></script>
+    <script src="{{asset('js/scripts/form-file-uploads.js?v='.time())}}"></script>
 
     <script src="{{ asset('ckeditor/ckeditor.js') }}"></script>
     <script>

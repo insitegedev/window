@@ -87,7 +87,7 @@ const ChooseFloor = ({ apartments, page, urlPrev }) => {
         },
         {
             key: 9,
-            link: route('client.showFloor.index', "A1"),
+            link: route('client.showFloor.index', "B1"),
             points: "1119.06,601.07 1187.62,601.07 1205.49,597.33 1186.17,594.43 1277.43,588.64 1295.29,592.02 1322.33,590.09 1565.68,617.12 1565.68,685.69 1268.25,679.41 1259.56,679.89 1142.72,685.69",
             floorName: "B1",
             para1: "სართული 4",
