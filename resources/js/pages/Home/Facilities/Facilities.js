@@ -25,6 +25,7 @@ const Facilities = () => {
         {
             icon: "/img/icons/home/spa.svg",
             name: __("spa_aesthetics"),
+            route: route('client.service.show', 1)
         },
         {
             id: "parking",
@@ -42,6 +43,7 @@ const Facilities = () => {
             id: "pool",
             icon: "/img/icons/home/pool.svg",
             name: __("cafe_restaurant"),
+            route: route('client.service.show', 2)
         },
         {
             id: "camera",
@@ -67,10 +69,11 @@ const Facilities = () => {
             {facilityList.map((Facility) => {
                 return (
                     <Link
-                        href={
-                            route("client.service.index", `${Facility.id}`) +
+                        href={Facility.route??
+                            route("client.service.index") +
                             `/#${Facility.id}`
                         }
+                        data={{state:Facility.id}}
                         className="flex"
                         data-aos="fade-up"
                     >
