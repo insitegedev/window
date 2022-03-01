@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import {
     ArrowButton,
     BackButton,
@@ -11,8 +11,11 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import "./Services.css";
 import Layout from "../../Layouts/Layout";
+import { scroller } from "react-scroll";
 
-const Services = ({ services, page, urlPrev }) => {
+const Services = ({ services, page, urlPrev, state }) => {
+    const [highlightBox, setHighLightBox] = useState(state);
+
     const sharedData = usePage().props.localizations;
 
     function __(key, replace = {}) {
@@ -29,31 +32,37 @@ const Services = ({ services, page, urlPrev }) => {
     }, []);
     const serviceBoxes = [
         {
+            id: "reception",
             icon: "/img/icons/home/bell.svg",
             title: __("recipient_recreation"),
             para: __("recipient_recreation_description"),
         },
         {
+            id: "trees",
             icon: "/img/icons/home/tree.svg",
             title: __("recreation_area_with_kids_playground"),
             para: __("recreation_area_with_kids_playground_description"),
         },
         {
+            id: "parking",
             icon: "/img/icons/home/parking-area.svg",
             title: __("parking_area"),
             para: __("parking_area_description"),
         },
         {
+            id: "security",
             icon: "/img/icons/home/secure-shield.svg",
             title: __("security_service"),
             para: __("security_service_description"),
         },
         {
+            id: "camera",
             icon: "/img/icons/home/cctv-camera.svg",
             title: __("video_monitoring"),
             para: __("video_monitoring_description"),
         },
         {
+            id: "keys",
             icon: "/img/icons/home/key.svg",
             title: __("rental_and_hotel_services"),
             para: __("rental_and_hotel_services_description"),
@@ -117,7 +126,11 @@ const Services = ({ services, page, urlPrev }) => {
                                 {services.slice(1).map((service) => {
                                     return (
                                         <div
-                                            className="sidebox sb1 flex"
+                                            className={
+                                                highlightBox === "pool"
+                                                    ? "sidebox sb1 flex highlighted"
+                                                    : "sidebox sb1 flex"
+                                            }
                                             // style={{
                                             //     background: `url(${
                                             //         service.main_file_1
@@ -183,7 +196,7 @@ const Services = ({ services, page, urlPrev }) => {
                             </div>
                         )}{" "}
                     </div>
-                    <div className="other_services">
+                    <div className="other_services" id="scroll_services">
                         <div className="head">
                             <h6>{page.title_2}</h6>
                             <p
@@ -195,7 +208,15 @@ const Services = ({ services, page, urlPrev }) => {
                         <div className="grid">
                             {serviceBoxes.map((box) => {
                                 return (
-                                    <div className="box" data-aos="flip-up">
+                                    <div
+                                        id={box.id}
+                                        className={
+                                            highlightBox === box.id
+                                                ? "box highlighted"
+                                                : "box"
+                                        }
+                                        data-aos="flip-up"
+                                    >
                                         <div className="service_title">
                                             <img
                                                 className="icon"

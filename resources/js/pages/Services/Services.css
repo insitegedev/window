@@ -15,7 +15,6 @@
 .servicePage .first.flex {
     align-items: flex-start;
     margin-top: 30px;
-    margin-bottom: 50px;
 }
 .servicePage .spabox {
     width: 70%;
@@ -62,6 +61,9 @@
     padding: 30px 40px;
     color: #fff;
 }
+.servicePage .side_boxes .sb1.highlighted {
+    box-shadow: #7b86196c 0 0 10px 5px;
+}
 .servicePage .side_boxes .icon {
     width: 40px;
 }
@@ -94,7 +96,9 @@
     text-align: left;
     margin-bottom: 50px;
 }
-
+.servicePage .other_services {
+    padding-top: 50px;
+}
 .servicePage .other_services .head {
     text-align: center;
     margin-bottom: 37px;
@@ -121,6 +125,9 @@
     background: #f2f2f2;
     padding-bottom: 50px;
     position: relative;
+}
+.servicePage .other_services .grid .box.highlighted {
+    box-shadow: #1c49686c 0 0 10px 5px;
 }
 .servicePage .other_services .grid .box .bg {
     height: 97%;

@@ -8,12 +8,11 @@ import ContactInfo from "../ContactInfo/ContactInfo";
 const Menu = ({ openMenu, linkClicked }) => {
     const sharedData = usePage().props.localizations;
 
-
     function __(key, replace = {}) {
         let translation = sharedData[key] || key;
 
         Object.keys(replace).forEach(function (key) {
-            translation = translation.replace(':' + key, replace[key])
+            translation = translation.replace(":" + key, replace[key]);
         });
 
         return translation;
@@ -62,7 +61,10 @@ const Menu = ({ openMenu, linkClicked }) => {
                 >
                     <div className="flex top">
                         <Languages />
-                        <MainButton link={route('client.contact.index')} text={__("contact_us")} />
+                        <MainButton
+                            link={route("client.contact.index")}
+                            text={__("contact_us")}
+                        />
                     </div>
                     <div className="flex bottom">
                         <ContactInfo color="#fff" />
