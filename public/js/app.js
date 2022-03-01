@@ -9497,8 +9497,10 @@ var Facilities = function Facilities() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "facilities"
   }, facilityList.map(function (Facility) {
+    var _Facility$route;
+
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__.Link, {
-      href: route("client.service.index"),
+      href: (_Facility$route = Facility.route) !== null && _Facility$route !== void 0 ? _Facility$route : route("client.service.index"),
       data: {
         state: Facility.id
       },

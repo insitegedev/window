@@ -69,7 +69,9 @@ const Facilities = () => {
             {facilityList.map((Facility) => {
                 return (
                     <Link
-                        href={route("client.service.index")}
+                        href={ Facility.route ??
+                            route("client.service.index")
+                        }
                         data={{state:Facility.id}}
                         className="flex"
                         data-aos="fade-up"
