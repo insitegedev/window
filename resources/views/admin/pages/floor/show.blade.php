@@ -1,7 +1,7 @@
 {{-- extend layout --}}
 @extends('admin.layout.contentLayoutMaster')
 {{-- page title --}}
-@section('title', $apartment->content)
+@section('title', $floor->content)
 
 
 
@@ -13,13 +13,13 @@
                 <div class="display-flex media">
                     <div class="media-body">
                         <h6 class="media-heading">
-                            <span class="users-view-name">{{$apartment->content}} </span>
+                            <span class="users-view-name">{{$floor->content}} </span>
                         </h6>
                     </div>
                 </div>
             </div>
             <div class="col s12 m5 quick-action-btns display-flex justify-content-end align-items-center pt-2">
-                <a href="{{locale_route('apartment.edit',$apartment->id)}}" class="btn-small indigo">
+                <a href="{{locale_route('floor.edit',$floor->id)}}" class="btn-small indigo">
                     @lang('admin.edit')
                 </a>
             </div>
@@ -32,18 +32,36 @@
                     <table class="striped">
                         <tbody>
                         <tr>
-                            <td>@lang('admin.title'):</td>
+                            <td>@lang('admin.apartment'):</td>
                             <td>
-                                {{$apartment->title}}
+                                <a href="{{locale_route('apartment.show',$floor->apartment_id)}}">
+                                    {{$floor->apartment_relation->title}}
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>@lang('admin.slug'):</td>
+                            <td>
+                                {{$floor->slug}}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>@lang('admin.status'):</td>
+                            <td>
+                                @if($floor->status)
+                                    <span class="chip green lighten-5 green-text">@lang('admin.active')</span>
+                                @else
+                                    <span class="chip red lighten-5 red-text">@lang('admin.not_active')</span>
+                                @endif
                             </td>
                         </tr>
                         <tr>
                             <td>@lang('admin.created_at')</td>
-                            <td>{{\Carbon\Carbon::parse($apartment->created_at)}}</td>
+                            <td>{{\Carbon\Carbon::parse($floor->created_at)}}</td>
                         </tr>
                         <tr>
                             <td>@lang('admin.updated_at')</td>
-                            <td>{{\Carbon\Carbon::parse($apartment->updated_at)}}</td>
+                            <td>{{\Carbon\Carbon::parse($floor->updated_at)}}</td>
                         </tr>
                         </tbody>
                     </table>
@@ -68,12 +86,36 @@
                                 <table class="striped">
                                     <tbody>
                                     <tr>
-                                        <td>@lang('admin.floor'):</td>
-                                        <td>{{$apartment->translate($locale)->floor ?? ''}}</td>
+                                        <td>@lang('admin.title'):</td>
+                                        <td>{{$floor->translate($locale)->title ?? ''}}</td>
                                     </tr>
                                     <tr>
-                                        <td>@lang('admin.apartments'):</td>
-                                        <td>{{$apartment->translate($locale)->apartments ?? ''}}</td>
+                                        <td>@lang('admin.dimension'):</td>
+                                        <td>{{$floor->translate($locale)->dimension ?? ''}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>@lang('admin.apartment'):</td>
+                                        <td>{{$floor->translate($locale)->apartment ?? ''}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>@lang('admin.area'):</td>
+                                        <td>{{$floor->translate($locale)->area ?? ''}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>@lang('admin.specifications'):</td>
+                                        <td>{!! $floor->translate($locale)->specifications ?? '' !!}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>@lang('admin.meta_title'):</td>
+                                        <td>{{$floor->translate($locale)->meta_title ?? ''}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>@lang('admin.meta_description'):</td>
+                                        <td>{{$floor->translate($locale)->meta_description ?? ''}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>@lang('admin.meta_keyword'):</td>
+                                        <td>{{$floor->translate($locale)->meta_keyword ?? ''}}</td>
                                     </tr>
                                 </table>
                             </div>
