@@ -134,8 +134,8 @@ Route::prefix('{locale?}')
             Route::get('/project/{project}', [\App\Http\Controllers\Client\ProjectController::class, "show"])->name('client.project.show');
 
             // Service Page
-            Route::get('/service/{state?}', [ServiceController::class, "index"])->name('client.service.index');
-            Route::get('/service/fsasf/{service?}', [ServiceController::class, "show"])->name('client.service.show');
+            Route::get('/service', [ServiceController::class, "index"])->name('client.service.index');
+            Route::get('/service/{service?}', [ServiceController::class, "show"])->name('client.service.show');
         });
     });
 

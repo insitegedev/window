@@ -72,11 +72,20 @@ class Floor extends Model
     }
 
     /**
+     * @return BelongsTo
+     */
+    public function apartment_relation(): BelongsTo
+    {
+        //this is for admin panel
+        return $this->belongsTo(Apartment::class, 'apartment_id', 'id');
+    }
+
+    /**
      * @return MorphMany
      */
     public function files(): MorphMany
     {
-        return $this->morphMany(File::class, 'fileable');
+        return $this->morphMany(File::class, 'fileable')->where('format', '!=', 'pdf');
     }
 
     /**
@@ -84,7 +93,15 @@ class Floor extends Model
      */
     public function file(): MorphOne
     {
-        return $this->morphOne(File::class, 'fileable');
+        return $this->morphOne(File::class, 'fileable')->where('format', '!=', 'pdf');
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\MorphMany
+     */
+    public function pdf(): MorphOne
+    {
+        return $this->morphOne(File::class, 'fileable')->where('format', '=', 'pdf');
     }
 
 }

@@ -45,7 +45,7 @@ class FloorController extends Controller
     public function index(SettingRequest $request)
     {
         return view('admin.pages.floor.index', [
-            'floors' => $this->floorRepository->getData($request, ['translations'])
+            'floors' => $this->floorRepository->getData($request, ['translations', 'apartment_relation'])
         ]);
     }
 
@@ -94,6 +94,7 @@ class FloorController extends Controller
         $saveData['status'] = isset($saveData['status']) && (bool)$saveData['status'];
         $this->floorRepository->update($floor->id,$saveData);
         $this->floorRepository->saveFiles($floor->id, $request);
+
 
 
 

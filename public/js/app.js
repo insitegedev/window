@@ -7492,8 +7492,9 @@ var Apartment = function Apartment(_ref) {
     }
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h6", null, "total area"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", {
     className: "total_area"
-  }, "58.3 M", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("sup", null, "2")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_8__.Link, {
-    href: "/",
+  }, "58.3 M", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("sup", null, "2")), apartment.pdf && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
+    href: "/" + apartment.pdf.path + "/" + apartment.pdf.title,
+    target: "_blank",
     className: "flex centered pdf"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
     src: _img_icons_apartment_file_svg__WEBPACK_IMPORTED_MODULE_9__["default"],
@@ -7630,7 +7631,7 @@ var ChooseFloor = function ChooseFloor(_ref) {
     para2: "დარჩენილია 5 ბინა"
   }, {
     key: 9,
-    link: route('client.showFloor.index', "A1"),
+    link: route('client.showFloor.index', "B1"),
     points: "1119.06,601.07 1187.62,601.07 1205.49,597.33 1186.17,594.43 1277.43,588.64 1295.29,592.02 1322.33,590.09 1565.68,617.12 1565.68,685.69 1268.25,679.41 1259.56,679.89 1142.72,685.69",
     floorName: "B1",
     para1: "სართული 4",
@@ -7861,6 +7862,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 var ChooseFloor = function ChooseFloor(_ref) {
   var urlPrev = _ref.urlPrev,
       apartments = _ref.apartments;
+  console.log(apartments);
   var sharedData = (0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.usePage)().props.localizations;
 
   function __(key) {
@@ -7870,9 +7872,7 @@ var ChooseFloor = function ChooseFloor(_ref) {
       translation = translation.replace(":" + key, replace[key]);
     });
     return translation;
-  }
-
-  var flatList = apartments; // const flatList = [
+  } // const flatList = [
   //     {
   //         link: "/",
   //         points: "91.3,350.9 11.6,350.9 11.6,4 179,4 179,33.6 174.2,33.6 160.6,67.1 171.9,71.6 179,71.6 179,77.2 164.4,77.2 164.4,350.9 142.5,350.9 142.5,346.5 91.6,346.5",
@@ -7921,6 +7921,7 @@ var ChooseFloor = function ChooseFloor(_ref) {
   //     },
   // ];
 
+
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(0),
       _useState2 = _slicedToArray(_useState, 2),
       flatIndex = _useState2[0],
@@ -7942,7 +7943,7 @@ var ChooseFloor = function ChooseFloor(_ref) {
     className: "head"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
     className: " block"
-  }, "A block"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
+  }, __("a_block")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
     className: "flex centered"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
     className: "left disabled"
@@ -7950,7 +7951,7 @@ var ChooseFloor = function ChooseFloor(_ref) {
     color: "#334E60"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
     className: "bold"
-  }, "Floor 1"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
+  }, apartments.floor), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
     href: route('client.showFloor.index', "A2")
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_img_icons_sm_smIcons__WEBPACK_IMPORTED_MODULE_2__.ArrowRight, {
     color: "#334E60"
@@ -7974,7 +7975,7 @@ var ChooseFloor = function ChooseFloor(_ref) {
     height: "486",
     xlinkHref: "/img/floorplan/A1.png",
     transform: "matrix(1 0 0 1 7.5 0)"
-  }), flatList.map(function (flat, index) {
+  }), apartments.floors.map(function (flat, index) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_tippyjs_react__WEBPACK_IMPORTED_MODULE_9__["default"], {
       maxWidth: "0",
       arrow: false,
@@ -8058,7 +8059,8 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 var ChooseFloor = function ChooseFloor(_ref) {
-  var urlPrev = _ref.urlPrev;
+  var urlPrev = _ref.urlPrev,
+      apartments = _ref.apartments;
   var sharedData = (0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.usePage)().props.localizations;
 
   function __(key) {
@@ -8133,7 +8135,7 @@ var ChooseFloor = function ChooseFloor(_ref) {
     className: "head"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
     className: " block"
-  }, "A block"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
+  }, __("a_block")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
     className: "flex centered"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
     href: route('client.showFloor.index', "A1"),
@@ -8142,7 +8144,7 @@ var ChooseFloor = function ChooseFloor(_ref) {
     color: "#334E60"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
     className: "bold"
-  }, "Floor 2"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
+  }, apartments.floor), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
     href: route('client.showFloor.index', "A3")
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_img_icons_sm_smIcons__WEBPACK_IMPORTED_MODULE_2__.ArrowRight, {
     color: "#334E60"
@@ -8166,7 +8168,7 @@ var ChooseFloor = function ChooseFloor(_ref) {
     height: "397",
     xlinkHref: "/img/floorplan/A2.png",
     transform: "matrix(1 0 0 1 20.5 26.5)"
-  }), flatList.map(function (flat, index) {
+  }), apartments.floors.map(function (flat, index) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_tippyjs_react__WEBPACK_IMPORTED_MODULE_9__["default"], {
       maxWidth: "0",
       arrow: false,
@@ -8182,9 +8184,9 @@ var ChooseFloor = function ChooseFloor(_ref) {
           fontSize: "16px",
           fontWeight: "bold"
         }
-      }, flat.dimensions, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("sup", null, "2"))
+      }, flat.dimension, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("sup", null, "2"))
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
-      href: flat.link,
+      href: route("client.apartment.index", flat.slug),
       onMouseEnter: function onMouseEnter() {
         return setFlatIndex(index + 1);
       },
@@ -8250,7 +8252,8 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 var ChooseFloor = function ChooseFloor(_ref) {
-  var urlPrev = _ref.urlPrev;
+  var urlPrev = _ref.urlPrev,
+      apartments = _ref.apartments;
   var sharedData = (0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.usePage)().props.localizations;
 
   function __(key) {
@@ -8325,7 +8328,7 @@ var ChooseFloor = function ChooseFloor(_ref) {
     className: "head"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
     className: " block"
-  }, "A block"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
+  }, __("a_block")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
     className: "flex centered"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
     href: route('client.showFloor.index', "A2"),
@@ -8334,7 +8337,7 @@ var ChooseFloor = function ChooseFloor(_ref) {
     color: "#334E60"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
     className: "bold"
-  }, "Floor 3"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
+  }, apartments.floor), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
     href: route('client.showFloor.index', "A4")
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_img_icons_sm_smIcons__WEBPACK_IMPORTED_MODULE_2__.ArrowRight, {
     color: "#334E60"
@@ -8358,7 +8361,7 @@ var ChooseFloor = function ChooseFloor(_ref) {
     height: "408",
     xlinkHref: "/img/floorplan/A3.png",
     transform: "matrix(1 0 0 1 17 18)"
-  }), flatList.map(function (flat, index) {
+  }), apartments.floors.map(function (flat, index) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_tippyjs_react__WEBPACK_IMPORTED_MODULE_9__["default"], {
       maxWidth: "0",
       arrow: false,
@@ -8374,9 +8377,9 @@ var ChooseFloor = function ChooseFloor(_ref) {
           fontSize: "16px",
           fontWeight: "bold"
         }
-      }, flat.dimensions, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("sup", null, "2"))
+      }, flat.dimension, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("sup", null, "2"))
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
-      href: flat.link,
+      href: route("client.apartment.index", flat.slug),
       onMouseEnter: function onMouseEnter() {
         return setFlatIndex(index + 1);
       },
@@ -8442,7 +8445,8 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 var ChooseFloor = function ChooseFloor(_ref) {
-  var urlPrev = _ref.urlPrev;
+  var urlPrev = _ref.urlPrev,
+      apartments = _ref.apartments;
   var sharedData = (0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.usePage)().props.localizations;
 
   function __(key) {
@@ -8501,7 +8505,7 @@ var ChooseFloor = function ChooseFloor(_ref) {
     className: "head"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
     className: " block"
-  }, "A block"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
+  }, __("a_block")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
     className: "flex centered"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
     href: route('client.showFloor.index', "A3"),
@@ -8510,7 +8514,7 @@ var ChooseFloor = function ChooseFloor(_ref) {
     color: "#334E60"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
     className: "bold"
-  }, "Floor 4"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
+  }, apartments.floor), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
     href: route('client.showFloor.index', "B2")
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_img_icons_sm_smIcons__WEBPACK_IMPORTED_MODULE_2__.ArrowRight, {
     color: "#334E60"
@@ -8534,7 +8538,7 @@ var ChooseFloor = function ChooseFloor(_ref) {
     height: "423",
     xlinkHref: "/img/floorplan/A4.png",
     transform: "matrix(1 0 0 1 20 13.5)"
-  }), flatList.map(function (flat, index) {
+  }), apartments.floors.map(function (flat, index) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_tippyjs_react__WEBPACK_IMPORTED_MODULE_9__["default"], {
       maxWidth: "0",
       arrow: false,
@@ -8550,9 +8554,174 @@ var ChooseFloor = function ChooseFloor(_ref) {
           fontSize: "16px",
           fontWeight: "bold"
         }
-      }, flat.dimensions, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("sup", null, "2"))
+      }, flat.dimension, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("sup", null, "2"))
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
-      href: flat.link,
+      href: route("client.apartment.index", flat.slug),
+      onMouseEnter: function onMouseEnter() {
+        return setFlatIndex(index + 1);
+      },
+      onMouseLeave: function onMouseLeave() {
+        return setFlatIndex(0);
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("polygon", {
+      dataText: "sdjnfskd",
+      key: index,
+      className: "st0",
+      points: flat.points
+    })));
+  })))));
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ChooseFloor);
+
+/***/ }),
+
+/***/ "./resources/js/Pages/FloorPlan/B1.js":
+/*!********************************************!*\
+  !*** ./resources/js/Pages/FloorPlan/B1.js ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _img_icons_sm_smIcons__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../img/icons/sm/smIcons */ "./public/img/icons/sm/smIcons.js");
+/* harmony import */ var _components_Buttons_Buttons__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/Buttons/Buttons */ "./resources/js/components/Buttons/Buttons.js");
+/* harmony import */ var _components_Showcase_Showcase__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../components/Showcase/Showcase */ "./resources/js/components/Showcase/Showcase.js");
+/* harmony import */ var _Layouts_Layout__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../Layouts/Layout */ "./resources/js/Layouts/Layout.js");
+/* harmony import */ var _img_apartments_bg_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../img/apartments/bg.png */ "./public/img/apartments/bg.png");
+/* harmony import */ var _floorPlan_css__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./floorPlan.css */ "./resources/js/Pages/FloorPlan/floorPlan.css");
+/* harmony import */ var _tippyjs_react__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @tippyjs/react */ "./node_modules/@tippyjs/react/dist/tippy-react.esm.js");
+/* harmony import */ var tippy_js_dist_tippy_css__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! tippy.js/dist/tippy.css */ "./node_modules/tippy.js/dist/tippy.css");
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+var ChooseFloor = function ChooseFloor(_ref) {
+  var urlPrev = _ref.urlPrev,
+      apartments = _ref.apartments;
+  var sharedData = (0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.usePage)().props.localizations;
+
+  function __(key) {
+    var replace = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+    var translation = sharedData[key] || key;
+    Object.keys(replace).forEach(function (key) {
+      translation = translation.replace(":" + key, replace[key]);
+    });
+    return translation;
+  }
+
+  var flatList = [{
+    link: "/",
+    points: " 1237.2,149.9 1348,149.9 1348,21.3 1604,21.3 1604,282.3 1237.2,282.3 1237.2,264 1241,264  1252.3,239.7 1243.7,236.1 1237.2,236.1",
+    dimensions: "Flat 1 / 35.6"
+  }, {
+    link: "/",
+    points: "1237.2,282.3 1604,282.3 1604,409.4 1237.2,409.4 1237.2,329.4 1240.9,329.4 1250.7,324.6 1239.6,300  1237.2,300 ",
+    dimensions: "Flat 2 / 35.6"
+  }, {
+    link: "/",
+    points: "1237.2,409.4 1604,409.4 1604,533 1595.6,533 1595.6,564.1 1484.9,564.1 1484.9,546.8 1426.7,546.8  1426.7,537.4 1237.2,537.4 1237.2,513.4 1242.7,513.4 1251.1,511.2 1240,486.8 1237.2,486.8 ",
+    dimensions: "Flat 3 / 35.6"
+  }];
+
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(0),
+      _useState2 = _slicedToArray(_useState, 2),
+      flatIndex = _useState2[0],
+      setFlatIndex = _useState2[1];
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_Layouts_Layout__WEBPACK_IMPORTED_MODULE_5__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
+    className: "floorPlan"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("img", {
+    className: "background",
+    src: _img_apartments_bg_png__WEBPACK_IMPORTED_MODULE_6__["default"],
+    alt: ""
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_components_Showcase_Showcase__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    "short": true
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_components_Buttons_Buttons__WEBPACK_IMPORTED_MODULE_3__.BackButton, {
+    color: "#1B2D39",
+    link: urlPrev,
+    text: __("go_back")
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
+    className: "head"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
+    className: " block"
+  }, __("b_block")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
+    className: "flex centered"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
+    href: route('client.showFloor.index', "A4"),
+    className: "left"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_img_icons_sm_smIcons__WEBPACK_IMPORTED_MODULE_2__.ArrowRight, {
+    color: "#334E60"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
+    className: "bold"
+  }, apartments.floor), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
+    href: route('client.showFloor.index', "B2")
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_img_icons_sm_smIcons__WEBPACK_IMPORTED_MODULE_2__.ArrowRight, {
+    color: "#334E60"
+  })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
+    className: "container"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("svg", {
+    version: "1.1",
+    id: "Layer_1",
+    x: "0px",
+    y: "0px",
+    viewBox: "0 0 1750 600",
+    style: {
+      enableBackground: "new 0 0 1750 600"
+    },
+    xmlSpace: "preserve"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("image", {
+    style: {
+      overflow: "visible"
+    },
+    width: "1710",
+    height: "568",
+    xlinkHref: "/img/floorplan/B2.png",
+    transform: "matrix(1 0 0 1 20 16)"
+  }), apartments.floors.map(function (flat, index) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_tippyjs_react__WEBPACK_IMPORTED_MODULE_9__["default"], {
+      maxWidth: "0",
+      arrow: false,
+      content: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("button", {
+        style: {
+          transform: "var(--tooltip-position2)",
+          width: "180px",
+          height: "50px",
+          borderRadius: "5px",
+          background: "#fff",
+          boxShadow: "0 3px 6px #1111111c",
+          color: "#334E60",
+          fontSize: "16px",
+          fontWeight: "bold"
+        }
+      }, flat.dimension, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("sup", null, "2"))
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
+      href: route("client.apartment.index", flat.slug),
       onMouseEnter: function onMouseEnter() {
         return setFlatIndex(index + 1);
       },
@@ -8618,7 +8787,8 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 var ChooseFloor = function ChooseFloor(_ref) {
-  var urlPrev = _ref.urlPrev;
+  var urlPrev = _ref.urlPrev,
+      apartments = _ref.apartments;
   var sharedData = (0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.usePage)().props.localizations;
 
   function __(key) {
@@ -8665,16 +8835,16 @@ var ChooseFloor = function ChooseFloor(_ref) {
     className: "head"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
     className: " block"
-  }, "B block"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
+  }, __("b_block")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
     className: "flex centered"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
-    href: route('client.showFloor.index', "A4"),
+    href: route('client.showFloor.index', "B1"),
     className: "left"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_img_icons_sm_smIcons__WEBPACK_IMPORTED_MODULE_2__.ArrowRight, {
     color: "#334E60"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
     className: "bold"
-  }, "Floor 2"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
+  }, apartments.floor), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
     href: route('client.showFloor.index', "B3")
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_img_icons_sm_smIcons__WEBPACK_IMPORTED_MODULE_2__.ArrowRight, {
     color: "#334E60"
@@ -8698,7 +8868,7 @@ var ChooseFloor = function ChooseFloor(_ref) {
     height: "568",
     xlinkHref: "/img/floorplan/B2.png",
     transform: "matrix(1 0 0 1 20 16)"
-  }), flatList.map(function (flat, index) {
+  }), apartments.floors.map(function (flat, index) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_tippyjs_react__WEBPACK_IMPORTED_MODULE_9__["default"], {
       maxWidth: "0",
       arrow: false,
@@ -8714,9 +8884,9 @@ var ChooseFloor = function ChooseFloor(_ref) {
           fontSize: "16px",
           fontWeight: "bold"
         }
-      }, flat.dimensions, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("sup", null, "2"))
+      }, flat.dimension, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("sup", null, "2"))
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
-      href: flat.link,
+      href: route("client.apartment.index", flat.slug),
       onMouseEnter: function onMouseEnter() {
         return setFlatIndex(index + 1);
       },
@@ -8782,7 +8952,8 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 var ChooseFloor = function ChooseFloor(_ref) {
-  var urlPrev = _ref.urlPrev;
+  var urlPrev = _ref.urlPrev,
+      apartments = _ref.apartments;
   var sharedData = (0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.usePage)().props.localizations;
 
   function __(key) {
@@ -8837,7 +9008,7 @@ var ChooseFloor = function ChooseFloor(_ref) {
     className: "head"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
     className: " block"
-  }, "B block"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
+  }, __("b_block")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
     className: "flex centered"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
     href: route('client.showFloor.index', "B2"),
@@ -8846,7 +9017,7 @@ var ChooseFloor = function ChooseFloor(_ref) {
     color: "#334E60"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
     className: "bold"
-  }, "Floor 3"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
+  }, apartments.floor), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
     href: route('client.showFloor.index', "B4")
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_img_icons_sm_smIcons__WEBPACK_IMPORTED_MODULE_2__.ArrowRight, {
     color: "#334E60"
@@ -8870,7 +9041,7 @@ var ChooseFloor = function ChooseFloor(_ref) {
     height: "589",
     xlinkHref: "/img/floorplan/B3.png",
     transform: "matrix(1 0 0 1 3.5 5.5)"
-  }), flatList.map(function (flat, index) {
+  }), apartments.floors.map(function (flat, index) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_tippyjs_react__WEBPACK_IMPORTED_MODULE_9__["default"], {
       maxWidth: "0",
       arrow: false,
@@ -8886,9 +9057,9 @@ var ChooseFloor = function ChooseFloor(_ref) {
           fontSize: "16px",
           fontWeight: "bold"
         }
-      }, flat.dimensions, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("sup", null, "2"))
+      }, flat.dimension, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("sup", null, "2"))
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
-      href: flat.link,
+      href: route("client.apartment.index", flat.slug),
       onMouseEnter: function onMouseEnter() {
         return setFlatIndex(index + 1);
       },
@@ -8954,7 +9125,8 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 var ChooseFloor = function ChooseFloor(_ref) {
-  var urlPrev = _ref.urlPrev;
+  var urlPrev = _ref.urlPrev,
+      apartments = _ref.apartments;
   var sharedData = (0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.usePage)().props.localizations;
 
   function __(key) {
@@ -9013,7 +9185,7 @@ var ChooseFloor = function ChooseFloor(_ref) {
     className: "head"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
     className: " block"
-  }, "B block"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
+  }, __("b_block")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
     className: "flex centered"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
     href: route('client.showFloor.index', "B3"),
@@ -9022,7 +9194,7 @@ var ChooseFloor = function ChooseFloor(_ref) {
     color: "#334E60"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
     className: "bold"
-  }, "Floor 4"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
+  }, apartments.floor), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
     className: "disabled"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_img_icons_sm_smIcons__WEBPACK_IMPORTED_MODULE_2__.ArrowRight, {
     color: "#334E60"
@@ -9046,7 +9218,7 @@ var ChooseFloor = function ChooseFloor(_ref) {
     height: "551",
     xlinkHref: "/img/floorplan/B4.png",
     transform: "matrix(1 0 0 1 19.5 24.5)"
-  }), flatList.map(function (flat, index) {
+  }), apartments.floors.map(function (flat, index) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_tippyjs_react__WEBPACK_IMPORTED_MODULE_9__["default"], {
       maxWidth: "0",
       arrow: false,
@@ -9062,9 +9234,9 @@ var ChooseFloor = function ChooseFloor(_ref) {
           fontSize: "16px",
           fontWeight: "bold"
         }
-      }, flat.dimensions, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("sup", null, "2"))
+      }, flat.dimension, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("sup", null, "2"))
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
-      href: flat.link,
+      href: route("client.apartment.index", flat.slug),
       onMouseEnter: function onMouseEnter() {
         return setFlatIndex(index + 1);
       },
@@ -9289,7 +9461,8 @@ var Facilities = function Facilities() {
     name: __("recipient_recreation")
   }, {
     icon: "/img/icons/home/spa.svg",
-    name: __("spa_aesthetics")
+    name: __("spa_aesthetics"),
+    route: route("client.service.show", 1)
   }, {
     id: "parking",
     scrollTo: "scroll_services",
@@ -9303,7 +9476,8 @@ var Facilities = function Facilities() {
   }, {
     id: "pool",
     icon: "/img/icons/home/pool.svg",
-    name: __("cafe_restaurant")
+    name: __("cafe_restaurant"),
+    route: route("client.service.show", 2)
   }, {
     id: "camera",
     scrollTo: "scroll_services",
@@ -57358,6 +57532,8 @@ var map = {
 	"./FloorPlan/A3.js": "./resources/js/Pages/FloorPlan/A3.js",
 	"./FloorPlan/A4": "./resources/js/Pages/FloorPlan/A4.js",
 	"./FloorPlan/A4.js": "./resources/js/Pages/FloorPlan/A4.js",
+	"./FloorPlan/B1": "./resources/js/Pages/FloorPlan/B1.js",
+	"./FloorPlan/B1.js": "./resources/js/Pages/FloorPlan/B1.js",
 	"./FloorPlan/B2": "./resources/js/Pages/FloorPlan/B2.js",
 	"./FloorPlan/B2.js": "./resources/js/Pages/FloorPlan/B2.js",
 	"./FloorPlan/B3": "./resources/js/Pages/FloorPlan/B3.js",

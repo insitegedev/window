@@ -19,7 +19,7 @@
                                     <thead>
                                     <tr>
                                         <th>@lang('admin.id')</th>
-                                        <th>@lang('admin.title')</th>
+                                        <th>@lang('admin.floor_name')</th>
                                         <th>@lang('admin.floor')</th>
                                         <th>@lang('admin.apartments')</th>
                                         <th>@lang('admin.actions')</th>
@@ -52,7 +52,7 @@
                                         @foreach($floors as $floor)
                                             <tr>
                                                 <td>{{$floor->id}}</td>
-                                                <td>{{$floor->apatmentt}}</td>
+                                                <td>{{$floor->apartment_relation->title}}</td>
                                                 <td>
                                                     <div class="row">
                                                         <div class="col s12">
@@ -93,7 +93,7 @@
                                                             @foreach(config('translatable.locales') as $locale)
                                                                 <div id="apartments-{{$locale}}-{{$floor->id}}"
                                                                      class="">
-                                                                    {{$floor->translate($locale)->dimension ?? ''}}
+                                                                    {{$floor->translate($locale)->apartment ?? ''}}
                                                                 </div>
                                                             @endforeach
                                                         </div>
@@ -114,7 +114,7 @@
                                     </tbody>
                                 </table>
                             </form>
-{{--                            {{ $floor->appends(request()->input())->links('admin.vendor.pagination.material') }}--}}
+                            {{ $floors->appends(request()->input())->links('admin.vendor.pagination.material') }}
                         </div>
                     </div>
                 </div>
