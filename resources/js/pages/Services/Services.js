@@ -21,7 +21,7 @@ const Services = ({ services, page, urlPrev, state }) => {
             delay: 0,
             smooth: "easeInOutQuart",
         });
-    });
+    }, []);
     const sharedData = usePage().props.localizations;
 
     function __(key, replace = {}) {
