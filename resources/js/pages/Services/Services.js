@@ -15,7 +15,13 @@ import { scroller } from "react-scroll";
 
 const Services = ({ services, page, urlPrev, state }) => {
     const [highlightBox, setHighLightBox] = useState(state);
-
+    useEffect(() => {
+        scroller.scrollTo("highlighted", {
+            duration: 800,
+            delay: 0,
+            smooth: "easeInOutQuart",
+        });
+    });
     const sharedData = usePage().props.localizations;
 
     function __(key, replace = {}) {

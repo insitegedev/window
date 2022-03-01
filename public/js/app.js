@@ -9324,7 +9324,7 @@ var Facilities = function Facilities() {
     className: "facilities"
   }, facilityList.map(function (Facility) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__.Link, {
-      href: route("client.service.index", "".concat(Facility.id)) + "/#".concat(Facility.id),
+      href: route("client.service.index", "".concat(Facility.id)),
       className: "flex",
       "data-aos": "fade-up"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
@@ -9597,6 +9597,13 @@ var Services = function Services(_ref) {
       highlightBox = _useState2[0],
       setHighLightBox = _useState2[1];
 
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    react_scroll__WEBPACK_IMPORTED_MODULE_8__.scroller.scrollTo("highlighted", {
+      duration: 800,
+      delay: 0,
+      smooth: "easeInOutQuart"
+    });
+  });
   var sharedData = (0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_3__.usePage)().props.localizations;
 
   function __(key) {
@@ -10538,6 +10545,13 @@ var Services = function Services(_ref) {
       highlightBox = _useState2[0],
       setHighLightBox = _useState2[1];
 
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    react_scroll__WEBPACK_IMPORTED_MODULE_8__.scroller.scrollTo("highlighted", {
+      duration: 800,
+      delay: 0,
+      smooth: "easeInOutQuart"
+    });
+  });
   var sharedData = (0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_3__.usePage)().props.localizations;
 
   function __(key) {
