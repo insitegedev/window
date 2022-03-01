@@ -61,7 +61,7 @@ const Facilities = () => {
             id: "keys",
             scrollTo: "scroll_services",
             icon: "/img/icons/home/key.svg",
-            name: __("rental_and_hotel_servicess"),
+            name: __("rental_and_hotel_services"),
         },
     ];
     return (
