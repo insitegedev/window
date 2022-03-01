@@ -17,6 +17,8 @@ const Facilities = () => {
 
     const facilityList = [
         {
+            id: "reception",
+            scrollTo: "scroll_services",
             icon: "/img/icons/home/bell.svg",
             name: __("recipient_recreation"),
         },
@@ -25,26 +27,37 @@ const Facilities = () => {
             name: __("spa_aesthetics"),
         },
         {
+            id: "parking",
+            scrollTo: "scroll_services",
             icon: "/img/icons/home/parking-area.svg",
             name: __("parking_area"),
         },
         {
+            id: "trees",
+            scrollTo: "scroll_services",
             icon: "/img/icons/home/tree.svg",
             name: __("recreation_area_with_kids_playground"),
         },
         {
+            id: "pool",
             icon: "/img/icons/home/pool.svg",
             name: __("cafe_restaurant"),
         },
         {
+            id: "camera",
+            scrollTo: "scroll_services",
             icon: "/img/icons/home/cctv-camera.svg",
             name: __("video_monitoring"),
         },
         {
+            id: "security",
+            scrollTo: "scroll_services",
             icon: "/img/icons/home/secure-shield.svg",
             name: __("security_service"),
         },
         {
+            id: "keys",
+            scrollTo: "scroll_services",
             icon: "/img/icons/home/key.svg",
             name: __("rental_and_hotel_services"),
         },
@@ -54,7 +67,10 @@ const Facilities = () => {
             {facilityList.map((Facility) => {
                 return (
                     <Link
-                        href={route("client.service.index")}
+                        href={
+                            route("client.service.index", `${Facility.id}`) +
+                            `/#${Facility.id}`
+                        }
                         className="flex"
                         data-aos="fade-up"
                     >

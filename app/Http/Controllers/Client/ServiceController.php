@@ -15,12 +15,12 @@ use Inertia\Inertia;
 
 class ServiceController extends Controller
 {
-    public function index() {
+    public function index($locale, $state="state") {
         $page = Page::where('key', 'service')->firstOrFail();
         $services = Service::where('status',true)->with(['mainFile_1','translations'])->get();
 //        dd($services);
 
-        return Inertia::render("Services/Services", ["services"=> $services, "page" => $page]);
+        return Inertia::render("Services/Services", ["services"=> $services, "page" => $page, "state" => $state]);
         return view('client.pages.service.index', [
             'services' => $services,
             'page' => $page

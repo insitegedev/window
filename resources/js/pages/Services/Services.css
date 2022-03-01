@@ -15,7 +15,6 @@
 .servicePage .first.flex {
     align-items: flex-start;
     margin-top: 30px;
-    margin-bottom: 50px;
 }
 .servicePage .spabox {
     width: 70%;
@@ -94,7 +93,9 @@
     text-align: left;
     margin-bottom: 50px;
 }
-
+.servicePage .other_services {
+    padding-top: 50px;
+}
 .servicePage .other_services .head {
     text-align: center;
     margin-bottom: 37px;
@@ -121,6 +122,13 @@
     background: #f2f2f2;
     padding-bottom: 50px;
     position: relative;
+    transition: 1s;
+    transform: scale(1);
+}
+.servicePage .other_services .grid .box.highlighted {
+    box-shadow: #1c49686c 0 0 10px 5px;
+    transform: scale(1.05);
+    z-index: 100;
 }
 .servicePage .other_services .grid .box .bg {
     height: 97%;
