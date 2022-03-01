@@ -69,7 +69,7 @@ const Facilities = () => {
                     <Link
                         href={
                             route("client.service.index", `${Facility.id}`) +
-                            `/#${Facility.scrollTo}`
+                            `/#${Facility.id}`
                         }
                         className="flex"
                         data-aos="fade-up"

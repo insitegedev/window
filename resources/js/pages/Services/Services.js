@@ -126,11 +126,7 @@ const Services = ({ services, page, urlPrev, state }) => {
                                 {services.slice(1).map((service) => {
                                     return (
                                         <div
-                                            className={
-                                                highlightBox === "pool"
-                                                    ? "sidebox sb1 flex highlighted"
-                                                    : "sidebox sb1 flex"
-                                            }
+                                            className="sidebox sb1 flex"
                                             // style={{
                                             //     background: `url(${
                                             //         service.main_file_1
@@ -209,6 +205,7 @@ const Services = ({ services, page, urlPrev, state }) => {
                             {serviceBoxes.map((box) => {
                                 return (
                                     <div
+                                        onClick={() => setHighLightBox(box.id)}
                                         id={box.id}
                                         className={
                                             highlightBox === box.id
