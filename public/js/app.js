@@ -9492,7 +9492,7 @@ var Facilities = function Facilities() {
     id: "keys",
     scrollTo: "scroll_services",
     icon: "/img/icons/home/key.svg",
-    name: __("rental_and_hotel_services")
+    name: __("rental_and_hotel_servicess")
   }];
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "facilities"
