@@ -36,7 +36,7 @@ class ApartmentController extends Controller
 
     public function show($locale, $slug)
     {
-        $apartment = Floor::with(['translations', 'file', 'pdf'])->where("slug", $slug)->firstOrFail();
+        $apartment = Floor::with(['translations', 'files', 'pdf'])->where("slug", $slug)->firstOrFail();
 //        dd($apartment);
         $page = Page::where('key', 'choose_apartment')->firstOrFail();
         return Inertia::render('Apartment/Apartment', ["apartment" => $apartment, "page" => $page]);
