@@ -106,6 +106,7 @@ const ChooseFloor = ({ page, urlPrev, apartments }) => {
                             transform="matrix(1 0 0 1 20 13.5)"
                         ></image>
                         {apartments.floors.map((flat, index) => {
+                            const sold = flat.status === 0;
                             return (
                                 <Tippy
                                     maxWidth="0"
@@ -126,16 +127,17 @@ const ChooseFloor = ({ page, urlPrev, apartments }) => {
                                                 fontWeight: "bold",
                                             }}
                                         >
-                                            {flat.status === 0
-                                                ? "sold"
-                                                : flat.dimension}
-                                            <sup>
-                                                {flat.status === 0 ? "" : "2"}
-                                            </sup>
+                                            {sold ? "sold" : flat.dimension}
+                                            <sup>{sold ? "" : "2"}</sup>
                                         </button>
                                     }
                                 >
                                     <Link
+                                        onClick={
+                                            sold
+                                                ? (e) => e.preventDefault()
+                                                : null
+                                        }
                                         href={route(
                                             "client.apartment.index",
                                             flat.slug
@@ -148,9 +150,7 @@ const ChooseFloor = ({ page, urlPrev, apartments }) => {
                                         <polygon
                                             key={index}
                                             className={
-                                                flat.status === 0
-                                                    ? "st0 sold"
-                                                    : "st0"
+                                                sold ? "st0 sold" : "st0"
                                             }
                                             points={flat.points}
                                         />

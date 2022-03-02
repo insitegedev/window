@@ -118,6 +118,7 @@ const ChooseFloor = ({ page, urlPrev, apartments }) => {
                             transform="matrix(1 0 0 1 7.5 0)"
                         ></image>
                         {apartments.floors.map((flat, index) => {
+                            const sold = flat.status === 0;
                             return (
                                 <Tippy
                                     maxWidth="0"
@@ -148,6 +149,11 @@ const ChooseFloor = ({ page, urlPrev, apartments }) => {
                                     }
                                 >
                                     <Link
+                                        onClick={
+                                            sold
+                                                ? (e) => e.preventDefault()
+                                                : null
+                                        }
                                         href={route(
                                             "client.apartment.index",
                                             flat.slug
@@ -160,9 +166,7 @@ const ChooseFloor = ({ page, urlPrev, apartments }) => {
                                         <polygon
                                             key={index}
                                             className={
-                                                flat.status === 0
-                                                    ? "st0 sold"
-                                                    : "st0"
+                                                sold ? "st0 sold" : "st0"
                                             }
                                             points={flat.points}
                                         />
