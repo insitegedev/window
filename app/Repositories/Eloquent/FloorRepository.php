@@ -61,6 +61,11 @@ class FloorRepository extends BaseRepository implements FloorRepositoryInterface
             }
         }
 
+        $oldPdf = $request->input("old_pdf");
+        if (!$oldPdf && $this->model->pdf) {
+            $this->model->pdf->delete();
+        }
+
         if ($request->hasFile('pdf')) {
             if ($this->model->pdf()) {
                 $this->model->pdf()->delete();

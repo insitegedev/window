@@ -20,8 +20,11 @@
             <div id="basic-form" class="card card card-default scrollspy">
                 <div class="card-content">
                     <input name="old-images[]" id="old_images" hidden disabled value="{{$floor->files}}">
+
                     <h4 class="card-title">{{ __('admin.floor-update') }}</h4>
                     {!! Form::model($floor,['url' => $url, 'method' => $method,'files' => true]) !!}
+                    {!! Form::text('old_pdf',$floor->pdf,['hidden','id'=>'old-main-1']) !!}
+
                     <div class="row">
                         <div class="col s12 m6 8">
                             <div class="row">
@@ -178,8 +181,8 @@
                                 <h6>@lang('admin.pdf')</h6>
                                 <div class="input-field">
                                     <input
+                                        id="input-file-now-1" class="dropify dropify-1"
                                         type="file"
-                                        id="input-file-events"
                                         class="dropify"
                                         name="pdf"
                                         @if($floor->pdf)
