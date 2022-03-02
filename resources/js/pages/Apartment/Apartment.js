@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { BackButton } from "../../components/Buttons/Buttons";
 import ContactInfo from "../../Components/ContactInfo/ContactInfo";
 import { PagePath } from "../../components/PagePath/PagePath";
@@ -105,11 +105,11 @@ const Apartment = ({ apartment }) => {
                                 />
                             );
                         })}
-                        <div className="dots">
+                        <div className="dots flex centered">
                             {viewList.map((apt, index) => {
                                 return (
                                     <button
-                                        className="other_view"
+                                        className="other_view img"
                                         onClick={() => setViewApartment(index)}
                                     >
                                         <img src={apt} alt="" />

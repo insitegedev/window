@@ -3,7 +3,7 @@
     background: url(/img/general/line-bg.png);
     background-position: center;
     background-size: contain;
-    align-items: flex-end;
+    align-items: flex-start;
 }
 .apartmentPage .apartment_img {
     margin: 0 30px;
@@ -44,10 +44,19 @@
     text-transform: uppercase;
     font-weight: bold;
 }
+.apartmentPage .dots {
+    margin-top: 40px;
+}
+.apartmentPage .dots .other_view {
+    width: 60px;
+    height: auto;
+    margin: 0 10px;
+}
 
 @media screen and (max-width: 1400px) {
     .apartmentPage .apartment_img {
         width: 60%;
+        margin: auto;
     }
 }
 @media screen and (max-width: 1100px) {
