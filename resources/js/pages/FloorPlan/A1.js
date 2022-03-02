@@ -148,6 +148,11 @@ const ChooseFloor = ({ page, urlPrev, apartments }) => {
                                     }
                                 >
                                     <Link
+                                        onClick={
+                                            flat.status === 0
+                                                ? (e) => e.preventDefault()
+                                                : null
+                                        }
                                         href={route(
                                             "client.apartment.index",
                                             flat.slug
