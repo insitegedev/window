@@ -100,7 +100,7 @@
                                                     </div>
                                                 </td>
                                                 <td>
-                                                    <a href="{{locale_route('apartment.show',$floor->id)}}">
+                                                    <a href="{{locale_route('floor.show',$floor->id)}}">
                                                         <i class="material-icons">remove_red_eye</i>
                                                     </a>
                                                     <a href="{{locale_route('floor.edit',$floor->id)}}"

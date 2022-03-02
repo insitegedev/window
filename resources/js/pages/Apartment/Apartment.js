@@ -9,7 +9,7 @@ import "./Apartment.css";
 import { Link, Head } from "@inertiajs/inertia-react";
 import Pdf from "/img/icons/apartment/file.svg";
 
-const Apartment = ({ page, apartment }) => {
+const Apartment = ({ apartment }) => {
     const specifications = [
         "Hall - 6.3 m",
         "Bathroom - 4.4 m",
@@ -20,6 +20,11 @@ const Apartment = ({ page, apartment }) => {
     ];
     return (
         <Layout>
+            <Head>
+                <title>{apartment.meta_title}</title>
+                <meta name="description" content={apartment.meta_description} />
+                <meta name="keywords" content={apartment.meta_keyword} />
+            </Head>
             <div className="apartmentPage">
                 <Showcase short />
                 <BackButton color="#334E60" />
@@ -52,7 +57,7 @@ const Apartment = ({ page, apartment }) => {
                         </div>
                         <h6>total area</h6>
                         <h1 className="total_area">
-                            58.3 M<sup>2</sup>
+                            {apartment.area}<sup>2</sup>
                         </h1>
                         {apartment.pdf && <a href={"/" + apartment.pdf.path + "/" + apartment.pdf.title} target="_blank"
                             className="flex centered pdf">

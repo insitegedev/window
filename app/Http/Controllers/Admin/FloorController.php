@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\ApartmentRequest;
+use App\Http\Requests\Admin\FloorRequest;
 use App\Http\Requests\Admin\ProductRequest;
 use App\Http\Requests\Admin\SettingRequest;
 use App\Models\Apartment;
@@ -39,10 +40,10 @@ class FloorController extends Controller
 
 
     /**
-     * @param SettingRequest $request
+     * @param FloorRequest $request
      * @return Application|Factory|View
      */
-    public function index(SettingRequest $request)
+    public function index(FloorRequest $request)
     {
         return view('admin.pages.floor.index', [
             'floors' => $this->floorRepository->getData($request, ['translations', 'apartment_relation'])
@@ -55,10 +56,10 @@ class FloorController extends Controller
      * @param Setting $setting
      * @return Application|Factory|View
      */
-    public function show(string $locale, Apartment $apartment)
+    public function show(string $locale, Floor $floor)
     {
-        return view('admin.pages.apartment.show', [
-            'apartment' => $apartment,
+        return view('admin.pages.floor.show', [
+            'floor' => $floor,
         ]);
     }
 
@@ -88,16 +89,17 @@ class FloorController extends Controller
      * @param Setting $setting
      * @return Application|RedirectResponse|Redirector
      */
-    public function update(Request $request, string $locale, Floor $floor)
+    public function update(FloorRequest $request, string $locale, Floor $floor)
     {
         $saveData = Arr::except($request->except('_token'), []);
         $saveData['status'] = isset($saveData['status']) && (bool)$saveData['status'];
+        $saveData['status'] = true;
         $this->floorRepository->update($floor->id,$saveData);
         $this->floorRepository->saveFiles($floor->id, $request);
 
 
 
 
-        return redirect(locale_route('apartment.show', $floor->id))->with('success', __('admin.update_successfully'));
+        return redirect(locale_route('floor.show', $floor->id))->with('success', __('admin.update_successfully'));
     }
 }

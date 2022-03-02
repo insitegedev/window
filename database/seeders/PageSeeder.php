@@ -34,7 +34,11 @@ class PageSeeder extends Seeder
             ],
             [
                 'key' => 'contact'
+            ],
+            [
+                'key' => 'choose_floor'
             ]
+
 
         ];
 

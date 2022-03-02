@@ -21,7 +21,7 @@ class ApartmentController extends Controller
 
     public function showFloor($locale, $slug)
     {
-        $page = Page::where('key', 'home')->firstOrFail();
+        $page = Page::where('key', 'choose_apartment')->firstOrFail();
 //        $apartments = Floor::whereHas('apartment', function (Builder $query) use ($slug) {
 //            $query->where('title', $slug);
 //        })->with(["apartment"])->get();

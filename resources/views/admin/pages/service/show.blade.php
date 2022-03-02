@@ -22,13 +22,13 @@
                 <a href="{{locale_route('service.edit',$service->id)}}" class="btn-small indigo">
                     @lang('admin.edit')
                 </a>
-                <a class="btn-small -settings waves-effect -light -btn right ml-3"
-                   href="{{locale_route('service.destroy',$service->id)}}"
-                   onclick="return confirm('Are you sure?')">
-                    <span class="hide-on-small-onl">
-                        @lang('admin.delete')
-                    </span>
-                </a>
+{{--                <a class="btn-small -settings waves-effect -light -btn right ml-3"--}}
+{{--                   href="{{locale_route('service.destroy',$service->id)}}"--}}
+{{--                   onclick="return confirm('Are you sure?')">--}}
+{{--                    <span class="hide-on-small-onl">--}}
+{{--                        @lang('admin.delete')--}}
+{{--                    </span>--}}
+{{--                </a>--}}
             </div>
         </div>
     </div>

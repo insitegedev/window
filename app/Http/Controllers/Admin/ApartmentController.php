@@ -4,21 +4,14 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\ApartmentRequest;
-use App\Http\Requests\Admin\ProductRequest;
 use App\Http\Requests\Admin\SettingRequest;
 use App\Models\Apartment;
-use App\Models\Category;
-use App\Models\Product;
 use App\Models\Setting;
 use App\Repositories\ApartmentRepositoryInterface;
-use App\Repositories\CategoryRepositoryInterface;
-use App\Repositories\ProductRepositoryInterface;
-use App\Repositories\SettingRepositoryInterface;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
-use Illuminate\Http\Request;
 use Illuminate\Routing\Redirector;
 use Illuminate\Support\Arr;
 
@@ -37,10 +30,10 @@ class ApartmentController extends Controller
 
 
     /**
-     * @param SettingRequest $request
+     * @param ApartmentRequest $request
      * @return Application|Factory|View
      */
-    public function index(SettingRequest $request)
+    public function index(ApartmentRequest $request)
     {
         return view('admin.pages.apartment.index', [
             'apartments' => $this->apartmentRepository->getData($request, ['translations'])

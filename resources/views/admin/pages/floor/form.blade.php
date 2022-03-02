@@ -20,8 +20,11 @@
             <div id="basic-form" class="card card card-default scrollspy">
                 <div class="card-content">
                     <input name="old-images[]" id="old_images" hidden disabled value="{{$floor->files}}">
+
                     <h4 class="card-title">{{ __('admin.floor-update') }}</h4>
                     {!! Form::model($floor,['url' => $url, 'method' => $method,'files' => true]) !!}
+                    {!! Form::text('old_pdf',$floor->pdf,['hidden','id'=>'old-main-1']) !!}
+
                     <div class="row">
                         <div class="col s12 m6 8">
                             <div class="row">
@@ -150,7 +153,7 @@
                                     <select name="apartment_id" class="select2 js-example-programmatic browser-default">
                                         <optgroup>
                                             @foreach($apartments as $key => $apartment)
-                                                <option value="{{$apartment->id}}" {{$key === 0 ? 'selected' : ''}} {{$floor->apartment_id === $apartment->id ? 'selected' : ''}}>
+                                                <option disabled value="{{$apartment->id}}" {{$key === 0 ? 'selected' : ''}} {{$floor->apartment_id === $apartment->id ? 'selected' : ''}}>
                                                     {{$apartment->title}}
                                                 </option>
                                             @endforeach
@@ -168,18 +171,18 @@
                                 <div class="col s12 mt-3 mb-3">
                                     <label>
                                         <input type="checkbox" name="status"
-                                               value="true" {{$floor->status ? 'checked' : ''}}>
+                                               value="true" {{$floor->status ? 'checked' : ''}} disabled>
                                         <span>{{__('admin.status')}}</span>
                                     </label>
                                 </div>
 
                             </div>
                             <div>
-                                <h5>@lang('admin.pdf')</h5>
+                                <h6>@lang('admin.pdf')</h6>
                                 <div class="input-field">
                                     <input
+                                        id="input-file-now-1" class="dropify dropify-1"
                                         type="file"
-                                        id="input-file-events"
                                         class="dropify"
                                         name="pdf"
                                         @if($floor->pdf)
@@ -190,6 +193,8 @@
                             </div>
 
                             <div class="form-group">
+                                <h6>@lang('admin.image')</h6>
+
                                 <div class="input-images"></div>
                                 @if ($errors->has('images'))
                                     <span class="help-block">
