@@ -138,12 +138,12 @@ const ChooseFloor = ({ page, urlPrev, apartments }) => {
                                                 fontWeight: "bold",
                                             }}
                                         >
-                                            {flat.status === 0
-                                                ? "sold"
-                                                : flat.dimension}
+                                            {flat.dimension}
                                             <sup>
-                                                {flat.status === 0 ? "" : "2"}
+                                                2
                                             </sup>
+                                            <br/>
+                                            {flat.status === 0 ? __("sold") : ""}
                                         </button>
                                     }
                                 >

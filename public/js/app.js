@@ -7999,7 +7999,7 @@ var ChooseFloor = function ChooseFloor(_ref) {
           fontSize: "16px",
           fontWeight: "bold"
         }
-      }, flat.status === 0 ? "sold" : flat.dimension, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("sup", null, flat.status === 0 ? "" : "2"))
+      }, flat.dimension, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("sup", null, "2"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("br", null), flat.status === 0 ? __("sold") : "")
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
       href: route("client.apartment.index", flat.slug),
       onMouseEnter: function onMouseEnter() {
@@ -8009,7 +8009,6 @@ var ChooseFloor = function ChooseFloor(_ref) {
         return setFlatIndex(0);
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("polygon", {
-      dataText: "sdjnfskd",
       key: index,
       className: flat.status === 0 ? "st0 sold" : "st0",
       points: flat.points
@@ -8150,14 +8149,14 @@ var ChooseFloor = function ChooseFloor(_ref) {
   }, __("a_block")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
     className: "flex centered"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
-    href: route('client.showFloor.index', "A1"),
+    href: route("client.showFloor.index", "A1"),
     className: "left"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_img_icons_sm_smIcons__WEBPACK_IMPORTED_MODULE_2__.ArrowRight, {
     color: "#334E60"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
     className: "bold"
   }, apartments.floor), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
-    href: route('client.showFloor.index', "A3")
+    href: route("client.showFloor.index", "A3")
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_img_icons_sm_smIcons__WEBPACK_IMPORTED_MODULE_2__.ArrowRight, {
     color: "#334E60"
   })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
@@ -8196,7 +8195,7 @@ var ChooseFloor = function ChooseFloor(_ref) {
           fontSize: "16px",
           fontWeight: "bold"
         }
-      }, flat.dimension, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("sup", null, "2"))
+      }, flat.status === 0 ? "sold" : flat.dimension, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("sup", null, flat.status === 0 ? "" : "2"))
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
       href: route("client.apartment.index", flat.slug),
       onMouseEnter: function onMouseEnter() {
@@ -8206,9 +8205,8 @@ var ChooseFloor = function ChooseFloor(_ref) {
         return setFlatIndex(0);
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("polygon", {
-      dataText: "sdjnfskd",
       key: index,
-      className: "st0",
+      className: flat.status === 0 ? "st0 sold" : "st0",
       points: flat.points
     })));
   })))));
@@ -8347,14 +8345,14 @@ var ChooseFloor = function ChooseFloor(_ref) {
   }, __("a_block")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
     className: "flex centered"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
-    href: route('client.showFloor.index', "A2"),
+    href: route("client.showFloor.index", "A2"),
     className: "left"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_img_icons_sm_smIcons__WEBPACK_IMPORTED_MODULE_2__.ArrowRight, {
     color: "#334E60"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
     className: "bold"
   }, apartments.floor), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
-    href: route('client.showFloor.index', "A4")
+    href: route("client.showFloor.index", "A4")
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_img_icons_sm_smIcons__WEBPACK_IMPORTED_MODULE_2__.ArrowRight, {
     color: "#334E60"
   })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
@@ -8393,7 +8391,7 @@ var ChooseFloor = function ChooseFloor(_ref) {
           fontSize: "16px",
           fontWeight: "bold"
         }
-      }, flat.dimension, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("sup", null, "2"))
+      }, flat.status === 0 ? "sold" : flat.dimension, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("sup", null, flat.status === 0 ? "" : "2"))
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
       href: route("client.apartment.index", flat.slug),
       onMouseEnter: function onMouseEnter() {
@@ -8403,9 +8401,8 @@ var ChooseFloor = function ChooseFloor(_ref) {
         return setFlatIndex(0);
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("polygon", {
-      dataText: "sdjnfskd",
       key: index,
-      className: "st0",
+      className: flat.status === 0 ? "st0 sold" : "st0",
       points: flat.points
     })));
   })))));
@@ -8528,14 +8525,14 @@ var ChooseFloor = function ChooseFloor(_ref) {
   }, __("a_block")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
     className: "flex centered"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
-    href: route('client.showFloor.index', "A3"),
+    href: route("client.showFloor.index", "A3"),
     className: "left"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_img_icons_sm_smIcons__WEBPACK_IMPORTED_MODULE_2__.ArrowRight, {
     color: "#334E60"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
     className: "bold"
   }, apartments.floor), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
-    href: route('client.showFloor.index', "B2")
+    href: route("client.showFloor.index", "B2")
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_img_icons_sm_smIcons__WEBPACK_IMPORTED_MODULE_2__.ArrowRight, {
     color: "#334E60"
   })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
@@ -8574,7 +8571,7 @@ var ChooseFloor = function ChooseFloor(_ref) {
           fontSize: "16px",
           fontWeight: "bold"
         }
-      }, flat.dimension, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("sup", null, "2"))
+      }, flat.status === 0 ? "sold" : flat.dimension, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("sup", null, flat.status === 0 ? "" : "2"))
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
       href: route("client.apartment.index", flat.slug),
       onMouseEnter: function onMouseEnter() {
@@ -8584,9 +8581,8 @@ var ChooseFloor = function ChooseFloor(_ref) {
         return setFlatIndex(0);
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("polygon", {
-      dataText: "sdjnfskd",
       key: index,
-      className: "st0",
+      className: flat.status === 0 ? "st0 sold" : "st0",
       points: flat.points
     })));
   })))));
@@ -8697,14 +8693,14 @@ var ChooseFloor = function ChooseFloor(_ref) {
   }, __("b_block")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
     className: "flex centered"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
-    href: route('client.showFloor.index', "A4"),
+    href: route("client.showFloor.index", "A4"),
     className: "left"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_img_icons_sm_smIcons__WEBPACK_IMPORTED_MODULE_2__.ArrowRight, {
     color: "#334E60"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
     className: "bold"
   }, apartments.floor), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
-    href: route('client.showFloor.index', "B2")
+    href: route("client.showFloor.index", "B2")
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_img_icons_sm_smIcons__WEBPACK_IMPORTED_MODULE_2__.ArrowRight, {
     color: "#334E60"
   })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
@@ -8743,7 +8739,7 @@ var ChooseFloor = function ChooseFloor(_ref) {
           fontSize: "16px",
           fontWeight: "bold"
         }
-      }, flat.dimension, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("sup", null, "2"))
+      }, flat.status === 0 ? "sold" : flat.dimension, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("sup", null, flat.status === 0 ? "" : "2"))
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
       href: route("client.apartment.index", flat.slug),
       onMouseEnter: function onMouseEnter() {
@@ -8753,9 +8749,8 @@ var ChooseFloor = function ChooseFloor(_ref) {
         return setFlatIndex(0);
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("polygon", {
-      dataText: "sdjnfskd",
       key: index,
-      className: "st0",
+      className: flat.status === 0 ? "st0 sold" : "st0",
       points: flat.points
     })));
   })))));
@@ -8866,14 +8861,14 @@ var ChooseFloor = function ChooseFloor(_ref) {
   }, __("b_block")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
     className: "flex centered"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
-    href: route('client.showFloor.index', "B1"),
+    href: route("client.showFloor.index", "B1"),
     className: "left"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_img_icons_sm_smIcons__WEBPACK_IMPORTED_MODULE_2__.ArrowRight, {
     color: "#334E60"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
     className: "bold"
   }, apartments.floor), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
-    href: route('client.showFloor.index', "B3")
+    href: route("client.showFloor.index", "B3")
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_img_icons_sm_smIcons__WEBPACK_IMPORTED_MODULE_2__.ArrowRight, {
     color: "#334E60"
   })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
@@ -8912,7 +8907,7 @@ var ChooseFloor = function ChooseFloor(_ref) {
           fontSize: "16px",
           fontWeight: "bold"
         }
-      }, flat.dimension, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("sup", null, "2"))
+      }, flat.status === 0 ? "sold" : flat.dimension, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("sup", null, flat.status === 0 ? "" : "2"))
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
       href: route("client.apartment.index", flat.slug),
       onMouseEnter: function onMouseEnter() {
@@ -8922,9 +8917,8 @@ var ChooseFloor = function ChooseFloor(_ref) {
         return setFlatIndex(0);
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("polygon", {
-      dataText: "sdjnfskd",
       key: index,
-      className: "st0",
+      className: flat.status === 0 ? "st0 sold" : "st0",
       points: flat.points
     })));
   })))));
@@ -9043,14 +9037,14 @@ var ChooseFloor = function ChooseFloor(_ref) {
   }, __("b_block")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
     className: "flex centered"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
-    href: route('client.showFloor.index', "B2"),
+    href: route("client.showFloor.index", "B2"),
     className: "left"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_img_icons_sm_smIcons__WEBPACK_IMPORTED_MODULE_2__.ArrowRight, {
     color: "#334E60"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
     className: "bold"
   }, apartments.floor), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
-    href: route('client.showFloor.index', "B4")
+    href: route("client.showFloor.index", "B4")
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_img_icons_sm_smIcons__WEBPACK_IMPORTED_MODULE_2__.ArrowRight, {
     color: "#334E60"
   })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
@@ -9089,7 +9083,7 @@ var ChooseFloor = function ChooseFloor(_ref) {
           fontSize: "16px",
           fontWeight: "bold"
         }
-      }, flat.dimension, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("sup", null, "2"))
+      }, flat.status === 0 ? "sold" : flat.dimension, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("sup", null, flat.status === 0 ? "" : "2"))
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
       href: route("client.apartment.index", flat.slug),
       onMouseEnter: function onMouseEnter() {
@@ -9099,9 +9093,8 @@ var ChooseFloor = function ChooseFloor(_ref) {
         return setFlatIndex(0);
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("polygon", {
-      dataText: "sdjnfskd",
       key: index,
-      className: "st0",
+      className: flat.status === 0 ? "st0 sold" : "st0",
       points: flat.points
     })));
   })))));
@@ -9224,7 +9217,7 @@ var ChooseFloor = function ChooseFloor(_ref) {
   }, __("b_block")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
     className: "flex centered"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
-    href: route('client.showFloor.index', "B3"),
+    href: route("client.showFloor.index", "B3"),
     className: "left"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_img_icons_sm_smIcons__WEBPACK_IMPORTED_MODULE_2__.ArrowRight, {
     color: "#334E60"
@@ -9270,7 +9263,7 @@ var ChooseFloor = function ChooseFloor(_ref) {
           fontSize: "16px",
           fontWeight: "bold"
         }
-      }, flat.dimension, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("sup", null, "2"))
+      }, flat.status === 0 ? "sold" : flat.dimension, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("sup", null, flat.status === 0 ? "" : "2"))
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
       href: route("client.apartment.index", flat.slug),
       onMouseEnter: function onMouseEnter() {
@@ -9280,9 +9273,8 @@ var ChooseFloor = function ChooseFloor(_ref) {
         return setFlatIndex(0);
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("polygon", {
-      dataText: "sdjnfskd",
       key: index,
-      className: "st0",
+      className: flat.status === 0 ? "st0 sold" : "st0",
       points: flat.points
     })));
   })))));
@@ -11453,7 +11445,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".floorPlan {\r\n    padding-bottom: 240px;\r\n}\r\n.floorPlan .background {\r\n    position: fixed;\r\n    left: 0;\r\n    top: 0;\r\n    width: 100%;\r\n    height: 100vh;\r\n    z-index: -1;\r\n}\r\n.floorPlan .back_button {\r\n    flex-direction: column;\r\n}\r\n.floorPlan .back_button .text {\r\n    opacity: 1;\r\n    margin-left: 0;\r\n    margin-top: 10px;\r\n}\r\n.floorPlan .head {\r\n    text-align: center;\r\n    color: #334e60;\r\n    text-transform: uppercase;\r\n    margin-bottom: 84px;\r\n    padding-top: 32px;\r\n    font-weight: bold;\r\n}\r\n.floorPlan .head .block {\r\n    opacity: 0.5;\r\n    font-size: 29px;\r\n    margin-bottom: 10px;\r\n}\r\n.floorPlan .head .disabled {\r\n    opacity: 0.5;\r\n    cursor: default;\r\n}\r\n.floorPlan .head .flex .bold {\r\n    font-size: 46px;\r\n    margin: 0px 15px;\r\n}\r\n.floorPlan .head .left {\r\n    transform: rotate(180deg) translateY(5px);\r\n}\r\n.floorPlan .container {\r\n    width: 1500px;\r\n    margin: auto;\r\n    position: relative;\r\n}\r\n.floorPlan .container svg {\r\n    width: 100%;\r\n}\r\n.floorPlan .st0 {\r\n    opacity: 0;\r\n    transition: 0.3s;\r\n    fill: #126d2a;\r\n}\r\n.floorPlan .sold .st0 {\r\n    fill: #6d1212;\r\n}\r\n.floorPlan .st0:hover {\r\n    opacity: 0.6;\r\n}\r\n:root {\r\n    --tooltip-position: translateY(180px) translateX(-50%);\r\n    --tooltip-position2: translateY(50px) translateX(-50%);\r\n}\r\n\r\n@media screen and (max-width: 1550px) {\r\n    .floorPlan .container {\r\n        width: 95%;\r\n    }\r\n}\r\n@media screen and (max-width: 1200px) {\r\n    .floorPlan .head .block {\r\n        font-size: 20px;\r\n        margin-bottom: 5px;\r\n    }\r\n    .floorPlan .head .flex .bold {\r\n        font-size: 30px;\r\n        margin: 0px 12px;\r\n    }\r\n    .floorPlan .head .flex svg {\r\n        width: 18px;\r\n    }\r\n}\r\n@media screen and (max-width: 1000px) {\r\n    :root {\r\n        --tooltip-position: translateY(50px) translateX(-50%);\r\n        --tooltip-position2: translateY(0px) translateX(-50%);\r\n    }\r\n}\r\n@media screen and (max-width: 700px) {\r\n    :root {\r\n        --tooltip-position: translateY(0) translateX(-50%);\r\n    }\r\n    .floorPlan .head {\r\n        margin-bottom: 47px;\r\n        padding-top: 141px;\r\n    }\r\n    .floorPlan .back_button {\r\n        flex-direction: row;\r\n    }\r\n    .floorPlan .back_button .text {\r\n        margin-left: 10px;\r\n        margin-top: 0;\r\n    }\r\n    .floorPlan {\r\n        padding-bottom: 83px;\r\n    }\r\n}\r\n@media screen and (max-width: 500px) {\r\n    .floorPlan {\r\n        padding-bottom: 129px;\r\n    }\r\n    .floor .floorPlan .head {\r\n        padding-top: 85px;\r\n    }\r\n    .floorPlan .head .flex .bold {\r\n        font-size: 25px;\r\n    }\r\n    .floorPlan .head .block {\r\n        font-size: 17px;\r\n        margin-bottom: 9px;\r\n    }\r\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".floorPlan {\r\n    padding-bottom: 240px;\r\n}\r\n.floorPlan .background {\r\n    position: fixed;\r\n    left: 0;\r\n    top: 0;\r\n    width: 100%;\r\n    height: 100vh;\r\n    z-index: -1;\r\n}\r\n.floorPlan .back_button {\r\n    flex-direction: column;\r\n}\r\n.floorPlan .back_button .text {\r\n    opacity: 1;\r\n    margin-left: 0;\r\n    margin-top: 10px;\r\n}\r\n.floorPlan .head {\r\n    text-align: center;\r\n    color: #334e60;\r\n    text-transform: uppercase;\r\n    margin-bottom: 84px;\r\n    padding-top: 32px;\r\n    font-weight: bold;\r\n}\r\n.floorPlan .head .block {\r\n    opacity: 0.5;\r\n    font-size: 29px;\r\n    margin-bottom: 10px;\r\n}\r\n.floorPlan .head .disabled {\r\n    opacity: 0.5;\r\n    cursor: default;\r\n}\r\n.floorPlan .head .flex .bold {\r\n    font-size: 46px;\r\n    margin: 0px 15px;\r\n}\r\n.floorPlan .head .left {\r\n    transform: rotate(180deg) translateY(5px);\r\n}\r\n.floorPlan .container {\r\n    width: 1500px;\r\n    margin: auto;\r\n    position: relative;\r\n}\r\n.floorPlan .container svg {\r\n    width: 100%;\r\n}\r\n.floorPlan .st0 {\r\n    opacity: 0;\r\n    transition: 0.3s;\r\n    fill: #126d2a;\r\n}\r\n.floorPlan .st0.sold {\r\n    fill: #6d1212;\r\n    cursor: default;\r\n}\r\n.floorPlan .st0:hover {\r\n    opacity: 0.6;\r\n}\r\n:root {\r\n    --tooltip-position: translateY(180px) translateX(-50%);\r\n    --tooltip-position2: translateY(50px) translateX(-50%);\r\n}\r\n\r\n@media screen and (max-width: 1550px) {\r\n    .floorPlan .container {\r\n        width: 95%;\r\n    }\r\n}\r\n@media screen and (max-width: 1200px) {\r\n    .floorPlan .head .block {\r\n        font-size: 20px;\r\n        margin-bottom: 5px;\r\n    }\r\n    .floorPlan .head .flex .bold {\r\n        font-size: 30px;\r\n        margin: 0px 12px;\r\n    }\r\n    .floorPlan .head .flex svg {\r\n        width: 18px;\r\n    }\r\n}\r\n@media screen and (max-width: 1000px) {\r\n    :root {\r\n        --tooltip-position: translateY(50px) translateX(-50%);\r\n        --tooltip-position2: translateY(0px) translateX(-50%);\r\n    }\r\n}\r\n@media screen and (max-width: 700px) {\r\n    :root {\r\n        --tooltip-position: translateY(0) translateX(-50%);\r\n    }\r\n    .floorPlan .head {\r\n        margin-bottom: 47px;\r\n        padding-top: 141px;\r\n    }\r\n    .floorPlan .back_button {\r\n        flex-direction: row;\r\n    }\r\n    .floorPlan .back_button .text {\r\n        margin-left: 10px;\r\n        margin-top: 0;\r\n    }\r\n    .floorPlan {\r\n        padding-bottom: 83px;\r\n    }\r\n}\r\n@media screen and (max-width: 500px) {\r\n    .floorPlan {\r\n        padding-bottom: 129px;\r\n    }\r\n    .floor .floorPlan .head {\r\n        padding-top: 85px;\r\n    }\r\n    .floorPlan .head .flex .bold {\r\n        font-size: 25px;\r\n    }\r\n    .floorPlan .head .block {\r\n        font-size: 17px;\r\n        margin-bottom: 9px;\r\n    }\r\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -11477,7 +11469,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".floorPlan {\r\n    padding-bottom: 240px;\r\n}\r\n.floorPlan .background {\r\n    position: fixed;\r\n    left: 0;\r\n    top: 0;\r\n    width: 100%;\r\n    height: 100vh;\r\n    z-index: -1;\r\n}\r\n.floorPlan .back_button {\r\n    flex-direction: column;\r\n}\r\n.floorPlan .back_button .text {\r\n    opacity: 1;\r\n    margin-left: 0;\r\n    margin-top: 10px;\r\n}\r\n.floorPlan .head {\r\n    text-align: center;\r\n    color: #334e60;\r\n    text-transform: uppercase;\r\n    margin-bottom: 84px;\r\n    padding-top: 32px;\r\n    font-weight: bold;\r\n}\r\n.floorPlan .head .block {\r\n    opacity: 0.5;\r\n    font-size: 29px;\r\n    margin-bottom: 10px;\r\n}\r\n.floorPlan .head .disabled {\r\n    opacity: 0.5;\r\n    cursor: default;\r\n}\r\n.floorPlan .head .flex .bold {\r\n    font-size: 46px;\r\n    margin: 0px 15px;\r\n}\r\n.floorPlan .head .left {\r\n    transform: rotate(180deg) translateY(5px);\r\n}\r\n.floorPlan .container {\r\n    width: 1500px;\r\n    margin: auto;\r\n    position: relative;\r\n}\r\n.floorPlan .container svg {\r\n    width: 100%;\r\n}\r\n.floorPlan .st0 {\r\n    opacity: 0;\r\n    transition: 0.3s;\r\n    fill: #126d2a;\r\n}\r\n.floorPlan .sold .st0 {\r\n    fill: #6d1212;\r\n}\r\n.floorPlan .st0:hover {\r\n    opacity: 0.6;\r\n}\r\n:root {\r\n    --tooltip-position: translateY(180px) translateX(-50%);\r\n    --tooltip-position2: translateY(50px) translateX(-50%);\r\n}\r\n\r\n@media screen and (max-width: 1550px) {\r\n    .floorPlan .container {\r\n        width: 95%;\r\n    }\r\n}\r\n@media screen and (max-width: 1200px) {\r\n    .floorPlan .head .block {\r\n        font-size: 20px;\r\n        margin-bottom: 5px;\r\n    }\r\n    .floorPlan .head .flex .bold {\r\n        font-size: 30px;\r\n        margin: 0px 12px;\r\n    }\r\n    .floorPlan .head .flex svg {\r\n        width: 18px;\r\n    }\r\n}\r\n@media screen and (max-width: 1000px) {\r\n    :root {\r\n        --tooltip-position: translateY(50px) translateX(-50%);\r\n        --tooltip-position2: translateY(0px) translateX(-50%);\r\n    }\r\n}\r\n@media screen and (max-width: 700px) {\r\n    :root {\r\n        --tooltip-position: translateY(0) translateX(-50%);\r\n    }\r\n    .floorPlan .head {\r\n        margin-bottom: 47px;\r\n        padding-top: 141px;\r\n    }\r\n    .floorPlan .back_button {\r\n        flex-direction: row;\r\n    }\r\n    .floorPlan .back_button .text {\r\n        margin-left: 10px;\r\n        margin-top: 0;\r\n    }\r\n    .floorPlan {\r\n        padding-bottom: 83px;\r\n    }\r\n}\r\n@media screen and (max-width: 500px) {\r\n    .floorPlan {\r\n        padding-bottom: 129px;\r\n    }\r\n    .floor .floorPlan .head {\r\n        padding-top: 85px;\r\n    }\r\n    .floorPlan .head .flex .bold {\r\n        font-size: 25px;\r\n    }\r\n    .floorPlan .head .block {\r\n        font-size: 17px;\r\n        margin-bottom: 9px;\r\n    }\r\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".floorPlan {\r\n    padding-bottom: 240px;\r\n}\r\n.floorPlan .background {\r\n    position: fixed;\r\n    left: 0;\r\n    top: 0;\r\n    width: 100%;\r\n    height: 100vh;\r\n    z-index: -1;\r\n}\r\n.floorPlan .back_button {\r\n    flex-direction: column;\r\n}\r\n.floorPlan .back_button .text {\r\n    opacity: 1;\r\n    margin-left: 0;\r\n    margin-top: 10px;\r\n}\r\n.floorPlan .head {\r\n    text-align: center;\r\n    color: #334e60;\r\n    text-transform: uppercase;\r\n    margin-bottom: 84px;\r\n    padding-top: 32px;\r\n    font-weight: bold;\r\n}\r\n.floorPlan .head .block {\r\n    opacity: 0.5;\r\n    font-size: 29px;\r\n    margin-bottom: 10px;\r\n}\r\n.floorPlan .head .disabled {\r\n    opacity: 0.5;\r\n    cursor: default;\r\n}\r\n.floorPlan .head .flex .bold {\r\n    font-size: 46px;\r\n    margin: 0px 15px;\r\n}\r\n.floorPlan .head .left {\r\n    transform: rotate(180deg) translateY(5px);\r\n}\r\n.floorPlan .container {\r\n    width: 1500px;\r\n    margin: auto;\r\n    position: relative;\r\n}\r\n.floorPlan .container svg {\r\n    width: 100%;\r\n}\r\n.floorPlan .st0 {\r\n    opacity: 0;\r\n    transition: 0.3s;\r\n    fill: #126d2a;\r\n}\r\n.floorPlan .st0.sold {\r\n    fill: #6d1212;\r\n    cursor: default;\r\n}\r\n.floorPlan .st0:hover {\r\n    opacity: 0.6;\r\n}\r\n:root {\r\n    --tooltip-position: translateY(180px) translateX(-50%);\r\n    --tooltip-position2: translateY(50px) translateX(-50%);\r\n}\r\n\r\n@media screen and (max-width: 1550px) {\r\n    .floorPlan .container {\r\n        width: 95%;\r\n    }\r\n}\r\n@media screen and (max-width: 1200px) {\r\n    .floorPlan .head .block {\r\n        font-size: 20px;\r\n        margin-bottom: 5px;\r\n    }\r\n    .floorPlan .head .flex .bold {\r\n        font-size: 30px;\r\n        margin: 0px 12px;\r\n    }\r\n    .floorPlan .head .flex svg {\r\n        width: 18px;\r\n    }\r\n}\r\n@media screen and (max-width: 1000px) {\r\n    :root {\r\n        --tooltip-position: translateY(50px) translateX(-50%);\r\n        --tooltip-position2: translateY(0px) translateX(-50%);\r\n    }\r\n}\r\n@media screen and (max-width: 700px) {\r\n    :root {\r\n        --tooltip-position: translateY(0) translateX(-50%);\r\n    }\r\n    .floorPlan .head {\r\n        margin-bottom: 47px;\r\n        padding-top: 141px;\r\n    }\r\n    .floorPlan .back_button {\r\n        flex-direction: row;\r\n    }\r\n    .floorPlan .back_button .text {\r\n        margin-left: 10px;\r\n        margin-top: 0;\r\n    }\r\n    .floorPlan {\r\n        padding-bottom: 83px;\r\n    }\r\n}\r\n@media screen and (max-width: 500px) {\r\n    .floorPlan {\r\n        padding-bottom: 129px;\r\n    }\r\n    .floor .floorPlan .head {\r\n        padding-top: 85px;\r\n    }\r\n    .floorPlan .head .flex .bold {\r\n        font-size: 25px;\r\n    }\r\n    .floorPlan .head .block {\r\n        font-size: 17px;\r\n        margin-bottom: 9px;\r\n    }\r\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

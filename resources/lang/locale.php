@@ -53,6 +53,7 @@ return [
     "go_back" => "Go Back",
     "a_block" => "A BLOCK",
     "b_block" => "B BLOCK",
+    "sold" => "Sold",
 
 
 ];

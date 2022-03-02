@@ -171,7 +171,7 @@
                                 <div class="col s12 mt-3 mb-3">
                                     <label>
                                         <input type="checkbox" name="status"
-                                               value="true" {{$floor->status ? 'checked' : ''}} disabled>
+                                               value="true" {{$floor->status ? 'checked' : ''}}>
                                         <span>{{__('admin.status')}}</span>
                                     </label>
                                 </div>
