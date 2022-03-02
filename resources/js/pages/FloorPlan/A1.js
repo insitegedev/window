@@ -92,7 +92,7 @@ const ChooseFloor = ({ urlPrev, apartments }) => {
                             <ArrowRight color="#334E60" />
                         </div>
                         <div className="bold">{apartments.floor}</div>
-                        <Link href={route('client.showFloor.index', "A2")}>
+                        <Link href={route("client.showFloor.index", "A2")}>
                             <ArrowRight color="#334E60" />
                         </Link>
                     </div>
@@ -135,21 +135,32 @@ const ChooseFloor = ({ urlPrev, apartments }) => {
                                                 fontWeight: "bold",
                                             }}
                                         >
-                                            {flat.dimension} <sup>2</sup>
+                                            {flat.status === 0
+                                                ? "sold"
+                                                : flat.dimension}
+                                            <sup>
+                                                {flat.status === 0 ? "" : "2"}
+                                            </sup>
                                         </button>
                                     }
                                 >
                                     <Link
-                                        href={route("client.apartment.index", flat.slug)}
+                                        href={route(
+                                            "client.apartment.index",
+                                            flat.slug
+                                        )}
                                         onMouseEnter={() =>
                                             setFlatIndex(index + 1)
                                         }
                                         onMouseLeave={() => setFlatIndex(0)}
                                     >
                                         <polygon
-                                            dataText="sdjnfskd"
                                             key={index}
-                                            className="st0"
+                                            className={
+                                                flat.status === 0
+                                                    ? "st0 sold"
+                                                    : "st0"
+                                            }
                                             points={flat.points}
                                         />
                                     </Link>

@@ -54,6 +54,10 @@
     transition: 0.3s;
     fill: #126d2a;
 }
+.floorPlan .st0.sold {
+    fill: #6d1212;
+    cursor: default;
+}
 .floorPlan .st0:hover {
     opacity: 0.6;
 }
