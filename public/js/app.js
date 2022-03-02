@@ -7984,6 +7984,7 @@ var ChooseFloor = function ChooseFloor(_ref) {
     xlinkHref: "/img/floorplan/A1.png",
     transform: "matrix(1 0 0 1 7.5 0)"
   }), apartments.floors.map(function (flat, index) {
+    var sold = flat.status === 0;
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_tippyjs_react__WEBPACK_IMPORTED_MODULE_9__["default"], {
       maxWidth: "0",
       arrow: false,
@@ -7999,9 +8000,9 @@ var ChooseFloor = function ChooseFloor(_ref) {
           fontSize: "16px",
           fontWeight: "bold"
         }
-      }, flat.status === 0 ? "sold" : flat.dimension, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("sup", null, flat.status === 0 ? "" : "2"))
+      }, sold ? "sold" : flat.dimension, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("sup", null, sold ? "" : "2"))
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
-      onClick: flat.status === 0 ? function (e) {
+      onClick: sold ? function (e) {
         return e.preventDefault();
       } : null,
       href: route("client.apartment.index", flat.slug),
@@ -8013,7 +8014,7 @@ var ChooseFloor = function ChooseFloor(_ref) {
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("polygon", {
       key: index,
-      className: flat.status === 0 ? "st0 sold" : "st0",
+      className: sold ? "st0 sold" : "st0",
       points: flat.points
     })));
   })))));
@@ -8183,6 +8184,7 @@ var ChooseFloor = function ChooseFloor(_ref) {
     xlinkHref: "/img/floorplan/A2.png",
     transform: "matrix(1 0 0 1 20.5 26.5)"
   }), apartments.floors.map(function (flat, index) {
+    var sold = flat.status === 0;
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_tippyjs_react__WEBPACK_IMPORTED_MODULE_9__["default"], {
       maxWidth: "0",
       arrow: false,
@@ -8198,8 +8200,11 @@ var ChooseFloor = function ChooseFloor(_ref) {
           fontSize: "16px",
           fontWeight: "bold"
         }
-      }, flat.status === 0 ? "sold" : flat.dimension, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("sup", null, flat.status === 0 ? "" : "2"))
+      }, sold ? "sold" : flat.dimension, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("sup", null, sold ? "" : "2"))
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
+      onClick: sold ? function (e) {
+        return e.preventDefault();
+      } : null,
       href: route("client.apartment.index", flat.slug),
       onMouseEnter: function onMouseEnter() {
         return setFlatIndex(index + 1);
@@ -8209,7 +8214,7 @@ var ChooseFloor = function ChooseFloor(_ref) {
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("polygon", {
       key: index,
-      className: flat.status === 0 ? "st0 sold" : "st0",
+      className: sold ? "st0 sold" : "st0",
       points: flat.points
     })));
   })))));
@@ -8379,6 +8384,7 @@ var ChooseFloor = function ChooseFloor(_ref) {
     xlinkHref: "/img/floorplan/A3.png",
     transform: "matrix(1 0 0 1 17 18)"
   }), apartments.floors.map(function (flat, index) {
+    var sold = flat.status === 0;
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_tippyjs_react__WEBPACK_IMPORTED_MODULE_9__["default"], {
       maxWidth: "0",
       arrow: false,
@@ -8394,8 +8400,11 @@ var ChooseFloor = function ChooseFloor(_ref) {
           fontSize: "16px",
           fontWeight: "bold"
         }
-      }, flat.status === 0 ? "sold" : flat.dimension, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("sup", null, flat.status === 0 ? "" : "2"))
+      }, sold ? "sold" : flat.dimension, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("sup", null, sold ? "" : "2"))
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
+      onClick: sold ? function (e) {
+        return e.preventDefault();
+      } : null,
       href: route("client.apartment.index", flat.slug),
       onMouseEnter: function onMouseEnter() {
         return setFlatIndex(index + 1);
@@ -8405,7 +8414,7 @@ var ChooseFloor = function ChooseFloor(_ref) {
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("polygon", {
       key: index,
-      className: flat.status === 0 ? "st0 sold" : "st0",
+      className: sold ? "st0 sold" : "st0",
       points: flat.points
     })));
   })))));
@@ -8559,6 +8568,7 @@ var ChooseFloor = function ChooseFloor(_ref) {
     xlinkHref: "/img/floorplan/A4.png",
     transform: "matrix(1 0 0 1 20 13.5)"
   }), apartments.floors.map(function (flat, index) {
+    var sold = flat.status === 0;
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_tippyjs_react__WEBPACK_IMPORTED_MODULE_9__["default"], {
       maxWidth: "0",
       arrow: false,
@@ -8574,8 +8584,11 @@ var ChooseFloor = function ChooseFloor(_ref) {
           fontSize: "16px",
           fontWeight: "bold"
         }
-      }, flat.status === 0 ? "sold" : flat.dimension, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("sup", null, flat.status === 0 ? "" : "2"))
+      }, sold ? "sold" : flat.dimension, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("sup", null, sold ? "" : "2"))
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
+      onClick: sold ? function (e) {
+        return e.preventDefault();
+      } : null,
       href: route("client.apartment.index", flat.slug),
       onMouseEnter: function onMouseEnter() {
         return setFlatIndex(index + 1);
@@ -8585,7 +8598,7 @@ var ChooseFloor = function ChooseFloor(_ref) {
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("polygon", {
       key: index,
-      className: flat.status === 0 ? "st0 sold" : "st0",
+      className: sold ? "st0 sold" : "st0",
       points: flat.points
     })));
   })))));
@@ -8727,6 +8740,7 @@ var ChooseFloor = function ChooseFloor(_ref) {
     xlinkHref: "/img/floorplan/B2.png",
     transform: "matrix(1 0 0 1 20 16)"
   }), apartments.floors.map(function (flat, index) {
+    var sold = flat.status === 0;
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_tippyjs_react__WEBPACK_IMPORTED_MODULE_9__["default"], {
       maxWidth: "0",
       arrow: false,
@@ -8742,8 +8756,11 @@ var ChooseFloor = function ChooseFloor(_ref) {
           fontSize: "16px",
           fontWeight: "bold"
         }
-      }, flat.status === 0 ? "sold" : flat.dimension, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("sup", null, flat.status === 0 ? "" : "2"))
+      }, sold ? "sold" : flat.dimension, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("sup", null, sold ? "" : "2"))
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
+      onClick: sold ? function (e) {
+        return e.preventDefault();
+      } : null,
       href: route("client.apartment.index", flat.slug),
       onMouseEnter: function onMouseEnter() {
         return setFlatIndex(index + 1);
@@ -8753,7 +8770,7 @@ var ChooseFloor = function ChooseFloor(_ref) {
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("polygon", {
       key: index,
-      className: flat.status === 0 ? "st0 sold" : "st0",
+      className: sold ? "st0 sold" : "st0",
       points: flat.points
     })));
   })))));
@@ -8895,6 +8912,7 @@ var ChooseFloor = function ChooseFloor(_ref) {
     xlinkHref: "/img/floorplan/B2.png",
     transform: "matrix(1 0 0 1 20 16)"
   }), apartments.floors.map(function (flat, index) {
+    var sold = flat.status === 0;
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_tippyjs_react__WEBPACK_IMPORTED_MODULE_9__["default"], {
       maxWidth: "0",
       arrow: false,
@@ -8910,8 +8928,11 @@ var ChooseFloor = function ChooseFloor(_ref) {
           fontSize: "16px",
           fontWeight: "bold"
         }
-      }, flat.status === 0 ? "sold" : flat.dimension, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("sup", null, flat.status === 0 ? "" : "2"))
+      }, sold ? "sold" : flat.dimension, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("sup", null, sold ? "" : "2"))
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
+      onClick: sold ? function (e) {
+        return e.preventDefault();
+      } : null,
       href: route("client.apartment.index", flat.slug),
       onMouseEnter: function onMouseEnter() {
         return setFlatIndex(index + 1);
@@ -8921,7 +8942,7 @@ var ChooseFloor = function ChooseFloor(_ref) {
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("polygon", {
       key: index,
-      className: flat.status === 0 ? "st0 sold" : "st0",
+      className: sold ? "st0 sold" : "st0",
       points: flat.points
     })));
   })))));
@@ -9071,6 +9092,7 @@ var ChooseFloor = function ChooseFloor(_ref) {
     xlinkHref: "/img/floorplan/B3.png",
     transform: "matrix(1 0 0 1 3.5 5.5)"
   }), apartments.floors.map(function (flat, index) {
+    var sold = flat.status === 0;
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_tippyjs_react__WEBPACK_IMPORTED_MODULE_9__["default"], {
       maxWidth: "0",
       arrow: false,
@@ -9086,8 +9108,11 @@ var ChooseFloor = function ChooseFloor(_ref) {
           fontSize: "16px",
           fontWeight: "bold"
         }
-      }, flat.status === 0 ? "sold" : flat.dimension, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("sup", null, flat.status === 0 ? "" : "2"))
+      }, sold ? "sold" : flat.dimension, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("sup", null, sold ? "" : "2"))
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
+      onClick: sold ? function (e) {
+        return e.preventDefault();
+      } : null,
       href: route("client.apartment.index", flat.slug),
       onMouseEnter: function onMouseEnter() {
         return setFlatIndex(index + 1);
@@ -9097,7 +9122,7 @@ var ChooseFloor = function ChooseFloor(_ref) {
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("polygon", {
       key: index,
-      className: flat.status === 0 ? "st0 sold" : "st0",
+      className: sold ? "st0 sold" : "st0",
       points: flat.points
     })));
   })))));
@@ -9251,6 +9276,7 @@ var ChooseFloor = function ChooseFloor(_ref) {
     xlinkHref: "/img/floorplan/B4.png",
     transform: "matrix(1 0 0 1 19.5 24.5)"
   }), apartments.floors.map(function (flat, index) {
+    var sold = flat.status === 0;
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_tippyjs_react__WEBPACK_IMPORTED_MODULE_9__["default"], {
       maxWidth: "0",
       arrow: false,
@@ -9266,8 +9292,11 @@ var ChooseFloor = function ChooseFloor(_ref) {
           fontSize: "16px",
           fontWeight: "bold"
         }
-      }, flat.status === 0 ? "sold" : flat.dimension, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("sup", null, flat.status === 0 ? "" : "2"))
+      }, sold ? "sold" : flat.dimension, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("sup", null, sold ? "" : "2"))
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
+      onClick: sold ? function (e) {
+        return e.preventDefault();
+      } : null,
       href: route("client.apartment.index", flat.slug),
       onMouseEnter: function onMouseEnter() {
         return setFlatIndex(index + 1);
@@ -9277,7 +9306,7 @@ var ChooseFloor = function ChooseFloor(_ref) {
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("polygon", {
       key: index,
-      className: flat.status === 0 ? "st0 sold" : "st0",
+      className: sold ? "st0 sold" : "st0",
       points: flat.points
     })));
   })))));
