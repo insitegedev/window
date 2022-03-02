@@ -5,11 +5,14 @@ import { PagePath } from "../../components/PagePath/PagePath";
 import Showcase from "../../components/Showcase/Showcase";
 import Layout from "../../Layouts/Layout";
 import ApartmentImg from "/img/apartments/1.png";
+import ApartmentImg2 from "/img/apartments/building.png";
 import "./Apartment.css";
 import { Link, Head } from "@inertiajs/inertia-react";
 import Pdf from "/img/icons/apartment/file.svg";
 
 const Apartment = ({ apartment }) => {
+    const [viewApartment, setViewApartment] = useState(0);
+    const viewList = [ApartmentImg, ApartmentImg2];
     const specifications = [
         "Hall - 6.3 m",
         "Bathroom - 4.4 m",
@@ -57,15 +60,64 @@ const Apartment = ({ apartment }) => {
                         </div>
                         <h6>total area</h6>
                         <h1 className="total_area">
-                            {apartment.area}<sup>2</sup>
+                            {apartment.area}
+                            <sup>2</sup>
                         </h1>
-                        {apartment.pdf && <a href={"/" + apartment.pdf.path + "/" + apartment.pdf.title} target="_blank"
-                            className="flex centered pdf">
-                            <img src={Pdf} alt=""/>
-                            <p>Download pdf</p>
-                        </a>}
+                        {apartment.pdf && (
+                            <a
+                                href={
+                                    "/" +
+                                    apartment.pdf.path +
+                                    "/" +
+                                    apartment.pdf.title
+                                }
+                                target="_blank"
+                                className="flex centered pdf"
+                            >
+                                <img src={Pdf} alt="" />
+                                <p>Download pdf</p>
+                            </a>
+                        )}
                     </div>
-                    {apartment.file && <img className="apartment_img" src={"/"+apartment.file.path+"/"+apartment.file.title} alt="" />}
+                    <div className="apt_view">
+                        {/* {apartment.file && (
+                            <img
+                                className="apartment_img"
+                                src={
+                                    "/" +
+                                    apartment.file.path +
+                                    "/" +
+                                    apartment.file.title
+                                }
+                                alt=""
+                            />
+                        )} */}
+                        {viewList.map((apt, index) => {
+                            return (
+                                <img
+                                    className={
+                                        viewApartment === index
+                                            ? "apartment_img show"
+                                            : "apartment_img"
+                                    }
+                                    src={apt}
+                                    alt=""
+                                />
+                            );
+                        })}
+                        <div className="dots">
+                            {viewList.map((apt, index) => {
+                                return (
+                                    <button
+                                        className="other_view"
+                                        onClick={() => setViewApartment(index)}
+                                    >
+                                        <img src={apt} alt="" />
+                                    </button>
+                                );
+                            })}
+                        </div>
+                    </div>
                     <ContactInfo color="#334E60" right />
                 </div>
             </div>

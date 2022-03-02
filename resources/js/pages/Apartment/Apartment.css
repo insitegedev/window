@@ -7,6 +7,10 @@
 }
 .apartmentPage .apartment_img {
     margin: 0 30px;
+    display: none;
+}
+.apartmentPage .apartment_img.show {
+    display: block;
 }
 .apartmentPage .details {
     color: #334e60;
