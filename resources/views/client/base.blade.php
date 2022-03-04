@@ -29,7 +29,10 @@
 <div id="fb-root"></div>
 
 <!-- Your Chat Plugin code -->
-<div id="fb-customer-chat" class="fb-customerchat">
+<div class="fb-customerchat"
+     attribution="install_email"
+     attribution_version="biz_inbox"
+     page_id="100160159275529">
 </div>
 
 <script>
@@ -37,6 +40,8 @@
     chatbox.setAttribute("page_id", "100160159275529");
     chatbox.setAttribute("attribution", "biz_inbox");
 </script>
+
+
 
 <!-- Your SDK code -->
 <script>
