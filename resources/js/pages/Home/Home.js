@@ -85,10 +85,6 @@ const Home = ({ sliders, seo }) => {
                                     style={{ justifyContent: "flex-start" }}
                                     data-aos="fade-right"
                                 >
-                                    <MainButton
-                                        text={__("contact_us")}
-                                        link={route("client.contact.index")}
-                                    />
                                     <div
                                         className="play_vid flex center"
                                         onClick={() => setShowVideo(true)}
@@ -101,6 +97,11 @@ const Home = ({ sliders, seo }) => {
                                             />
                                         </div>
                                     </div>
+                                    <ArrowButton
+                                        color="#fff"
+                                        link={route("client.choosefloor.index")}
+                                        text={__("choose_apartment")}
+                                    />
                                 </div>
                                 <Facilities />
                             </div>
@@ -154,11 +155,6 @@ const Home = ({ sliders, seo }) => {
                     color="#fff"
                     ginstagram={ginstagram.value}
                     gfacebook={gfacebook.value}
-                />
-                <ArrowButton
-                    color="#fff"
-                    link={route("client.choosefloor.index")}
-                    text={__("choose_apartment")}
                 />
             </div>
         </Layout>

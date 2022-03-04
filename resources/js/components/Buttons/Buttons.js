@@ -17,11 +17,11 @@ export const ArrowButton = ({ color, link, text }) => {
     return (
         <Link href={link}>
             <div className="arrow_button flex centered">
-                <div className="text" style={{ color: color }}>
-                    {text}
-                </div>
                 <div className="circle" style={{ borderColor: color }}>
                     <ArrowRight color={color} />
+                </div>
+                <div className="text" style={{ color: color }}>
+                    {text}
                 </div>
             </div>
         </Link>
