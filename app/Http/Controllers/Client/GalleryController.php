@@ -13,7 +13,7 @@ class GalleryController extends Controller
     {
 
 
-        $galleries = Gallery::query()->where("status", 1)->with(['file'])->paginate(15);
+        $galleries = Gallery::query()->where("status", 1)->with(['file'])->paginate(10);
         $page = Page::where('key', 'gallery')->firstOrFail();
 
 

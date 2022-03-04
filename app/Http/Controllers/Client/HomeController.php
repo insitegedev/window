@@ -15,8 +15,11 @@ class HomeController extends Controller
 
         $page = Page::where('key', 'home')->firstOrFail();
         $sliders = Slider::query()->where("status", 1)->with(['file', 'translations']);
+//        dd($page);
 
-        return Inertia::render('Home/Home', ["sliders" => $sliders->get(), "page" => $page]);
+        return Inertia::render('Home/Home', ["sliders" => $sliders->get(), "page" => $page])->withViewData([
+            'meta_title' => $page->meta_title, 'meta_description' => $page->meta_description
+        ]);
 
     }
 
@@ -34,7 +37,6 @@ class HomeController extends Controller
     {
         return Inertia::render('ChooseFloor/ChooseFloor');
     }
-
 
 
 }
