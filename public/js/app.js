@@ -7479,6 +7479,16 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 var Apartment = function Apartment(_ref) {
   var apartment = _ref.apartment,
       urlPrev = _ref.urlPrev;
+  var sharedData = (0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_9__.usePage)().props.localizations;
+
+  function __(key) {
+    var replace = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+    var translation = sharedData[key] || key;
+    Object.keys(replace).forEach(function (key) {
+      translation = translation.replace(":" + key, replace[key]);
+    });
+    return translation;
+  }
 
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(0),
       _useState2 = _slicedToArray(_useState, 2),

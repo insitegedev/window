@@ -7,10 +7,22 @@ import Layout from "../../Layouts/Layout";
 import ApartmentImg from "/img/apartments/1.png";
 import ApartmentImg2 from "/img/apartments/building.png";
 import "./Apartment.css";
-import {Head} from "@inertiajs/inertia-react";
+import {Head, usePage} from "@inertiajs/inertia-react";
 import Pdf from "/img/icons/apartment/file.svg";
 
 const Apartment = ({apartment, urlPrev}) => {
+    const sharedData = usePage().props.localizations;
+
+    function __(key, replace = {}) {
+        let translation = sharedData[key] || key;
+
+        Object.keys(replace).forEach(function (key) {
+            translation = translation.replace(":" + key, replace[key]);
+        });
+
+        return translation;
+    }
+
     const [viewApartment, setViewApartment] = useState(0);
     const viewList = [ApartmentImg, ApartmentImg2];
     const specifications = [
