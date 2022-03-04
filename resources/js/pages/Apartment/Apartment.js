@@ -10,7 +10,7 @@ import "./Apartment.css";
 import {Head} from "@inertiajs/inertia-react";
 import Pdf from "/img/icons/apartment/file.svg";
 
-const Apartment = ({apartment}) => {
+const Apartment = ({apartment, urlPrev}) => {
     const [viewApartment, setViewApartment] = useState(0);
     const viewList = [ApartmentImg, ApartmentImg2];
     const specifications = [
@@ -30,7 +30,7 @@ const Apartment = ({apartment}) => {
             </Head>
             <div className="apartmentPage">
                 <Showcase short/>
-                <BackButton color="#334E60"/>
+                <BackButton color="#fff" link={urlPrev} text={__("go_back")} />
                 <PagePath
                     loc1="home"
                     loc2="Choose apartment"

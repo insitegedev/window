@@ -7477,7 +7477,8 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 var Apartment = function Apartment(_ref) {
-  var apartment = _ref.apartment;
+  var apartment = _ref.apartment,
+      urlPrev = _ref.urlPrev;
 
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(0),
       _useState2 = _slicedToArray(_useState, 2),
@@ -7497,7 +7498,9 @@ var Apartment = function Apartment(_ref) {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Showcase_Showcase__WEBPACK_IMPORTED_MODULE_4__["default"], {
     "short": true
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Buttons_Buttons__WEBPACK_IMPORTED_MODULE_1__.BackButton, {
-    color: "#334E60"
+    color: "#fff",
+    link: urlPrev,
+    text: __("go_back")
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_PagePath_PagePath__WEBPACK_IMPORTED_MODULE_3__.PagePath, {
     loc1: "home",
     loc2: "Choose apartment",
