@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <title>{{ $meta_title }}</title>
     <meta name="description"
@@ -14,19 +14,17 @@
     <meta property="og:image" content="/img/home/1.png">
     <meta property="og:url" content="{{ request()->fullUrl() }}">
     <meta property="og:type" content="page">
-    <link href="{{ mix('/css/app.css') }}" rel="stylesheet" />
+    <link href="{{ mix('/css/app.css') }}" rel="stylesheet"/>
     @if(app()->getLocale()=="ge")
-        <link href="{{ mix('/css/AppGeo.css') }}" rel="stylesheet" />
+        <link href="{{ mix('/css/AppGeo.css') }}" rel="stylesheet"/>
     @elseif(app()->getLocale()=="en")
-        <link href="{{ mix('/css/AppEng.css') }}" rel="stylesheet" />
+        <link href="{{ mix('/css/AppEng.css') }}" rel="stylesheet"/>
     @endif
-{{--    @dd($page["props"]["page"]["meta_title"])--}}
+    {{--    @dd($page["props"]["page"]["meta_title"])--}}
     @routes
     <script src="{{ mix('/js/app.js') }}" defer></script>
 </head>
 <body>
-@inertia
-</body>
 <!-- Messenger Chat Plugin Code -->
 <div id="fb-root"></div>
 
@@ -42,19 +40,23 @@
 
 <!-- Your SDK code -->
 <script>
-    window.fbAsyncInit = function() {
+    window.fbAsyncInit = function () {
         FB.init({
-            xfbml            : true,
-            version          : 'v13.0'
+            xfbml: true,
+            version: 'v13.0'
         });
     };
 
-    (function(d, s, id) {
+    (function (d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
         if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
+        js = d.createElement(s);
+        js.id = id;
         js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
 </script>
+@inertia
+</body>
+
 </html>
