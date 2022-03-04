@@ -29,26 +29,18 @@
 <div id="fb-root"></div>
 
 <!-- Your Chat Plugin code -->
-<div class="fb-customerchat"
-     attribution="install_email"
-     attribution_version="biz_inbox"
-     page_id="100160159275529">
+<div id="fb-customer-chat" class="fb-customerchat">
 </div>
 
 <script>
     var chatbox = document.getElementById('fb-customer-chat');
     chatbox.setAttribute("page_id", "100160159275529");
     chatbox.setAttribute("attribution", "biz_inbox");
-</script>
 
-
-
-<!-- Your SDK code -->
-<script>
     window.fbAsyncInit = function() {
         FB.init({
             xfbml            : true,
-            version          : 'v13.0'
+            version          : 'v12.0'
         });
     };
 
