@@ -1,16 +1,16 @@
-import React, { useState } from "react";
-import { BackButton } from "../../components/Buttons/Buttons";
+import React, {useState} from "react";
+import {BackButton} from "../../components/Buttons/Buttons";
 import ContactInfo from "../../Components/ContactInfo/ContactInfo";
-import { PagePath } from "../../components/PagePath/PagePath";
+import {PagePath} from "../../components/PagePath/PagePath";
 import Showcase from "../../components/Showcase/Showcase";
 import Layout from "../../Layouts/Layout";
 import ApartmentImg from "/img/apartments/1.png";
 import ApartmentImg2 from "/img/apartments/building.png";
 import "./Apartment.css";
-import { Link, Head } from "@inertiajs/inertia-react";
+import {Head} from "@inertiajs/inertia-react";
 import Pdf from "/img/icons/apartment/file.svg";
 
-const Apartment = ({ apartment }) => {
+const Apartment = ({apartment}) => {
     const [viewApartment, setViewApartment] = useState(0);
     const viewList = [ApartmentImg, ApartmentImg2];
     const specifications = [
@@ -25,12 +25,12 @@ const Apartment = ({ apartment }) => {
         <Layout>
             <Head>
                 <title>{apartment.meta_title}</title>
-                <meta name="description" content={apartment.meta_description} />
-                <meta name="keywords" content={apartment.meta_keyword} />
+                <meta name="description" content={apartment.meta_description}/>
+                <meta name="keywords" content={apartment.meta_keyword}/>
             </Head>
             <div className="apartmentPage">
-                <Showcase short />
-                <BackButton color="#334E60" />
+                <Showcase short/>
+                <BackButton color="#334E60"/>
                 <PagePath
                     loc1="home"
                     loc2="Choose apartment"
@@ -74,7 +74,7 @@ const Apartment = ({ apartment }) => {
                                 target="_blank"
                                 className="flex centered pdf"
                             >
-                                <img src={Pdf} alt="" />
+                                <img src={Pdf} alt=""/>
                                 <p>Download pdf</p>
                             </a>
                         )}
@@ -92,7 +92,7 @@ const Apartment = ({ apartment }) => {
                                 alt=""
                             />
                         )} */}
-                        {viewList.map((apt, index) => {
+                        {apartment.files.map((apt, index) => {
                             return (
                                 <img
                                     className={
@@ -100,25 +100,35 @@ const Apartment = ({ apartment }) => {
                                             ? "apartment_img show"
                                             : "apartment_img"
                                     }
-                                    src={apt}
+                                    src={
+                                        "/" +
+                                        apt.path +
+                                        "/" +
+                                        apt.title
+                                    }
                                     alt=""
                                 />
                             );
                         })}
                         <div className="dots flex centered">
-                            {viewList.map((apt, index) => {
+                            {apartment.files.map((apt, index) => {
                                 return (
                                     <button
                                         className="other_view img"
                                         onClick={() => setViewApartment(index)}
                                     >
-                                        <img src={apt} alt="" />
+                                        <img src={
+                                            "/" +
+                                            apt.path +
+                                            "/" +
+                                            apt.title
+                                        } alt=""/>
                                     </button>
                                 );
                             })}
                         </div>
                     </div>
-                    <ContactInfo color="#334E60" right />
+                    <ContactInfo color="#334E60" right/>
                 </div>
             </div>
         </Layout>

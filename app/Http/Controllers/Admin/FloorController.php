@@ -93,7 +93,7 @@ class FloorController extends Controller
     {
         $saveData = Arr::except($request->except('_token'), []);
         $saveData['status'] = isset($saveData['status']) && (bool)$saveData['status'];
-        $saveData['status'] = true;
+//        $saveData['status'] = true;
         $this->floorRepository->update($floor->id,$saveData);
         $this->floorRepository->saveFiles($floor->id, $request);
 
