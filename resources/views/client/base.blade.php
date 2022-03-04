@@ -4,9 +4,9 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-    <title>My apppp</title>
-    <meta head-key="description" name="description" content="This is the default description"/>
-    <link rel="icon" type="image/svg+xml" href="/img/apartments/1.png"/>
+    <title>@lang('client.home_meta_title')</title>
+    <meta name="description"
+          content="@lang('client.home_meta_description')">
     <link href="{{ mix('/css/app.css') }}" rel="stylesheet"/>
     @if(app()->getLocale()=="ge")
         <link href="{{ mix('/css/AppGeo.css') }}" rel="stylesheet"/>
