@@ -1,18 +1,18 @@
 .arrow_button {
     cursor: pointer;
     position: fixed;
-    right: 56px;
+    left: 56px;
     bottom: 30px;
     z-index: 1000;
 }
 .arrow_button .text {
     transition: 0.5s;
     transform: scaleX(0);
-    transform-origin: right;
+    transform-origin: left;
     font-weight: bold;
 }
 .arrow_button:hover .text {
-    margin-right: 10px;
+    margin-left: 10px;
     transform: scaleX(1);
     opacity: 1;
 }
@@ -47,7 +47,7 @@
 
 @media screen and (max-width: 1350px) {
     .arrow_button {
-        right: 30px;
+        left: 30px;
     }
     .back_button {
         left: 16px;
@@ -56,7 +56,7 @@
 }
 @media screen and (max-width: 700px) {
     .arrow_button {
-        right: 15px;
+        left: 15px;
         bottom: 15px;
     }
     .back_button {
