@@ -12,6 +12,8 @@ class AboutUsController extends Controller
     public function index()
     {
         $page = Page::where('key', 'about')->firstOrFail();
-        return Inertia::render('AboutUs/AboutUs', ["page" => $page]);
+        return Inertia::render('AboutUs/AboutUs', ["page" => $page])->withViewData([
+            'meta_title' => $page->meta_title, 'meta_description' => $page->meta_description
+        ]);;
     }
 }

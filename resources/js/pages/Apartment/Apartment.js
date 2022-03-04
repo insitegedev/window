@@ -7,10 +7,22 @@ import Layout from "../../Layouts/Layout";
 import ApartmentImg from "/img/apartments/1.png";
 import ApartmentImg2 from "/img/apartments/building.png";
 import "./Apartment.css";
-import {Head} from "@inertiajs/inertia-react";
+import {Head, usePage} from "@inertiajs/inertia-react";
 import Pdf from "/img/icons/apartment/file.svg";
 
-const Apartment = ({apartment}) => {
+const Apartment = ({apartment, urlPrev}) => {
+    const sharedData = usePage().props.localizations;
+
+    function __(key, replace = {}) {
+        let translation = sharedData[key] || key;
+
+        Object.keys(replace).forEach(function (key) {
+            translation = translation.replace(":" + key, replace[key]);
+        });
+
+        return translation;
+    }
+
     const [viewApartment, setViewApartment] = useState(0);
     const viewList = [ApartmentImg, ApartmentImg2];
     const specifications = [
@@ -30,7 +42,7 @@ const Apartment = ({apartment}) => {
             </Head>
             <div className="apartmentPage">
                 <Showcase short/>
-                <BackButton color="#334E60"/>
+                <BackButton color="#334E60" link={urlPrev} text={__("go_back")} />
                 <PagePath
                     loc1="home"
                     loc2="Choose apartment"
@@ -41,7 +53,7 @@ const Apartment = ({apartment}) => {
                         <h1 className="floor">{apartment.title}</h1>
                         <h1 className="apartment">{apartment.apartment}</h1>
                         <div className="specifications">
-                            <h6>Specifications</h6>
+                            <h6>{__("specifications")}</h6>
                             <p
                                 dangerouslySetInnerHTML={{
                                     __html: apartment.specifications,
@@ -58,7 +70,7 @@ const Apartment = ({apartment}) => {
                             {/*    })}*/}
                             {/*</ol>*/}
                         </div>
-                        <h6>total area</h6>
+                        <h6>{__("total_area")}</h6>
                         <h1 className="total_area">
                             {apartment.area}
                             <sup>2</sup>
@@ -75,7 +87,7 @@ const Apartment = ({apartment}) => {
                                 className="flex centered pdf"
                             >
                                 <img src={Pdf} alt=""/>
-                                <p>Download pdf</p>
+                                <p>{__("download_pdf")}</p>
                             </a>
                         )}
                     </div>

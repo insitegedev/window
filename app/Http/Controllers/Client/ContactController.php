@@ -15,7 +15,9 @@ class ContactController extends Controller
     public function index()
     {
         $page = Page::where('key', 'contact')->firstOrFail();
-        return Inertia::render('Contact/Contact', ["page" => $page]);
+        return Inertia::render('Contact/Contact', ["page" => $page])->withViewData([
+            'meta_title' => $page->meta_title, 'meta_description' => $page->meta_description
+        ]);;
 
     }
 

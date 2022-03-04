@@ -54,6 +54,9 @@ return [
     "a_block" => "A BLOCK",
     "b_block" => "B BLOCK",
     "sold" => "Sold",
+    "specifications" => "specifications",
+    "total_area" => "total_area",
+    "download_pdf" => "Download pdf",
 
 
 ];

@@ -16,7 +16,9 @@ class ApartmentController extends Controller
         $apartments = Apartment::with(['translations'])->get();
         $page = Page::where('key', 'choose_apartment')->firstOrFail();
 
-        return Inertia::render('ChooseFloor/ChooseFloor', ["apartments" => $apartments, "page" => $page]);
+        return Inertia::render('ChooseFloor/ChooseFloor', ["apartments" => $apartments, "page" => $page])->withViewData([
+            'meta_title' => $page->meta_title, 'meta_description' => $page->meta_description
+        ]);;
     }
 
     public function showFloor($locale, $slug)
@@ -31,7 +33,9 @@ class ApartmentController extends Controller
             }
         ])->firstOrFail();
 
-        return Inertia::render('FloorPlan/' . $slug, ["page" => $page, "apartments" => $apartments]);
+        return Inertia::render('FloorPlan/' . $slug, ["page" => $page, "apartments" => $apartments])->withViewData([
+            'meta_title' => $page->meta_title, 'meta_description' => $page->meta_description
+        ]);;
     }
 
     public function show($locale, $slug)
@@ -39,6 +43,8 @@ class ApartmentController extends Controller
         $apartment = Floor::with(['translations', 'files', 'pdf'])->where("slug", $slug)->firstOrFail();
 //        dd($apartment);
         $page = Page::where('key', 'choose_apartment')->firstOrFail();
-        return Inertia::render('Apartment/Apartment', ["apartment" => $apartment, "page" => $page]);
+        return Inertia::render('Apartment/Apartment', ["apartment" => $apartment, "page" => $page])->withViewData([
+            'meta_title' => $page->meta_title, 'meta_description' => $page->meta_description
+        ]);;
     }
 }

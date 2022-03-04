@@ -13,11 +13,13 @@ class GalleryController extends Controller
     {
 
 
-        $galleries = Gallery::query()->where("status", 1)->with(['file'])->paginate(15);
+        $galleries = Gallery::query()->where("status", 1)->with(['file'])->paginate(10);
         $page = Page::where('key', 'gallery')->firstOrFail();
 
 
-        return Inertia::render('Gallery/Gallery', ["galleries" => $galleries, "page" =>$page]);
+        return Inertia::render('Gallery/Gallery', ["galleries" => $galleries, "page" =>$page])->withViewData([
+            'meta_title' => $page->meta_title, 'meta_description' => $page->meta_description
+        ]);;
 
     }
 
