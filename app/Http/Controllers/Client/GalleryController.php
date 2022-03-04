@@ -17,7 +17,9 @@ class GalleryController extends Controller
         $page = Page::where('key', 'gallery')->firstOrFail();
 
 
-        return Inertia::render('Gallery/Gallery', ["galleries" => $galleries, "page" =>$page]);
+        return Inertia::render('Gallery/Gallery', ["galleries" => $galleries, "page" =>$page])->withViewData([
+            'meta_title' => $page->meta_title, 'meta_description' => $page->meta_description
+        ]);;
 
     }
 

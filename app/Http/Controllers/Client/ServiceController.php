@@ -20,7 +20,9 @@ class ServiceController extends Controller
         $page = Page::where('key', 'service')->firstOrFail();
         $services = Service::where('status',true)->with(['mainFile_1','translations'])->get();
 
-        return Inertia::render("Services/Services", ["services"=> $services, "page" => $page, "state" => $request->input('state')]);
+        return Inertia::render("Services/Services", ["services"=> $services, "page" => $page, "state" => $request->input('state')])->withViewData([
+            'meta_title' => $page->meta_title, 'meta_description' => $page->meta_description
+        ]);;
 
     }
 
@@ -30,7 +32,9 @@ class ServiceController extends Controller
         $nextService = Service::where("status", 1)->with(['mainFile_1','translations'])->inRandomOrder()->first();
 //        dd(Service::inRandomOrder()->first());
 
-        return Inertia::render("SingleService/SingleService", ["service"=> $service, "nextService" => $nextService]);
+        return Inertia::render("SingleService/SingleService", ["service"=> $service, "nextService" => $nextService])->withViewData([
+            'meta_title' => $page->meta_title, 'meta_description' => $page->meta_description
+        ]);;
         return view('client.pages.service.index', [
             'services' => $services,
             'page' => $page
