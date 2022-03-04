@@ -90,6 +90,8 @@ class PageController extends Controller
     {
         $saveData = Arr::except($request->except('_token'), []);
         $this->pageRepository->update($page->id,$saveData);
+        $this->pageRepository->saveFiles($page->id, $request);
+
 
 
         return redirect(locale_route('page.show', $page->id))->with('success', __('admin.update_successfully'));

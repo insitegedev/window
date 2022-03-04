@@ -1,4 +1,4 @@
-import { Link, Head, usePage } from "@inertiajs/inertia-react";
+import { Link, usePage } from "@inertiajs/inertia-react";
 import React from "react";
 import { useState } from "react";
 import { BackButton } from "../../components/Buttons/Buttons";
@@ -7,7 +7,7 @@ import Layout from "../../Layouts/Layout";
 import Background from "/img/apartments/bg.png";
 import "./ChooseFloor.css";
 
-const ChooseFloor = ({ apartments, page, urlPrev }) => {
+const ChooseFloor = ({ apartments, seo, urlPrev }) => {
     const sharedData = usePage().props.localizations;
 
     function __(key, replace = {}) {
@@ -104,11 +104,7 @@ const ChooseFloor = ({ apartments, page, urlPrev }) => {
         });
     });
     return (
-        <Layout>
-            <Head>
-                <title>{page.meta_title}</title>
-                <meta name="description" content={page.meta_description} />
-            </Head>
+        <Layout seo={seo}>
             <div className="chooseFloor">
                 <img className="background" src={Background} alt="" />
                 <Showcase short />

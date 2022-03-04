@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
+use Illuminate\Database\Eloquent\Relations\MorphOne;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Page extends Model
@@ -30,7 +31,10 @@ class Page extends Model
         'description',
         'description_2',
         "meta_title",
-        "meta_description"
+        "meta_description",
+        "meta_keyword",
+        "meta_og_title",
+        "meta_og_description",
     ];
 
 
@@ -53,7 +57,10 @@ class Page extends Model
     }
 
 
-
+    public function file(): MorphOne
+    {
+        return $this->morphOne(File::class, 'fileable');
+    }
 
     public function files(): MorphMany
     {

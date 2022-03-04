@@ -8,7 +8,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import { usePage, Head } from "@inertiajs/inertia-react";
 
-const AboutUs = ({ page }) => {
+const AboutUs = ({ page, seo }) => {
     const sharedData = usePage().props.localizations;
 
     function __(key, replace = {}) {
@@ -24,11 +24,7 @@ const AboutUs = ({ page }) => {
         Aos.init({ duration: 2000 });
     }, []);
     return (
-        <Layout>
-            <Head>
-                <title>{page.meta_title}</title>
-                <meta name="description" content={page.meta_description} />
-            </Head>
+        <Layout seo={seo}>
             <div className="aboutPage">
                 <ArrowButton
                     link={route("client.choosefloor.index")}

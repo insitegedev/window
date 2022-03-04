@@ -10,7 +10,7 @@ import "./floorPlan.css";
 import Tippy from "@tippyjs/react";
 import "tippy.js/dist/tippy.css";
 
-const ChooseFloor = ({ page, urlPrev, apartments }) => {
+const ChooseFloor = ({ seo, urlPrev, apartments }) => {
     const sharedData = usePage().props.localizations;
 
     function __(key, replace = {}) {
@@ -60,11 +60,7 @@ const ChooseFloor = ({ page, urlPrev, apartments }) => {
     const [flatIndex, setFlatIndex] = useState(0);
 
     return (
-        <Layout>
-            <Head>
-                <title>{page.meta_title}</title>
-                <meta name="description" content={page.meta_description} />
-            </Head>
+        <Layout seo={seo}>
             <div className="floorPlan">
                 <img className="background" src={Background} alt="" />
                 <Showcase short />

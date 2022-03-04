@@ -7270,17 +7270,79 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var _Components_Header_Header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Components/Header/Header */ "./resources/js/Components/Header/Header.js");
 /* harmony import */ var _Components_Footer_Footer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Components/Footer/Footer */ "./resources/js/Components/Footer/Footer.js");
+/* harmony import */ var _SetSeoData__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./SetSeoData */ "./resources/js/Layouts/SetSeoData.js");
 // import "../Pages/App.css";
  // import ScrollToTop from "../Components/ScrollToTop";
+
 
 
  // import {Fragment} from "react";
 // import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function Layout(_ref) {
-  var children = _ref.children;
+  var children = _ref.children,
+      _ref$seo = _ref.seo,
+      seo = _ref$seo === void 0 ? null : _ref$seo;
+
+  if (seo) {
+    (0,_SetSeoData__WEBPACK_IMPORTED_MODULE_3__["default"])(seo);
+  }
+
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Components_Header_Header__WEBPACK_IMPORTED_MODULE_1__["default"], null), children, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Components_Footer_Footer__WEBPACK_IMPORTED_MODULE_2__["default"], null));
 }
+
+/***/ }),
+
+/***/ "./resources/js/Layouts/SetSeoData.js":
+/*!********************************************!*\
+  !*** ./resources/js/Layouts/SetSeoData.js ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+function setSeoData(seoData) {
+  console.log(seoData);
+  Object.keys(seoData).map(function (key) {
+    var value = seoData[key];
+
+    switch (key) {
+      case 'title':
+        document.title = value;
+        break;
+
+      case 'description':
+        document.getElementsByTagName('meta')['description'].content = value;
+        break;
+
+      case 'keywords':
+        document.getElementsByTagName('meta')['keywords'].content = value;
+        break;
+
+      case 'og_title':
+        document.querySelector('meta[property="og:title"]').setAttribute("content", value);
+        break;
+
+      case 'og_description':
+        document.querySelector('meta[property="og:description"]').setAttribute("content", value);
+        break;
+
+      case 'image':
+        document.querySelector('meta[property="og:image"]').setAttribute("content", value);
+        break;
+
+      case 'locale':
+        document.documentElement.setAttribute('lang', value);
+        break;
+    }
+  });
+  document.querySelector('meta[property="og:url"]').setAttribute("content", window.location.href);
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (setSeoData);
 
 /***/ }),
 
@@ -7316,7 +7378,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var AboutUs = function AboutUs(_ref) {
-  var page = _ref.page;
+  var page = _ref.page,
+      seo = _ref.seo;
   var sharedData = (0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_8__.usePage)().props.localizations;
 
   function __(key) {
@@ -7333,10 +7396,9 @@ var AboutUs = function AboutUs(_ref) {
       duration: 2000
     });
   }, []);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Layouts_Layout__WEBPACK_IMPORTED_MODULE_5__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_8__.Head, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("title", null, page.meta_title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("meta", {
-    name: "description",
-    content: page.meta_description
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Layouts_Layout__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    seo: seo
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "aboutPage"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Buttons_Buttons__WEBPACK_IMPORTED_MODULE_3__.ArrowButton, {
     link: route("client.choosefloor.index"),
@@ -7478,7 +7540,8 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 var Apartment = function Apartment(_ref) {
   var apartment = _ref.apartment,
-      urlPrev = _ref.urlPrev;
+      urlPrev = _ref.urlPrev,
+      seo = _ref.seo;
   var sharedData = (0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_9__.usePage)().props.localizations;
 
   function __(key) {
@@ -7497,13 +7560,9 @@ var Apartment = function Apartment(_ref) {
 
   var viewList = [_img_apartments_1_png__WEBPACK_IMPORTED_MODULE_6__["default"], _img_apartments_building_png__WEBPACK_IMPORTED_MODULE_7__["default"]];
   var specifications = ["Hall - 6.3 m", "Bathroom - 4.4 m", "living room - 12.7 m", "Master bedroom - 14.8 m", "Bedroom - 8.5 m", "Balcony - 4.5 m"];
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Layouts_Layout__WEBPACK_IMPORTED_MODULE_5__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_9__.Head, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("title", null, apartment.meta_title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("meta", {
-    name: "description",
-    content: apartment.meta_description
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("meta", {
-    name: "keywords",
-    content: apartment.meta_keyword
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Layouts_Layout__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    seo: seo
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "apartmentPage"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Showcase_Showcase__WEBPACK_IMPORTED_MODULE_4__["default"], {
     "short": true
@@ -7609,7 +7668,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 var ChooseFloor = function ChooseFloor(_ref) {
   var apartments = _ref.apartments,
-      page = _ref.page,
+      seo = _ref.seo,
       urlPrev = _ref.urlPrev;
   var sharedData = (0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.usePage)().props.localizations;
 
@@ -7701,10 +7760,9 @@ var ChooseFloor = function ChooseFloor(_ref) {
       }
     });
   });
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_Layouts_Layout__WEBPACK_IMPORTED_MODULE_4__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Head, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("title", null, page.meta_title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("meta", {
-    name: "description",
-    content: page.meta_description
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_Layouts_Layout__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    seo: seo
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
     className: "chooseFloor"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("img", {
     className: "background",
@@ -7818,7 +7876,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var Contact = function Contact(_ref) {
-  var page = _ref.page;
+  var page = _ref.page,
+      seo = _ref.seo;
   var sharedData = (0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_9__.usePage)().props.localizations;
 
   function __(key) {
@@ -7835,10 +7894,9 @@ var Contact = function Contact(_ref) {
       duration: 2000
     });
   }, []);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Layouts_Layout__WEBPACK_IMPORTED_MODULE_6__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_9__.Head, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("title", null, page.meta_title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("meta", {
-    name: "description",
-    content: page.meta_description
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Layouts_Layout__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    seo: seo
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "contactPage"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Showcase_Showcase__WEBPACK_IMPORTED_MODULE_1__["default"], {
     title: page.title
@@ -7915,7 +7973,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 var ChooseFloor = function ChooseFloor(_ref) {
-  var page = _ref.page,
+  var seo = _ref.seo,
       urlPrev = _ref.urlPrev,
       apartments = _ref.apartments;
   var sharedData = (0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.usePage)().props.localizations;
@@ -7982,10 +8040,9 @@ var ChooseFloor = function ChooseFloor(_ref) {
       flatIndex = _useState2[0],
       setFlatIndex = _useState2[1];
 
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_Layouts_Layout__WEBPACK_IMPORTED_MODULE_5__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Head, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("title", null, page.meta_title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("meta", {
-    name: "description",
-    content: page.meta_description
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_Layouts_Layout__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    seo: seo
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
     className: "floorPlan"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("img", {
     className: "background",
@@ -8120,7 +8177,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 var ChooseFloor = function ChooseFloor(_ref) {
-  var page = _ref.page,
+  var seo = _ref.seo,
       urlPrev = _ref.urlPrev,
       apartments = _ref.apartments;
   var sharedData = (0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.usePage)().props.localizations;
@@ -8181,10 +8238,9 @@ var ChooseFloor = function ChooseFloor(_ref) {
       flatIndex = _useState2[0],
       setFlatIndex = _useState2[1];
 
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_Layouts_Layout__WEBPACK_IMPORTED_MODULE_5__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Head, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("title", null, page.meta_title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("meta", {
-    name: "description",
-    content: page.meta_description
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_Layouts_Layout__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    seo: seo
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
     className: "floorPlan"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("img", {
     className: "background",
@@ -8320,7 +8376,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 var ChooseFloor = function ChooseFloor(_ref) {
-  var page = _ref.page,
+  var seo = _ref.seo,
       urlPrev = _ref.urlPrev,
       apartments = _ref.apartments;
   var sharedData = (0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.usePage)().props.localizations;
@@ -8381,10 +8437,9 @@ var ChooseFloor = function ChooseFloor(_ref) {
       flatIndex = _useState2[0],
       setFlatIndex = _useState2[1];
 
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_Layouts_Layout__WEBPACK_IMPORTED_MODULE_5__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Head, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("title", null, page.meta_title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("meta", {
-    name: "description",
-    content: page.meta_description
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_Layouts_Layout__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    seo: seo
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
     className: "floorPlan"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("img", {
     className: "background",
@@ -8520,7 +8575,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 var ChooseFloor = function ChooseFloor(_ref) {
-  var page = _ref.page,
+  var seo = _ref.seo,
       urlPrev = _ref.urlPrev,
       apartments = _ref.apartments;
   var sharedData = (0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.usePage)().props.localizations;
@@ -8565,10 +8620,9 @@ var ChooseFloor = function ChooseFloor(_ref) {
       flatIndex = _useState2[0],
       setFlatIndex = _useState2[1];
 
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_Layouts_Layout__WEBPACK_IMPORTED_MODULE_5__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Head, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("title", null, page.meta_title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("meta", {
-    name: "description",
-    content: page.meta_description
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_Layouts_Layout__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    seo: seo
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
     className: "floorPlan"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("img", {
     className: "background",
@@ -8704,7 +8758,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 var ChooseFloor = function ChooseFloor(_ref) {
-  var page = _ref.page,
+  var seo = _ref.seo,
       urlPrev = _ref.urlPrev,
       apartments = _ref.apartments;
   var sharedData = (0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.usePage)().props.localizations;
@@ -8737,10 +8791,9 @@ var ChooseFloor = function ChooseFloor(_ref) {
       flatIndex = _useState2[0],
       setFlatIndex = _useState2[1];
 
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_Layouts_Layout__WEBPACK_IMPORTED_MODULE_5__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Head, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("title", null, page.meta_title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("meta", {
-    name: "description",
-    content: page.meta_description
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_Layouts_Layout__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    seo: seo
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
     className: "floorPlan"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("img", {
     className: "background",
@@ -8876,7 +8929,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 var ChooseFloor = function ChooseFloor(_ref) {
-  var page = _ref.page,
+  var seo = _ref.seo,
       urlPrev = _ref.urlPrev,
       apartments = _ref.apartments;
   var sharedData = (0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.usePage)().props.localizations;
@@ -8909,10 +8962,9 @@ var ChooseFloor = function ChooseFloor(_ref) {
       flatIndex = _useState2[0],
       setFlatIndex = _useState2[1];
 
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_Layouts_Layout__WEBPACK_IMPORTED_MODULE_5__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Head, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("title", null, page.meta_title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("meta", {
-    name: "description",
-    content: page.meta_description
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_Layouts_Layout__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    seo: seo
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
     className: "floorPlan"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("img", {
     className: "background",
@@ -9048,7 +9100,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 var ChooseFloor = function ChooseFloor(_ref) {
-  var page = _ref.page,
+  var seo = _ref.seo,
       urlPrev = _ref.urlPrev,
       apartments = _ref.apartments;
   var sharedData = (0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.usePage)().props.localizations;
@@ -9089,10 +9141,9 @@ var ChooseFloor = function ChooseFloor(_ref) {
       flatIndex = _useState2[0],
       setFlatIndex = _useState2[1];
 
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_Layouts_Layout__WEBPACK_IMPORTED_MODULE_5__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Head, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("title", null, page.meta_title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("meta", {
-    name: "description",
-    content: page.meta_description
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_Layouts_Layout__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    seo: seo
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
     className: "floorPlan"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("img", {
     className: "background",
@@ -9228,7 +9279,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 var ChooseFloor = function ChooseFloor(_ref) {
-  var page = _ref.page,
+  var seo = _ref.seo,
       urlPrev = _ref.urlPrev,
       apartments = _ref.apartments;
   var sharedData = (0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.usePage)().props.localizations;
@@ -9273,10 +9324,9 @@ var ChooseFloor = function ChooseFloor(_ref) {
       flatIndex = _useState2[0],
       setFlatIndex = _useState2[1];
 
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_Layouts_Layout__WEBPACK_IMPORTED_MODULE_5__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Head, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("title", null, page.meta_title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("meta", {
-    name: "description",
-    content: page.meta_description
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_Layouts_Layout__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    seo: seo
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
     className: "floorPlan"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("img", {
     className: "background",
@@ -9414,7 +9464,8 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 var Gallery = function Gallery(_ref) {
   var galleries = _ref.galleries,
       urlPrev = _ref.urlPrev,
-      page = _ref.page;
+      page = _ref.page,
+      seo = _ref.seo;
   var sharedData = (0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_9__.usePage)().props.localizations;
 
   function __(key) {
@@ -9443,10 +9494,9 @@ var Gallery = function Gallery(_ref) {
       setImgsrc = _useState4[1];
 
   var galleryImages = ["/img/gallery/1.png", "/img/gallery/2.png", "/img/gallery/3.png", "/img/gallery/4.png", "/img/gallery/5.png", "/img/gallery/6.png", "/img/gallery/7.png", "/img/gallery/8.png", "/img/gallery/9.png", "/img/gallery/10.png", "/img/gallery/3.png", "/img/gallery/4.png", "/img/gallery/5.png", "/img/gallery/6.png", "/img/gallery/3.png"];
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Layouts_Layout__WEBPACK_IMPORTED_MODULE_8__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_9__.Head, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("title", null, page.meta_title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("meta", {
-    name: "description",
-    content: page.meta_description
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Layouts_Layout__WEBPACK_IMPORTED_MODULE_8__["default"], {
+    seo: seo
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "galleryPage"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Buttons_Buttons__WEBPACK_IMPORTED_MODULE_3__.BackButton, {
     link: urlPrev,
@@ -9676,7 +9726,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 var Home = function Home(_ref) {
   var sliders = _ref.sliders,
-      page = _ref.page;
+      seo = _ref.seo;
   var sharedData = (0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_10__.usePage)().props.localizations;
   var _usePage$props = (0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_10__.usePage)().props,
       gfacebook = _usePage$props.gfacebook,
@@ -9730,7 +9780,9 @@ var Home = function Home(_ref) {
       showVideo = _useState4[0],
       setShowVideo = _useState4[1];
 
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Layouts_Layout__WEBPACK_IMPORTED_MODULE_7__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Layouts_Layout__WEBPACK_IMPORTED_MODULE_7__["default"], {
+    seo: seo
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "mainSlider"
   }, sliders.map(function (data, indexData) {
     var position = "nextSlide";
@@ -9876,7 +9928,8 @@ var Services = function Services(_ref) {
   var services = _ref.services,
       page = _ref.page,
       urlPrev = _ref.urlPrev,
-      state = _ref.state;
+      state = _ref.state,
+      seo = _ref.seo;
 
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(state),
       _useState2 = _slicedToArray(_useState, 2),
@@ -9937,10 +9990,9 @@ var Services = function Services(_ref) {
     title: __("rental_and_hotel_services"),
     para: __("rental_and_hotel_services_description")
   }];
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Layouts_Layout__WEBPACK_IMPORTED_MODULE_7__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_3__.Head, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("title", null, page.meta_title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("meta", {
-    name: "description",
-    content: page.meta_description
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Layouts_Layout__WEBPACK_IMPORTED_MODULE_7__["default"], {
+    seo: seo
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "servicePage"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Showcase_Showcase__WEBPACK_IMPORTED_MODULE_2__["default"], {
     title: page.title
@@ -10158,7 +10210,8 @@ __webpack_require__.r(__webpack_exports__);
 var SingleService = function SingleService(_ref) {
   var service = _ref.service,
       nextService = _ref.nextService,
-      urlPrev = _ref.urlPrev;
+      urlPrev = _ref.urlPrev,
+      seo = _ref.seo;
   var sharedData = (0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_9__.usePage)().props.localizations;
 
   function __(key) {
@@ -10176,13 +10229,9 @@ var SingleService = function SingleService(_ref) {
       duration: 2000
     });
   }, []);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Layouts_Layout__WEBPACK_IMPORTED_MODULE_8__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_9__.Head, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("title", null, service.meta_title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("meta", {
-    name: "description",
-    content: service.meta_description
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("meta", {
-    name: "keywords",
-    content: service.meta_keyword
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Layouts_Layout__WEBPACK_IMPORTED_MODULE_8__["default"], {
+    seo: seo
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "singleService servicePage"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Showcase_Showcase__WEBPACK_IMPORTED_MODULE_2__["default"], {
     "short": true
@@ -10824,7 +10873,8 @@ var Services = function Services(_ref) {
   var services = _ref.services,
       page = _ref.page,
       urlPrev = _ref.urlPrev,
-      state = _ref.state;
+      state = _ref.state,
+      seo = _ref.seo;
 
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(state),
       _useState2 = _slicedToArray(_useState, 2),
@@ -10885,10 +10935,9 @@ var Services = function Services(_ref) {
     title: __("rental_and_hotel_services"),
     para: __("rental_and_hotel_services_description")
   }];
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Layouts_Layout__WEBPACK_IMPORTED_MODULE_7__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_3__.Head, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("title", null, page.meta_title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("meta", {
-    name: "description",
-    content: page.meta_description
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Layouts_Layout__WEBPACK_IMPORTED_MODULE_7__["default"], {
+    seo: seo
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "servicePage"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Showcase_Showcase__WEBPACK_IMPORTED_MODULE_2__["default"], {
     title: page.title

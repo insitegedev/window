@@ -10,7 +10,7 @@ import "aos/dist/aos.css";
 import Layout from "../../Layouts/Layout";
 import {usePage, Head} from "@inertiajs/inertia-react";
 
-const Gallery = ({ galleries, urlPrev, page }) => {
+const Gallery = ({ galleries, urlPrev, page, seo }) => {
     const sharedData = usePage().props.localizations;
 
 
@@ -47,11 +47,7 @@ const Gallery = ({ galleries, urlPrev, page }) => {
         "/img/gallery/3.png",
     ];
     return (
-        <Layout>
-            <Head>
-                <title>{page.meta_title}</title>
-                <meta name="description" content={page.meta_description} />
-            </Head>
+        <Layout seo={seo}>
             <div className="galleryPage">
                 <BackButton link={urlPrev} color="#fff" text={__("go_back")} />
                 <ArrowButton color="#334E60" link="#334E60" text={__("choose_apartment")}/>

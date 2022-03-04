@@ -13,7 +13,7 @@ import "./Services.css";
 import Layout from "../../Layouts/Layout";
 import { scroller } from "react-scroll";
 
-const Services = ({ services, page, urlPrev, state }) => {
+const Services = ({ services, page, urlPrev, state, seo }) => {
     const [highlightBox, setHighLightBox] = useState(state);
     useEffect(() => {
         scroller.scrollTo("highlighted", {
@@ -76,11 +76,7 @@ const Services = ({ services, page, urlPrev, state }) => {
     ];
 
     return (
-        <Layout>
-            <Head>
-                <title>{page.meta_title}</title>
-                <meta name="description" content={page.meta_description} />
-            </Head>
+        <Layout seo={seo}>
             <div className="servicePage">
                 <Showcase title={page.title} />
                 <BackButton color="#fff" link={urlPrev} text={__("go_back")} />

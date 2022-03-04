@@ -13,7 +13,7 @@ import { Head, usePage } from "@inertiajs/inertia-react";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
-const SingleService = ({ service, nextService, urlPrev }) => {
+const SingleService = ({ service, nextService, urlPrev, seo }) => {
     const sharedData = usePage().props.localizations;
 
     function __(key, replace = {}) {
@@ -39,12 +39,7 @@ const SingleService = ({ service, nextService, urlPrev }) => {
         Aos.init({ duration: 2000 });
     }, []);
     return (
-        <Layout>
-            <Head>
-                <title>{service.meta_title}</title>
-                <meta name="description" content={service.meta_description} />
-                <meta name="keywords" content={service.meta_keyword} />
-            </Head>
+        <Layout seo={seo}>
             <div className="singleService servicePage">
                 <Showcase short />
                 <BackButton

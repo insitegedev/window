@@ -20,24 +20,50 @@ class ServiceController extends Controller
         $page = Page::where('key', 'service')->firstOrFail();
         $services = Service::where('status',true)->with(['mainFile_1','translations'])->get();
 
-        return Inertia::render("Services/Services", ["services"=> $services, "page" => $page, "state" => $request->input('state')])->withViewData([
-            'meta_title' => $page->meta_title, 'meta_description' => $page->meta_description
-        ]);;
+        return Inertia::render("Services/Services", ["services"=> $services,
+            "page" => $page,
+            "state" => $request->input('state'),
+            "seo" => [
+                "title"=>$page->meta_title,
+                "description"=>$page->meta_description,
+                "keywords"=>$page->meta_keyword,
+                "og_title"=>$page->meta_og_title,
+                "og_description"=>$page->meta_og_description,
+//            "image" => "imgg",
+//            "locale" => App::getLocale()
+            ]])
+            ->withViewData([
+            'meta_title' => $page->meta_title,
+            'meta_description' => $page->meta_description,
+            'meta_keyword' => $page->meta_keyword,
+            "image" => $page->file,
+            'og_title' => $page->meta_og_title,
+            'og_description' => $page->meta_og_description
+        ]);
 
     }
 
     public function show(string $locale, $id) {
         $page = Page::where('key', 'service')->firstOrFail();
-        $service = Service::where('status', 1)->where("id", $id)->with(['files','mainFile_1','mainFile_2','translations'])->firstOrFail();
+        $service = Service::where('status', 1)->where("id", $id)->with(['files','mainFile_1','mainFile_2','translations', ])->firstOrFail();
         $nextService = Service::where("status", 1)->with(['mainFile_1','translations'])->inRandomOrder()->first();
-//        dd(Service::inRandomOrder()->first());
 
-        return Inertia::render("SingleService/SingleService", ["service"=> $service, "nextService" => $nextService])->withViewData([
-            'meta_title' => $page->meta_title, 'meta_description' => $page->meta_description
-        ]);;
-        return view('client.pages.service.index', [
-            'services' => $services,
-            'page' => $page
+        return Inertia::render("SingleService/SingleService", ["service"=> $service, "nextService" => $nextService, "seo" => [
+            "title"=>$service->meta_title??$page->meta_title,
+            "description"=>$service->meta_description??$page->meta_description,
+            "keywords"=>$service->meta_keyword??$page->meta_keyword,
+            "og_title"=>$page->meta_og_title,
+            "og_description"=>$page->meta_og_description,
+//            "image" => "imgg",
+//            "locale" => App::getLocale()
+        ]])->withViewData([
+            'meta_title' => $service->meta_title??$page->meta_title,
+            'meta_description' => $service->meta_description??$page->meta_description,
+            'meta_keyword' => $service->meta_keyword??$page->meta_keyword,
+            "image" => $service->mainFile_1,
+            'og_title' => $page->meta_og_title,
+            'og_description' => $page->meta_og_description
         ]);
+
     }
 }

@@ -11,7 +11,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import { usePage, Head } from "@inertiajs/inertia-react";
 
-const Home = ({ sliders, page }) => {
+const Home = ({ sliders, seo }) => {
     const sharedData = usePage().props.localizations;
     const { gfacebook, ginstagram } = usePage().props;
 
@@ -54,11 +54,7 @@ const Home = ({ sliders, page }) => {
 
     const [showVideo, setShowVideo] = useState(false);
     return (
-        <Layout>
-            {/*<Head>*/}
-            {/*    <title>{page.meta_title}</title>*/}
-            {/*    <meta name="description" content={page.meta_description} />*/}
-            {/*</Head>*/}
+        <Layout seo={seo}>
             <div className="mainSlider">
                 {sliders.map((data, indexData) => {
                     let position = "nextSlide";

@@ -10,7 +10,7 @@ import "./Apartment.css";
 import {Head, usePage} from "@inertiajs/inertia-react";
 import Pdf from "/img/icons/apartment/file.svg";
 
-const Apartment = ({apartment, urlPrev}) => {
+const Apartment = ({apartment, urlPrev, seo}) => {
     const sharedData = usePage().props.localizations;
 
     function __(key, replace = {}) {
@@ -23,6 +23,7 @@ const Apartment = ({apartment, urlPrev}) => {
         return translation;
     }
 
+
     const [viewApartment, setViewApartment] = useState(0);
     const viewList = [ApartmentImg, ApartmentImg2];
     const specifications = [
@@ -34,12 +35,7 @@ const Apartment = ({apartment, urlPrev}) => {
         "Balcony - 4.5 m",
     ];
     return (
-        <Layout>
-            <Head>
-                <title>{apartment.meta_title}</title>
-                <meta name="description" content={apartment.meta_description}/>
-                <meta name="keywords" content={apartment.meta_keyword}/>
-            </Head>
+        <Layout seo={seo}>
             <div className="apartmentPage">
                 <Showcase short/>
                 <BackButton color="#334E60" link={urlPrev} text={__("go_back")} />

@@ -95,7 +95,7 @@
                                             @enderror
                                         </div>
                                         <div class="input-field ">
-                                            {!! Form::text($locale.'[meta_description]',$page->translate($locale)->meta_keyword ?? '',['class' => 'validate '. $errors->has($locale.'.meta_description') ? '' : 'valid']) !!}
+                                            {!! Form::text($locale.'[meta_description]',$page->translate($locale)->meta_description ?? '',['class' => 'validate '. $errors->has($locale.'.meta_description') ? '' : 'valid']) !!}
                                             {!! Form::label($locale.'[meta_description]',__('admin.meta_description')) !!}
                                             @error($locale.'.meta_description')
                                             <small class="errorTxt4">
@@ -105,8 +105,49 @@
                                             </small>
                                             @enderror
                                         </div>
+                                        <div class="input-field ">
+                                            {!! Form::text($locale.'[meta_keyword]',$page->translate($locale)->meta_keyword ?? '',['class' => 'validate '. $errors->has($locale.'.meta_keyword') ? '' : 'valid']) !!}
+                                            {!! Form::label($locale.'[meta_keyword]',__('admin.meta_keyword')) !!}
+                                            @error($locale.'.meta_keyword')
+                                            <small class="errorTxt4">
+                                                <div class="error">
+                                                    {{$message}}
+                                                </div>
+                                            </small>
+                                            @enderror
+                                        </div>
+                                        <div class="input-field ">
+                                            {!! Form::text($locale.'[meta_og_title]',$page->translate($locale)->meta_og_title ?? '',['class' => 'validate '. $errors->has($locale.'.meta_og_title') ? '' : 'valid']) !!}
+                                            {!! Form::label($locale.'[meta_og_title]',__('admin.meta_og_title')) !!}
+                                            @error($locale.'.meta_og_title')
+                                            <small class="errorTxt4">
+                                                <div class="error">
+                                                    {{$message}}
+                                                </div>
+                                            </small>
+                                            @enderror
+                                        </div>
+                                        <div class="input-field ">
+                                            {!! Form::text($locale.'[meta_og_description]',$page->translate($locale)->meta_og_description ?? '',['class' => 'validate '. $errors->has($locale.'.meta_og_description') ? '' : 'valid']) !!}
+                                            {!! Form::label($locale.'[meta_og_description]',__('admin.meta_og_description')) !!}
+                                            @error($locale.'.meta_og_description')
+                                            <small class="errorTxt4">
+                                                <div class="error">
+                                                    {{$message}}
+                                                </div>
+                                            </small>
+                                            @enderror
+                                        </div>
                                     </div>
                                 @endforeach
+                            </div>
+                            <div class="form-group">
+                                <div class="input-images"></div>
+                                @if ($errors->has('images'))
+                                    <span class="help-block">
+                                            {{ $errors->first('images') }}
+                                        </span>
+                                @endif
                             </div>
                         </div>
                     </div>

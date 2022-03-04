@@ -16,9 +16,22 @@ class ApartmentController extends Controller
         $apartments = Apartment::with(['translations'])->get();
         $page = Page::where('key', 'choose_apartment')->firstOrFail();
 
-        return Inertia::render('ChooseFloor/ChooseFloor', ["apartments" => $apartments, "page" => $page])->withViewData([
-            'meta_title' => $page->meta_title, 'meta_description' => $page->meta_description
-        ]);;
+        return Inertia::render('ChooseFloor/ChooseFloor', ["apartments" => $apartments, "page" => $page, "seo" => [
+            "title"=>$page->meta_title,
+            "description"=>$page->meta_description,
+            "keywords"=>$page->meta_keyword,
+            "og_title"=>$page->meta_og_title,
+            "og_description"=>$page->meta_og_description,
+//            "image" => "imgg",
+//            "locale" => App::getLocale()
+        ]])->withViewData([
+            'meta_title' => $page->meta_title,
+            'meta_description' => $page->meta_description,
+            'meta_keyword' => $page->meta_keyword,
+            "image" => $page->file,
+            'og_title' => $page->meta_og_title,
+            'og_description' => $page->meta_og_description
+        ]);
     }
 
     public function showFloor($locale, $slug)
@@ -33,18 +46,45 @@ class ApartmentController extends Controller
             }
         ])->firstOrFail();
 
-        return Inertia::render('FloorPlan/' . $slug, ["page" => $page, "apartments" => $apartments])->withViewData([
-            'meta_title' => $page->meta_title, 'meta_description' => $page->meta_description
-        ]);;
+        return Inertia::render('FloorPlan/' . $slug, ["page" => $page, "apartments" => $apartments, "seo" => [
+            "title"=>$page->meta_title,
+            "description"=>$page->meta_description,
+            "keywords"=>$page->meta_keyword,
+            "og_title"=>$page->meta_og_title,
+            "og_description"=>$page->meta_og_description,
+//            "image" => "imgg",
+//            "locale" => App::getLocale()
+        ]])->withViewData([
+            'meta_title' => $page->meta_title,
+            'meta_description' => $page->meta_description,
+            'meta_keyword' => $page->meta_keyword,
+            "image" => $page->file,
+            'og_title' => $page->meta_og_title,
+            'og_description' => $page->meta_og_description
+        ]);
     }
 
     public function show($locale, $slug)
     {
         $apartment = Floor::with(['translations', 'files', 'pdf'])->where("slug", $slug)->firstOrFail();
-//        dd($apartment);
+
+//        dd(count($apartment->files)>0 ? $apartment->files[0]: null);
         $page = Page::where('key', 'choose_apartment')->firstOrFail();
-        return Inertia::render('Apartment/Apartment', ["apartment" => $apartment, "page" => $page])->withViewData([
-            'meta_title' => $page->meta_title, 'meta_description' => $page->meta_description
-        ]);;
+        return Inertia::render('Apartment/Apartment', ["apartment" => $apartment, "page" => $page, "seo" => [
+            "title"=>$apartment->meta_title??$page->meta_title,
+            "description"=>$apartment->meta_description??$page->meta_description,
+            "keywords"=>$apartment->meta_keyword??$page->meta_keyword,
+            "og_title"=>$page->meta_og_title,
+            "og_description"=>$page->meta_og_description,
+//            "image" => "imgg",
+//            "locale" => App::getLocale()
+        ]])->withViewData([
+            'meta_title' => $apartment->meta_title??$page->meta_title,
+            'meta_description' => $apartment->meta_description??$page->meta_description,
+            'meta_keyword' => $apartment->meta_keyword??$page->meta_keyword,
+            "image" => count($apartment->files)>0 ? $apartment->files[0]: null,
+            'og_title' => $page->meta_og_title,
+            'og_description' => $page->meta_og_description
+        ]);
     }
 }
