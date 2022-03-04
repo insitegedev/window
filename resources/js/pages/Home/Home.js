@@ -55,10 +55,10 @@ const Home = ({ sliders, page }) => {
     const [showVideo, setShowVideo] = useState(false);
     return (
         <Layout>
-            <Head>
-                <title>{page.meta_title}</title>
-                <meta name="description" content={page.meta_description} />
-            </Head>
+            {/*<Head>*/}
+            {/*    <title>{page.meta_title}</title>*/}
+            {/*    <meta name="description" content={page.meta_description} />*/}
+            {/*</Head>*/}
             <div className="mainSlider">
                 {sliders.map((data, indexData) => {
                     let position = "nextSlide";

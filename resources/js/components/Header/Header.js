@@ -3,7 +3,7 @@ import { Link } from "@inertiajs/inertia-react";
 import { Languages } from "../Languages/Languages";
 import Menu from "../Menu/Menu";
 import "./Header.css";
-import { usePage } from "@inertiajs/inertia-react";
+import { usePage, Head } from "@inertiajs/inertia-react";
 
 const Header = () => {
     const { pathname } = usePage().props;
@@ -18,6 +18,11 @@ const Header = () => {
             }
             style={{ position: menu ? "fixed" : "absolute" }}
         >
+            <Head>
+                <title>My app</title>
+                <meta head-key="description" name="description" content="This is the default description" />
+                <link rel="icon" type="image/svg+xml" href="/img/apartments/1.png" />
+            </Head>
             <button
                 className={menu ? "menu_btn circle clicked" : "menu_btn circle"}
                 onClick={() => toggleMenu()}
