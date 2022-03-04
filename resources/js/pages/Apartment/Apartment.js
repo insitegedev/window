@@ -42,7 +42,7 @@ const Apartment = ({apartment, urlPrev}) => {
             </Head>
             <div className="apartmentPage">
                 <Showcase short/>
-                <BackButton color="#fff" link={urlPrev} text={__("go_back")} />
+                <BackButton color="#334E60" link={urlPrev} text={__("go_back")} />
                 <PagePath
                     loc1="home"
                     loc2="Choose apartment"
@@ -53,7 +53,7 @@ const Apartment = ({apartment, urlPrev}) => {
                         <h1 className="floor">{apartment.title}</h1>
                         <h1 className="apartment">{apartment.apartment}</h1>
                         <div className="specifications">
-                            <h6>Specifications</h6>
+                            <h6>{__("specifications")}</h6>
                             <p
                                 dangerouslySetInnerHTML={{
                                     __html: apartment.specifications,
@@ -70,7 +70,7 @@ const Apartment = ({apartment, urlPrev}) => {
                             {/*    })}*/}
                             {/*</ol>*/}
                         </div>
-                        <h6>total area</h6>
+                        <h6>{__("total_area")}</h6>
                         <h1 className="total_area">
                             {apartment.area}
                             <sup>2</sup>
@@ -87,7 +87,7 @@ const Apartment = ({apartment, urlPrev}) => {
                                 className="flex centered pdf"
                             >
                                 <img src={Pdf} alt=""/>
-                                <p>Download pdf</p>
+                                <p>{__("download_pdf")}</p>
                             </a>
                         )}
                     </div>
