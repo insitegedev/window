@@ -79,7 +79,7 @@ const ChooseFloor = ({ seo, urlPrev, apartments }) => {
                             <ArrowRight color="#334E60" />
                         </Link>
                         <div className="bold">{apartments.floor}</div>
-                        <Link href={route("client.showFloor.index", "B2")}>
+                        <Link href={route("client.showFloor.index", "B1")}>
                             <ArrowRight color="#334E60" />
                         </Link>
                     </div>

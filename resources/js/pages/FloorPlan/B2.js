@@ -26,25 +26,35 @@ const ChooseFloor = ({ seo, urlPrev, apartments }) => {
     const flatList = [
         {
             link: "/",
-            points: " 1237.2,149.9 1348,149.9 1348,21.3 1604,21.3 1604,282.3 1237.2,282.3 1237.2,264 1241,264  1252.3,239.7 1243.7,236.1 1237.2,236.1",
+            points: "39.5,9.6 303.9,9.6 303.9,228.6 300,228.6 290,232.3 302,255.8 305.5,255.8 305.5,274.3 42.9,274.3  42.9,278.6 7.6,278.6 7.6,149.3 40.2,149.3 ",
             dimensions: "Flat 1 / 35.6",
         },
         {
             link: "/",
-            points: "1237.2,282.3 1604,282.3 1604,409.4 1237.2,409.4 1237.2,329.4 1240.9,329.4 1250.7,324.6 1239.6,300  1237.2,300 ",
+            points: "7.6,278.6 42.9,278.6 42.9,274.3 305.5,274.3 305.5,293.9 301.7,293.9 288.8,316.8 303.7,320.6  305.5,320.6 305.5,400.8 42.6,400.8 42.6,404.1 7.6,404.1 ",
             dimensions: "Flat 2 / 35.6",
         },
         {
             link: "/",
-            points: "1237.2,409.4 1604,409.4 1604,533 1595.6,533 1595.6,564.1 1484.9,564.1 1484.9,546.8 1426.7,546.8  1426.7,537.4 1237.2,537.4 1237.2,513.4 1242.7,513.4 1251.1,511.2 1240,486.8 1237.2,486.8 ",
+            points: "7.6,404.1 42.6,404.1 42.6,400.8 305.5,400.8 305.5,476.2 300.5,476.2 289.4,479.1 302.6,504.5  305.5,504.5 305.5,530.6 38.7,530.6 38.7,519.4 7.6,519.4  ",
             dimensions: "Flat 3 / 35.6",
+        },
+        {
+            link: "/",
+            points: "303.9,9.6 567,9.6 567,274.3 353.7,274.3 353.7,210.6 346.3,210.6 346.3,204.4 343.6,192.6  320.5,204.1 320.5,210 303.9,210",
+            dimensions: "Flat 4 / 35.6",
+        },
+        {
+            link: "/",
+            points: "353.7,274.3 567,274.3 567,540.4 537.1,540.4 537.1,565.3 419.1,565.3 419.1,527.1 353.7,527.1  353.7,405.9 362.6,405.9 369.4,399 358.4,378.6 353.7,378.6 ",
+            dimensions: "Flat 5 / 35.6",
         },
     ];
     const [flatIndex, setFlatIndex] = useState(0);
 
     return (
         <Layout seo={seo}>
-            <div className="floorPlan">
+            <div className="floorPlan smaller">
                 <img className="background" src={Background} alt="" />
                 <Showcase short />
                 <BackButton
@@ -73,18 +83,18 @@ const ChooseFloor = ({ seo, urlPrev, apartments }) => {
                         id="Layer_1"
                         x="0px"
                         y="0px"
-                        viewBox="0 0 1750 600"
-                        style={{ enableBackground: "new 0 0 1750 600" }}
+                        viewBox="0 0 700 600"
+                        style={{ enableBackground: "new 0 0 700 600" }}
                         xmlSpace="preserve"
                     >
                         <image
                             style={{ overflow: "visible" }}
-                            width="1710"
-                            height="568"
-                            xlinkHref="/img/floorplan/B2.png"
-                            transform="matrix(1 0 0 1 20 16)"
+                            width="693"
+                            height="589"
+                            xlinkHref="/img/floorplan/B3.png"
+                            transform="matrix(1 0 0 1 3.5 5.5)"
                         ></image>
-                        {apartments.floors.map((flat, index) => {
+                        {flatList.map((flat, index) => {
                             const sold = flat.status === 0;
                             return (
                                 <Tippy

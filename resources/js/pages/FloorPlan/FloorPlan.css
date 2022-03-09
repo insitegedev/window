@@ -41,10 +41,14 @@
 .floorPlan .head .left {
     transform: rotate(180deg) translateY(5px);
 }
+
 .floorPlan .container {
     width: 1500px;
     margin: auto;
     position: relative;
+}
+.floorPlan.smaller .container {
+    width: 800px;
 }
 .floorPlan .container svg {
     width: 100%;
@@ -88,6 +92,9 @@
     :root {
         --tooltip-position: translateY(50px) translateX(-50%);
         --tooltip-position2: translateY(0px) translateX(-50%);
+    }
+    .floorPlan.smaller .container {
+        width: 95%;
     }
 }
 @media screen and (max-width: 700px) {

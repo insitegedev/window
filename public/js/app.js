@@ -8648,7 +8648,7 @@ var ChooseFloor = function ChooseFloor(_ref) {
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
     className: "bold"
   }, apartments.floor), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
-    href: route("client.showFloor.index", "B2")
+    href: route("client.showFloor.index", "B1")
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_img_icons_sm_smIcons__WEBPACK_IMPORTED_MODULE_2__.ArrowRight, {
     color: "#334E60"
   })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
@@ -8945,16 +8945,24 @@ var ChooseFloor = function ChooseFloor(_ref) {
 
   var flatList = [{
     link: "/",
-    points: " 1237.2,149.9 1348,149.9 1348,21.3 1604,21.3 1604,282.3 1237.2,282.3 1237.2,264 1241,264  1252.3,239.7 1243.7,236.1 1237.2,236.1",
+    points: "39.5,9.6 303.9,9.6 303.9,228.6 300,228.6 290,232.3 302,255.8 305.5,255.8 305.5,274.3 42.9,274.3  42.9,278.6 7.6,278.6 7.6,149.3 40.2,149.3 ",
     dimensions: "Flat 1 / 35.6"
   }, {
     link: "/",
-    points: "1237.2,282.3 1604,282.3 1604,409.4 1237.2,409.4 1237.2,329.4 1240.9,329.4 1250.7,324.6 1239.6,300  1237.2,300 ",
+    points: "7.6,278.6 42.9,278.6 42.9,274.3 305.5,274.3 305.5,293.9 301.7,293.9 288.8,316.8 303.7,320.6  305.5,320.6 305.5,400.8 42.6,400.8 42.6,404.1 7.6,404.1 ",
     dimensions: "Flat 2 / 35.6"
   }, {
     link: "/",
-    points: "1237.2,409.4 1604,409.4 1604,533 1595.6,533 1595.6,564.1 1484.9,564.1 1484.9,546.8 1426.7,546.8  1426.7,537.4 1237.2,537.4 1237.2,513.4 1242.7,513.4 1251.1,511.2 1240,486.8 1237.2,486.8 ",
+    points: "7.6,404.1 42.6,404.1 42.6,400.8 305.5,400.8 305.5,476.2 300.5,476.2 289.4,479.1 302.6,504.5  305.5,504.5 305.5,530.6 38.7,530.6 38.7,519.4 7.6,519.4  ",
     dimensions: "Flat 3 / 35.6"
+  }, {
+    link: "/",
+    points: "303.9,9.6 567,9.6 567,274.3 353.7,274.3 353.7,210.6 346.3,210.6 346.3,204.4 343.6,192.6  320.5,204.1 320.5,210 303.9,210",
+    dimensions: "Flat 4 / 35.6"
+  }, {
+    link: "/",
+    points: "353.7,274.3 567,274.3 567,540.4 537.1,540.4 537.1,565.3 419.1,565.3 419.1,527.1 353.7,527.1  353.7,405.9 362.6,405.9 369.4,399 358.4,378.6 353.7,378.6 ",
+    dimensions: "Flat 5 / 35.6"
   }];
 
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(0),
@@ -8965,7 +8973,7 @@ var ChooseFloor = function ChooseFloor(_ref) {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_Layouts_Layout__WEBPACK_IMPORTED_MODULE_5__["default"], {
     seo: seo
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
-    className: "floorPlan"
+    className: "floorPlan smaller"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("img", {
     className: "background",
     src: _img_apartments_bg_png__WEBPACK_IMPORTED_MODULE_6__["default"],
@@ -9000,20 +9008,20 @@ var ChooseFloor = function ChooseFloor(_ref) {
     id: "Layer_1",
     x: "0px",
     y: "0px",
-    viewBox: "0 0 1750 600",
+    viewBox: "0 0 700 600",
     style: {
-      enableBackground: "new 0 0 1750 600"
+      enableBackground: "new 0 0 700 600"
     },
     xmlSpace: "preserve"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("image", {
     style: {
       overflow: "visible"
     },
-    width: "1710",
-    height: "568",
-    xlinkHref: "/img/floorplan/B2.png",
-    transform: "matrix(1 0 0 1 20 16)"
-  }), apartments.floors.map(function (flat, index) {
+    width: "693",
+    height: "589",
+    xlinkHref: "/img/floorplan/B3.png",
+    transform: "matrix(1 0 0 1 3.5 5.5)"
+  }), flatList.map(function (flat, index) {
     var sold = flat.status === 0;
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_tippyjs_react__WEBPACK_IMPORTED_MODULE_9__["default"], {
       maxWidth: "0",
@@ -9116,24 +9124,28 @@ var ChooseFloor = function ChooseFloor(_ref) {
 
   var flatList = [{
     link: "/",
-    points: "39.5,9.6 303.9,9.6 303.9,228.6 300,228.6 290,232.3 302,255.8 305.5,255.8 305.5,274.3 42.9,274.3  42.9,278.6 7.6,278.6 7.6,149.3 40.2,149.3 ",
+    points: "23.6,40.9 54.4,40.9 54.4,28.4 317.2,28.4 317.2,159.2 298.1,159.2 298.1,154.1 271.7,140.6 267.4,153.9 267.4,157 56.5,157 56.5,176.4 23.6,176.4 ",
     dimensions: "Flat 1 / 35.6"
   }, {
     link: "/",
-    points: "7.6,278.6 42.9,278.6 42.9,274.3 305.5,274.3 305.5,293.9 301.7,293.9 288.8,316.8 303.7,320.6  305.5,320.6 305.5,400.8 42.6,400.8 42.6,404.1 7.6,404.1 ",
+    points: "23.6,176.4 56.5,176.4 56.5,157 267.4,157 267.4,236.6 264.8,236.6 253,261.2 261.7,264.6 267.4,264.6 267.4,280.1 57.2,280.1 57.2,282.8 23.6,282.8 ",
     dimensions: "Flat 2 / 35.6"
   }, {
     link: "/",
-    points: "7.6,404.1 42.6,404.1 42.6,400.8 305.5,400.8 305.5,476.2 300.5,476.2 289.4,479.1 302.6,504.5  305.5,504.5 305.5,530.6 38.7,530.6 38.7,519.4 7.6,519.4  ",
+    points: "23.6,282.8 57.2,282.8 57.2,280.1 267.4,280.1 267.4,294.8 262.8,294.8 251.2,318.3 262.3,322.3 267.4,322.3 267.4,400.1 57.2,400.1 57.2,404.3 23.6,404.3",
     dimensions: "Flat 3 / 35.6"
   }, {
     link: "/",
-    points: "303.9,9.6 567,9.6 567,274.3 353.7,274.3 353.7,210.6 346.3,210.6 346.3,204.4 343.6,192.6  320.5,204.1 320.5,210 303.9,210",
+    points: "23.6,404.3 57.2,404.3 57.2,400.1 267.4,400.1 267.4,478.3 262.3,478.3 251.4,482.1 263.2,506.6 267.4,506.6 267.4,516.6 53.7,516.6 53.7,511.2 23.6,511.2 ",
     dimensions: "Flat 4 / 35.6"
   }, {
     link: "/",
-    points: "353.7,274.3 567,274.3 567,540.4 537.1,540.4 537.1,565.3 419.1,565.3 419.1,527.1 353.7,527.1  353.7,405.9 362.6,405.9 369.4,399 358.4,378.6 353.7,378.6 ",
+    points: "317.2,28.4 522.1,28.4 522.1,271.2 491,271.2 491,280.1 315.4,280.1 315.4,189 317.2,189 330.6,184.8 319.6,159.7 317.2,159.7",
     dimensions: "Flat 5 / 35.6"
+  }, {
+    link: "/",
+    points: "315.4,280.1 491,280.1 491,301.6 521.4,301.6 521.4,532.5 493.4,532.5 493.4,561.4 386.6,561.4 386.6,532.4 372.4,532.4 372.3,517.7 315.4,517.7 315.4,404.3 318.7,404.3 330.3,401.7 320.5,378.9 315.4,378.9  ",
+    dimensions: "Flat 6 / 35.6"
   }];
 
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(0),
@@ -9144,7 +9156,7 @@ var ChooseFloor = function ChooseFloor(_ref) {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_Layouts_Layout__WEBPACK_IMPORTED_MODULE_5__["default"], {
     seo: seo
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
-    className: "floorPlan"
+    className: "floorPlan smaller"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("img", {
     className: "background",
     src: _img_apartments_bg_png__WEBPACK_IMPORTED_MODULE_6__["default"],
@@ -9169,7 +9181,8 @@ var ChooseFloor = function ChooseFloor(_ref) {
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
     className: "bold"
   }, apartments.floor), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
-    href: route("client.showFloor.index", "B4")
+    href: route("client.showFloor.index", "B4"),
+    className: "right"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_img_icons_sm_smIcons__WEBPACK_IMPORTED_MODULE_2__.ArrowRight, {
     color: "#334E60"
   })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
@@ -9188,18 +9201,18 @@ var ChooseFloor = function ChooseFloor(_ref) {
     style: {
       overflow: "visible"
     },
-    width: "693",
-    height: "589",
-    xlinkHref: "/img/floorplan/B3.png",
-    transform: "matrix(1 0 0 1 3.5 5.5)"
-  }), apartments.floors.map(function (flat, index) {
+    width: "661",
+    height: "551",
+    xlinkHref: "/img/floorplan/B4.png",
+    transform: "matrix(1 0 0 1 19.5 24.5)"
+  }), flatList.map(function (flat, index) {
     var sold = flat.status === 0;
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_tippyjs_react__WEBPACK_IMPORTED_MODULE_9__["default"], {
       maxWidth: "0",
       arrow: false,
       content: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("button", {
         style: {
-          transform: "var(--tooltip-position)",
+          transform: "var(--tooltip-position2)",
           width: "180px",
           height: "50px",
           borderRadius: "5px",
@@ -9295,28 +9308,20 @@ var ChooseFloor = function ChooseFloor(_ref) {
 
   var flatList = [{
     link: "/",
-    points: "23.6,40.9 54.4,40.9 54.4,28.4 317.2,28.4 317.2,159.2 298.1,159.2 298.1,154.1 271.7,140.6 267.4,153.9 267.4,157 56.5,157 56.5,176.4 23.6,176.4 ",
+    points: "166.9,120.4 166.9,50.7 425.6,50.7 425.6,60.4 453.6,60.4 453.6,71.6 460.2,71.6 460.2,143.1 453.6,143.1 453.6,155.4 166.9,155.4 166.9,142.7 171.2,142.7 177.3,130.9 166.9,122.1",
     dimensions: "Flat 1 / 35.6"
   }, {
     link: "/",
-    points: "23.6,176.4 56.5,176.4 56.5,157 267.4,157 267.4,236.6 264.8,236.6 253,261.2 261.7,264.6 267.4,264.6 267.4,280.1 57.2,280.1 57.2,282.8 23.6,282.8 ",
+    points: "166.9,155.4 453.6,155.4 453.6,171.4 460.2,171.4 460.2,243.1 454,243.1 454,255.4 166.9,255.4 166.9,242.9 171.1,243 180.8,224.4 171.9,222.9 166.9,222.9 ",
     dimensions: "Flat 2 / 35.6"
   }, {
     link: "/",
-    points: "23.6,282.8 57.2,282.8 57.2,280.1 267.4,280.1 267.4,294.8 262.8,294.8 251.2,318.3 262.3,322.3 267.4,322.3 267.4,400.1 57.2,400.1 57.2,404.3 23.6,404.3",
+    points: "166.9,255.4 454,255.4 454,269.1 460.2,269.1 460.2,339 453.9,339 453.9,353.4 166.9,353.4 166.9,292.3 173,292.3 181,289.6 170.1,272 167,272 ",
     dimensions: "Flat 3 / 35.6"
   }, {
     link: "/",
-    points: "23.6,404.3 57.2,404.3 57.2,400.1 267.4,400.1 267.4,478.3 262.3,478.3 251.4,482.1 263.2,506.6 267.4,506.6 267.4,516.6 53.7,516.6 53.7,511.2 23.6,511.2 ",
+    points: "166.9,353.4 453.9,353.4 453.9,461.2 431.9,461.2 431.9,487 342.9,487 343,462.1 331,462.1 331,451.8 312,451.8 312,522.4 254.7,522.4 254.7,460.9 192.1,460.9 192.1,455.9 164.4,455.9 164.4,451 167.3,451 167.3,431 171.5,431 181.3,413.6 173,411.1 167.1,411.1 ",
     dimensions: "Flat 4 / 35.6"
-  }, {
-    link: "/",
-    points: "317.2,28.4 522.1,28.4 522.1,271.2 491,271.2 491,280.1 315.4,280.1 315.4,189 317.2,189 330.6,184.8 319.6,159.7 317.2,159.7",
-    dimensions: "Flat 5 / 35.6"
-  }, {
-    link: "/",
-    points: "315.4,280.1 491,280.1 491,301.6 521.4,301.6 521.4,532.5 493.4,532.5 493.4,561.4 386.6,561.4 386.6,532.4 372.4,532.4 372.3,517.7 315.4,517.7 315.4,404.3 318.7,404.3 330.3,401.7 320.5,378.9 315.4,378.9  ",
-    dimensions: "Flat 6 / 35.6"
   }];
 
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(0),
@@ -9327,7 +9332,7 @@ var ChooseFloor = function ChooseFloor(_ref) {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_Layouts_Layout__WEBPACK_IMPORTED_MODULE_5__["default"], {
     seo: seo
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
-    className: "floorPlan"
+    className: "floorPlan smaller"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("img", {
     className: "background",
     src: _img_apartments_bg_png__WEBPACK_IMPORTED_MODULE_6__["default"],
@@ -9371,18 +9376,18 @@ var ChooseFloor = function ChooseFloor(_ref) {
     style: {
       overflow: "visible"
     },
-    width: "661",
-    height: "551",
-    xlinkHref: "/img/floorplan/B4.png",
-    transform: "matrix(1 0 0 1 19.5 24.5)"
-  }), apartments.floors.map(function (flat, index) {
+    width: "516",
+    height: "533",
+    xlinkHref: "/img/floorplan/B5.png",
+    transform: "matrix(1 0 0 1 92 33)"
+  }), flatList.map(function (flat, index) {
     var sold = flat.status === 0;
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_tippyjs_react__WEBPACK_IMPORTED_MODULE_9__["default"], {
       maxWidth: "0",
       arrow: false,
       content: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("button", {
         style: {
-          transform: "var(--tooltip-position)",
+          transform: "var(--tooltip-position2)",
           width: "180px",
           height: "50px",
           borderRadius: "5px",
@@ -11546,7 +11551,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".contactPage .body {\n  display: grid;\n  grid-template-columns: repeat(2, 1fr);\n  grid-gap: 77px;\n  width: 1300px;\n  margin: auto;\n  padding-top: 58px;\n  padding-bottom: 80px;\n  background: url(/img/general/line-bg.png);\n  background-position: center;\n  background-size: contain;\n}\n.contactPage .contact_info .title:first-child {\n  margin-top: 0;\n}\n.contactPage .body .img {\n  width: 100%;\n}\n\n@media screen and (max-width: 1350px) {\n  .contactPage .body {\n    width: 95%;\n  }\n}\n\n@media screen and (max-width: 1000px) {\n  .contactPage .body {\n    grid-gap: 41px;\n  }\n}\n\n@media screen and (max-width: 850px) {\n  .form .playfair {\n    font-size: 33px;\n    margin: 12px 0;\n  }\n  .form input,\n  .form textarea {\n    height: 49px;\n    margin-bottom: 14px;\n  }\n  .form textarea {\n    padding-top: 16px;\n    height: 104px;\n  }\n  .contactPage .body {\n    grid-gap: 22px;\n  }\n  .form .grid {\n    grid-gap: 11px;\n  }\n}\n@media screen and (max-width: 700px) {\n  .contactPage .body {\n    grid-template-columns: 1fr;\n  }\n  .contactPage .body .form {\n    grid-row: 1;\n  }\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".contactPage .body {\r\n  display: grid;\r\n  grid-template-columns: repeat(2, 1fr);\r\n  grid-gap: 77px;\r\n  width: 1300px;\r\n  margin: auto;\r\n  padding-top: 58px;\r\n  padding-bottom: 80px;\r\n  background: url(/img/general/line-bg.png);\r\n  background-position: center;\r\n  background-size: contain;\r\n}\r\n.contactPage .contact_info .title:first-child {\r\n  margin-top: 0;\r\n}\r\n.contactPage .body .img {\r\n  width: 100%;\r\n}\r\n\r\n@media screen and (max-width: 1350px) {\r\n  .contactPage .body {\r\n    width: 95%;\r\n  }\r\n}\r\n\r\n@media screen and (max-width: 1000px) {\r\n  .contactPage .body {\r\n    grid-gap: 41px;\r\n  }\r\n}\r\n\r\n@media screen and (max-width: 850px) {\r\n  .form .playfair {\r\n    font-size: 33px;\r\n    margin: 12px 0;\r\n  }\r\n  .form input,\r\n  .form textarea {\r\n    height: 49px;\r\n    margin-bottom: 14px;\r\n  }\r\n  .form textarea {\r\n    padding-top: 16px;\r\n    height: 104px;\r\n  }\r\n  .contactPage .body {\r\n    grid-gap: 22px;\r\n  }\r\n  .form .grid {\r\n    grid-gap: 11px;\r\n  }\r\n}\r\n@media screen and (max-width: 700px) {\r\n  .contactPage .body {\r\n    grid-template-columns: 1fr;\r\n  }\r\n  .contactPage .body .form {\r\n    grid-row: 1;\r\n  }\r\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -11570,7 +11575,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".floorPlan {\r\n    padding-bottom: 240px;\r\n}\r\n.floorPlan .background {\r\n    position: fixed;\r\n    left: 0;\r\n    top: 0;\r\n    width: 100%;\r\n    height: 100vh;\r\n    z-index: -1;\r\n}\r\n.floorPlan .back_button {\r\n    flex-direction: column;\r\n}\r\n.floorPlan .back_button .text {\r\n    opacity: 1;\r\n    margin-left: 0;\r\n    margin-top: 10px;\r\n}\r\n.floorPlan .head {\r\n    text-align: center;\r\n    color: #334e60;\r\n    text-transform: uppercase;\r\n    margin-bottom: 84px;\r\n    padding-top: 32px;\r\n    font-weight: bold;\r\n}\r\n.floorPlan .head .block {\r\n    opacity: 0.5;\r\n    font-size: 29px;\r\n    margin-bottom: 10px;\r\n}\r\n.floorPlan .head .disabled {\r\n    opacity: 0.5;\r\n    cursor: default;\r\n}\r\n.floorPlan .head .flex .bold {\r\n    font-size: 46px;\r\n    margin: 0px 15px;\r\n}\r\n.floorPlan .head .left {\r\n    transform: rotate(180deg) translateY(5px);\r\n}\r\n.floorPlan .container {\r\n    width: 1500px;\r\n    margin: auto;\r\n    position: relative;\r\n}\r\n.floorPlan .container svg {\r\n    width: 100%;\r\n}\r\n.floorPlan .st0 {\r\n    opacity: 0;\r\n    transition: 0.3s;\r\n    fill: #126d2a;\r\n}\r\n.floorPlan .st0.sold {\r\n    fill: #6d1212;\r\n    cursor: default;\r\n}\r\n.floorPlan .st0:hover {\r\n    opacity: 0.6;\r\n}\r\n:root {\r\n    --tooltip-position: translateY(180px) translateX(-50%);\r\n    --tooltip-position2: translateY(50px) translateX(-50%);\r\n}\r\n\r\n@media screen and (max-width: 1550px) {\r\n    .floorPlan .container {\r\n        width: 95%;\r\n    }\r\n}\r\n@media screen and (max-width: 1200px) {\r\n    .floorPlan .head .block {\r\n        font-size: 20px;\r\n        margin-bottom: 5px;\r\n    }\r\n    .floorPlan .head .flex .bold {\r\n        font-size: 30px;\r\n        margin: 0px 12px;\r\n    }\r\n    .floorPlan .head .flex svg {\r\n        width: 18px;\r\n    }\r\n}\r\n@media screen and (max-width: 1000px) {\r\n    :root {\r\n        --tooltip-position: translateY(50px) translateX(-50%);\r\n        --tooltip-position2: translateY(0px) translateX(-50%);\r\n    }\r\n}\r\n@media screen and (max-width: 700px) {\r\n    :root {\r\n        --tooltip-position: translateY(0) translateX(-50%);\r\n    }\r\n    .floorPlan .head {\r\n        margin-bottom: 47px;\r\n        padding-top: 141px;\r\n    }\r\n    .floorPlan .back_button {\r\n        flex-direction: row;\r\n    }\r\n    .floorPlan .back_button .text {\r\n        margin-left: 10px;\r\n        margin-top: 0;\r\n    }\r\n    .floorPlan {\r\n        padding-bottom: 83px;\r\n    }\r\n}\r\n@media screen and (max-width: 500px) {\r\n    .floorPlan {\r\n        padding-bottom: 129px;\r\n    }\r\n    .floor .floorPlan .head {\r\n        padding-top: 85px;\r\n    }\r\n    .floorPlan .head .flex .bold {\r\n        font-size: 25px;\r\n    }\r\n    .floorPlan .head .block {\r\n        font-size: 17px;\r\n        margin-bottom: 9px;\r\n    }\r\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".floorPlan {\r\n    padding-bottom: 240px;\r\n}\r\n.floorPlan .background {\r\n    position: fixed;\r\n    left: 0;\r\n    top: 0;\r\n    width: 100%;\r\n    height: 100vh;\r\n    z-index: -1;\r\n}\r\n.floorPlan .back_button {\r\n    flex-direction: column;\r\n}\r\n.floorPlan .back_button .text {\r\n    opacity: 1;\r\n    margin-left: 0;\r\n    margin-top: 10px;\r\n}\r\n.floorPlan .head {\r\n    text-align: center;\r\n    color: #334e60;\r\n    text-transform: uppercase;\r\n    margin-bottom: 84px;\r\n    padding-top: 32px;\r\n    font-weight: bold;\r\n}\r\n.floorPlan .head .block {\r\n    opacity: 0.5;\r\n    font-size: 29px;\r\n    margin-bottom: 10px;\r\n}\r\n.floorPlan .head .disabled {\r\n    opacity: 0.5;\r\n    cursor: default;\r\n}\r\n.floorPlan .head .flex .bold {\r\n    font-size: 46px;\r\n    margin: 0px 15px;\r\n}\r\n.floorPlan .head .left {\r\n    transform: rotate(180deg) translateY(5px);\r\n}\r\n\r\n.floorPlan .container {\r\n    width: 1500px;\r\n    margin: auto;\r\n    position: relative;\r\n}\r\n.floorPlan.smaller .container {\r\n    width: 800px;\r\n}\r\n.floorPlan .container svg {\r\n    width: 100%;\r\n}\r\n.floorPlan .st0 {\r\n    opacity: 0;\r\n    transition: 0.3s;\r\n    fill: #126d2a;\r\n}\r\n.floorPlan .st0.sold {\r\n    fill: #6d1212;\r\n    cursor: default;\r\n}\r\n.floorPlan .st0:hover {\r\n    opacity: 0.6;\r\n}\r\n:root {\r\n    --tooltip-position: translateY(180px) translateX(-50%);\r\n    --tooltip-position2: translateY(50px) translateX(-50%);\r\n}\r\n\r\n@media screen and (max-width: 1550px) {\r\n    .floorPlan .container {\r\n        width: 95%;\r\n    }\r\n}\r\n@media screen and (max-width: 1200px) {\r\n    .floorPlan .head .block {\r\n        font-size: 20px;\r\n        margin-bottom: 5px;\r\n    }\r\n    .floorPlan .head .flex .bold {\r\n        font-size: 30px;\r\n        margin: 0px 12px;\r\n    }\r\n    .floorPlan .head .flex svg {\r\n        width: 18px;\r\n    }\r\n}\r\n@media screen and (max-width: 1000px) {\r\n    :root {\r\n        --tooltip-position: translateY(50px) translateX(-50%);\r\n        --tooltip-position2: translateY(0px) translateX(-50%);\r\n    }\r\n    .floorPlan.smaller .container {\r\n        width: 95%;\r\n    }\r\n}\r\n@media screen and (max-width: 700px) {\r\n    :root {\r\n        --tooltip-position: translateY(0) translateX(-50%);\r\n    }\r\n    .floorPlan .head {\r\n        margin-bottom: 47px;\r\n        padding-top: 141px;\r\n    }\r\n    .floorPlan .back_button {\r\n        flex-direction: row;\r\n    }\r\n    .floorPlan .back_button .text {\r\n        margin-left: 10px;\r\n        margin-top: 0;\r\n    }\r\n    .floorPlan {\r\n        padding-bottom: 83px;\r\n    }\r\n}\r\n@media screen and (max-width: 500px) {\r\n    .floorPlan {\r\n        padding-bottom: 129px;\r\n    }\r\n    .floor .floorPlan .head {\r\n        padding-top: 85px;\r\n    }\r\n    .floorPlan .head .flex .bold {\r\n        font-size: 25px;\r\n    }\r\n    .floorPlan .head .block {\r\n        font-size: 17px;\r\n        margin-bottom: 9px;\r\n    }\r\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -11594,7 +11599,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".floorPlan {\r\n    padding-bottom: 240px;\r\n}\r\n.floorPlan .background {\r\n    position: fixed;\r\n    left: 0;\r\n    top: 0;\r\n    width: 100%;\r\n    height: 100vh;\r\n    z-index: -1;\r\n}\r\n.floorPlan .back_button {\r\n    flex-direction: column;\r\n}\r\n.floorPlan .back_button .text {\r\n    opacity: 1;\r\n    margin-left: 0;\r\n    margin-top: 10px;\r\n}\r\n.floorPlan .head {\r\n    text-align: center;\r\n    color: #334e60;\r\n    text-transform: uppercase;\r\n    margin-bottom: 84px;\r\n    padding-top: 32px;\r\n    font-weight: bold;\r\n}\r\n.floorPlan .head .block {\r\n    opacity: 0.5;\r\n    font-size: 29px;\r\n    margin-bottom: 10px;\r\n}\r\n.floorPlan .head .disabled {\r\n    opacity: 0.5;\r\n    cursor: default;\r\n}\r\n.floorPlan .head .flex .bold {\r\n    font-size: 46px;\r\n    margin: 0px 15px;\r\n}\r\n.floorPlan .head .left {\r\n    transform: rotate(180deg) translateY(5px);\r\n}\r\n.floorPlan .container {\r\n    width: 1500px;\r\n    margin: auto;\r\n    position: relative;\r\n}\r\n.floorPlan .container svg {\r\n    width: 100%;\r\n}\r\n.floorPlan .st0 {\r\n    opacity: 0;\r\n    transition: 0.3s;\r\n    fill: #126d2a;\r\n}\r\n.floorPlan .st0.sold {\r\n    fill: #6d1212;\r\n    cursor: default;\r\n}\r\n.floorPlan .st0:hover {\r\n    opacity: 0.6;\r\n}\r\n:root {\r\n    --tooltip-position: translateY(180px) translateX(-50%);\r\n    --tooltip-position2: translateY(50px) translateX(-50%);\r\n}\r\n\r\n@media screen and (max-width: 1550px) {\r\n    .floorPlan .container {\r\n        width: 95%;\r\n    }\r\n}\r\n@media screen and (max-width: 1200px) {\r\n    .floorPlan .head .block {\r\n        font-size: 20px;\r\n        margin-bottom: 5px;\r\n    }\r\n    .floorPlan .head .flex .bold {\r\n        font-size: 30px;\r\n        margin: 0px 12px;\r\n    }\r\n    .floorPlan .head .flex svg {\r\n        width: 18px;\r\n    }\r\n}\r\n@media screen and (max-width: 1000px) {\r\n    :root {\r\n        --tooltip-position: translateY(50px) translateX(-50%);\r\n        --tooltip-position2: translateY(0px) translateX(-50%);\r\n    }\r\n}\r\n@media screen and (max-width: 700px) {\r\n    :root {\r\n        --tooltip-position: translateY(0) translateX(-50%);\r\n    }\r\n    .floorPlan .head {\r\n        margin-bottom: 47px;\r\n        padding-top: 141px;\r\n    }\r\n    .floorPlan .back_button {\r\n        flex-direction: row;\r\n    }\r\n    .floorPlan .back_button .text {\r\n        margin-left: 10px;\r\n        margin-top: 0;\r\n    }\r\n    .floorPlan {\r\n        padding-bottom: 83px;\r\n    }\r\n}\r\n@media screen and (max-width: 500px) {\r\n    .floorPlan {\r\n        padding-bottom: 129px;\r\n    }\r\n    .floor .floorPlan .head {\r\n        padding-top: 85px;\r\n    }\r\n    .floorPlan .head .flex .bold {\r\n        font-size: 25px;\r\n    }\r\n    .floorPlan .head .block {\r\n        font-size: 17px;\r\n        margin-bottom: 9px;\r\n    }\r\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".floorPlan {\r\n    padding-bottom: 240px;\r\n}\r\n.floorPlan .background {\r\n    position: fixed;\r\n    left: 0;\r\n    top: 0;\r\n    width: 100%;\r\n    height: 100vh;\r\n    z-index: -1;\r\n}\r\n.floorPlan .back_button {\r\n    flex-direction: column;\r\n}\r\n.floorPlan .back_button .text {\r\n    opacity: 1;\r\n    margin-left: 0;\r\n    margin-top: 10px;\r\n}\r\n.floorPlan .head {\r\n    text-align: center;\r\n    color: #334e60;\r\n    text-transform: uppercase;\r\n    margin-bottom: 84px;\r\n    padding-top: 32px;\r\n    font-weight: bold;\r\n}\r\n.floorPlan .head .block {\r\n    opacity: 0.5;\r\n    font-size: 29px;\r\n    margin-bottom: 10px;\r\n}\r\n.floorPlan .head .disabled {\r\n    opacity: 0.5;\r\n    cursor: default;\r\n}\r\n.floorPlan .head .flex .bold {\r\n    font-size: 46px;\r\n    margin: 0px 15px;\r\n}\r\n.floorPlan .head .left {\r\n    transform: rotate(180deg) translateY(5px);\r\n}\r\n\r\n.floorPlan .container {\r\n    width: 1500px;\r\n    margin: auto;\r\n    position: relative;\r\n}\r\n.floorPlan.smaller .container {\r\n    width: 800px;\r\n}\r\n.floorPlan .container svg {\r\n    width: 100%;\r\n}\r\n.floorPlan .st0 {\r\n    opacity: 0;\r\n    transition: 0.3s;\r\n    fill: #126d2a;\r\n}\r\n.floorPlan .st0.sold {\r\n    fill: #6d1212;\r\n    cursor: default;\r\n}\r\n.floorPlan .st0:hover {\r\n    opacity: 0.6;\r\n}\r\n:root {\r\n    --tooltip-position: translateY(180px) translateX(-50%);\r\n    --tooltip-position2: translateY(50px) translateX(-50%);\r\n}\r\n\r\n@media screen and (max-width: 1550px) {\r\n    .floorPlan .container {\r\n        width: 95%;\r\n    }\r\n}\r\n@media screen and (max-width: 1200px) {\r\n    .floorPlan .head .block {\r\n        font-size: 20px;\r\n        margin-bottom: 5px;\r\n    }\r\n    .floorPlan .head .flex .bold {\r\n        font-size: 30px;\r\n        margin: 0px 12px;\r\n    }\r\n    .floorPlan .head .flex svg {\r\n        width: 18px;\r\n    }\r\n}\r\n@media screen and (max-width: 1000px) {\r\n    :root {\r\n        --tooltip-position: translateY(50px) translateX(-50%);\r\n        --tooltip-position2: translateY(0px) translateX(-50%);\r\n    }\r\n    .floorPlan.smaller .container {\r\n        width: 95%;\r\n    }\r\n}\r\n@media screen and (max-width: 700px) {\r\n    :root {\r\n        --tooltip-position: translateY(0) translateX(-50%);\r\n    }\r\n    .floorPlan .head {\r\n        margin-bottom: 47px;\r\n        padding-top: 141px;\r\n    }\r\n    .floorPlan .back_button {\r\n        flex-direction: row;\r\n    }\r\n    .floorPlan .back_button .text {\r\n        margin-left: 10px;\r\n        margin-top: 0;\r\n    }\r\n    .floorPlan {\r\n        padding-bottom: 83px;\r\n    }\r\n}\r\n@media screen and (max-width: 500px) {\r\n    .floorPlan {\r\n        padding-bottom: 129px;\r\n    }\r\n    .floor .floorPlan .head {\r\n        padding-top: 85px;\r\n    }\r\n    .floorPlan .head .flex .bold {\r\n        font-size: 25px;\r\n    }\r\n    .floorPlan .head .block {\r\n        font-size: 17px;\r\n        margin-bottom: 9px;\r\n    }\r\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -11906,7 +11911,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".showcase {\n  position: relative;\n  width: 100%;\n  height: 330px;\n  background: url(/img/home/1.png) no-repeat;\n  background-position: center;\n  background-size: cover;\n  background-attachment: fixed;\n  display: flex;\n  align-items: flex-end;\n  justify-content: center;\n  padding-bottom: 37px;\n  color: #fff;\n  font-size: 42px;\n}\n.showcase.short {\n  height: 210px;\n}\n.showcase::after {\n  width: 100%;\n  height: 100%;\n  left: 0;\n  top: 0;\n  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), #134d4d3a);\n  z-index: 0;\n}\n.showcase .title {\n  position: relative;\n  z-index: 100;\n}\n\n@media screen and (max-width: 1350px) {\n  .showcase {\n    height: 208px;\n    padding-bottom: 20px;\n    font-size: 36px;\n  }\n  .showcase.short {\n    height: 123px;\n  }\n}\n@media screen and (max-width: 600px) {\n  .showcase {\n    height: 161px;\n    padding-bottom: 14px;\n    font-size: 30px;\n  }\n  .showcase.short {\n    height: 94px;\n  }\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".showcase {\r\n  position: relative;\r\n  width: 100%;\r\n  height: 330px;\r\n  background: url(/img/home/1.png) no-repeat;\r\n  background-position: center;\r\n  background-size: cover;\r\n  background-attachment: fixed;\r\n  display: flex;\r\n  align-items: flex-end;\r\n  justify-content: center;\r\n  padding-bottom: 37px;\r\n  color: #fff;\r\n  font-size: 42px;\r\n}\r\n.showcase.short {\r\n  height: 210px;\r\n}\r\n.showcase::after {\r\n  width: 100%;\r\n  height: 100%;\r\n  left: 0;\r\n  top: 0;\r\n  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), #134d4d3a);\r\n  z-index: 0;\r\n}\r\n.showcase .title {\r\n  position: relative;\r\n  z-index: 100;\r\n}\r\n\r\n@media screen and (max-width: 1350px) {\r\n  .showcase {\r\n    height: 208px;\r\n    padding-bottom: 20px;\r\n    font-size: 36px;\r\n  }\r\n  .showcase.short {\r\n    height: 123px;\r\n  }\r\n}\r\n@media screen and (max-width: 600px) {\r\n  .showcase {\r\n    height: 161px;\r\n    padding-bottom: 14px;\r\n    font-size: 30px;\r\n  }\r\n  .showcase.short {\r\n    height: 94px;\r\n  }\r\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -57776,7 +57781,7 @@ webpackContext.id = "./resources/js/Pages sync recursive ^\\.\\/.*$";
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"Promise based HTTP client for the browser and node.js","main":"index.js","scripts":{"test":"grunt test","start":"node ./sandbox/server.js","build":"NODE_ENV=production grunt build","preversion":"npm test","version":"npm run build && grunt version && git add -A dist && git add CHANGELOG.md bower.json package.json","postversion":"git push && git push --tags","examples":"node ./examples/server.js","coveralls":"cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js","fix":"eslint --fix lib/**/*.js"},"repository":{"type":"git","url":"https://github.com/axios/axios.git"},"keywords":["xhr","http","ajax","promise","node"],"author":"Matt Zabriskie","license":"MIT","bugs":{"url":"https://github.com/axios/axios/issues"},"homepage":"https://axios-http.com","devDependencies":{"coveralls":"^3.0.0","es6-promise":"^4.2.4","grunt":"^1.3.0","grunt-banner":"^0.6.0","grunt-cli":"^1.2.0","grunt-contrib-clean":"^1.1.0","grunt-contrib-watch":"^1.0.0","grunt-eslint":"^23.0.0","grunt-karma":"^4.0.0","grunt-mocha-test":"^0.13.3","grunt-ts":"^6.0.0-beta.19","grunt-webpack":"^4.0.2","istanbul-instrumenter-loader":"^1.0.0","jasmine-core":"^2.4.1","karma":"^6.3.2","karma-chrome-launcher":"^3.1.0","karma-firefox-launcher":"^2.1.0","karma-jasmine":"^1.1.1","karma-jasmine-ajax":"^0.1.13","karma-safari-launcher":"^1.0.0","karma-sauce-launcher":"^4.3.6","karma-sinon":"^1.0.5","karma-sourcemap-loader":"^0.3.8","karma-webpack":"^4.0.2","load-grunt-tasks":"^3.5.2","minimist":"^1.2.0","mocha":"^8.2.1","sinon":"^4.5.0","terser-webpack-plugin":"^4.2.3","typescript":"^4.0.5","url-search-params":"^0.10.0","webpack":"^4.44.2","webpack-dev-server":"^3.11.0"},"browser":{"./lib/adapters/http.js":"./lib/adapters/xhr.js"},"jsdelivr":"dist/axios.min.js","unpkg":"dist/axios.min.js","typings":"./index.d.ts","dependencies":{"follow-redirects":"^1.14.0"},"bundlesize":[{"path":"./dist/axios.min.js","threshold":"5kB"}]}');
+module.exports = JSON.parse('{"_from":"axios@0.21.4","_id":"axios@0.21.4","_inBundle":false,"_integrity":"sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==","_location":"/axios","_phantomChildren":{},"_requested":{"type":"version","registry":true,"raw":"axios@0.21.4","name":"axios","escapedName":"axios","rawSpec":"0.21.4","saveSpec":null,"fetchSpec":"0.21.4"},"_requiredBy":["#DEV:/","#USER","/@inertiajs/inertia"],"_resolved":"https://registry.npmjs.org/axios/-/axios-0.21.4.tgz","_shasum":"c67b90dc0568e5c1cf2b0b858c43ba28e2eda575","_spec":"axios@0.21.4","_where":"C:\\\\Users\\\\Shamisa\\\\Desktop\\\\local-projects\\\\window","author":{"name":"Matt Zabriskie"},"browser":{"./lib/adapters/http.js":"./lib/adapters/xhr.js"},"bugs":{"url":"https://github.com/axios/axios/issues"},"bundleDependencies":false,"bundlesize":[{"path":"./dist/axios.min.js","threshold":"5kB"}],"dependencies":{"follow-redirects":"^1.14.0"},"deprecated":false,"description":"Promise based HTTP client for the browser and node.js","devDependencies":{"coveralls":"^3.0.0","es6-promise":"^4.2.4","grunt":"^1.3.0","grunt-banner":"^0.6.0","grunt-cli":"^1.2.0","grunt-contrib-clean":"^1.1.0","grunt-contrib-watch":"^1.0.0","grunt-eslint":"^23.0.0","grunt-karma":"^4.0.0","grunt-mocha-test":"^0.13.3","grunt-ts":"^6.0.0-beta.19","grunt-webpack":"^4.0.2","istanbul-instrumenter-loader":"^1.0.0","jasmine-core":"^2.4.1","karma":"^6.3.2","karma-chrome-launcher":"^3.1.0","karma-firefox-launcher":"^2.1.0","karma-jasmine":"^1.1.1","karma-jasmine-ajax":"^0.1.13","karma-safari-launcher":"^1.0.0","karma-sauce-launcher":"^4.3.6","karma-sinon":"^1.0.5","karma-sourcemap-loader":"^0.3.8","karma-webpack":"^4.0.2","load-grunt-tasks":"^3.5.2","minimist":"^1.2.0","mocha":"^8.2.1","sinon":"^4.5.0","terser-webpack-plugin":"^4.2.3","typescript":"^4.0.5","url-search-params":"^0.10.0","webpack":"^4.44.2","webpack-dev-server":"^3.11.0"},"homepage":"https://axios-http.com","jsdelivr":"dist/axios.min.js","keywords":["xhr","http","ajax","promise","node"],"license":"MIT","main":"index.js","name":"axios","repository":{"type":"git","url":"git+https://github.com/axios/axios.git"},"scripts":{"build":"NODE_ENV=production grunt build","coveralls":"cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js","examples":"node ./examples/server.js","fix":"eslint --fix lib/**/*.js","postversion":"git push && git push --tags","preversion":"npm test","start":"node ./sandbox/server.js","test":"grunt test","version":"npm run build && grunt version && git add -A dist && git add CHANGELOG.md bower.json package.json"},"typings":"./index.d.ts","unpkg":"dist/axios.min.js","version":"0.21.4"}');
 
 /***/ })
 
