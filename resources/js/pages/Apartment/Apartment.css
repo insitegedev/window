@@ -6,7 +6,7 @@
     align-items: flex-start;
 }
 .apartmentPage .apt_view {
-    width: 70%;
+    width: 55%;
     margin: 0 30px;
     margin-top: -40px;
 }
@@ -21,14 +21,15 @@
     color: #334e60;
 }
 .apartmentPage .details .floor {
-    font-size: 46px;
-    margin-bottom: 4px;
+    font-size: 30px;
+    white-space: nowrap;
+    margin-bottom: 10px;
 }
 .apartmentPage .details .apartment {
-    font-size: 28px;
+    font-size: 23px;
 }
 .apartmentPage .details .specifications {
-    margin: 40px 0;
+    margin: 30px 0;
 }
 .apartmentPage .details h6 {
     text-transform: uppercase;
@@ -82,8 +83,11 @@
 }
 @media screen and (max-width: 700px) {
     .apartmentPage .details .floor {
-        font-size: 35px;
-        margin-bottom: 0px;
+        font-size: 25px;
+        margin-bottom: 5px;
+    }
+    .apartmentPage .details .apartment {
+        font-size: 20px;
     }
     .apartmentPage .details .specifications {
         margin: 21px 0;
@@ -102,18 +106,12 @@
         margin-top: 19px;
     }
 }
-@media screen and (max-width: 440px) {
+@media screen and (max-width: 550px) {
     .apartmentPage .wrapper {
         grid-template-columns: 1fr;
     }
     .apartmentPage .apartment_img {
         grid-column: 1;
-    }
-    .apartmentPage .details .floor {
-        font-size: 29px;
-    }
-    .apartmentPage .details .apartment {
-        font-size: 21px;
     }
     .apartmentPage .details .total_area {
         font-size: 26px;
