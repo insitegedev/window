@@ -1,16 +1,16 @@
-import React, {useState} from "react";
-import {BackButton} from "../../components/Buttons/Buttons";
+import React, { useState } from "react";
+import { BackButton } from "../../components/Buttons/Buttons";
 import ContactInfo from "../../Components/ContactInfo/ContactInfo";
-import {PagePath} from "../../components/PagePath/PagePath";
+import { PagePath } from "../../components/PagePath/PagePath";
 import Showcase from "../../components/Showcase/Showcase";
 import Layout from "../../Layouts/Layout";
 import ApartmentImg from "/img/apartments/1.png";
 import ApartmentImg2 from "/img/apartments/building.png";
 import "./Apartment.css";
-import {Head, usePage} from "@inertiajs/inertia-react";
+import { Head, usePage } from "@inertiajs/inertia-react";
 import Pdf from "/img/icons/apartment/file.svg";
 
-const Apartment = ({apartment, urlPrev, seo}) => {
+const Apartment = ({ apartment, urlPrev, seo }) => {
     const sharedData = usePage().props.localizations;
 
     function __(key, replace = {}) {
@@ -22,7 +22,6 @@ const Apartment = ({apartment, urlPrev, seo}) => {
 
         return translation;
     }
-
 
     const [viewApartment, setViewApartment] = useState(0);
     const viewList = [ApartmentImg, ApartmentImg2];
@@ -37,8 +36,12 @@ const Apartment = ({apartment, urlPrev, seo}) => {
     return (
         <Layout seo={seo}>
             <div className="apartmentPage">
-                <Showcase short/>
-                <BackButton color="#334E60" link={urlPrev} text={__("go_back")} />
+                <Showcase short />
+                <BackButton
+                    color="#334E60"
+                    link={urlPrev}
+                    text={__("go_back")}
+                />
                 <PagePath
                     loc1="home"
                     loc2="Choose apartment"
@@ -82,24 +85,29 @@ const Apartment = ({apartment, urlPrev, seo}) => {
                                 target="_blank"
                                 className="flex centered pdf"
                             >
-                                <img src={Pdf} alt=""/>
+                                <img src={Pdf} alt="" />
                                 <p>{__("download_pdf")}</p>
                             </a>
                         )}
                     </div>
                     <div className="apt_view">
-                        {/* {apartment.file && (
-                            <img
-                                className="apartment_img"
-                                src={
-                                    "/" +
-                                    apartment.file.path +
-                                    "/" +
-                                    apartment.file.title
-                                }
-                                alt=""
-                            />
-                        )} */}
+                        <div className="dots flex centered">
+                            {apartment.files.map((apt, index) => {
+                                return (
+                                    <button
+                                        className="other_view img"
+                                        onClick={() => setViewApartment(index)}
+                                    >
+                                        <img
+                                            src={
+                                                "/" + apt.path + "/" + apt.title
+                                            }
+                                            alt=""
+                                        />
+                                    </button>
+                                );
+                            })}
+                        </div>
                         {apartment.files.map((apt, index) => {
                             return (
                                 <img
@@ -108,35 +116,13 @@ const Apartment = ({apartment, urlPrev, seo}) => {
                                             ? "apartment_img show"
                                             : "apartment_img"
                                     }
-                                    src={
-                                        "/" +
-                                        apt.path +
-                                        "/" +
-                                        apt.title
-                                    }
+                                    src={"/" + apt.path + "/" + apt.title}
                                     alt=""
                                 />
                             );
                         })}
-                        <div className="dots flex centered">
-                            {apartment.files.map((apt, index) => {
-                                return (
-                                    <button
-                                        className="other_view img"
-                                        onClick={() => setViewApartment(index)}
-                                    >
-                                        <img src={
-                                            "/" +
-                                            apt.path +
-                                            "/" +
-                                            apt.title
-                                        } alt=""/>
-                                    </button>
-                                );
-                            })}
-                        </div>
                     </div>
-                    <ContactInfo color="#334E60" right/>
+                    <ContactInfo color="#334E60" right />
                 </div>
             </div>
         </Layout>
