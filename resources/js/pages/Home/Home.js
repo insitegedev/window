@@ -86,7 +86,7 @@ const Home = ({ sliders, seo }) => {
                                     data-aos="fade-right"
                                 >
                                     <div
-                                        className="play_vid flex center"
+                                        className="play_vid flex centered"
                                         onClick={() => setShowVideo(true)}
                                     >
                                         <div>{__("watch_the_video")}</div>

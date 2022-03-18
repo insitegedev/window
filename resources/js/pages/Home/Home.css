@@ -116,6 +116,7 @@
     margin-left: 8px;
     width: 51px;
     height: 51px;
+    transition: 0.4s;
 }
 .mainSlider .play_vid {
     cursor: pointer;
@@ -159,6 +160,10 @@
 .mainSlider .arrow_button .circle {
     width: 51px;
     height: 51px;
+    transition: 0.4s;
+}
+.mainSlider .flex.centered:hover .circle {
+    transform: scale(1.1);
 }
 .mainSlider .arrow_button .circle svg {
     width: 16px;
