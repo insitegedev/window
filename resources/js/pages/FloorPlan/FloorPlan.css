@@ -59,6 +59,7 @@
     fill: #126d2a;
 }
 .floorPlan .st0.sold {
+    opacity: 0.6;
     fill: #6d1212;
     cursor: default;
 }

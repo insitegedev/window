@@ -123,7 +123,7 @@ const ChooseFloor = ({ seo, urlPrev, apartments }) => {
                                                 fontWeight: "bold",
                                             }}
                                         >
-                                            {sold ? "sold" : flat.dimension}
+                                            {sold ? __("sold") : flat.dimension}
                                             <sup>{sold ? "" : "2"}</sup>
                                         </button>
                                     }
