@@ -9767,14 +9767,15 @@ var Home = function Home(_ref) {
     if (index > lastIndex) {
       setIndex(0);
     }
-  }, [index]); //   useEffect(() => {
-  //     let slider = setInterval(() => {
-  //       setIndex(index + 1);
-  //     }, 5000);
-  //     return () => {
-  //       clearInterval(slider);
-  //     };
-  //   }, [index]);
+  }, [index]);
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    var slider = setInterval(function () {
+      setIndex(index + 1);
+    }, 4000);
+    return function () {
+      clearInterval(slider);
+    };
+  }, [index]);
 
   var moveDot = function moveDot(i) {
     setIndex(i);
