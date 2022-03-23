@@ -105,18 +105,15 @@ const Home = ({ sliders, seo }) => {
                                 </div>
                                 <Facilities />
                             </div>
-                            <VideoPopup
-                                // src='https://www.youtube.com/embed/zr4r3n5Smho'
-                                videoSrc={
-                                    "https://www.youtube.com/embed/" +
-                                    data.youtube_url
-                                }
-                                showVideo={showVideo}
-                                hideVideo={() => setShowVideo(false)}
-                            />
                         </article>
                     );
                 })}
+                <VideoPopup
+                    // src='https://www.youtube.com/embed/zr4r3n5Smho'
+                    videoSrc="https://www.youtube.com/embed/zr4r3n5Smho"
+                    showVideo={showVideo}
+                    hideVideo={() => setShowVideo(false)}
+                />
                 <div className="flex centered controllers">
                     <button
                         onClick={() => setIndex(index - 1)}

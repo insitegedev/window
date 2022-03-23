@@ -10056,14 +10056,14 @@ var Home = function Home(_ref) {
       color: "#fff",
       link: route("client.choosefloor.index"),
       text: __("choose_apartment")
-    })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Facilities_Facilities__WEBPACK_IMPORTED_MODULE_3__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_VideoPopup_VideoPopup__WEBPACK_IMPORTED_MODULE_6__.VideoPopup // src='https://www.youtube.com/embed/zr4r3n5Smho'
-    , {
-      videoSrc: "https://www.youtube.com/embed/" + data.youtube_url,
-      showVideo: showVideo,
-      hideVideo: function hideVideo() {
-        return setShowVideo(false);
-      }
-    }));
+    })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Facilities_Facilities__WEBPACK_IMPORTED_MODULE_3__["default"], null)));
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_VideoPopup_VideoPopup__WEBPACK_IMPORTED_MODULE_6__.VideoPopup // src='https://www.youtube.com/embed/zr4r3n5Smho'
+  , {
+    videoSrc: "https://www.youtube.com/embed/zr4r3n5Smho",
+    showVideo: showVideo,
+    hideVideo: function hideVideo() {
+      return setShowVideo(false);
+    }
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "flex centered controllers"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
