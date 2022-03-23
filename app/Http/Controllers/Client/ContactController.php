@@ -48,7 +48,7 @@ class ContactController extends Controller
                 'name' => $request->name,
                 'mail' => $request->mail,
                 'phone' => $request->phone,
-                "subject" => "subject",
+                "subject" => "Window",
                 'message' => $request->message
             ];
 
@@ -58,6 +58,22 @@ class ContactController extends Controller
             }
 
         }
-        return Inertia::render('Contact/Contact');
+        $page = Page::where('key', 'contact')->firstOrFail();
+        return Inertia::render('Contact/Contact', ["page" => $page, "seo" => [
+            "title"=>$page->meta_title,
+            "description"=>$page->meta_description,
+            "keywords"=>$page->meta_keyword,
+            "og_title"=>$page->meta_og_title,
+            "og_description"=>$page->meta_og_description,
+//            "image" => "imgg",
+//            "locale" => App::getLocale()
+        ]])->withViewData([
+            'meta_title' => $page->meta_title,
+            'meta_description' => $page->meta_description,
+            'meta_keyword' => $page->meta_keyword,
+            "image" => $page->file,
+            'og_title' => $page->meta_og_title,
+            'og_description' => $page->meta_og_description
+        ]);
     }
 }
