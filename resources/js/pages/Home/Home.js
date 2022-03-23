@@ -38,15 +38,15 @@ const Home = ({ sliders, seo }) => {
             setIndex(0);
         }
     }, [index]);
-    // useEffect(() => {
-    //     let slider = setInterval(() => {
-    //         setIndex(index + 1);
-    //     }, 4000);
+    useEffect(() => {
+        let slider = setInterval(() => {
+            setIndex(index + 1);
+        }, 4000);
 
-    //     return () => {
-    //         clearInterval(slider);
-    //     };
-    // }, [index]);
+        return () => {
+            clearInterval(slider);
+        };
+    }, [index]);
 
     const moveDot = (i) => {
         setIndex(i);
