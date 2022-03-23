@@ -122,6 +122,9 @@ const ChooseFloor = ({ seo, urlPrev, apartments }) => {
                                                 color: "#334E60",
                                                 fontSize: "16px",
                                                 fontWeight: "bold",
+                                                display: sold
+                                                    ? "none"
+                                                    : "block",
                                             }}
                                         >
                                             {sold ? __("sold") : flat.dimension}
@@ -155,6 +158,39 @@ const ChooseFloor = ({ seo, urlPrev, apartments }) => {
                                 </Tippy>
                             );
                         })}
+                    </svg>
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="100%"
+                        height="100%"
+                        viewBox="0 0 1000 750"
+                        style={{ position: "absolute" }}
+                    >
+                        <defs>
+                            <pattern
+                                id="sold_image"
+                                height="100%"
+                                width="100%"
+                                patternContentUnits="objectBoundingBox"
+                                viewBox="-0.1 -0.15 1 1"
+                                preserveAspectRatio="xMidYMid none"
+                            >
+                                <rect
+                                    x="-100%"
+                                    y="-100%"
+                                    width="200%"
+                                    height="200%"
+                                    fill="rgba(226, 70, 70, 0.7)"
+                                ></rect>
+                                <image
+                                    xlinkHref="https://archi.ge/images/sold_eng.png"
+                                    height="1"
+                                    width="1"
+                                    preserveAspectRatio="xMidYMid none"
+                                    transform="scale(0.8)"
+                                ></image>
+                            </pattern>
+                        </defs>
                     </svg>
                 </div>
             </div>
