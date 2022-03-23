@@ -12,10 +12,12 @@ use Inertia\Inertia;
 
 class ContactController extends Controller
 {
-    public function index()
+    public function index($locale, Request $request)
     {
+        $messageSent = $request->session()->get('message', null);
+//        dump($messageSent);
         $page = Page::where('key', 'contact')->firstOrFail();
-        return Inertia::render('Contact/Contact', ["page" => $page, "seo" => [
+        return Inertia::render('Contact/Contact', ["page" => $page, "messageSent"=>$messageSent, "seo" => [
             "title"=>$page->meta_title,
             "description"=>$page->meta_description,
             "keywords"=>$page->meta_keyword,
@@ -58,7 +60,7 @@ class ContactController extends Controller
             }
 
         }
-        return redirect(locale_route("client.contact.index"));
+        return redirect(locale_route("client.contact.index"))->with('message', 'Message sent!');
 
     }
 }
