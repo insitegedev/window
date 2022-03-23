@@ -7094,10 +7094,11 @@ var Languages = function Languages() {
     className: "on flex centered"
   }, Object.keys(locales).map(function (name, index) {
     if (locales[name] === currentLocale) {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
-        href: locale_urls[name],
-        key: name + "locale"
-      }, name);
+      return (
+        /*#__PURE__*/
+        //   <a href={locale_urls[name]} key={name + "locale"}>{name}</a>
+        react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, name)
+      );
     }
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "drop"
