@@ -129,7 +129,34 @@ trait ScopeFilter
     {
         return $query->whereHas('translations', function ($query) use ($apartments) {
             return $query->where('apartments', 'like', '%' . $apartments . '%');
-        });    }
+        });
+    }
+
+    /**
+     * @param $query
+     * @param $name
+     *
+     * @return mixed
+     */
+    public function scopeApartment($query, $apartment)
+    {
+        return $query->whereHas('translations', function ($query) use ($apartment) {
+            return $query->where('apartment', 'like', '%' . $apartment . '%');
+        });
+    }
+
+    /**
+     * @param $query
+     * @param $name
+     *
+     * @return mixed
+     */
+    public function scopeFloorName($query, $floorName)
+    {
+        return $query->whereHas('apartment', function ($query) use ($floorName) {
+            return $query->where('title', 'like', '%' . $floorName . '%');
+        });
+    }
 
     /**
      * @param $query

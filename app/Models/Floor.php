@@ -47,17 +47,17 @@ class Floor extends Model
                 'hasParam' => true,
                 'scopeMethod' => 'id'
             ],
-            'title' => [
+            'floorName' => [
                 'hasParam' => true,
-                'scopeMethod' => 'title'
+                'scopeMethod' => 'floorName'
             ],
             'floor' => [
                 'hasParam' => true,
-                'scopeMethod' => 'floor'
+                'scopeMethod' => 'titleTranslation'
             ],
-            'apartments' => [
+            'apartment' => [
                 'hasParam' => true,
-                'scopeMethod' => 'apartments'
+                'scopeMethod' => 'apartment'
             ],
 
         ];

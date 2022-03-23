@@ -32,9 +32,9 @@
                                                    class="validate {{$errors->has('id') ? '' : 'valid'}}">
                                         </th>
                                         <th>
-                                            <input type="text" name="title" onchange="this.form.submit()"
-                                                   value="{{Request::get('title')}}"
-                                                   class="validate {{$errors->has('title') ? '' : 'valid'}}">
+                                            <input type="text" name="floorName" onchange="this.form.submit()"
+                                                   value="{{Request::get('floorName')}}"
+                                                   class="validate {{$errors->has('floorName') ? '' : 'valid'}}">
                                         </th>
                                         <th>
                                             <input type="text" name="floor" onchange="this.form.submit()"
@@ -42,9 +42,9 @@
                                                    class="validate {{$errors->has('floor') ? '' : 'valid'}}">
                                         </th>
                                         <th>
-                                            <input type="text" name="apartments" onchange="this.form.submit()"
-                                                   value="{{Request::get('apartments')}}"
-                                                   class="validate {{$errors->has('apartments') ? '' : 'valid'}}">
+                                            <input type="text" name="apartment" onchange="this.form.submit()"
+                                                   value="{{Request::get('apartment')}}"
+                                                   class="validate {{$errors->has('apartment') ? '' : 'valid'}}">
                                         </th>
                                     </tr>
                                     <tbody>
