@@ -9,8 +9,19 @@ import Layout from "../../Layouts/Layout";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { usePage, Head } from "@inertiajs/inertia-react";
+import Swal from 'sweetalert2'
 
-const Contact = ({ page, seo }) => {
+const Contact = ({ page, seo, messageSent }) => {
+    console.log(messageSent);
+    if (messageSent){
+        Swal.fire({
+            title: 'Message sent!',
+            text: 'Do you want to continue',
+            icon: 'success',
+            confirmButtonText: 'Cool'
+        })
+    }
+
     const sharedData = usePage().props.localizations;
 
     function __(key, replace = {}) {
