@@ -82,6 +82,7 @@
     -webkit-text-stroke: 4px;
     letter-spacing: 1px;
     margin-left: 10px;
+    white-space: nowrap;
 }
 .mainSlider .activeSlide .content {
     visibility: visible;

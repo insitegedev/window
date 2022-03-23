@@ -8332,7 +8332,8 @@ var ChooseFloor = function ChooseFloor(_ref) {
           boxShadow: "0 3px 6px #1111111c",
           color: "#334E60",
           fontSize: "16px",
-          fontWeight: "bold"
+          fontWeight: "bold",
+          display: sold ? "none" : "block"
         }
       }, sold ? __("sold") : flat.dimension, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("sup", null, sold ? "" : "2"))
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
@@ -8351,7 +8352,34 @@ var ChooseFloor = function ChooseFloor(_ref) {
       className: sold ? "st0 sold" : "st0",
       points: flat.points
     })));
-  })))));
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "100%",
+    height: "100%",
+    viewBox: "0 0 1000 750",
+    style: {
+      position: "absolute"
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("defs", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("pattern", {
+    id: "sold_image",
+    height: "100%",
+    width: "100%",
+    patternContentUnits: "objectBoundingBox",
+    viewBox: "-0.1 -0.15 1 1",
+    preserveAspectRatio: "xMidYMid none"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("rect", {
+    x: "-100%",
+    y: "-100%",
+    width: "200%",
+    height: "200%",
+    fill: "rgba(226, 70, 70, 0.7)"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("image", {
+    xlinkHref: "https://archi.ge/images/sold_eng.png",
+    height: "1",
+    width: "1",
+    preserveAspectRatio: "xMidYMid none",
+    transform: "scale(0.8)"
+  })))))));
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ChooseFloor);
@@ -8531,7 +8559,8 @@ var ChooseFloor = function ChooseFloor(_ref) {
           boxShadow: "0 3px 6px #1111111c",
           color: "#334E60",
           fontSize: "16px",
-          fontWeight: "bold"
+          fontWeight: "bold",
+          display: sold ? "none" : "block"
         }
       }, sold ? __("sold") : flat.dimension, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("sup", null, sold ? "" : "2"))
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
@@ -8550,7 +8579,34 @@ var ChooseFloor = function ChooseFloor(_ref) {
       className: sold ? "st0 sold" : "st0",
       points: flat.points
     })));
-  })))));
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "100%",
+    height: "100%",
+    viewBox: "0 0 1000 750",
+    style: {
+      position: "absolute"
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("defs", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("pattern", {
+    id: "sold_image",
+    height: "100%",
+    width: "100%",
+    patternContentUnits: "objectBoundingBox",
+    viewBox: "-0.1 -0.15 1 1",
+    preserveAspectRatio: "xMidYMid none"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("rect", {
+    x: "-100%",
+    y: "-100%",
+    width: "200%",
+    height: "200%",
+    fill: "rgba(226, 70, 70, 0.7)"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("image", {
+    xlinkHref: "https://archi.ge/images/sold_eng.png",
+    height: "1",
+    width: "1",
+    preserveAspectRatio: "xMidYMid none",
+    transform: "scale(0.8)"
+  })))))));
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ChooseFloor);
@@ -8714,7 +8770,8 @@ var ChooseFloor = function ChooseFloor(_ref) {
           boxShadow: "0 3px 6px #1111111c",
           color: "#334E60",
           fontSize: "16px",
-          fontWeight: "bold"
+          fontWeight: "bold",
+          display: sold ? "none" : "block"
         }
       }, sold ? __("sold") : flat.dimension, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("sup", null, sold ? "" : "2"))
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
@@ -8733,7 +8790,34 @@ var ChooseFloor = function ChooseFloor(_ref) {
       className: sold ? "st0 sold" : "st0",
       points: flat.points
     })));
-  })))));
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "100%",
+    height: "100%",
+    viewBox: "0 0 1000 750",
+    style: {
+      position: "absolute"
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("defs", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("pattern", {
+    id: "sold_image",
+    height: "100%",
+    width: "100%",
+    patternContentUnits: "objectBoundingBox",
+    viewBox: "-0.1 -0.15 1 1",
+    preserveAspectRatio: "xMidYMid none"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("rect", {
+    x: "-100%",
+    y: "-100%",
+    width: "200%",
+    height: "200%",
+    fill: "rgba(226, 70, 70, 0.7)"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("image", {
+    xlinkHref: "https://archi.ge/images/sold_eng.png",
+    height: "1",
+    width: "1",
+    preserveAspectRatio: "xMidYMid none",
+    transform: "scale(0.8)"
+  })))))));
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ChooseFloor);
@@ -8885,7 +8969,8 @@ var ChooseFloor = function ChooseFloor(_ref) {
           boxShadow: "0 3px 6px #1111111c",
           color: "#334E60",
           fontSize: "16px",
-          fontWeight: "bold"
+          fontWeight: "bold",
+          display: sold ? "none" : "block"
         }
       }, sold ? __("sold") : flat.dimension, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("sup", null, sold ? "" : "2"))
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
@@ -8904,7 +8989,34 @@ var ChooseFloor = function ChooseFloor(_ref) {
       className: sold ? "st0 sold" : "st0",
       points: flat.points
     })));
-  })))));
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "100%",
+    height: "100%",
+    viewBox: "0 0 1000 750",
+    style: {
+      position: "absolute"
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("defs", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("pattern", {
+    id: "sold_image",
+    height: "100%",
+    width: "100%",
+    patternContentUnits: "objectBoundingBox",
+    viewBox: "-0.1 -0.15 1 1",
+    preserveAspectRatio: "xMidYMid none"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("rect", {
+    x: "-100%",
+    y: "-100%",
+    width: "200%",
+    height: "200%",
+    fill: "rgba(226, 70, 70, 0.7)"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("image", {
+    xlinkHref: "https://archi.ge/images/sold_eng.png",
+    height: "1",
+    width: "1",
+    preserveAspectRatio: "xMidYMid none",
+    transform: "scale(0.8)"
+  })))))));
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ChooseFloor);
@@ -9064,7 +9176,8 @@ var ChooseFloor = function ChooseFloor(_ref) {
           boxShadow: "0 3px 6px #1111111c",
           color: "#334E60",
           fontSize: "16px",
-          fontWeight: "bold"
+          fontWeight: "bold",
+          display: sold ? "none" : "block"
         }
       }, sold ? __("sold") : flat.dimension, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("sup", null, sold ? "" : "2"))
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
@@ -9083,7 +9196,34 @@ var ChooseFloor = function ChooseFloor(_ref) {
       className: sold ? "st0 sold" : "st0",
       points: flat.points
     })));
-  })))));
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "100%",
+    height: "100%",
+    viewBox: "0 0 1000 750",
+    style: {
+      position: "absolute"
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("defs", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("pattern", {
+    id: "sold_image",
+    height: "100%",
+    width: "100%",
+    patternContentUnits: "objectBoundingBox",
+    viewBox: "-0.1 -0.15 1 1",
+    preserveAspectRatio: "xMidYMid none"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("rect", {
+    x: "-100%",
+    y: "-100%",
+    width: "200%",
+    height: "200%",
+    fill: "rgba(226, 70, 70, 0.7)"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("image", {
+    xlinkHref: "https://archi.ge/images/sold_eng.png",
+    height: "1",
+    width: "1",
+    preserveAspectRatio: "xMidYMid none",
+    transform: "scale(0.8)"
+  })))))));
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ChooseFloor);
@@ -9248,7 +9388,8 @@ var ChooseFloor = function ChooseFloor(_ref) {
           boxShadow: "0 3px 6px #1111111c",
           color: "#334E60",
           fontSize: "16px",
-          fontWeight: "bold"
+          fontWeight: "bold",
+          display: sold ? "none" : "block"
         }
       }, sold ? __("sold") : flat.dimension, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("sup", null, sold ? "" : "2"))
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
@@ -9267,7 +9408,34 @@ var ChooseFloor = function ChooseFloor(_ref) {
       className: sold ? "st0 sold" : "st0",
       points: flat.points
     })));
-  })))));
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "100%",
+    height: "100%",
+    viewBox: "0 0 1000 750",
+    style: {
+      position: "absolute"
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("defs", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("pattern", {
+    id: "sold_image",
+    height: "100%",
+    width: "100%",
+    patternContentUnits: "objectBoundingBox",
+    viewBox: "-0.1 -0.15 1 1",
+    preserveAspectRatio: "xMidYMid none"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("rect", {
+    x: "-100%",
+    y: "-100%",
+    width: "200%",
+    height: "200%",
+    fill: "rgba(226, 70, 70, 0.7)"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("image", {
+    xlinkHref: "https://archi.ge/images/sold_eng.png",
+    height: "1",
+    width: "1",
+    preserveAspectRatio: "xMidYMid none",
+    transform: "scale(0.8)"
+  })))))));
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ChooseFloor);
@@ -9423,7 +9591,8 @@ var ChooseFloor = function ChooseFloor(_ref) {
           boxShadow: "0 3px 6px #1111111c",
           color: "#334E60",
           fontSize: "16px",
-          fontWeight: "bold"
+          fontWeight: "bold",
+          display: sold ? "none" : "block"
         }
       }, sold ? __("sold") : flat.dimension, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("sup", null, sold ? "" : "2"))
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
@@ -9442,7 +9611,34 @@ var ChooseFloor = function ChooseFloor(_ref) {
       className: sold ? "st0 sold" : "st0",
       points: flat.points
     })));
-  })))));
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "100%",
+    height: "100%",
+    viewBox: "0 0 1000 750",
+    style: {
+      position: "absolute"
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("defs", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("pattern", {
+    id: "sold_image",
+    height: "100%",
+    width: "100%",
+    patternContentUnits: "objectBoundingBox",
+    viewBox: "-0.1 -0.15 1 1",
+    preserveAspectRatio: "xMidYMid none"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("rect", {
+    x: "-100%",
+    y: "-100%",
+    width: "200%",
+    height: "200%",
+    fill: "rgba(226, 70, 70, 0.7)"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("image", {
+    xlinkHref: "https://archi.ge/images/sold_eng.png",
+    height: "1",
+    width: "1",
+    preserveAspectRatio: "xMidYMid none",
+    transform: "scale(0.8)"
+  })))))));
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ChooseFloor);
@@ -9795,15 +9991,14 @@ var Home = function Home(_ref) {
     if (index > lastIndex) {
       setIndex(0);
     }
-  }, [index]);
-  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
-    var slider = setInterval(function () {
-      setIndex(index + 1);
-    }, 4000);
-    return function () {
-      clearInterval(slider);
-    };
-  }, [index]);
+  }, [index]); // useEffect(() => {
+  //     let slider = setInterval(() => {
+  //         setIndex(index + 1);
+  //     }, 4000);
+  //     return () => {
+  //         clearInterval(slider);
+  //     };
+  // }, [index]);
 
   var moveDot = function moveDot(i) {
     setIndex(i);
@@ -11724,7 +11919,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".mainSlider {\r\n    position: relative;\r\n    height: 100vh;\r\n    overflow: hidden;\r\n}\r\n.mainSlider article {\r\n    position: absolute;\r\n    left: 0;\r\n    top: 0;\r\n    width: 100%;\r\n    height: 100%;\r\n    color: #171c26;\r\n    transition: 1s;\r\n}\r\n.mainSlider article.lastSlide {\r\n    visibility: hidden;\r\n}\r\n.mainSlider article.activeSlide {\r\n    transform: translateX(0);\r\n}\r\n.mainSlider article.nextSlide {\r\n    visibility: hidden;\r\n}\r\n.mainSlider article.lastSlide .bg {\r\n    transform: translateX(-100%);\r\n}\r\n.mainSlider article.activeSlide .bg {\r\n    transform: translateX(0);\r\n}\r\n.mainSlider article.nextSlide .bg {\r\n    transform: translateX(100%);\r\n}\r\n.mainSlider article.lastSlide .playfair {\r\n    transform: translateX(-150px);\r\n}\r\n.mainSlider article.nextSlide .playfair {\r\n    transform: translateX(150px);\r\n}\r\n.mainSlider .bg {\r\n    position: absolute;\r\n    z-index: -1;\r\n    width: 100%;\r\n    height: 100%;\r\n    transition: 1s;\r\n}\r\n.mainSlider .bg img,\r\n.mainSlider .bg video {\r\n    -o-object-fit: cover;\r\n       object-fit: cover;\r\n    width: 100%;\r\n    height: 100%;\r\n}\r\n.mainSlider .bg::after {\r\n    width: 100%;\r\n    height: 100%;\r\n    left: 0;\r\n    top: 0;\r\n    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), #134d4d3a);\r\n    z-index: 0;\r\n}\r\n.mainSlider .content {\r\n    visibility: hidden;\r\n    position: relative;\r\n    z-index: 100;\r\n    color: #fff;\r\n    width: 1100px;\r\n    margin: auto;\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: center;\r\n    align-items: flex-start;\r\n    height: 100%;\r\n}\r\n.mainSlider .content .playfair {\r\n    font-size: 70px;\r\n    max-width: 700px;\r\n    margin-bottom: 30px;\r\n    transition: 1.2s;\r\n    opacity: 0;\r\n}\r\n.mainSlider .content .playfair span {\r\n    font-family: \"playfair\";\r\n    -webkit-text-stroke: 4px;\r\n    letter-spacing: 1px;\r\n    margin-left: 10px;\r\n}\r\n.mainSlider .activeSlide .content {\r\n    visibility: visible;\r\n}\r\n.mainSlider .activeSlide .content .playfair {\r\n    transform: translateX(0);\r\n    opacity: 1;\r\n}\r\n.mainSlider .controllers {\r\n    position: absolute;\r\n    left: calc(50% + 375px);\r\n    top: 330px;\r\n    transform: translateX(-50%);\r\n    z-index: 100;\r\n}\r\n.mainSlider .controllers button {\r\n    font-size: 35px;\r\n    color: #fff;\r\n    opacity: 0.3;\r\n    transition: 0.5s;\r\n}\r\n.mainSlider .controllers .arrow {\r\n    margin: 0 10px;\r\n}\r\n.mainSlider .controllers .dots {\r\n    align-items: flex-end;\r\n}\r\n.mainSlider .controllers .dots button {\r\n    margin: 0 9px;\r\n}\r\n.mainSlider .play_vid .circle {\r\n    margin-left: 8px;\r\n    width: 51px;\r\n    height: 51px;\r\n    transition: 0.4s;\r\n}\r\n.mainSlider .play_vid {\r\n    cursor: pointer;\r\n}\r\n.mainSlider .controllers button.active {\r\n    opacity: 0.7;\r\n    transform: scale(3.4) translateY(-9px);\r\n    margin: 0 50px;\r\n}\r\n.mainSlider .main_button {\r\n    margin-right: 50px;\r\n}\r\n.mainSlider .facilities {\r\n    margin-top: 40px;\r\n}\r\n.mainSlider .socialmedia {\r\n    position: absolute;\r\n    left: 60px;\r\n    bottom: 50px;\r\n    z-index: 100;\r\n}\r\n.mainSlider .socialmedia a {\r\n    transition: 0.3s;\r\n}\r\n.mainSlider .socialmedia a:hover {\r\n    transform: translateY(-4px);\r\n}\r\n.mainSlider .arrow_button {\r\n    position: relative !important;\r\n    left: auto !important;\r\n    bottom: auto !important;\r\n    margin-left: 10px;\r\n    flex-direction: row-reverse;\r\n}\r\n.mainSlider .arrow_button .text {\r\n    transform: scaleX(1) !important;\r\n    font-weight: normal;\r\n    margin-right: 8px !important;\r\n    margin-left: 0 !important;\r\n}\r\n.mainSlider .arrow_button .circle {\r\n    width: 51px;\r\n    height: 51px;\r\n    transition: 0.4s;\r\n}\r\n.mainSlider .flex.centered:hover .circle {\r\n    transform: scale(1.1);\r\n}\r\n.mainSlider .arrow_button .circle svg {\r\n    width: 16px;\r\n}\r\n\r\n/* responsiveness */\r\n\r\n/* HEIGHT */\r\n@media screen and (max-height: 900px) {\r\n    .mainSlider .content .playfair {\r\n        font-size: 53px;\r\n        max-width: 535px;\r\n    }\r\n    .mainSlider .facilities {\r\n        margin-top: 44px;\r\n        grid-gap: 25px 20px;\r\n    }\r\n    .mainSlider .controllers {\r\n        left: calc(50% + 316px);\r\n        top: 325px;\r\n    }\r\n    .mainSlider .controllers button.active {\r\n        transform: scale(2.6) translateY(-8px);\r\n        margin: 0 40px;\r\n    }\r\n}\r\n@media screen and (max-height: 750px) {\r\n    .mainSlider .controllers {\r\n        top: 253px !important;\r\n    }\r\n}\r\n@media screen and (max-height: 700px) and (max-width: 900px) {\r\n    .mainSlider .controllers {\r\n        top: 272px !important;\r\n    }\r\n}\r\n\r\n/* WIDTH */\r\n@media screen and (max-width: 1500px) {\r\n    .mainSlider .activeSlide .content {\r\n        width: 75%;\r\n        font-size: 12px;\r\n    }\r\n}\r\n@media screen and (max-width: 1350px) {\r\n    .mainSlider .content .playfair {\r\n        font-size: 30px;\r\n        max-width: 310px;\r\n    }\r\n    .mainSlider .content .playfair span {\r\n        -webkit-text-stroke: 2px;\r\n    }\r\n    .mainSlider .facilities {\r\n        margin-top: 44px;\r\n        grid-gap: 25px 20px;\r\n    }\r\n    .mainSlider .controllers {\r\n        left: calc(50% + 316px);\r\n        top: 325px;\r\n    }\r\n    .mainSlider .controllers button.active {\r\n        transform: scale(2.6) translateY(-8px);\r\n        margin: 0 29px;\r\n    }\r\n\r\n    .mainSlider .socialmedia {\r\n        left: 32px;\r\n        bottom: 28px;\r\n    }\r\n    /* .mainSlider .arrow_button {\r\n        bottom: 19px;\r\n        right: 17px;\r\n    } */\r\n}\r\n@media screen and (max-width: 1200px) {\r\n    .mainSlider .facilities {\r\n        margin-top: 44px;\r\n        grid-gap: 18px 15px;\r\n        font-size: 12px;\r\n    }\r\n    .mainSlider .facilities img {\r\n        width: 30px !important;\r\n    }\r\n    .mainSlider .facilities .flex img {\r\n        margin-right: 9px;\r\n    }\r\n}\r\n@media screen and (max-width: 1050px) {\r\n    .mainSlider .facilities {\r\n        grid-template-columns: repeat(3, 1fr);\r\n    }\r\n    .mainSlider .controllers {\r\n        transform: none;\r\n        left: auto;\r\n        right: 134px;\r\n    }\r\n    .mainSlider .controllers button {\r\n        font-size: 29px;\r\n    }\r\n    .mainSlider .controllers button.active {\r\n        transform: scale(2.6) translateY(-6px);\r\n        margin: 0 21px;\r\n        margin-left: 26px;\r\n    }\r\n    .mainSlider .facilities {\r\n        grid-gap: 13px 15px;\r\n    }\r\n}\r\n@media screen and (max-width: 900px) {\r\n    .mainSlider .controllers button.active {\r\n        transform: scale(2) translateY(-5px);\r\n        margin: 0 20px;\r\n    }\r\n    .mainSlider .controllers button {\r\n        font-size: 32px;\r\n        margin: 0 8px;\r\n    }\r\n    .mainSlider .controllers {\r\n        top: 166px !important;\r\n        right: 30px;\r\n    }\r\n    .mainSlider .facilities {\r\n        grid-template-columns: repeat(2, 1fr);\r\n    }\r\n    .mainSlider .content {\r\n        padding-top: 222px;\r\n        padding-bottom: 50px;\r\n        height: auto;\r\n    }\r\n}\r\n@media screen and (max-width: 700px) {\r\n    .mainSlider .activeSlide .content {\r\n        width: 95%;\r\n    }\r\n    .mainSlider .controllers button {\r\n        font-size: 25px;\r\n    }\r\n    .mainSlider .controllers button.active {\r\n        transform: scale(2) translateY(-3px);\r\n        margin: 0 17px;\r\n    }\r\n    .mainSlider .controllers button {\r\n        font-size: 21px;\r\n    }\r\n    .mainSlider .controllers .arrow.prev {\r\n        margin-top: -11px !important;\r\n    }\r\n}\r\n@media screen and (max-width: 600px) {\r\n    /* .mainSlider .content .playfair {\r\n        font-size: 35px;\r\n    } */\r\n    .mainSlider .content .playfair span {\r\n        -webkit-text-stroke: 2px;\r\n    }\r\n    .mainSlider .facilities {\r\n        grid-template-columns: 1fr;\r\n    }\r\n    .mainSlider .controllers {\r\n        top: 144px !important;\r\n    }\r\n    .mainSlider .content {\r\n        padding-top: 208px;\r\n    }\r\n    .mainSlider .main_button {\r\n        width: 142px;\r\n        height: 45px;\r\n        font-size: 13px;\r\n        margin-right: 18px;\r\n    }\r\n    .mainSlider .play_vid .circle {\r\n        margin-left: 6px;\r\n        width: 41px;\r\n        height: 41px;\r\n    }\r\n    .mainSlider .arrow_button .circle {\r\n        width: 41px;\r\n        height: 41px;\r\n    }\r\n    .mainSlider .play_vid {\r\n        font-size: 14px;\r\n    }\r\n}\r\n\r\n@media screen and (max-width: 900px) and (min-height: 700px) {\r\n    .mainSlider {\r\n        min-height: 100vh;\r\n        height: auto;\r\n    }\r\n}\r\n@media screen and (max-width: 900px) and (max-height: 900px) {\r\n    .mainSlider {\r\n        min-height: 900px;\r\n        height: auto;\r\n    }\r\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".mainSlider {\r\n    position: relative;\r\n    height: 100vh;\r\n    overflow: hidden;\r\n}\r\n.mainSlider article {\r\n    position: absolute;\r\n    left: 0;\r\n    top: 0;\r\n    width: 100%;\r\n    height: 100%;\r\n    color: #171c26;\r\n    transition: 1s;\r\n}\r\n.mainSlider article.lastSlide {\r\n    visibility: hidden;\r\n}\r\n.mainSlider article.activeSlide {\r\n    transform: translateX(0);\r\n}\r\n.mainSlider article.nextSlide {\r\n    visibility: hidden;\r\n}\r\n.mainSlider article.lastSlide .bg {\r\n    transform: translateX(-100%);\r\n}\r\n.mainSlider article.activeSlide .bg {\r\n    transform: translateX(0);\r\n}\r\n.mainSlider article.nextSlide .bg {\r\n    transform: translateX(100%);\r\n}\r\n.mainSlider article.lastSlide .playfair {\r\n    transform: translateX(-150px);\r\n}\r\n.mainSlider article.nextSlide .playfair {\r\n    transform: translateX(150px);\r\n}\r\n.mainSlider .bg {\r\n    position: absolute;\r\n    z-index: -1;\r\n    width: 100%;\r\n    height: 100%;\r\n    transition: 1s;\r\n}\r\n.mainSlider .bg img,\r\n.mainSlider .bg video {\r\n    -o-object-fit: cover;\r\n       object-fit: cover;\r\n    width: 100%;\r\n    height: 100%;\r\n}\r\n.mainSlider .bg::after {\r\n    width: 100%;\r\n    height: 100%;\r\n    left: 0;\r\n    top: 0;\r\n    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), #134d4d3a);\r\n    z-index: 0;\r\n}\r\n.mainSlider .content {\r\n    visibility: hidden;\r\n    position: relative;\r\n    z-index: 100;\r\n    color: #fff;\r\n    width: 1100px;\r\n    margin: auto;\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: center;\r\n    align-items: flex-start;\r\n    height: 100%;\r\n}\r\n.mainSlider .content .playfair {\r\n    font-size: 70px;\r\n    max-width: 700px;\r\n    margin-bottom: 30px;\r\n    transition: 1.2s;\r\n    opacity: 0;\r\n}\r\n.mainSlider .content .playfair span {\r\n    font-family: \"playfair\";\r\n    -webkit-text-stroke: 4px;\r\n    letter-spacing: 1px;\r\n    margin-left: 10px;\r\n    white-space: nowrap;\r\n}\r\n.mainSlider .activeSlide .content {\r\n    visibility: visible;\r\n}\r\n.mainSlider .activeSlide .content .playfair {\r\n    transform: translateX(0);\r\n    opacity: 1;\r\n}\r\n.mainSlider .controllers {\r\n    position: absolute;\r\n    left: calc(50% + 375px);\r\n    top: 330px;\r\n    transform: translateX(-50%);\r\n    z-index: 100;\r\n}\r\n.mainSlider .controllers button {\r\n    font-size: 35px;\r\n    color: #fff;\r\n    opacity: 0.3;\r\n    transition: 0.5s;\r\n}\r\n.mainSlider .controllers .arrow {\r\n    margin: 0 10px;\r\n}\r\n.mainSlider .controllers .dots {\r\n    align-items: flex-end;\r\n}\r\n.mainSlider .controllers .dots button {\r\n    margin: 0 9px;\r\n}\r\n.mainSlider .play_vid .circle {\r\n    margin-left: 8px;\r\n    width: 51px;\r\n    height: 51px;\r\n    transition: 0.4s;\r\n}\r\n.mainSlider .play_vid {\r\n    cursor: pointer;\r\n}\r\n.mainSlider .controllers button.active {\r\n    opacity: 0.7;\r\n    transform: scale(3.4) translateY(-9px);\r\n    margin: 0 50px;\r\n}\r\n.mainSlider .main_button {\r\n    margin-right: 50px;\r\n}\r\n.mainSlider .facilities {\r\n    margin-top: 40px;\r\n}\r\n.mainSlider .socialmedia {\r\n    position: absolute;\r\n    left: 60px;\r\n    bottom: 50px;\r\n    z-index: 100;\r\n}\r\n.mainSlider .socialmedia a {\r\n    transition: 0.3s;\r\n}\r\n.mainSlider .socialmedia a:hover {\r\n    transform: translateY(-4px);\r\n}\r\n.mainSlider .arrow_button {\r\n    position: relative !important;\r\n    left: auto !important;\r\n    bottom: auto !important;\r\n    margin-left: 10px;\r\n    flex-direction: row-reverse;\r\n}\r\n.mainSlider .arrow_button .text {\r\n    transform: scaleX(1) !important;\r\n    font-weight: normal;\r\n    margin-right: 8px !important;\r\n    margin-left: 0 !important;\r\n}\r\n.mainSlider .arrow_button .circle {\r\n    width: 51px;\r\n    height: 51px;\r\n    transition: 0.4s;\r\n}\r\n.mainSlider .flex.centered:hover .circle {\r\n    transform: scale(1.1);\r\n}\r\n.mainSlider .arrow_button .circle svg {\r\n    width: 16px;\r\n}\r\n\r\n/* responsiveness */\r\n\r\n/* HEIGHT */\r\n@media screen and (max-height: 900px) {\r\n    .mainSlider .content .playfair {\r\n        font-size: 53px;\r\n        max-width: 535px;\r\n    }\r\n    .mainSlider .facilities {\r\n        margin-top: 44px;\r\n        grid-gap: 25px 20px;\r\n    }\r\n    .mainSlider .controllers {\r\n        left: calc(50% + 316px);\r\n        top: 325px;\r\n    }\r\n    .mainSlider .controllers button.active {\r\n        transform: scale(2.6) translateY(-8px);\r\n        margin: 0 40px;\r\n    }\r\n}\r\n@media screen and (max-height: 750px) {\r\n    .mainSlider .controllers {\r\n        top: 253px !important;\r\n    }\r\n}\r\n@media screen and (max-height: 700px) and (max-width: 900px) {\r\n    .mainSlider .controllers {\r\n        top: 272px !important;\r\n    }\r\n}\r\n\r\n/* WIDTH */\r\n@media screen and (max-width: 1500px) {\r\n    .mainSlider .activeSlide .content {\r\n        width: 75%;\r\n        font-size: 12px;\r\n    }\r\n}\r\n@media screen and (max-width: 1350px) {\r\n    .mainSlider .content .playfair {\r\n        font-size: 30px;\r\n        max-width: 310px;\r\n    }\r\n    .mainSlider .content .playfair span {\r\n        -webkit-text-stroke: 2px;\r\n    }\r\n    .mainSlider .facilities {\r\n        margin-top: 44px;\r\n        grid-gap: 25px 20px;\r\n    }\r\n    .mainSlider .controllers {\r\n        left: calc(50% + 316px);\r\n        top: 325px;\r\n    }\r\n    .mainSlider .controllers button.active {\r\n        transform: scale(2.6) translateY(-8px);\r\n        margin: 0 29px;\r\n    }\r\n\r\n    .mainSlider .socialmedia {\r\n        left: 32px;\r\n        bottom: 28px;\r\n    }\r\n    /* .mainSlider .arrow_button {\r\n        bottom: 19px;\r\n        right: 17px;\r\n    } */\r\n}\r\n@media screen and (max-width: 1200px) {\r\n    .mainSlider .facilities {\r\n        margin-top: 44px;\r\n        grid-gap: 18px 15px;\r\n        font-size: 12px;\r\n    }\r\n    .mainSlider .facilities img {\r\n        width: 30px !important;\r\n    }\r\n    .mainSlider .facilities .flex img {\r\n        margin-right: 9px;\r\n    }\r\n}\r\n@media screen and (max-width: 1050px) {\r\n    .mainSlider .facilities {\r\n        grid-template-columns: repeat(3, 1fr);\r\n    }\r\n    .mainSlider .controllers {\r\n        transform: none;\r\n        left: auto;\r\n        right: 134px;\r\n    }\r\n    .mainSlider .controllers button {\r\n        font-size: 29px;\r\n    }\r\n    .mainSlider .controllers button.active {\r\n        transform: scale(2.6) translateY(-6px);\r\n        margin: 0 21px;\r\n        margin-left: 26px;\r\n    }\r\n    .mainSlider .facilities {\r\n        grid-gap: 13px 15px;\r\n    }\r\n}\r\n@media screen and (max-width: 900px) {\r\n    .mainSlider .controllers button.active {\r\n        transform: scale(2) translateY(-5px);\r\n        margin: 0 20px;\r\n    }\r\n    .mainSlider .controllers button {\r\n        font-size: 32px;\r\n        margin: 0 8px;\r\n    }\r\n    .mainSlider .controllers {\r\n        top: 166px !important;\r\n        right: 30px;\r\n    }\r\n    .mainSlider .facilities {\r\n        grid-template-columns: repeat(2, 1fr);\r\n    }\r\n    .mainSlider .content {\r\n        padding-top: 222px;\r\n        padding-bottom: 50px;\r\n        height: auto;\r\n    }\r\n}\r\n@media screen and (max-width: 700px) {\r\n    .mainSlider .activeSlide .content {\r\n        width: 95%;\r\n    }\r\n    .mainSlider .controllers button {\r\n        font-size: 25px;\r\n    }\r\n    .mainSlider .controllers button.active {\r\n        transform: scale(2) translateY(-3px);\r\n        margin: 0 17px;\r\n    }\r\n    .mainSlider .controllers button {\r\n        font-size: 21px;\r\n    }\r\n    .mainSlider .controllers .arrow.prev {\r\n        margin-top: -11px !important;\r\n    }\r\n}\r\n@media screen and (max-width: 600px) {\r\n    /* .mainSlider .content .playfair {\r\n        font-size: 35px;\r\n    } */\r\n    .mainSlider .content .playfair span {\r\n        -webkit-text-stroke: 2px;\r\n    }\r\n    .mainSlider .facilities {\r\n        grid-template-columns: 1fr;\r\n    }\r\n    .mainSlider .controllers {\r\n        top: 144px !important;\r\n    }\r\n    .mainSlider .content {\r\n        padding-top: 208px;\r\n    }\r\n    .mainSlider .main_button {\r\n        width: 142px;\r\n        height: 45px;\r\n        font-size: 13px;\r\n        margin-right: 18px;\r\n    }\r\n    .mainSlider .play_vid .circle {\r\n        margin-left: 6px;\r\n        width: 41px;\r\n        height: 41px;\r\n    }\r\n    .mainSlider .arrow_button .circle {\r\n        width: 41px;\r\n        height: 41px;\r\n    }\r\n    .mainSlider .play_vid {\r\n        font-size: 14px;\r\n    }\r\n}\r\n\r\n@media screen and (max-width: 900px) and (min-height: 700px) {\r\n    .mainSlider {\r\n        min-height: 100vh;\r\n        height: auto;\r\n    }\r\n}\r\n@media screen and (max-width: 900px) and (max-height: 900px) {\r\n    .mainSlider {\r\n        min-height: 900px;\r\n        height: auto;\r\n    }\r\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
