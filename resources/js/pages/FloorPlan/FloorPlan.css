@@ -59,8 +59,9 @@
     fill: #126d2a;
 }
 .floorPlan .st0.sold {
-    fill: #6d1212;
+    fill: url(#sold_image);
     cursor: default;
+    opacity: 1 !important;
 }
 .floorPlan .st0:hover {
     opacity: 0.6;
