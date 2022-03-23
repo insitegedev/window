@@ -7944,7 +7944,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Showcase_Showcase__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../components/Showcase/Showcase */ "./resources/js/components/Showcase/Showcase.js");
 /* harmony import */ var _Layouts_Layout__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../Layouts/Layout */ "./resources/js/Layouts/Layout.js");
 /* harmony import */ var _img_apartments_bg_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../img/apartments/bg.png */ "./public/img/apartments/bg.png");
-/* harmony import */ var _floorPlan_css__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./floorPlan.css */ "./resources/js/Pages/FloorPlan/floorPlan.css");
+/* harmony import */ var _FloorPlan_css__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./FloorPlan.css */ "./resources/js/Pages/FloorPlan/FloorPlan.css");
 /* harmony import */ var _tippyjs_react__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @tippyjs/react */ "./node_modules/@tippyjs/react/dist/tippy-react.esm.js");
 /* harmony import */ var tippy_js_dist_tippy_css__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! tippy.js/dist/tippy.css */ "./node_modules/tippy.js/dist/tippy.css");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
@@ -8334,7 +8334,7 @@ var ChooseFloor = function ChooseFloor(_ref) {
           fontSize: "16px",
           fontWeight: "bold"
         }
-      }, sold ? "sold" : flat.dimension, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("sup", null, sold ? "" : "2"))
+      }, sold ? __("sold") : flat.dimension, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("sup", null, sold ? "" : "2"))
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
       onClick: sold ? function (e) {
         return e.preventDefault();
@@ -8533,7 +8533,7 @@ var ChooseFloor = function ChooseFloor(_ref) {
           fontSize: "16px",
           fontWeight: "bold"
         }
-      }, sold ? "sold" : flat.dimension, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("sup", null, sold ? "" : "2"))
+      }, sold ? __("sold") : flat.dimension, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("sup", null, sold ? "" : "2"))
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
       onClick: sold ? function (e) {
         return e.preventDefault();
@@ -8716,7 +8716,7 @@ var ChooseFloor = function ChooseFloor(_ref) {
           fontSize: "16px",
           fontWeight: "bold"
         }
-      }, sold ? "sold" : flat.dimension, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("sup", null, sold ? "" : "2"))
+      }, sold ? __("sold") : flat.dimension, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("sup", null, sold ? "" : "2"))
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
       onClick: sold ? function (e) {
         return e.preventDefault();
@@ -8887,7 +8887,7 @@ var ChooseFloor = function ChooseFloor(_ref) {
           fontSize: "16px",
           fontWeight: "bold"
         }
-      }, sold ? "sold" : flat.dimension, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("sup", null, sold ? "" : "2"))
+      }, sold ? __("sold") : flat.dimension, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("sup", null, sold ? "" : "2"))
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
       onClick: sold ? function (e) {
         return e.preventDefault();
@@ -9066,7 +9066,7 @@ var ChooseFloor = function ChooseFloor(_ref) {
           fontSize: "16px",
           fontWeight: "bold"
         }
-      }, sold ? "sold" : flat.dimension, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("sup", null, sold ? "" : "2"))
+      }, sold ? __("sold") : flat.dimension, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("sup", null, sold ? "" : "2"))
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
       onClick: sold ? function (e) {
         return e.preventDefault();
@@ -9250,7 +9250,7 @@ var ChooseFloor = function ChooseFloor(_ref) {
           fontSize: "16px",
           fontWeight: "bold"
         }
-      }, sold ? "sold" : flat.dimension, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("sup", null, sold ? "" : "2"))
+      }, sold ? __("sold") : flat.dimension, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("sup", null, sold ? "" : "2"))
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
       onClick: sold ? function (e) {
         return e.preventDefault();
@@ -9425,7 +9425,7 @@ var ChooseFloor = function ChooseFloor(_ref) {
           fontSize: "16px",
           fontWeight: "bold"
         }
-      }, sold ? "sold" : flat.dimension, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("sup", null, sold ? "" : "2"))
+      }, sold ? __("sold") : flat.dimension, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("sup", null, sold ? "" : "2"))
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
       onClick: sold ? function (e) {
         return e.preventDefault();

@@ -6,7 +6,7 @@ import { BackButton } from "../../components/Buttons/Buttons";
 import Showcase from "../../components/Showcase/Showcase";
 import Layout from "../../Layouts/Layout";
 import Background from "/img/apartments/bg.png";
-import "./floorPlan.css";
+import "./FloorPlan.css";
 import Tippy from "@tippyjs/react";
 import "tippy.js/dist/tippy.css";
 import { followCursor } from "tippy.js";
