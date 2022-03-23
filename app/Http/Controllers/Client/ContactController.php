@@ -48,7 +48,7 @@ class ContactController extends Controller
                 'name' => $request->name,
                 'mail' => $request->mail,
                 'phone' => $request->phone,
-                "subject" => "subject",
+                "subject" => "Window",
                 'message' => $request->message
             ];
 
@@ -58,6 +58,7 @@ class ContactController extends Controller
             }
 
         }
-        return Inertia::render('Contact/Contact');
+        return redirect(locale_route("client.contact.index"));
+
     }
 }
