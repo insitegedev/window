@@ -12,7 +12,6 @@ import { usePage, Head } from "@inertiajs/inertia-react";
 import Swal from 'sweetalert2'
 
 const Contact = ({ page, seo, messageSent }) => {
-    console.log(messageSent);
     if (messageSent){
         Swal.fire({
             title: 'Message sent!',

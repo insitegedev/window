@@ -12,6 +12,7 @@ import "aos/dist/aos.css";
 import { usePage, Head } from "@inertiajs/inertia-react";
 
 const Home = ({ sliders, seo }) => {
+    // console.log(sliders[0]["youtube_url"]);
     const sharedData = usePage().props.localizations;
     const { gfacebook, ginstagram } = usePage().props;
 
@@ -108,9 +109,10 @@ const Home = ({ sliders, seo }) => {
                         </article>
                     );
                 })}
+                {/*{console.log(sliders[0]["youtube_url"])}*/}
                 <VideoPopup
                     // src='https://www.youtube.com/embed/zr4r3n5Smho'
-                    videoSrc="https://www.youtube.com/embed/zr4r3n5Smho"
+                    videoSrc={"https://www.youtube.com/embed/"+sliders[0]["youtube_url"]}
                     showVideo={showVideo}
                     hideVideo={() => setShowVideo(false)}
                 />

@@ -7306,7 +7306,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 function setSeoData(seoData) {
-  console.log(seoData);
   Object.keys(seoData).map(function (key) {
     var value = seoData[key];
 
@@ -7883,7 +7882,6 @@ var Contact = function Contact(_ref) {
   var page = _ref.page,
       seo = _ref.seo,
       messageSent = _ref.messageSent;
-  console.log(messageSent);
 
   if (messageSent) {
     sweetalert2__WEBPACK_IMPORTED_MODULE_10___default().fire({
@@ -9972,6 +9970,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 var Home = function Home(_ref) {
   var sliders = _ref.sliders,
       seo = _ref.seo;
+  // console.log(sliders[0]["youtube_url"]);
   var sharedData = (0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_10__.usePage)().props.localizations;
   var _usePage$props = (0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_10__.usePage)().props,
       gfacebook = _usePage$props.gfacebook,
@@ -10076,7 +10075,7 @@ var Home = function Home(_ref) {
     })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Facilities_Facilities__WEBPACK_IMPORTED_MODULE_3__["default"], null)));
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_VideoPopup_VideoPopup__WEBPACK_IMPORTED_MODULE_6__.VideoPopup // src='https://www.youtube.com/embed/zr4r3n5Smho'
   , {
-    videoSrc: "https://www.youtube.com/embed/zr4r3n5Smho",
+    videoSrc: "https://www.youtube.com/embed/" + sliders[0]["youtube_url"],
     showVideo: showVideo,
     hideVideo: function hideVideo() {
       return setShowVideo(false);
