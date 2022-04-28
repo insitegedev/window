@@ -95,7 +95,7 @@ Route::prefix('{locale?}')
         Route::middleware(['active'])->group(function () {
 
             // Home Page
-            Route::get('', [HomeController::class, 'index1'])->name('client.home.index');
+            Route::get('', [HomeController::class, 'index'])->name('client.home.index');
             Route::get('/gallery', [\App\Http\Controllers\Client\GalleryController::class, 'index'])->name('client.gallery.index');
             //            Route::get('/doctors', [HomeController::class, 'doctors'])->name('client.doctors.index');
             //            Route::get('/choosefloor', [HomeController::class, 'choosefloor'])->name('client.choosefloor.index');

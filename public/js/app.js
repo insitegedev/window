@@ -6839,7 +6839,7 @@ var BackButton = function BackButton(_ref3) {
       color = _ref3.color,
       text = _ref3.text;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__.Link, {
-    href: link == link ? "contact" : link
+    href: link !== null && link !== void 0 ? link : "#"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
     className: "back_button flex centered"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -6855,7 +6855,7 @@ var BackButton = function BackButton(_ref3) {
     style: {
       color: color
     }
-  }, "asdasd")));
+  }, text)));
 };
 
 /***/ }),
@@ -7670,6 +7670,10 @@ var ChooseFloor = function ChooseFloor(_ref) {
   var apartments = _ref.apartments,
       seo = _ref.seo,
       urlPrev = _ref.urlPrev;
+  // vitom fix
+  // if (urlPrev == "/") {
+  //     urlPrev = 'contact';
+  // }
   var sharedData = (0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.usePage)().props.localizations;
 
   function __(key) {
@@ -10075,7 +10079,7 @@ var Home = function Home(_ref) {
     })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Facilities_Facilities__WEBPACK_IMPORTED_MODULE_3__["default"], null)));
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_VideoPopup_VideoPopup__WEBPACK_IMPORTED_MODULE_6__.VideoPopup // src='https://www.youtube.com/embed/zr4r3n5Smho'
   , {
-    videoSrc: "https://www.youtube.com/embed/" + sliders[0]["youtube_url"],
+    videoSrc: "https://www.youtube.com/embed/" + (sliders.length > 0 ? sliders[0]["youtube_url"] : ""),
     showVideo: showVideo,
     hideVideo: function hideVideo() {
       return setShowVideo(false);
@@ -10631,7 +10635,7 @@ var BackButton = function BackButton(_ref3) {
       color = _ref3.color,
       text = _ref3.text;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__.Link, {
-    href: link == link ? "contact" : link
+    href: link !== null && link !== void 0 ? link : "#"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
     className: "back_button flex centered"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -10647,7 +10651,7 @@ var BackButton = function BackButton(_ref3) {
     style: {
       color: color
     }
-  }, "asdasd")));
+  }, text)));
 };
 
 /***/ }),
