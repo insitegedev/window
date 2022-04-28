@@ -7,7 +7,17 @@ import Layout from "../../Layouts/Layout";
 import Background from "/img/apartments/bg.png";
 import "./ChooseFloor.css";
 
+
+
 const ChooseFloor = ({ apartments, seo, urlPrev }) => {
+
+    // vitom fix
+    // if (urlPrev == "/") {
+    //     urlPrev = 'contact';
+    // }
+
+
+
     const sharedData = usePage().props.localizations;
 
     function __(key, replace = {}) {
@@ -103,6 +113,8 @@ const ChooseFloor = ({ apartments, seo, urlPrev }) => {
             }
         });
     });
+
+
     return (
         <Layout seo={seo}>
             <div className="chooseFloor">

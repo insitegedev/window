@@ -10,23 +10,24 @@ use Inertia\Inertia;
 
 class HomeController extends Controller
 {
+
+    // problem
+
     public function index()
     {
-
-
         $page = Page::where('key', 'home')->firstOrFail();
         $sliders = Slider::query()->where("status", 1)->with(['file', 'translations']);
-//        dd($page->file);
-//        dd(App::getLocale());
+        // dd($page->file);
+        // dd(App::getLocale());
 
         return Inertia::render('Home/Home', ["sliders" => $sliders->get(), "page" => $page, "seo" => [
-            "title"=>$page->meta_title,
-            "description"=>$page->meta_description,
-            "keywords"=>$page->meta_keyword,
-            "og_title"=>$page->meta_og_title,
-            "og_description"=>$page->meta_og_description,
-//            "image" => "imgg",
-//            "locale" => App::getLocale()
+            "title" => $page->meta_title,
+            "description" => $page->meta_description,
+            "keywords" => $page->meta_keyword,
+            "og_title" => $page->meta_og_title,
+            "og_description" => $page->meta_og_description,
+            //            "image" => "imgg",
+            //            "locale" => App::getLocale()
         ]])->withViewData([
             'meta_title' => $page->meta_title,
             'meta_description' => $page->meta_description,
@@ -35,8 +36,10 @@ class HomeController extends Controller
             'og_title' => $page->meta_og_title,
             'og_description' => $page->meta_og_description
         ]);
-
     }
+
+
+    // problem
 
     public function gallery()
     {
@@ -53,5 +56,8 @@ class HomeController extends Controller
         return Inertia::render('ChooseFloor/ChooseFloor');
     }
 
-
+    public function index1()
+    {
+        return 'asdasd';
+    }
 }

@@ -33,6 +33,7 @@ const Apartment = ({ apartment, urlPrev, seo }) => {
         "Bedroom - 8.5 m",
         "Balcony - 4.5 m",
     ];
+
     return (
         <Layout seo={seo}>
             <div className="apartmentPage">

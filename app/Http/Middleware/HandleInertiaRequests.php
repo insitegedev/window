@@ -6,6 +6,7 @@ use App\Models\Setting;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 use Inertia\Middleware;
+use Illuminate\Support\Facades\URL;
 
 class HandleInertiaRequests extends Middleware
 {
@@ -46,12 +47,19 @@ class HandleInertiaRequests extends Middleware
         $locale_urls = $this->locale_urls();
         //Generates link for go back button
         $urlPrev = $this->urlPrev();
+        // $urlPrev = URL::previous();
+
+        // vitom fix 2
+        if ($urlPrev == "/") {
+            $urlPrev = "contact";
+        }
+
+
         return array_merge(parent::share($request), [
             "locales" => $locales,
             "pathname" => $currentRoute,
             "locale_urls" => $locale_urls,
-            'urlPrev'	=> $urlPrev,
-
+            'urlPrev'    => $urlPrev,
         ]);
     }
 
@@ -63,7 +71,7 @@ class HandleInertiaRequests extends Middleware
         //Generates link for go back button
         if (url()->previous() !== route('login') && url()->previous() !== '' && url()->previous() !== url()->current()) {
             return url()->previous();
-        }else {
+        } else {
             return "/";
         }
     }
@@ -75,9 +83,8 @@ class HandleInertiaRequests extends Middleware
     {
         $locales = config("translatable.locales");
         $routes = [];
-        foreach ($locales as $key => $val)
-        {
-         $routes[$key] = get_url($val);
+        foreach ($locales as $key => $val) {
+            $routes[$key] = get_url($val);
         }
         return $routes;
     }
@@ -129,5 +136,4 @@ class HandleInertiaRequests extends Middleware
             "gcountry" => $gcountry
         ]);
     }
-
 }

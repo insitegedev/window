@@ -8,8 +8,8 @@ import setSeoData from "./SetSeoData";
 // import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 
-export default function Layout({children, seo=null}) {
-    if (seo){
+export default function Layout({ children, seo = null }) {
+    if (seo) {
         setSeoData(seo);
     }
 
@@ -17,9 +17,9 @@ export default function Layout({children, seo=null}) {
         <>
             {/*<Router>*/}
             {/*<Fragment>*/}
-                <Header/>
-                {children}
-                <Footer/>
+            <Header />
+            {children}
+            <Footer />
             {/*</Fragment>*/}
             {/*</Router>*/}
         </>
