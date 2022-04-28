@@ -1,4 +1,5 @@
 <?php
+
 /**
  *  app/Http/Controllers/Admin/Auth/AuthController.php
  *
@@ -10,8 +11,11 @@
 namespace App\Http\Controllers\Admin\Auth;
 
 
+
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\Auth\LoginRequest;
+// use Illuminate\Support\Facades\Request;
+use Illuminate\Http\Request;
 
 /**
  * Class AuthController
@@ -19,7 +23,6 @@ use App\Http\Requests\Admin\Auth\LoginRequest;
  */
 class LoginController extends Controller
 {
-
     /**
      * Create a new controller instance.
      *
@@ -37,9 +40,7 @@ class LoginController extends Controller
     {
         $pageConfigs = ['bodyCustomClass' => 'login-bg', 'isCustomizer' => false];
 
-        return view('admin.auth.login', [
-
-        ]);
+        return view('admin.auth.login', []);
     }
 
     /**
@@ -50,19 +51,18 @@ class LoginController extends Controller
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
      * @throws \Exception
      */
-    public function login(LoginRequest $request)
+    public function login(Request $request)
     {
+        // dd($request->all());
         if (!\Auth::attempt([
             'email' => $request->email,
             'password' => $request->password,
-        ],$request->remember)) {
-            return back()->with('danger','Email or Password is incorrect!');
+        ], $request->remember)) {
+            return back()->with('danger', 'Email or Password is incorrect!');
         }
 
         return redirect('/ge/admin/apartment');
     }
-
-
     /**
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
      */

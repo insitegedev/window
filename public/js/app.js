@@ -6796,7 +6796,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
-/* harmony import */ var _img_icons_sm_smIcons__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../img/icons/sm/smIcons */ "./public/img/icons/sm/smIcons.js");
+/* harmony import */ var _img_icons_sm_smIcons__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../img/icons/sm/smIcons */ "./public/img/icons/sm/smIcons.js");
 /* harmony import */ var _Buttons_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Buttons.css */ "./resources/js/Components/Buttons/Buttons.css");
 
 
@@ -6839,7 +6839,7 @@ var BackButton = function BackButton(_ref3) {
       color = _ref3.color,
       text = _ref3.text;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__.Link, {
-    href: link !== null && link !== void 0 ? link : "#"
+    href: link == link ? "contact" : link
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
     className: "back_button flex centered"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -6855,7 +6855,7 @@ var BackButton = function BackButton(_ref3) {
     style: {
       color: color
     }
-  }, text)));
+  }, "asdasd")));
 };
 
 /***/ }),
@@ -6935,7 +6935,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var _Buttons_Buttons__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Buttons/Buttons */ "./resources/js/Components/Buttons/Buttons.js");
-/* harmony import */ var _img_logo_insite_1_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../img/logo/insite/1.svg */ "./public/img/logo/insite/1.svg");
+/* harmony import */ var _img_logo_insite_1_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../img/logo/insite/1.svg */ "./public/img/logo/insite/1.svg");
 /* harmony import */ var _Footer_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Footer.css */ "./resources/js/Components/Footer/Footer.css");
 /* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
 
@@ -7229,7 +7229,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
-/* harmony import */ var _img_icons_sm_smIcons__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../img/icons/sm/smIcons */ "./public/img/icons/sm/smIcons.js");
+/* harmony import */ var _img_icons_sm_smIcons__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../img/icons/sm/smIcons */ "./public/img/icons/sm/smIcons.js");
 
 
 
@@ -7509,11 +7509,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_PagePath_PagePath__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/PagePath/PagePath */ "./resources/js/components/PagePath/PagePath.js");
 /* harmony import */ var _components_Showcase_Showcase__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../components/Showcase/Showcase */ "./resources/js/components/Showcase/Showcase.js");
 /* harmony import */ var _Layouts_Layout__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../Layouts/Layout */ "./resources/js/Layouts/Layout.js");
-/* harmony import */ var _img_apartments_1_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../img/apartments/1.png */ "./public/img/apartments/1.png");
-/* harmony import */ var _img_apartments_building_png__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../img/apartments/building.png */ "./public/img/apartments/building.png");
+/* harmony import */ var _img_apartments_1_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../../img/apartments/1.png */ "./public/img/apartments/1.png");
+/* harmony import */ var _img_apartments_building_png__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../../../img/apartments/building.png */ "./public/img/apartments/building.png");
 /* harmony import */ var _Apartment_css__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Apartment.css */ "./resources/js/Pages/Apartment/Apartment.css");
 /* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
-/* harmony import */ var _img_icons_apartment_file_svg__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../img/icons/apartment/file.svg */ "./public/img/icons/apartment/file.svg");
+/* harmony import */ var _img_icons_apartment_file_svg__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../../../../img/icons/apartment/file.svg */ "./public/img/icons/apartment/file.svg");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -7643,7 +7643,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Buttons_Buttons__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/Buttons/Buttons */ "./resources/js/components/Buttons/Buttons.js");
 /* harmony import */ var _components_Showcase_Showcase__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/Showcase/Showcase */ "./resources/js/components/Showcase/Showcase.js");
 /* harmony import */ var _Layouts_Layout__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../Layouts/Layout */ "./resources/js/Layouts/Layout.js");
-/* harmony import */ var _img_apartments_bg_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../img/apartments/bg.png */ "./public/img/apartments/bg.png");
+/* harmony import */ var _img_apartments_bg_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../../img/apartments/bg.png */ "./public/img/apartments/bg.png");
 /* harmony import */ var _ChooseFloor_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./ChooseFloor.css */ "./resources/js/Pages/ChooseFloor/ChooseFloor.css");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
@@ -7953,11 +7953,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _img_icons_sm_smIcons__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../img/icons/sm/smIcons */ "./public/img/icons/sm/smIcons.js");
+/* harmony import */ var _img_icons_sm_smIcons__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../img/icons/sm/smIcons */ "./public/img/icons/sm/smIcons.js");
 /* harmony import */ var _components_Buttons_Buttons__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/Buttons/Buttons */ "./resources/js/components/Buttons/Buttons.js");
 /* harmony import */ var _components_Showcase_Showcase__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../components/Showcase/Showcase */ "./resources/js/components/Showcase/Showcase.js");
 /* harmony import */ var _Layouts_Layout__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../Layouts/Layout */ "./resources/js/Layouts/Layout.js");
-/* harmony import */ var _img_apartments_bg_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../img/apartments/bg.png */ "./public/img/apartments/bg.png");
+/* harmony import */ var _img_apartments_bg_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../../img/apartments/bg.png */ "./public/img/apartments/bg.png");
 /* harmony import */ var _FloorPlan_css__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./FloorPlan.css */ "./resources/js/Pages/FloorPlan/FloorPlan.css");
 /* harmony import */ var _tippyjs_react__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @tippyjs/react */ "./node_modules/@tippyjs/react/dist/tippy-react.esm.js");
 /* harmony import */ var tippy_js_dist_tippy_css__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! tippy.js/dist/tippy.css */ "./node_modules/tippy.js/dist/tippy.css");
@@ -8186,11 +8186,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _img_icons_sm_smIcons__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../img/icons/sm/smIcons */ "./public/img/icons/sm/smIcons.js");
+/* harmony import */ var _img_icons_sm_smIcons__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../img/icons/sm/smIcons */ "./public/img/icons/sm/smIcons.js");
 /* harmony import */ var _components_Buttons_Buttons__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/Buttons/Buttons */ "./resources/js/components/Buttons/Buttons.js");
 /* harmony import */ var _components_Showcase_Showcase__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../components/Showcase/Showcase */ "./resources/js/components/Showcase/Showcase.js");
 /* harmony import */ var _Layouts_Layout__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../Layouts/Layout */ "./resources/js/Layouts/Layout.js");
-/* harmony import */ var _img_apartments_bg_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../img/apartments/bg.png */ "./public/img/apartments/bg.png");
+/* harmony import */ var _img_apartments_bg_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../../img/apartments/bg.png */ "./public/img/apartments/bg.png");
 /* harmony import */ var _floorPlan_css__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./floorPlan.css */ "./resources/js/Pages/FloorPlan/floorPlan.css");
 /* harmony import */ var _tippyjs_react__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @tippyjs/react */ "./node_modules/@tippyjs/react/dist/tippy-react.esm.js");
 /* harmony import */ var tippy_js_dist_tippy_css__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! tippy.js/dist/tippy.css */ "./node_modules/tippy.js/dist/tippy.css");
@@ -8413,11 +8413,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _img_icons_sm_smIcons__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../img/icons/sm/smIcons */ "./public/img/icons/sm/smIcons.js");
+/* harmony import */ var _img_icons_sm_smIcons__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../img/icons/sm/smIcons */ "./public/img/icons/sm/smIcons.js");
 /* harmony import */ var _components_Buttons_Buttons__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/Buttons/Buttons */ "./resources/js/components/Buttons/Buttons.js");
 /* harmony import */ var _components_Showcase_Showcase__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../components/Showcase/Showcase */ "./resources/js/components/Showcase/Showcase.js");
 /* harmony import */ var _Layouts_Layout__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../Layouts/Layout */ "./resources/js/Layouts/Layout.js");
-/* harmony import */ var _img_apartments_bg_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../img/apartments/bg.png */ "./public/img/apartments/bg.png");
+/* harmony import */ var _img_apartments_bg_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../../img/apartments/bg.png */ "./public/img/apartments/bg.png");
 /* harmony import */ var _floorPlan_css__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./floorPlan.css */ "./resources/js/Pages/FloorPlan/floorPlan.css");
 /* harmony import */ var _tippyjs_react__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @tippyjs/react */ "./node_modules/@tippyjs/react/dist/tippy-react.esm.js");
 /* harmony import */ var tippy_js_dist_tippy_css__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! tippy.js/dist/tippy.css */ "./node_modules/tippy.js/dist/tippy.css");
@@ -8640,11 +8640,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _img_icons_sm_smIcons__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../img/icons/sm/smIcons */ "./public/img/icons/sm/smIcons.js");
+/* harmony import */ var _img_icons_sm_smIcons__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../img/icons/sm/smIcons */ "./public/img/icons/sm/smIcons.js");
 /* harmony import */ var _components_Buttons_Buttons__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/Buttons/Buttons */ "./resources/js/components/Buttons/Buttons.js");
 /* harmony import */ var _components_Showcase_Showcase__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../components/Showcase/Showcase */ "./resources/js/components/Showcase/Showcase.js");
 /* harmony import */ var _Layouts_Layout__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../Layouts/Layout */ "./resources/js/Layouts/Layout.js");
-/* harmony import */ var _img_apartments_bg_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../img/apartments/bg.png */ "./public/img/apartments/bg.png");
+/* harmony import */ var _img_apartments_bg_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../../img/apartments/bg.png */ "./public/img/apartments/bg.png");
 /* harmony import */ var _floorPlan_css__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./floorPlan.css */ "./resources/js/Pages/FloorPlan/floorPlan.css");
 /* harmony import */ var _tippyjs_react__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @tippyjs/react */ "./node_modules/@tippyjs/react/dist/tippy-react.esm.js");
 /* harmony import */ var tippy_js_dist_tippy_css__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! tippy.js/dist/tippy.css */ "./node_modules/tippy.js/dist/tippy.css");
@@ -8851,11 +8851,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _img_icons_sm_smIcons__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../img/icons/sm/smIcons */ "./public/img/icons/sm/smIcons.js");
+/* harmony import */ var _img_icons_sm_smIcons__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../img/icons/sm/smIcons */ "./public/img/icons/sm/smIcons.js");
 /* harmony import */ var _components_Buttons_Buttons__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/Buttons/Buttons */ "./resources/js/components/Buttons/Buttons.js");
 /* harmony import */ var _components_Showcase_Showcase__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../components/Showcase/Showcase */ "./resources/js/components/Showcase/Showcase.js");
 /* harmony import */ var _Layouts_Layout__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../Layouts/Layout */ "./resources/js/Layouts/Layout.js");
-/* harmony import */ var _img_apartments_bg_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../img/apartments/bg.png */ "./public/img/apartments/bg.png");
+/* harmony import */ var _img_apartments_bg_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../../img/apartments/bg.png */ "./public/img/apartments/bg.png");
 /* harmony import */ var _floorPlan_css__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./floorPlan.css */ "./resources/js/Pages/FloorPlan/floorPlan.css");
 /* harmony import */ var _tippyjs_react__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @tippyjs/react */ "./node_modules/@tippyjs/react/dist/tippy-react.esm.js");
 /* harmony import */ var tippy_js_dist_tippy_css__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! tippy.js/dist/tippy.css */ "./node_modules/tippy.js/dist/tippy.css");
@@ -9050,11 +9050,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _img_icons_sm_smIcons__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../img/icons/sm/smIcons */ "./public/img/icons/sm/smIcons.js");
+/* harmony import */ var _img_icons_sm_smIcons__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../img/icons/sm/smIcons */ "./public/img/icons/sm/smIcons.js");
 /* harmony import */ var _components_Buttons_Buttons__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/Buttons/Buttons */ "./resources/js/components/Buttons/Buttons.js");
 /* harmony import */ var _components_Showcase_Showcase__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../components/Showcase/Showcase */ "./resources/js/components/Showcase/Showcase.js");
 /* harmony import */ var _Layouts_Layout__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../Layouts/Layout */ "./resources/js/Layouts/Layout.js");
-/* harmony import */ var _img_apartments_bg_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../img/apartments/bg.png */ "./public/img/apartments/bg.png");
+/* harmony import */ var _img_apartments_bg_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../../img/apartments/bg.png */ "./public/img/apartments/bg.png");
 /* harmony import */ var _floorPlan_css__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./floorPlan.css */ "./resources/js/Pages/FloorPlan/floorPlan.css");
 /* harmony import */ var _tippyjs_react__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @tippyjs/react */ "./node_modules/@tippyjs/react/dist/tippy-react.esm.js");
 /* harmony import */ var tippy_js_dist_tippy_css__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! tippy.js/dist/tippy.css */ "./node_modules/tippy.js/dist/tippy.css");
@@ -9257,11 +9257,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _img_icons_sm_smIcons__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../img/icons/sm/smIcons */ "./public/img/icons/sm/smIcons.js");
+/* harmony import */ var _img_icons_sm_smIcons__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../img/icons/sm/smIcons */ "./public/img/icons/sm/smIcons.js");
 /* harmony import */ var _components_Buttons_Buttons__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/Buttons/Buttons */ "./resources/js/components/Buttons/Buttons.js");
 /* harmony import */ var _components_Showcase_Showcase__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../components/Showcase/Showcase */ "./resources/js/components/Showcase/Showcase.js");
 /* harmony import */ var _Layouts_Layout__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../Layouts/Layout */ "./resources/js/Layouts/Layout.js");
-/* harmony import */ var _img_apartments_bg_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../img/apartments/bg.png */ "./public/img/apartments/bg.png");
+/* harmony import */ var _img_apartments_bg_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../../img/apartments/bg.png */ "./public/img/apartments/bg.png");
 /* harmony import */ var _floorPlan_css__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./floorPlan.css */ "./resources/js/Pages/FloorPlan/floorPlan.css");
 /* harmony import */ var _tippyjs_react__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @tippyjs/react */ "./node_modules/@tippyjs/react/dist/tippy-react.esm.js");
 /* harmony import */ var tippy_js_dist_tippy_css__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! tippy.js/dist/tippy.css */ "./node_modules/tippy.js/dist/tippy.css");
@@ -9469,11 +9469,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _img_icons_sm_smIcons__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../img/icons/sm/smIcons */ "./public/img/icons/sm/smIcons.js");
+/* harmony import */ var _img_icons_sm_smIcons__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../img/icons/sm/smIcons */ "./public/img/icons/sm/smIcons.js");
 /* harmony import */ var _components_Buttons_Buttons__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/Buttons/Buttons */ "./resources/js/components/Buttons/Buttons.js");
 /* harmony import */ var _components_Showcase_Showcase__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../components/Showcase/Showcase */ "./resources/js/components/Showcase/Showcase.js");
 /* harmony import */ var _Layouts_Layout__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../Layouts/Layout */ "./resources/js/Layouts/Layout.js");
-/* harmony import */ var _img_apartments_bg_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../img/apartments/bg.png */ "./public/img/apartments/bg.png");
+/* harmony import */ var _img_apartments_bg_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../../img/apartments/bg.png */ "./public/img/apartments/bg.png");
 /* harmony import */ var _floorPlan_css__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./floorPlan.css */ "./resources/js/Pages/FloorPlan/floorPlan.css");
 /* harmony import */ var _tippyjs_react__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @tippyjs/react */ "./node_modules/@tippyjs/react/dist/tippy-react.esm.js");
 /* harmony import */ var tippy_js_dist_tippy_css__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! tippy.js/dist/tippy.css */ "./node_modules/tippy.js/dist/tippy.css");
@@ -9932,7 +9932,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _img_icons_sm_smIcons__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../img/icons/sm/smIcons */ "./public/img/icons/sm/smIcons.js");
+/* harmony import */ var _img_icons_sm_smIcons__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../img/icons/sm/smIcons */ "./public/img/icons/sm/smIcons.js");
 /* harmony import */ var _Home_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Home.css */ "./resources/js/Pages/Home/Home.css");
 /* harmony import */ var _Facilities_Facilities__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Facilities/Facilities */ "./resources/js/Pages/Home/Facilities/Facilities.js");
 /* harmony import */ var _components_SocialMedia_SocialMedia__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../components/SocialMedia/SocialMedia */ "./resources/js/components/SocialMedia/SocialMedia.js");
@@ -10588,7 +10588,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
-/* harmony import */ var _img_icons_sm_smIcons__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../img/icons/sm/smIcons */ "./public/img/icons/sm/smIcons.js");
+/* harmony import */ var _img_icons_sm_smIcons__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../img/icons/sm/smIcons */ "./public/img/icons/sm/smIcons.js");
 /* harmony import */ var _Buttons_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Buttons.css */ "./resources/js/components/Buttons/Buttons.css");
 
 
@@ -10631,7 +10631,7 @@ var BackButton = function BackButton(_ref3) {
       color = _ref3.color,
       text = _ref3.text;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__.Link, {
-    href: link !== null && link !== void 0 ? link : "#"
+    href: link == link ? "contact" : link
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
     className: "back_button flex centered"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -10647,7 +10647,7 @@ var BackButton = function BackButton(_ref3) {
     style: {
       color: color
     }
-  }, text)));
+  }, "asdasd")));
 };
 
 /***/ }),
@@ -10892,7 +10892,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "PagePath": () => (/* binding */ PagePath)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _img_icons_arrows_chevron_svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../img/icons/arrows/chevron.svg */ "./public/img/icons/arrows/chevron.svg");
+/* harmony import */ var _img_icons_arrows_chevron_svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../img/icons/arrows/chevron.svg */ "./public/img/icons/arrows/chevron.svg");
 /* harmony import */ var _PagePath_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./PagePath.css */ "./resources/js/components/PagePath/PagePath.css");
 
 
@@ -10996,7 +10996,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
-/* harmony import */ var _img_icons_sm_smIcons__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../img/icons/sm/smIcons */ "./public/img/icons/sm/smIcons.js");
+/* harmony import */ var _img_icons_sm_smIcons__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../img/icons/sm/smIcons */ "./public/img/icons/sm/smIcons.js");
 
 
 
@@ -11791,7 +11791,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".contactPage .body {\n  display: grid;\n  grid-template-columns: repeat(2, 1fr);\n  grid-gap: 77px;\n  width: 1300px;\n  margin: auto;\n  padding-top: 58px;\n  padding-bottom: 80px;\n  background: url(/img/general/line-bg.png);\n  background-position: center;\n  background-size: contain;\n}\n.contactPage .contact_info .title:first-child {\n  margin-top: 0;\n}\n.contactPage .body .img {\n  width: 100%;\n}\n\n@media screen and (max-width: 1350px) {\n  .contactPage .body {\n    width: 95%;\n  }\n}\n\n@media screen and (max-width: 1000px) {\n  .contactPage .body {\n    grid-gap: 41px;\n  }\n}\n\n@media screen and (max-width: 850px) {\n  .form .playfair {\n    font-size: 33px;\n    margin: 12px 0;\n  }\n  .form input,\n  .form textarea {\n    height: 49px;\n    margin-bottom: 14px;\n  }\n  .form textarea {\n    padding-top: 16px;\n    height: 104px;\n  }\n  .contactPage .body {\n    grid-gap: 22px;\n  }\n  .form .grid {\n    grid-gap: 11px;\n  }\n}\n@media screen and (max-width: 700px) {\n  .contactPage .body {\n    grid-template-columns: 1fr;\n  }\n  .contactPage .body .form {\n    grid-row: 1;\n  }\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".contactPage .body {\r\n  display: grid;\r\n  grid-template-columns: repeat(2, 1fr);\r\n  grid-gap: 77px;\r\n  width: 1300px;\r\n  margin: auto;\r\n  padding-top: 58px;\r\n  padding-bottom: 80px;\r\n  background: url(/img/general/line-bg.png);\r\n  background-position: center;\r\n  background-size: contain;\r\n}\r\n.contactPage .contact_info .title:first-child {\r\n  margin-top: 0;\r\n}\r\n.contactPage .body .img {\r\n  width: 100%;\r\n}\r\n\r\n@media screen and (max-width: 1350px) {\r\n  .contactPage .body {\r\n    width: 95%;\r\n  }\r\n}\r\n\r\n@media screen and (max-width: 1000px) {\r\n  .contactPage .body {\r\n    grid-gap: 41px;\r\n  }\r\n}\r\n\r\n@media screen and (max-width: 850px) {\r\n  .form .playfair {\r\n    font-size: 33px;\r\n    margin: 12px 0;\r\n  }\r\n  .form input,\r\n  .form textarea {\r\n    height: 49px;\r\n    margin-bottom: 14px;\r\n  }\r\n  .form textarea {\r\n    padding-top: 16px;\r\n    height: 104px;\r\n  }\r\n  .contactPage .body {\r\n    grid-gap: 22px;\r\n  }\r\n  .form .grid {\r\n    grid-gap: 11px;\r\n  }\r\n}\r\n@media screen and (max-width: 700px) {\r\n  .contactPage .body {\r\n    grid-template-columns: 1fr;\r\n  }\r\n  .contactPage .body .form {\r\n    grid-row: 1;\r\n  }\r\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -12151,7 +12151,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".showcase {\n  position: relative;\n  width: 100%;\n  height: 330px;\n  background: url(/img/home/1.png) no-repeat;\n  background-position: center;\n  background-size: cover;\n  background-attachment: fixed;\n  display: flex;\n  align-items: flex-end;\n  justify-content: center;\n  padding-bottom: 37px;\n  color: #fff;\n  font-size: 42px;\n}\n.showcase.short {\n  height: 210px;\n}\n.showcase::after {\n  width: 100%;\n  height: 100%;\n  left: 0;\n  top: 0;\n  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), #134d4d3a);\n  z-index: 0;\n}\n.showcase .title {\n  position: relative;\n  z-index: 100;\n}\n\n@media screen and (max-width: 1350px) {\n  .showcase {\n    height: 208px;\n    padding-bottom: 20px;\n    font-size: 36px;\n  }\n  .showcase.short {\n    height: 123px;\n  }\n}\n@media screen and (max-width: 600px) {\n  .showcase {\n    height: 161px;\n    padding-bottom: 14px;\n    font-size: 30px;\n  }\n  .showcase.short {\n    height: 94px;\n  }\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".showcase {\r\n  position: relative;\r\n  width: 100%;\r\n  height: 330px;\r\n  background: url(/img/home/1.png) no-repeat;\r\n  background-position: center;\r\n  background-size: cover;\r\n  background-attachment: fixed;\r\n  display: flex;\r\n  align-items: flex-end;\r\n  justify-content: center;\r\n  padding-bottom: 37px;\r\n  color: #fff;\r\n  font-size: 42px;\r\n}\r\n.showcase.short {\r\n  height: 210px;\r\n}\r\n.showcase::after {\r\n  width: 100%;\r\n  height: 100%;\r\n  left: 0;\r\n  top: 0;\r\n  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), #134d4d3a);\r\n  z-index: 0;\r\n}\r\n.showcase .title {\r\n  position: relative;\r\n  z-index: 100;\r\n}\r\n\r\n@media screen and (max-width: 1350px) {\r\n  .showcase {\r\n    height: 208px;\r\n    padding-bottom: 20px;\r\n    font-size: 36px;\r\n  }\r\n  .showcase.short {\r\n    height: 123px;\r\n  }\r\n}\r\n@media screen and (max-width: 600px) {\r\n  .showcase {\r\n    height: 161px;\r\n    padding-bottom: 14px;\r\n    font-size: 30px;\r\n  }\r\n  .showcase.short {\r\n    height: 94px;\r\n  }\r\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
