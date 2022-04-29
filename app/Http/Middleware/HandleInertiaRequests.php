@@ -43,17 +43,35 @@ class HandleInertiaRequests extends Middleware
         $locales = config("translatable.locales");
         $currentRoute = url()->current();
 
+        $linksBase = [
+            'home' => '/ge',
+            "singlePages" => [
+                'about' => '/about',
+                'gallery' => '/gallery',
+                'service' => '/service',
+                'contact' => '/contact',
+                'choose-floor' => '/choose-floor',
+            ],
+            'childs' => [
+                '/ge/choose-apartment/A4'
+            ]
+        ];
+
         //Generates urls for language switcher with each locale
         $locale_urls = $this->locale_urls();
         //Generates link for go back button
         $urlPrev = $this->urlPrev();
+        // $urlPrev = str_replace(url('/'), '', $this->urlPrev());
         // $urlPrev = URL::previous();
+
+        if (str_replace(url('/'), '', url()->current()) == $linksBase['childs'][0]) {
+            $urlPrev == "/ge";
+        }
 
         // vitom fix 2
         if ($urlPrev == "/") {
-            $urlPrev = "contact";
+            $urlPrev = "/ge";
         }
-
 
         return array_merge(parent::share($request), [
             "locales" => $locales,

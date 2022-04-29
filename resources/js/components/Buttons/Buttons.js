@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "@inertiajs/inertia-react";
 import { ArrowRight } from "/img/icons/sm/smIcons";
 import "./Buttons.css";
+import { useNavigate } from "react-router-dom"
 
 export const MainButton = ({ text, link, dark }) => {
     return (
@@ -28,20 +29,28 @@ export const ArrowButton = ({ color, link, text }) => {
     );
 };
 
+function jaba() {
+    alert('asd');
+}
+// const navigate = useNavigate()
+
+const onClickHandler = () => {
+    history.back()
+};
 export const BackButton = ({ link, color, text }) => {
     return (
-        <Link href={link ?? "#"}>
-            <button className="back_button flex centered">
-                <div
-                    className="circle"
-                    style={{ borderColor: color, transform: "rotate(180deg)" }}
-                >
-                    <ArrowRight color={color} />
-                </div>
-                <div className="text" style={{ color: color }}>
-                    {text}
-                </div>
-            </button>
-        </Link>
+        // <Link href={link ?? "#"}>
+        <button className="back_button flex centered" onClick={() => { onClickHandler() }}>
+            <div
+                className="circle"
+                style={{ borderColor: color, transform: "rotate(180deg)" }}
+            >
+                <ArrowRight color={color} />
+            </div>
+            <div className="text" style={{ color: color }}>
+                {text}
+            </div>
+        </button>
+        // </Link>
     );
 };
