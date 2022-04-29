@@ -29,18 +29,26 @@ export const ArrowButton = ({ color, link, text }) => {
     );
 };
 
-function jaba() {
-    alert('asd');
-}
+
 // const navigate = useNavigate()
+// var base_url = window.location.origin;
+
 
 const onClickHandler = () => {
-    history.back()
+    // set base url of website manually includes and href
+    let link = history.state.props.urlPrev;
+    if (link.includes('http://127.0.0.1:8000/')) {
+        window.history.back()
+    } else {
+        window.location.href = 'http://127.0.0.1:8000/';
+    }
+    // window.history.back();
 };
+
 export const BackButton = ({ link, color, text }) => {
     return (
         // <Link href={link ?? "#"}>
-        <button className="back_button flex centered" onClick={() => { onClickHandler() }}>
+        <button className="back_button flex centered" onClick={() => { onClickHandler() }} >
             <div
                 className="circle"
                 style={{ borderColor: color, transform: "rotate(180deg)" }}

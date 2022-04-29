@@ -6834,15 +6834,19 @@ var ArrowButton = function ArrowButton(_ref2) {
       color: color
     }
   }, text)));
-};
-
-function jaba() {
-  alert('asd');
-} // const navigate = useNavigate()
-
+}; // const navigate = useNavigate()
+// var base_url = window.location.origin;
 
 var onClickHandler = function onClickHandler() {
-  history.back();
+  // set base url of website manually includes and href
+  var link = history.state.props.urlPrev;
+
+  if (link.includes('http://127.0.0.1:8000/')) {
+    window.history.back();
+  } else {
+    window.location.href = 'http://127.0.0.1:8000/';
+  } // window.history.back();
+
 };
 
 var BackButton = function BackButton(_ref3) {
@@ -10647,15 +10651,19 @@ var ArrowButton = function ArrowButton(_ref2) {
       color: color
     }
   }, text)));
-};
-
-function jaba() {
-  alert('asd');
-} // const navigate = useNavigate()
-
+}; // const navigate = useNavigate()
+// var base_url = window.location.origin;
 
 var onClickHandler = function onClickHandler() {
-  history.back();
+  // set base url of website manually includes and href
+  var link = history.state.props.urlPrev;
+
+  if (link.includes('http://127.0.0.1:8000/')) {
+    window.history.back();
+  } else {
+    window.location.href = 'http://127.0.0.1:8000/';
+  } // window.history.back();
+
 };
 
 var BackButton = function BackButton(_ref3) {
