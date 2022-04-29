@@ -31,16 +31,16 @@ export const ArrowButton = ({ color, link, text }) => {
 
 
 // const navigate = useNavigate()
-// var base_url = window.location.origin;
+var base_url = window.location.origin;
 
 
 const onClickHandler = () => {
     // set base url of website manually includes and href
     let link = history.state.props.urlPrev;
-    if (link.includes('http://127.0.0.1:8000/')) {
+    if (link.includes(base_url)) {
         window.history.back()
     } else {
-        window.location.href = 'http://127.0.0.1:8000/';
+        window.location.href = base_url;
     }
     // window.history.back();
 };
