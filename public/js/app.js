@@ -6802,6 +6802,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 var MainButton = function MainButton(_ref) {
   var text = _ref.text,
       link = _ref.link,
@@ -6833,29 +6834,50 @@ var ArrowButton = function ArrowButton(_ref2) {
       color: color
     }
   }, text)));
+}; // const navigate = useNavigate()
+
+var base_url = window.location.origin;
+
+var onClickHandler = function onClickHandler() {
+  // set base url of website manually includes and href
+  var link = history.state.props.urlPrev;
+
+  if (link.includes(base_url)) {
+    window.history.back();
+  } else {
+    window.location.href = base_url;
+  } // window.history.back();
+
 };
+
 var BackButton = function BackButton(_ref3) {
   var link = _ref3.link,
       color = _ref3.color,
       text = _ref3.text;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__.Link, {
-    href: link !== null && link !== void 0 ? link : "#"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
-    className: "back_button flex centered"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "circle",
-    style: {
-      borderColor: color,
-      transform: "rotate(180deg)"
-    }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_img_icons_sm_smIcons__WEBPACK_IMPORTED_MODULE_2__.ArrowRight, {
-    color: color
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "text",
-    style: {
+  return (
+    /*#__PURE__*/
+    // <Link href={link ?? "#"}>
+    react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+      className: "back_button flex centered",
+      onClick: function onClick() {
+        onClickHandler();
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      className: "circle",
+      style: {
+        borderColor: color,
+        transform: "rotate(180deg)"
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_img_icons_sm_smIcons__WEBPACK_IMPORTED_MODULE_2__.ArrowRight, {
       color: color
-    }
-  }, text)));
+    })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      className: "text",
+      style: {
+        color: color
+      }
+    }, text)) // </Link>
+
+  );
 };
 
 /***/ }),
@@ -10598,6 +10620,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 var MainButton = function MainButton(_ref) {
   var text = _ref.text,
       link = _ref.link,
@@ -10629,29 +10652,50 @@ var ArrowButton = function ArrowButton(_ref2) {
       color: color
     }
   }, text)));
+}; // const navigate = useNavigate()
+
+var base_url = window.location.origin;
+
+var onClickHandler = function onClickHandler() {
+  // set base url of website manually includes and href
+  var link = history.state.props.urlPrev;
+
+  if (link.includes(base_url)) {
+    window.history.back();
+  } else {
+    window.location.href = base_url;
+  } // window.history.back();
+
 };
+
 var BackButton = function BackButton(_ref3) {
   var link = _ref3.link,
       color = _ref3.color,
       text = _ref3.text;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__.Link, {
-    href: link !== null && link !== void 0 ? link : "#"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
-    className: "back_button flex centered"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "circle",
-    style: {
-      borderColor: color,
-      transform: "rotate(180deg)"
-    }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_img_icons_sm_smIcons__WEBPACK_IMPORTED_MODULE_2__.ArrowRight, {
-    color: color
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "text",
-    style: {
+  return (
+    /*#__PURE__*/
+    // <Link href={link ?? "#"}>
+    react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+      className: "back_button flex centered",
+      onClick: function onClick() {
+        onClickHandler();
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      className: "circle",
+      style: {
+        borderColor: color,
+        transform: "rotate(180deg)"
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_img_icons_sm_smIcons__WEBPACK_IMPORTED_MODULE_2__.ArrowRight, {
       color: color
-    }
-  }, text)));
+    })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      className: "text",
+      style: {
+        color: color
+      }
+    }, text)) // </Link>
+
+  );
 };
 
 /***/ }),

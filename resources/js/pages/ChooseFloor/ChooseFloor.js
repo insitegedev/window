@@ -17,7 +17,6 @@ const ChooseFloor = ({ apartments, seo, urlPrev }) => {
     // }
 
 
-
     const sharedData = usePage().props.localizations;
 
     function __(key, replace = {}) {
