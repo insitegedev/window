@@ -6802,7 +6802,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
 var MainButton = function MainButton(_ref) {
   var text = _ref.text,
       link = _ref.link,
@@ -6834,50 +6833,61 @@ var ArrowButton = function ArrowButton(_ref2) {
       color: color
     }
   }, text)));
-}; // const navigate = useNavigate()
+};
 
-var base_url = window.location.origin;
+var base_url = window.location.origin,
+    linksBase = {
+  "home": base_url,
+  "singlePage": ["about", "service", "gallery", "contact", "choose-floor"],
+  "apartamant": ["choose-apartment"],
+  "floor": ["apartment/floor"]
+},
+    link = window.location.pathname,
+    a = link.split('/'),
+    getFlatNumber = function getFlatNumber() {
+  if (linksBase.floor.some(function (e) {
+    return location.href.includes(e);
+  })) {
+    var _a;
 
-var onClickHandler = function onClickHandler() {
-  // set base url of website manually includes and href
-  var link = history.state.props.urlPrev;
+    if (window.location.pathname.split('/')[3].split('_')[1].length == 1) {
+      _a = "A" + window.location.pathname.split('/')[3].split('_')[1];
+    } else {
+      _a = window.location.pathname.split('/')[3].split('_')[1];
+    }
 
-  if (link.includes(base_url)) {
-    window.history.back();
-  } else {
-    window.location.href = base_url;
-  } // window.history.back();
-
+    return _a;
+  }
 };
 
 var BackButton = function BackButton(_ref3) {
   var link = _ref3.link,
       color = _ref3.color,
       text = _ref3.text;
-  return (
-    /*#__PURE__*/
-    // <Link href={link ?? "#"}>
-    react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
-      className: "back_button flex centered",
-      onClick: function onClick() {
-        onClickHandler();
-      }
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-      className: "circle",
-      style: {
-        borderColor: color,
-        transform: "rotate(180deg)"
-      }
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_img_icons_sm_smIcons__WEBPACK_IMPORTED_MODULE_2__.ArrowRight, {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__.Link, {
+    href: linksBase.singlePage.some(function (e) {
+      return location.href.includes(e);
+    }) ? "/" + a[1] : linksBase.apartamant.some(function (e) {
+      return location.href.includes(e);
+    }) ? "/" + a[1] + '/choose-floor' : linksBase.floor.some(function (e) {
+      return location.href.includes(e);
+    }) ? '/' + a[1] + '/choose-apartment/' + getFlatNumber() : "#"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    className: "back_button flex centered"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "circle",
+    style: {
+      borderColor: color,
+      transform: "rotate(180deg)"
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_img_icons_sm_smIcons__WEBPACK_IMPORTED_MODULE_2__.ArrowRight, {
+    color: color
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "text",
+    style: {
       color: color
-    })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-      className: "text",
-      style: {
-        color: color
-      }
-    }, text)) // </Link>
-
-  );
+    }
+  }, text)));
 };
 
 /***/ }),
@@ -10620,7 +10630,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
 var MainButton = function MainButton(_ref) {
   var text = _ref.text,
       link = _ref.link,
@@ -10652,50 +10661,61 @@ var ArrowButton = function ArrowButton(_ref2) {
       color: color
     }
   }, text)));
-}; // const navigate = useNavigate()
+};
 
-var base_url = window.location.origin;
+var base_url = window.location.origin,
+    linksBase = {
+  "home": base_url,
+  "singlePage": ["about", "service", "gallery", "contact", "choose-floor"],
+  "apartamant": ["choose-apartment"],
+  "floor": ["apartment/floor"]
+},
+    link = window.location.pathname,
+    a = link.split('/'),
+    getFlatNumber = function getFlatNumber() {
+  if (linksBase.floor.some(function (e) {
+    return location.href.includes(e);
+  })) {
+    var _a;
 
-var onClickHandler = function onClickHandler() {
-  // set base url of website manually includes and href
-  var link = history.state.props.urlPrev;
+    if (window.location.pathname.split('/')[3].split('_')[1].length == 1) {
+      _a = "A" + window.location.pathname.split('/')[3].split('_')[1];
+    } else {
+      _a = window.location.pathname.split('/')[3].split('_')[1];
+    }
 
-  if (link.includes(base_url)) {
-    window.history.back();
-  } else {
-    window.location.href = base_url;
-  } // window.history.back();
-
+    return _a;
+  }
 };
 
 var BackButton = function BackButton(_ref3) {
   var link = _ref3.link,
       color = _ref3.color,
       text = _ref3.text;
-  return (
-    /*#__PURE__*/
-    // <Link href={link ?? "#"}>
-    react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
-      className: "back_button flex centered",
-      onClick: function onClick() {
-        onClickHandler();
-      }
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-      className: "circle",
-      style: {
-        borderColor: color,
-        transform: "rotate(180deg)"
-      }
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_img_icons_sm_smIcons__WEBPACK_IMPORTED_MODULE_2__.ArrowRight, {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__.Link, {
+    href: linksBase.singlePage.some(function (e) {
+      return location.href.includes(e);
+    }) ? "/" + a[1] : linksBase.apartamant.some(function (e) {
+      return location.href.includes(e);
+    }) ? "/" + a[1] + '/choose-floor' : linksBase.floor.some(function (e) {
+      return location.href.includes(e);
+    }) ? '/' + a[1] + '/choose-apartment/' + getFlatNumber() : "#"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    className: "back_button flex centered"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "circle",
+    style: {
+      borderColor: color,
+      transform: "rotate(180deg)"
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_img_icons_sm_smIcons__WEBPACK_IMPORTED_MODULE_2__.ArrowRight, {
+    color: color
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "text",
+    style: {
       color: color
-    })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-      className: "text",
-      style: {
-        color: color
-      }
-    }, text)) // </Link>
-
-  );
+    }
+  }, text)));
 };
 
 /***/ }),

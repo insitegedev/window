@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "@inertiajs/inertia-react";
 import { ArrowRight } from "/img/icons/sm/smIcons";
 import "./Buttons.css";
-import { useNavigate } from "react-router-dom"
 
 export const MainButton = ({ text, link, dark }) => {
     return (
@@ -28,37 +27,49 @@ export const ArrowButton = ({ color, link, text }) => {
         </Link>
     );
 };
-
-
-// const navigate = useNavigate()
-var base_url = window.location.origin;
-
-
-const onClickHandler = () => {
-    // set base url of website manually includes and href
-    let link = history.state.props.urlPrev;
-    if (link.includes(base_url)) {
-        window.history.back()
-    } else {
-        window.location.href = base_url;
+let base_url = window.location.origin,
+    linksBase = {
+        "home": base_url,
+        "singlePage": [
+            "about", "service", "gallery", "contact", "choose-floor"
+        ],
+        "apartamant": [
+            "choose-apartment"
+        ],
+        "floor": ["apartment/floor"]
+    },
+    link = window.location.pathname,
+    a = link.split('/'),
+    getFlatNumber = () => {
+        if (linksBase.floor.some((e) => location.href.includes(e))) {
+            let a;
+            if (window.location.pathname.split('/')[3].split('_')[1].length == 1) {
+                a = "A" + window.location.pathname.split('/')[3].split('_')[1];
+            } else {
+                a = window.location.pathname.split('/')[3].split('_')[1];
+            }
+            return a;
+        }
     }
-    // window.history.back();
-};
 
 export const BackButton = ({ link, color, text }) => {
     return (
-        // <Link href={link ?? "#"}>
-        <button className="back_button flex centered" onClick={() => { onClickHandler() }} >
-            <div
-                className="circle"
-                style={{ borderColor: color, transform: "rotate(180deg)" }}
-            >
-                <ArrowRight color={color} />
-            </div>
-            <div className="text" style={{ color: color }}>
-                {text}
-            </div>
-        </button>
-        // </Link>
+        <Link href={
+            linksBase.singlePage.some((e) => location.href.includes(e)) ? "/" + a[1]
+                : linksBase.apartamant.some((e) => location.href.includes(e)) ? "/" + a[1] + '/choose-floor'
+                    : linksBase.floor.some((e) => location.href.includes(e)) ? '/' + a[1] + '/choose-apartment/' + getFlatNumber() : "#"
+        } >
+            <button className="back_button flex centered">
+                <div
+                    className="circle"
+                    style={{ borderColor: color, transform: "rotate(180deg)" }}
+                >
+                    <ArrowRight color={color} />
+                </div>
+                <div className="text" style={{ color: color }}>
+                    {text}
+                </div>
+            </button>
+        </Link >
     );
 };
