@@ -46,6 +46,7 @@
     width: 1500px;
     margin: auto;
     position: relative;
+    text-align: center;
 }
 .floorPlan.smaller .container {
     width: 800px;
@@ -66,6 +67,7 @@
 .floorPlan .st0:hover {
     opacity: 0.6;
 }
+
 :root {
     --tooltip-position: translateY(180px) translateX(-50%);
     --tooltip-position2: translateY(50px) translateX(-50%);

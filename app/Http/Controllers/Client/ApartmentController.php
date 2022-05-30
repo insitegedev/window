@@ -30,7 +30,7 @@ class ApartmentController extends Controller
             "image" => $page->file,
             'og_title' => $page->meta_og_title,
             'og_description' => $page->meta_og_description
-        ]);
+        ]); 
     }
 
     public function showFloor($locale, $slug)

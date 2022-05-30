@@ -27,20 +27,8 @@ const ChooseFloor = ({ seo, urlPrev, apartments }) => {
         {
             slug: "1",
             status: 1,
-            points: " 1359.6,297.6 1359.6,149.3 1487.1,149.3 1487.1,0.6 1773.3,0.6 1773.3,296.7 ",
+            points: "523.2,25.7 2.1,25.7 2.1,699.8 987.4,699.8 987.4,25.7 600.5,25.4 600.5,52.8 592.1,90 525.2,51.2 525.2,39.3 523.3,39.3",
             dimension: "Flat 1 / 35.6",
-        },
-        {
-            slug: "1",
-            status: 1,
-            points: "1359.6,297.6 1773.3,297.6 1773.3,439.5 1359.8,439.5 ",
-            dimension: "Flat 2 / 35.6",
-        },
-        {
-            slug: "1",
-            status: 1,
-            points: "1359.8,439.5 1773.3,439.5 1773.3,579 1763.1,579 1763.1,613.7 1636.9,613.7 1636.9,593.6 1578.5,593.6 1578.5,582.3 1359,582.3",
-            dimension: "Flat 3 / 35.6",
         },
     ];
     const [flatIndex, setFlatIndex] = useState(0);
@@ -56,16 +44,16 @@ const ChooseFloor = ({ seo, urlPrev, apartments }) => {
                     text={__("go_back")}
                 />
                 <div className="head">
-                    <div className=" block">{__("b_block")}</div>
+                    <div className=" block">{__("a_block")}</div>
                     <div className="flex centered">
                         <Link
-                            href={route("client.showFloor.index", "A5")}
+                            href={route("client.showFloor.index", "A4")}
                             className="left"
                         >
                             <ArrowRight color="#334E60" />
                         </Link>
                         <div className="bold">{apartments.floor}</div>
-                        <Link href={route("client.showFloor.index", "B2")}>
+                        <Link href={route("client.showFloor.index", "B1")}>
                             <ArrowRight color="#334E60" />
                         </Link>
                     </div>
@@ -76,16 +64,19 @@ const ChooseFloor = ({ seo, urlPrev, apartments }) => {
                         id="Layer_1"
                         x="0px"
                         y="0px"
-                        viewBox="0 0 1900 614"
-                        style={{ enableBackground: "new 0 0 1900 614" }}
+                        viewBox=" 0 0 990 700"
+                        style={{
+                            enableBackground: "new new 0 0 990 700",
+                            maxWidth: "500px",
+                        }}
                         xmlSpace="preserve"
                     >
                         <image
                             style={{ overflow: "visible" }}
-                            width="4871"
-                            height="1574"
-                            xlinkHref="/img/floorplan/B1.png"
-                            transform="matrix(0.39 0 0 0.39 0.3333 0.1475)"
+                            width="1487"
+                            height="1055"
+                            xlinkHref="/img/floorplan/A5.png"
+                            transform="matrix(1 0 0 1 5.9166 -3.5695)"
                         ></image>
                         {flatList.map((flat, index) => {
                             const sold = flat.status === 0;
@@ -97,7 +88,7 @@ const ChooseFloor = ({ seo, urlPrev, apartments }) => {
                                         <button
                                             style={{
                                                 transform:
-                                                    "var(--tooltip-position2)",
+                                                    "var(--tooltip-position)",
                                                 width: "180px",
                                                 height: "50px",
                                                 borderRadius: "5px",
