@@ -147,7 +147,7 @@
                                 </div>
                                 <div class="input-field col s12">
                                     {!! Form::text('points',$floor->points,['class' => 'validate '. $errors->has('points') ? '' : 'valid']) !!}
-                                    {!! Form::label('points',__('admin.slug')) !!}
+                                    {!! Form::label('points',__('admin.points')) !!}
                                     @error('points')
                                     <small class="errorTxt4">
                                         <div class="error">
