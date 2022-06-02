@@ -8800,7 +8800,7 @@ var ChooseFloor = function ChooseFloor(_ref) {
     height: "1672",
     xlinkHref: "/img/floorplan/A4.png",
     transform: "matrix(1 0 0 1 5.9166 -3.5695)"
-  }), flatList.map(function (flat, index) {
+  }), apartments.floors.map(function (flat, index) {
     var sold = flat.status === 0;
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_tippyjs_react__WEBPACK_IMPORTED_MODULE_9__["default"], {
       maxWidth: "0",
