@@ -30,11 +30,12 @@ class ApartmentController extends Controller
             "image" => $page->file,
             'og_title' => $page->meta_og_title,
             'og_description' => $page->meta_og_description
-        ]); 
+        ]);
     }
 
     public function showFloor($locale, $slug)
     {
+        //dd($slug);
         $page = Page::where('key', 'choose_apartment')->firstOrFail();
         //        $apartments = Floor::whereHas('apartment', function (Builder $query) use ($slug) {
         //            $query->where('title', $slug);
@@ -65,6 +66,7 @@ class ApartmentController extends Controller
 
     public function show($locale, $slug)
     {
+        //dd($slug);
         $apartment = Floor::with(['translations', 'files', 'pdf'])->where("slug", $slug)->firstOrFail();
 
         //        dd(count($apartment->files)>0 ? $apartment->files[0]: null);

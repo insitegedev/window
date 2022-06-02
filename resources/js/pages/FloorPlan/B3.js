@@ -108,7 +108,7 @@ const ChooseFloor = ({ seo, urlPrev, apartments }) => {
                             xlinkHref="/img/floorplan/B3.png"
                             transform="matrix(0.9702 0 0 0.9702 59.2222 38.989)"
                         ></image>
-                        {flatList.map((flat, index) => {
+                        {apartments.floors.map((flat, index) => {
                             const sold = flat.status === 0;
                             return (
                                 <Tippy

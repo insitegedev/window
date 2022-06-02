@@ -24,6 +24,7 @@ class Floor extends Model
         'apartment_id',
         'slug',
         'status',
+        'points'
     ];
 
     protected $translationModel = FloorTranslation::class;

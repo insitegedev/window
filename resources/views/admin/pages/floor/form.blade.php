@@ -145,6 +145,17 @@
                                     </small>
                                     @enderror
                                 </div>
+                                <div class="input-field col s12">
+                                    {!! Form::text('points',$floor->points,['class' => 'validate '. $errors->has('points') ? '' : 'valid']) !!}
+                                    {!! Form::label('points',__('admin.slug')) !!}
+                                    @error('points')
+                                    <small class="errorTxt4">
+                                        <div class="error">
+                                            {{$message}}
+                                        </div>
+                                    </small>
+                                    @enderror
+                                </div>
                                 <div class="col">
                                     <label for="category_id">{{__('admin.apartment')}}</label>
                                 </div>
