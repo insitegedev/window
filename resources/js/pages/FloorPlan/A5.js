@@ -73,8 +73,8 @@ const ChooseFloor = ({ seo, urlPrev, apartments }) => {
                     >
                         <image
                             style={{ overflow: "visible" }}
-                            width="1487"
-                            height="1055"
+                            width="100%"
+                            height="100%"
                             xlinkHref="/img/floorplan/A5.png"
                             transform="matrix(1 0 0 1 5.9166 -3.5695)"
                         ></image>
