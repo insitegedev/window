@@ -189,7 +189,7 @@ const ChooseFloor = ({ seo, urlPrev, apartments }) => {
                                     fill="rgba(226, 70, 70, 0.7)"
                                 ></rect>
                                 <image
-                                    xlinkHref="https://archi.ge/images/sold_eng.png"
+                                    xlinkHref="/images/sold_eng.png"
                                     height="1"
                                     width="1"
                                     preserveAspectRatio="xMidYMid none"
